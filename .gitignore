@@ -1,0 +1,28 @@
+# Tooling
+.opencode/
+.superpowers/
+skills/
+squads/
+_opensquad/
+docs/
+dashboard/node_modules/
+dashboard/package-lock.json
+dashboard/package.json
+dashboard/public/
+dashboard/src/
+dashboard/test-results/
+dashboard/tsconfig.json
+dashboard/vite.config.ts
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+package.json
+package-lock.json

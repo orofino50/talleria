@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-29T00:15:00+02:00",
+  "title": "Design System: AltaPro",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Coral Elétrico", "canonical": "#e94560", "tonalRamp": ["#4a151e", "#7a1f30", "#a32a42", "#c93554", "#e94560", "#f0607a", "#f58a9e", "#fbb5c3"] },
+      "trust": { "role": "secondary", "displayName": "Verde Garantía", "canonical": "#2ecc71", "tonalRamp": ["#0a3d1e", "#11662f", "#1a8f42", "#24b855", "#2ecc71", "#4dd48a", "#7adea7", "#aee9c5"] },
+      "neutral-bg": { "role": "neutral", "displayName": "Blanco Estudio", "canonical": "#f5f5f7", "tonalRamp": ["#d5d5d7", "#dddddf", "#e5e5e7", "#ededef", "#f5f5f7", "#f7f7f9", "#f9f9fb", "#fbfbfd"] },
+      "neutral-bg-white": { "role": "neutral", "displayName": "Blanco Puro", "canonical": "#ffffff", "tonalRamp": ["#cccccc", "#d9d9d9", "#e6e6e6", "#f2f2f2", "#ffffff", "#ffffff", "#ffffff", "#ffffff"] },
+      "neutral-bg-dark": { "role": "neutral", "displayName": "Noche Azul", "canonical": "#1a1a2e", "tonalRamp": ["#06060b", "#0d0d17", "#131322", "#1a1a2e", "#252540", "#313153", "#3e3e66", "#4c4c7a"] },
+      "neutral-bg-dark-alt": { "role": "neutral", "displayName": "Azul Profundo", "canonical": "#16213e", "tonalRamp": ["#050811", "#0a1023", "#10182f", "#16213e", "#1e2e55", "#263b6c", "#304985", "#3b589e"] },
+      "neutral-text-primary": { "role": "neutral", "displayName": "Casi Negro", "canonical": "#1d1d1f", "tonalRamp": ["#09090a", "#0f0f11", "#141417", "#1d1d1f", "#3d3d40", "#5e5e62", "#7e7e83", "#9e9ea4"] },
+      "neutral-text-secondary": { "role": "neutral", "displayName": "Gris Medio", "canonical": "#6e6e73", "tonalRamp": ["#222224", "#39393c", "#505054", "#6e6e73", "#8a8a8e", "#a6a6aa", "#c1c1c4", "#dddde0"] },
+      "neutral-border": { "role": "neutral", "displayName": "Gris Borde", "canonical": "#e8e8ed", "tonalRamp": ["#b8b8bd", "#c8c8cd", "#d8d8dd", "#e0e0e5", "#e8e8ed", "#ececf0", "#f0f0f4", "#f4f4f7"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline na página inicial. Máximo impacto, usado uma vez por página." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de seção em todas as páginas." },
+      "title": { "displayName": "Title", "purpose": "Títulos de cards, especificações e destaques internos." },
+      "body": { "displayName": "Body", "purpose": "Parágrafos, descrições. Line length 600-700px." },
+      "label": { "displayName": "Label", "purpose": "Badges, labels de seção, metadados. Sempre uppercase." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-default", "value": "300ms cubic-bezier(0.25, 0.1, 0.25, 1)", "purpose": "Estado padrão para transições de UI (hover, foco, FAQ accordion)" },
+      { "name": "ease-button", "value": "200ms ease", "purpose": "Botões hover e foco — resposta rápida e sutil" },
+      { "name": "ease-reveal", "value": "600ms cubic-bezier(0.25, 0.1, 0.25, 1)", "purpose": "Scroll reveal — entrada suave com easing quart" },
+      { "name": "ease-navbar", "value": "300ms ease", "purpose": "Transição do header (transparente → branco com blur)" },
+      { "name": "ease-hover-lift", "value": "300ms ease", "purpose": "Hover lift de cards (translateY -4px)" }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "768px" },
+      { "name": "md", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Accent Button",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "CTA primário em Coral Elétrico. Usado no hero e seções principais.",
+      "html": "<a href=\"#\" class=\"ds-btn-accent\">Descubrir PaintPro &rarr;</a>",
+      "css": ".ds-btn-accent { display: inline-flex; align-items: center; justify-content: center; background: #e94560; color: #fff; padding: 16px 40px; border-radius: 8px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.938rem; font-weight: 700; border: 2px solid transparent; cursor: pointer; text-decoration: none; text-align: center; transition: opacity 200ms ease, background-color 200ms ease; } .ds-btn-accent:hover { opacity: 0.9; } .ds-btn-accent:active { opacity: 0.8; } .ds-btn-accent:focus-visible { outline: 2px solid #e94560; outline-offset: 2px; }"
+    },
+    {
+      "name": "Trust Button",
+      "kind": "button",
+      "refersTo": "button-trust",
+      "description": "CTA final de compra em Verde Garantía. Maior padding e radius para destaque.",
+      "html": "<a href=\"#\" class=\"ds-btn-trust\">Comprar ahora &rarr;</a>",
+      "css": ".ds-btn-trust { display: inline-flex; align-items: center; justify-content: center; background: #2ecc71; color: #fff; padding: 20px 64px; border-radius: 12px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.125rem; font-weight: 700; letter-spacing: 0.02em; border: none; cursor: pointer; text-decoration: none; text-align: center; transition: opacity 200ms ease; } .ds-btn-trust:hover { opacity: 0.95; } .ds-btn-trust:focus-visible { outline: 2px solid #2ecc71; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Botão transparente com borda sutil para fundos escuros.",
+      "html": "<a href=\"#\" class=\"ds-btn-ghost\">Ver especificaciones</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #fff; padding: 14px 36px; border-radius: 8px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.938rem; font-weight: 400; border: 2px solid rgba(255,255,255,0.3); cursor: pointer; text-decoration: none; text-align: center; transition: border-color 200ms ease, opacity 200ms ease; } .ds-btn-ghost:hover { border-color: #fff; } .ds-btn-ghost:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Default Card",
+      "kind": "card",
+      "refersTo": "card-default",
+      "description": "Card branco com borda sutil e hover lift. Usado em seções claras.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-icon\"><svg width=\"48\" height=\"48\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M13 2L3 14h9l-1 8 10-12h-9l1-8z\"/></svg></div><h3 class=\"ds-card-title\">Potencia profesional</h3><p class=\"ds-card-text\">Rendimiento de alto nivel en un formato compacto y manejable.</p></div>",
+      "css": ".ds-card { background: #ffffff; border: 1px solid #e8e8ed; border-radius: 16px; padding: 32px; transition: transform 300ms ease; } .ds-card:hover { transform: translateY(-4px); } .ds-card-icon { width: 48px; height: 48px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: #e94560; } .ds-card-title { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; font-size: 1.125rem; margin-bottom: 8px; letter-spacing: -0.3px; color: #1d1d1f; } .ds-card-text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.938rem; color: #6e6e73; line-height: 1.6; }"
+    },
+    {
+      "name": "Dark Card",
+      "kind": "card",
+      "refersTo": "card-dark",
+      "description": "Card em fundo escuro para seções dark (galeria, testimoniais em dark).",
+      "html": "<div class=\"ds-card-dark\"><h3 class=\"ds-card-dark-title\">Calidad profesional</h3><p class=\"ds-card-dark-text\">Acabado superior en cada proyecto con la precisión de un experto.</p></div>",
+      "css": ".ds-card-dark { background: #16213e; border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 32px; transition: transform 300ms ease; } .ds-card-dark:hover { transform: translateY(-4px); } .ds-card-dark-title { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; font-size: 1.125rem; margin-bottom: 8px; letter-spacing: -0.3px; color: #ffffff; } .ds-card-dark-text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.938rem; color: rgba(255,255,255,0.6); line-height: 1.6; }"
+    },
+    {
+      "name": "Header CTA",
+      "kind": "button",
+      "refersTo": "header-cta",
+      "description": "Botão compacto no header, visível apenas em desktop.",
+      "html": "<a href=\"#\" class=\"ds-header-cta\">Comprar</a>",
+      "css": ".ds-header-cta { display: inline-flex; align-items: center; justify-content: center; background: #e94560; color: #fff; padding: 8px 20px; border-radius: 6px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.813rem; font-weight: 700; border: none; cursor: pointer; text-decoration: none; text-align: center; transition: opacity 200ms ease; } .ds-header-cta:hover { opacity: 0.9; } .ds-header-cta:focus-visible { outline: 2px solid #e94560; outline-offset: 2px; }"
+    },
+    {
+      "name": "Form Input",
+      "kind": "input",
+      "refersTo": "input-default",
+      "description": "Campo de formulário com borda sutil e foco em Coral.",
+      "html": "<div style=\"display:flex;flex-direction:column;gap:6px\"><label class=\"ds-label\" for=\"demo-input\">Nombre</label><input class=\"ds-input\" id=\"demo-input\" type=\"text\" placeholder=\"Tu nombre\"></div>",
+      "css": ".ds-label { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.813rem; font-weight: 700; color: #6e6e73; letter-spacing: 0.02em; } .ds-input { width: 100%; padding: 14px 16px; background: #ffffff; border: 1px solid #e8e8ed; border-radius: 10px; color: #1d1d1f; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1rem; transition: border-color 200ms ease; } .ds-input:focus { outline: none; border-color: #e94560; } .ds-input::placeholder { color: #6e6e73; opacity: 0.5; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Link de navegação no header. Estado normal (transparente) e scrolled.",
+      "html": "<nav style=\"display:flex;gap:32px;align-items:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif\"><a href=\"#\" class=\"ds-nav-link\" style=\"color:rgba(255,255,255,0.7)\">Inicio</a><a href=\"#\" class=\"ds-nav-link ds-nav-link--active\" style=\"color:#fff;font-weight:600\">PaintPro</a><a href=\"#\" class=\"ds-nav-link\" style=\"color:rgba(255,255,255,0.7)\">Sobre</a></nav>",
+      "css": ".ds-nav-link { font-size: 0.875rem; font-weight: 500; letter-spacing: 0.01em; text-decoration: none; transition: color 200ms ease; cursor: pointer; } .ds-nav-link:hover { color: #ffffff !important; } .ds-nav-link--active { font-weight: 600; }"
+    },
+    {
+      "name": "FAQ Accordion",
+      "kind": "custom",
+      "refersTo": "faq-item",
+      "description": "Item de FAQ com accordion. Pergunta clicável abre resposta com animação.",
+      "html": "<div class=\"ds-faq\"><div class=\"ds-faq-item\"><button class=\"ds-faq-question\" aria-expanded=\"false\">¿Cómo funciona la pintura sin cables?<span class=\"ds-faq-icon\">+</span></button><div class=\"ds-faq-answer\" style=\"max-height:0;overflow:hidden;transition:max-height 300ms ease,padding 300ms ease\"><div class=\"ds-faq-answer-inner\">La pistola PaintPro funciona con batería recargable de iones de litio. Sin compresor, sin mangueras.</div></div></div></div>",
+      "css": ".ds-faq { max-width: 720px; } .ds-faq-item { border-bottom: 1px solid #e8e8ed; } .ds-faq-item:first-child { border-top: 1px solid #e8e8ed; } .ds-faq-question { width: 100%; display: flex; align-items: center; justify-content: space-between; background: none; border: none; padding: 20px 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 600; color: #1d1d1f; cursor: pointer; text-align: left; transition: color 200ms ease; } .ds-faq-question:hover { color: #e94560; } .ds-faq-icon { font-size: 1.25rem; color: #6e6e73; flex-shrink: 0; margin-left: 16px; transition: transform 300ms ease; } .ds-faq-item.is-open .ds-faq-icon { transform: rotate(45deg); } .ds-faq-item.is-open .ds-faq-answer { max-height: 300px; } .ds-faq-answer-inner { padding: 0 0 20px; color: #6e6e73; font-size: 0.938rem; line-height: 1.7; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }"
+    },
+    {
+      "name": "Spec Item",
+      "kind": "custom",
+      "refersTo": "spec-item",
+      "description": "Item de especificação técnica com label accent e valor bold.",
+      "html": "<div class=\"ds-spec\"><div class=\"ds-spec-label\">Potencia</div><div class=\"ds-spec-value\">600 W</div></div>",
+      "css": ".ds-spec { background: #ffffff; border: 1px solid #e8e8ed; border-radius: 12px; padding: 24px 20px; text-align: center; } .ds-spec-label { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.688rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #e94560; margin-bottom: 8px; } .ds-spec-value { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.125rem; font-weight: 700; color: #1d1d1f; letter-spacing: -0.3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Luz de Estúdio",
+    "overview": "Como um estúdio fotográfico profissional — fundo claro e neutro (#f5f5f7) onde o produto é a estrela, com holofotes escuros (#1a1a2e) direcionados apenas para hero e CTA final. O coral elétrico (#e94560) funciona como ponteiro visual preciso: ≤10% da tela, nunca competindo consigo mesmo. As bordas finas (#e8e8ed) e o radius generoso (16px) criam uma sensação Apple de precisão industrial sem recorrer a sombras ou glassmorphism. O sistema rejeita explicitamente: gradientes purple-to-blue, cards aninhados, temas escuros genéricos sem personalidade, excesso de badges, tom de 'vendedor de TV'. A qualidade se percebe no espaço negativo, na tipografia limpa e nas transições sutis.",
+    "keyCharacteristics": [
+      "Light-first: fundo #f5f5f7 como padrão, cards brancos (#ffffff), escuro (#1a1a2e) só para seções de alto impacto",
+      "Apple-inspired: bordas finas (#e8e8ed), radius 16px, letter-spacing negativo em títulos, sem sombras",
+      "Multi-página consistente: header fixo, footer, tipografia e ritmo visual idênticos em todas as 5 páginas",
+      "Coral Elétrico como único accent visual — usado exclusivamente para CTAs, labels de seção e ícones",
+      "Scroll reveal com ease-out quart, navbar transparente→branca com blur no scroll",
+      "Zero glassmorphism, zero gradientes decorativos, zero cards aninhados"
+    ],
+    "rules": [
+      { "name": "The Single Accent Rule", "body": "O Coral Elétrico aparece em ≤10% de qualquer tela. Sua raridade é o que o faz funcionar. Nunca competir com ele mesmo — um só CTA por viewport.", "section": "colors" },
+      { "name": "The Single Voice Rule", "body": "Inter em todas as variantes. Nunca adicionar uma segunda fonte. O contraste vem do weight e do letter-spacing, não da família.", "section": "typography" },
+      { "name": "The No-Shadow Rule", "body": "Box-shadows são proibidos em qualquer estado. Profundidade é criada por contraste tonal, bordas finas e espaço negativo.", "section": "elevation" }
+    ],
+    "dos": [
+      "Usar #f5f5f7 como fundo padrão e #ffffff para cards — o contraste sutil cria hierarquia sem esforço.",
+      "Reservar o fundo escuro (#1a1a2e) exclusivamente para hero e CTA final — o impacto vem da raridade.",
+      "Usar Coral Elétrico como o único ponteiro visual para ação. Máximo 10% da tela.",
+      "Manter botões com padding generoso (16px 40px no mínimo) para alvos de toque confortáveis.",
+      "Incluir hover lift (translateY -4px, 300ms ease) em cards — é a única resposta de profundidade do sistema.",
+      "Usar letter-spacing negativo em títulos (-3px display, -0.5px headline) para compactação óptica.",
+      "Manter consistência de header, footer e tipografia nas 5 páginas.",
+      "Usar prefers-reduced-motion para desligar animações quando solicitado."
+    ],
+    "donts": [
+      "Usar sombras (box-shadow) em nenhum elemento. A profundidade é tonal e espacial, não luminosa.",
+      "Adicionar uma segunda fonte. Inter em pesos 400/600/700/900 é o sistema completo.",
+      "Usar glassmorphism, gradientes decorativos ou purple-to-blue gradients (anti-reference: diseño genérico de IA).",
+      "Usar cards aninhados ou side-stripe borders (border-left/border-right como accent).",
+      "Usar texto gradiente com background-clip: text.",
+      "Usar grey text on colored backgrounds — o Gris Medio (#6e6e73) só aparece sobre fundos claros ou brancos.",
+      "Adicionar eyebrow tracking (tiny uppercase label acima de seções). O label de seção já é auto-suficiente.",
+      "Usar bounce ou elastic easing. Todas as transições usam ease-out (200–600ms).",
+      "Criar temas escuros genéricos sem personalidade (anti-reference: templates de IA que parecem 'vibecoding').",
+      "Adicionar emojis como ícones. Use SVGs inline para ícones de card, contato e valores."
+    ]
+  }
+}

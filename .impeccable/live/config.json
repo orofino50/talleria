@@ -1,0 +1,8 @@
+{
+  "framework": "static-html",
+  "files": ["*.html"],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "port": 8400,
+  "cspChecked": true
+}
