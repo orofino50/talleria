@@ -690,15 +690,9 @@ ul { list-style: none; }
   margin-left: 16px;
   color: var(--text-secondary);
 }
-.faq-item.is-open .faq-icon { transform: rotate(45deg); }
+details.faq-item[open] .faq-icon { transform: rotate(45deg); }
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 300ms ease, padding 300ms ease;
-}
-.faq-item.is-open .faq-answer { max-height: 1000px; }
-.faq-answer-inner {
-  padding: 0 0 20px;
+  padding: 16px 0 20px;
   color: var(--text-secondary);
   font-size: 0.938rem;
   line-height: 1.7;
