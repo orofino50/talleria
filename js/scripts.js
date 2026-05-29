@@ -302,8 +302,14 @@ document.querySelectorAll('.comparison-slider').forEach(function(slider) {
         var opacity = Math.min(1, ratio * 2);
         section.style.opacity = opacity;
 
-        // Activate image when section is most visible (ratio > 0.3)
-        if (ratio > 0.3) {
+        // Smoothly scale active image — slight parallax feel
+        var img = document.querySelector('.sticky-media__image[data-section="' + sectionId + '"]');
+        if (img && opacity < 1) {
+          img.style.transform = 'scale(' + (0.96 + opacity * 0.04) + ')';
+        }
+
+        // Activate image when section is most visible (ratio > 0.35)
+        if (ratio > 0.35) {
           stickyImages.forEach(function(img) { img.classList.remove('is-active'); });
           stickySections.forEach(function(s) { s.classList.remove('is-active'); });
           var activeImg = document.querySelector('.sticky-media__image[data-section="' + sectionId + '"]');
