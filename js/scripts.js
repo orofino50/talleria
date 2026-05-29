@@ -171,3 +171,277 @@ document.querySelectorAll('.urgency-timer').forEach(function(timer) {
   update();
   setInterval(update, 1000);
 });
+
+/* ==========================================
+   APPLE-STYLE LANDING PAGE — Interactions
+   ========================================== */
+
+(function() {
+  'use strict';
+
+  // 1. Product Nav Transition
+  var nav = document.querySelector('.product-nav');
+  var hero = document.querySelector('.hero--apple');
+
+  if (nav && hero) {
+    function updateNav() {
+      var heroBottom = hero.offsetTop + hero.offsetHeight;
+      if (window.scrollY >= heroBottom - 80) {
+        nav.classList.add('product-nav--scrolled');
+      } else {
+        nav.classList.remove('product-nav--scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  }
+
+  // 2. Sticky Media Image + Section Swap
+  var visual = document.querySelector('.sticky-media__visual');
+  var sections = document.querySelectorAll('.sticky-media__section');
+  var images = document.querySelectorAll('.sticky-media__image');
+
+  if (sections.length && images.length) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var sectionId = entry.target.getAttribute('data-section');
+          // Deactivate all sections and images
+          sections.forEach(function(s) { s.classList.remove('is-active'); });
+          images.forEach(function(img) { img.classList.remove('is-active'); });
+          // Activate matching section and image
+          var activeSection = document.querySelector('.sticky-media__section[data-section="' + sectionId + '"]');
+          var activeImage = document.querySelector('.sticky-media__image[data-section="' + sectionId + '"]');
+          if (activeSection) activeSection.classList.add('is-active');
+          if (activeImage) activeImage.classList.add('is-active');
+        }
+      });
+    }, { threshold: 0.45 });
+
+    sections.forEach(function(s) { observer.observe(s); });
+  }
+
+  // 3. Sticky media height fix for mobile
+  if (visual) {
+    function fixStickyHeight() {
+      if (window.innerWidth <= 768) {
+        visual.style.position = 'relative';
+        visual.style.height = 'auto';
+      } else {
+        visual.style.position = '';
+        visual.style.height = '';
+      }
+    }
+    window.addEventListener('resize', fixStickyHeight);
+    fixStickyHeight();
+  }
+
+})();
+
+/* ==========================================
+   APPLE FIDELITY — New Interactions
+   ========================================== */
+
+(function() {
+  'use strict';
+
+  // 1. Testimonial Scroll — fade in/out on scroll
+  var testimonialItems = document.querySelectorAll('.testimonial-scroll__item');
+
+  if (testimonialItems.length) {
+    var testimonialObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        } else {
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    testimonialItems.forEach(function(item) {
+      testimonialObserver.observe(item);
+    });
+  }
+
+  // 2. Paint Reveal — trigger clip-path animation on scroll
+  var paintReveal = document.querySelector('.paint-reveal');
+
+  if (paintReveal) {
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          paintReveal.classList.add('is-revealed');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    revealObserver.observe(paintReveal);
+  }
+
+  // 3. CTA Timer — dynamic countdown
+  var ctaTimer = document.querySelector('.apple-cta__timer');
+  if (ctaTimer) {
+    var timerSpan = ctaTimer.querySelector('strong');
+    if (timerSpan) {
+      var endTime = new Date();
+      endTime.setHours(endTime.getHours() + 48);
+
+      function updateTimer() {
+        var diff = endTime - new Date();
+        if (diff <= 0) {
+          timerSpan.textContent = 'Oferta finalizada';
+          return;
+        }
+        var h = Math.floor(diff / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        timerSpan.textContent =
+          String(h).padStart(2, '0') + ':' +
+          String(m).padStart(2, '0') + ':' +
+          String(s).padStart(2, '0');
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    }
+  }
+
+  // 4. Gallery items — reveal on scroll
+  var galleryItems = document.querySelectorAll('.gallery-apps__item');
+
+  if (galleryItems.length) {
+    var galleryObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0) scale(1)';
+          galleryObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    galleryItems.forEach(function(item) {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(20px) scale(0.97)';
+      item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      galleryObserver.observe(item);
+    });
+  }
+
+})();
+
+/* ==========================================
+   SQUAD UPGRADE — Continuous + Interactive
+   ========================================== */
+
+(function() {
+  'use strict';
+
+  // 1. Continuous Sticky Media Transition (scroll-progress based)
+  var stickySections = document.querySelectorAll('.sticky-media__section');
+  var stickyImages = document.querySelectorAll('.sticky-media__image');
+
+  if (stickySections.length && stickyImages.length) {
+    var stickyScroll = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        var section = entry.target;
+        var sectionId = section.getAttribute('data-section');
+        var ratio = entry.intersectionRatio;
+
+        // Set section opacity based on intersection ratio (peaks at 50%)
+        var opacity = Math.min(1, ratio * 2);
+        section.style.opacity = opacity;
+
+        // Activate image when section is most visible (ratio > 0.3)
+        if (ratio > 0.3) {
+          stickyImages.forEach(function(img) { img.classList.remove('is-active'); });
+          stickySections.forEach(function(s) { s.classList.remove('is-active'); });
+          var activeImg = document.querySelector('.sticky-media__image[data-section="' + sectionId + '"]');
+          if (activeImg) activeImg.classList.add('is-active');
+          section.classList.add('is-active');
+        }
+      });
+    }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] });
+
+    stickySections.forEach(function(s) { stickyScroll.observe(s); });
+  }
+
+  // 2. Highlights Interactive Tabs
+  var tabCards = document.querySelectorAll('.highlights--tabs .highlights__card');
+  var tabImages = document.querySelectorAll('.highlights--tabs .highlights__img');
+
+  if (tabCards.length && tabImages.length) {
+    tabCards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        var highlight = this.getAttribute('data-highlight');
+
+        tabCards.forEach(function(c) { c.classList.remove('is-active'); });
+        tabImages.forEach(function(img) { img.classList.remove('is-active'); });
+
+        this.classList.add('is-active');
+        var activeImg = document.querySelector('.highlights--tabs .highlights__img[data-highlight="' + highlight + '"]');
+        if (activeImg) activeImg.classList.add('is-active');
+      });
+    });
+  }
+
+  // 3. 3D Parallax Hero
+  var hero3d = document.querySelector('.hero--apple');
+
+  if (hero3d) {
+    hero3d.classList.add('is-3d');
+
+    hero3d.addEventListener('mousemove', function(e) {
+      var bg = this.querySelector('.hero--apple__bg');
+      if (!bg) return;
+
+      var rect = this.getBoundingClientRect();
+      var x = (e.clientX - rect.left) / rect.width - 0.5;
+      var y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      var rotateY = x * 8;
+      var rotateX = -y * 8;
+
+      bg.style.transform = 'perspective(1000px) rotateY(' + rotateY + 'deg) rotateX(' + rotateX + 'deg) scale(1.05)';
+    });
+
+    hero3d.addEventListener('mouseleave', function() {
+      var bg = this.querySelector('.hero--apple__bg');
+      if (bg) {
+        bg.style.transform = '';
+      }
+    });
+  }
+
+  // 4. Why Buy cards — sequential reveal
+  var whyBuyCards = document.querySelectorAll('.whybuy__card');
+
+  if (whyBuyCards.length) {
+    whyBuyCards.forEach(function(card) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+
+    var whyBuyObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var cards = entry.target.querySelectorAll('.whybuy__card');
+          cards.forEach(function(card, i) {
+            setTimeout(function() {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, i * 100);
+          });
+          whyBuyObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    var whyBuySection = document.querySelector('.whybuy');
+    if (whyBuySection) whyBuyObserver.observe(whyBuySection);
+  }
+
+})();
