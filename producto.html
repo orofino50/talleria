@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PaintPro™ — Pistola pulverizadora inalámbrica. Acabados profesionales sin experiencia previa. Envío 24-48h.">
-  <title>PaintPro™ — Pistola de Pintar Sin Cables | AltaPro</title>
+  <meta name="description" content="PaintPro™ — Pistola de pintar inalámbrica profesional. Pinta madera, paredes, metal y vidrio. Sin compresor, sin cables. Acabado profesional en casa.">
+  <title>PaintPro™ — Pistola de Pintar Inalámbrica | AltaPro</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
@@ -28,7 +28,7 @@
           <li><a href="sobre.html" class="nav__link">Sobre</a></li>
           <li><a href="faq.html" class="nav__link">FAQ</a></li>
           <li><a href="contacto.html" class="nav__link">Contacto</a></li>
-          <li><a href="contacto.html" class="btn btn--accent-header btn--accent-header-mobile">Comprar</a></li>
+          <li><a href="#cta" class="btn btn--accent-header btn--accent-header-mobile">Comprar</a></li>
         </ul>
       </nav>
       <a href="#cta" class="btn btn--accent-header">Comprar</a>
@@ -36,141 +36,355 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-label="PaintPro producto">
+    <!-- Hero with Video -->
+    <section class="hero hero--product" aria-label="PaintPro">
       <div class="container hero--split">
         <div class="hero__content">
-          <p class="hero__brand">AltaPro — Potencia. Control. Resultado.</p>
-          <h1 class="hero__headline">PAINTPRO™</h1>
-          <p class="hero__subheadline">Pistola pulverizadora inalámbrica. Acabados profesionales, sin experiencia previa.</p>
+          <p class="hero__pain-headline">¿Cansado de brochas y rodillos que dejan marcas?</p>
+          <h1 class="hero__headline hero__headline--product">PaintPro™.<br>Acabado profesional<br>sin marcas ni complicaciones.</h1>
+          <p class="hero__subheadline hero__subheadline--product">Pinta madera, paredes, metal y vidrio con un solo dispositivo. Sin compresor, sin cables, sin complicaciones. Resultados de taller desde tu casa.</p>
           <div class="hero__actions">
-            <a href="#cta" class="btn btn--accent">Comprar</a>
-            <a href="#benefits" class="btn btn--link">Ver en acci&oacute;n &darr;</a>
+            <a href="#cta" class="btn btn--accent">Comprar ahora →</a>
+            <a href="#beneficios" class="btn btn--link">Ver beneficios</a>
           </div>
         </div>
         <div class="hero__visual">
-          <div class="hero__visual-inner">
-            <img src="images/hastahoy.webp" alt="PaintPro — pistola pulverizadora inalámbrica profesional" class="hero__visual-img" width="480" height="480">
-            <div class="hero__visual-text">PAINTPRO<br>TM</div>
+          <video class="hero__video" autoplay muted loop playsinline poster="images/hastahoy.webp">
+            <source src="https://cdn.shopify.com/videos/c/o/v/ad85df309d0f4ef3ad004a1e7fe18033.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pain vs Solution -->
+    <section class="section section--light" id="beneficios" aria-label="Beneficios PaintPro">
+      <div class="container">
+        <p class="section__label section__title--center">Por qué PaintPro</p>
+        <h2 class="section__title section__title--center">Olvídate del compresor ruidoso.<br>Tu nuevo mejor compañero de trabajo.</h2>
+        <div class="mt-40">
+          <div class="pain-solution">
+            <div class="pain-solution__card pain-solution__card--pain">
+              <svg class="pain-solution__icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <p class="pain-solution__label">Brochas y rodillos</p>
+              <p class="pain-solution__title">Marcas, grumos y tiempo perdido</p>
+              <p class="pain-solution__text">Horas aplicando capa tras capa. Resultado irregular que delata que no es profesional.</p>
+            </div>
+            <div class="pain-solution__vs">vs</div>
+            <div class="pain-solution__card pain-solution__card--solution">
+              <svg class="pain-solution__icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <p class="pain-solution__label">PaintPro™</p>
+              <p class="pain-solution__title">Pulverización uniforme al instante</p>
+              <p class="pain-solution__text">Cobertura perfecta en la mitad del tiempo. Sin marcas, sin esfuerzo, sin experiencia previa.</p>
+            </div>
+          </div>
+          <div class="pain-solution mt-32">
+            <div class="pain-solution__card pain-solution__card--pain">
+              <svg class="pain-solution__icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              <p class="pain-solution__label">Compresor caro y ruidoso</p>
+              <p class="pain-solution__title">Inversión grande, mantenimiento constante</p>
+              <p class="pain-solution__text">Equipos pesados que ocupan espacio, hacen ruido y requieren mantenimiento profesional.</p>
+            </div>
+            <div class="pain-solution__vs">vs</div>
+            <div class="pain-solution__card pain-solution__card--solution">
+              <svg class="pain-solution__icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <p class="pain-solution__label">PaintPro™</p>
+              <p class="pain-solution__title">Inalámbrico y silencioso</p>
+              <p class="pain-solution__text">Ligero, portátil, sin cables. Funciona donde quieras sin molestar a nadie. Carga rápida, larga duración.</p>
+            </div>
+          </div>
+          <div class="pain-solution mt-32">
+            <div class="pain-solution__card pain-solution__card--pain">
+              <svg class="pain-solution__icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              <p class="pain-solution__label">Lata a lata</p>
+              <p class="pain-solution__title">Lento, tedioso, agotador</p>
+              <p class="pain-solution__text">Pintar una habitación entera te lleva un día entero. El resultado rara vez es uniforme.</p>
+            </div>
+            <div class="pain-solution__vs">vs</div>
+            <div class="pain-solution__card pain-solution__card--solution">
+              <svg class="pain-solution__icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <p class="pain-solution__label">PaintPro™</p>
+              <p class="pain-solution__title">Una pared en 20 minutos</p>
+              <p class="pain-solution__text">Cobertura rápida y uniforme. Una habitación entera en menos de una hora. Más tiempo para lo que importa.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--light" id="benefits" aria-label="Beneficios">
+    <!-- Before / After Sliders -->
+    <section class="section section--dark" aria-label="Antes y después">
       <div class="container">
-        <p class="section__label">Beneficios</p>
-        <h2 class="section__title">Cobertura perfecta en segundos.</h2>
-        <p class="section__subtitle">Olvídate de brochas y rodillos lentos. PaintPro pulveriza de forma uniforme en cualquier superficie.</p>
-        <div class="cards-grid cards-grid--4">
+        <p class="section__label">Transformación</p>
+        <h2 class="section__title">La misma superficie. Resultados diferentes.</h2>
+        <p class="section__subtitle">Desliza para ver la diferencia que hace una herramienta profesional.</p>
+        <div class="mt-40 comparison-grid">
+          <div>
+            <div class="comparison-slider reveal" role="slider" aria-label="Comparación antes y después de pintar una pared">
+              <img src="images/demo-paredes.jpg" alt="" class="comparison-slider__img comparison-slider__img--after" loading="lazy">
+              <img src="images/demo-paredes.jpg" alt="" class="comparison-slider__img comparison-slider__img--before" loading="lazy">
+              <div class="comparison-slider__handle"></div>
+              <span class="comparison-slider__label comparison-slider__label--before">ANTES</span>
+              <span class="comparison-slider__label comparison-slider__label--after">DESPUÉS</span>
+            </div>
+            <p class="comparison-slider__caption">Paredes — Acabado uniforme sin marcas</p>
+          </div>
+          <div>
+            <div class="comparison-slider reveal" role="slider" aria-label="Comparación antes y después de restaurar un mueble">
+              <img src="images/demo-muebles.jpg" alt="" class="comparison-slider__img comparison-slider__img--after" loading="lazy">
+              <img src="images/demo-muebles.jpg" alt="" class="comparison-slider__img comparison-slider__img--before" loading="lazy">
+              <div class="comparison-slider__handle"></div>
+              <span class="comparison-slider__label comparison-slider__label--before">ANTES</span>
+              <span class="comparison-slider__label comparison-slider__label--after">DESPUÉS</span>
+            </div>
+            <p class="comparison-slider__caption">Muebles — Restauración profesional</p>
+          </div>
+          <div>
+            <div class="comparison-slider reveal" role="slider" aria-label="Comparación antes y después de pintar metal">
+              <img src="images/demo-metal.jpg" alt="" class="comparison-slider__img comparison-slider__img--after" loading="lazy">
+              <img src="images/demo-metal.jpg" alt="" class="comparison-slider__img comparison-slider__img--before" loading="lazy">
+              <div class="comparison-slider__handle"></div>
+              <span class="comparison-slider__label comparison-slider__label--before">ANTES</span>
+              <span class="comparison-slider__label comparison-slider__label--after">DESPUÉS</span>
+            </div>
+            <p class="comparison-slider__caption">Metal — Adherencia perfecta sin goteo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits (Apple-style cards) -->
+    <section class="section section--white" aria-label="Características">
+      <div class="container">
+        <p class="section__label section__title--center">Características</p>
+        <h2 class="section__title section__title--center">Diseñada para quienes exigen resultados.</h2>
+        <div class="cards-grid cards-grid--4 mt-40">
           <article class="card reveal">
             <div class="card__icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             </div>
-            <h3 class="card__title">Cobertura perfecta en segundos</h3>
-            <p class="card__text">Olvídate de brochas y rodillos lentos. Acabado uniforme al instante.</p>
+            <h3 class="card__title">Libertad sin cables</h3>
+            <p class="card__text">Batería de larga duración para trabajar sin ataduras. Carga completa en 2 horas.</p>
           </article>
           <article class="card reveal">
             <div class="card__icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
             </div>
-            <h3 class="card__title">Recargable e inalámbrica</h3>
-            <p class="card__text">Libertad total de movimiento. Batería de larga duración para proyectos grandes.</p>
+            <h3 class="card__title">Control total</h3>
+            <p class="card__text">Flujo de pintura ajustable para cada superficie. De precisión fina a cobertura rápida.</p>
           </article>
           <article class="card reveal">
             <div class="card__icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <h3 class="card__title">Ahorra hasta 40% en pintura</h3>
-            <p class="card__text">Tecnología de pulverización que reduce el desperdicio al mínimo.</p>
+            <h3 class="card__title">Todas las superficies</h3>
+            <p class="card__text">Madera, metal, paredes, vidrio, plástico. Un solo dispositivo para cualquier proyecto.</p>
           </article>
           <article class="card reveal">
             <div class="card__icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
-            <h3 class="card__title">Hasta 4x más rápido</h3>
-            <p class="card__text">Termina en minutos lo que antes tomaba horas. Eficiencia profesional.</p>
+            <h3 class="card__title">Resultado profesional</h3>
+            <p class="card__text">Acabado uniforme desde el primer uso. Sin experiencia previa, sin práctica necesaria.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Video Grid 2x2 -->
+    <section class="section section--light" aria-label="Vídeos del producto">
+      <div class="container">
+        <p class="section__label section__title--center">En acción</p>
+        <h2 class="section__title section__title--center">Vélo en acción. Literalmente.</h2>
+        <p class="section__subtitle section__subtitle--center">Haz clic en cualquier vídeo para ver PaintPro funcionando en situaciones reales.</p>
+        <div class="video-grid mt-40">
+          <div class="video-grid__item reveal" data-video="ad85df309d0f4ef3ad004a1e7fe18033">
+            <img src="images/hastahoy.webp" alt="" class="video-grid__thumbnail" loading="lazy" width="400" height="225">
+            <div class="video-grid__play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <p class="video-grid__title">Pintando una pared — Acabado profesional</p>
+            <video class="video-grid__video" preload="none" playsinline loop muted>
+              <source src="https://cdn.shopify.com/videos/c/o/v/ad85df309d0f4ef3ad004a1e7fe18033.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-grid__item reveal" data-video="13df0fbc8e874c139007d31bf9e8a37f">
+            <img src="images/thc_3.webp" alt="" class="video-grid__thumbnail" loading="lazy" width="400" height="225">
+            <div class="video-grid__play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <p class="video-grid__title">Control de flujo — Precisión en cada gota</p>
+            <video class="video-grid__video" preload="none" playsinline loop muted>
+              <source src="https://cdn.shopify.com/videos/c/o/v/13df0fbc8e874c139007d31bf9e8a37f.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-grid__item reveal" data-video="4df49e2d46b84be39f3a490e52b62ec5">
+            <img src="images/superficies.webp" alt="" class="video-grid__thumbnail" loading="lazy" width="400" height="225">
+            <div class="video-grid__play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <p class="video-grid__title">Aplicación en madera — Sin imperfecciones</p>
+            <video class="video-grid__video" preload="none" playsinline loop muted>
+              <source src="https://cdn.shopify.com/videos/c/o/v/4df49e2d46b84be39f3a490e52b62ec5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-grid__item reveal" data-video="c582b246264d4431b978eadc5da341cb">
+            <img src="images/accesorios.webp" alt="" class="video-grid__thumbnail" loading="lazy" width="400" height="225">
+            <div class="video-grid__play"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <p class="video-grid__title">Visión general — Todo lo que incluye</p>
+            <video class="video-grid__video" preload="none" playsinline loop muted>
+              <source src="https://cdn.shopify.com/videos/c/o/v/c582b246264d4431b978eadc5da341cb.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Surfaces Grid -->
+    <section class="section section--white" aria-label="Superficies compatibles">
+      <div class="container">
+        <p class="section__label section__title--center">Superficies</p>
+        <h2 class="section__title section__title--center">Pinta sobre cualquier superficie con resultados profesionales.</h2>
+        <div class="gallery-grid mt-40">
+          <div class="gallery-item reveal">
+            <img src="images/demo-madera.jpg" alt="Acabado profesional en madera con PaintPro" class="gallery-item__img" width="400" height="300">
+            <p class="gallery-item__label">Madera — Acabado uniforme sin imperfecciones</p>
+          </div>
+          <div class="gallery-item reveal">
+            <img src="images/demo-metal.jpg" alt="Acabado profesional en metal con PaintPro" class="gallery-item__img" width="400" height="300">
+            <p class="gallery-item__label">Metal — Adherencia perfecta sin goteo</p>
+          </div>
+          <div class="gallery-item reveal">
+            <img src="images/superficies.webp" alt="Tipos de superficie compatibles con PaintPro" class="gallery-item__img" width="400" height="300">
+            <p class="gallery-item__label">Todas las superficies — Un solo dispositivo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="section section--light" aria-label="Testimonios">
+      <div class="container">
+        <p class="section__label section__title--center">Testimonios</p>
+        <h2 class="section__title section__title--center">2000+ personas ya pintan con resultados profesionales.</h2>
+        <div class="stats-bar mt-40">
+          <div>
+            <div class="stats-bar__number">+2000</div>
+            <div class="stats-bar__label">Unidades vendidas</div>
+          </div>
+          <div>
+            <div class="stats-bar__number">4.8/5</div>
+            <div class="stats-bar__label">Valoración media</div>
+          </div>
+          <div>
+            <div class="stats-bar__number">98%</div>
+            <div class="stats-bar__label">Recomiendan PaintPro</div>
+          </div>
+        </div>
+        <div class="mt-40">
+          <div class="testimonials-grid--with-photos">
+            <article class="testimonial-card--photo reveal">
+              <img src="images/testimonial-augusto.webp" alt="Foto de Augusto" class="testimonial-card__avatar" loading="lazy" width="56" height="56">
+              <div class="testimonial-card__body">
+                <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testimonial-card__text">"Dejé de perder tiempo con brochas. PaintPro me da resultados profesionales en la mitad del tiempo. La mejor compra del año."</blockquote>
+                <p class="testimonial-card__author">Augusto · Sevilla, España</p>
+              </div>
+            </article>
+            <article class="testimonial-card--photo reveal">
+              <img src="images/testimonial-luis.webp" alt="Foto de Luis" class="testimonial-card__avatar" loading="lazy" width="56" height="56">
+              <div class="testimonial-card__body">
+                <div class="testimonial-card__stars" aria-label="5 de 5 estrellas">
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="testimonial-card__star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testimonial-card__text">"El control de flujo es ideal para no desperdiciar pintura. La uso para muebles, paredes, incluso metal. Recomendadísima."</blockquote>
+                <p class="testimonial-card__author">Luis · Madrid, España</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specs Accordion -->
     <section class="section section--white" id="specs" aria-label="Especificaciones técnicas">
       <div class="container">
         <p class="section__label section__title--center">Especificaciones</p>
-        <h2 class="section__title section__title--center">Diseñada para rendir.</h2>
-        <p class="section__subtitle section__subtitle--center">Cada detalle cuenta. PaintPro está construida con componentes de alto rendimiento.</p>
-        <div class="specs-grid">
-          <div class="spec-item reveal">
-            <p class="spec-item__label">Motor</p>
-            <p class="spec-item__value">150W</p>
-          </div>
-          <div class="spec-item reveal">
-            <p class="spec-item__label">Batería</p>
-            <p class="spec-item__value">36V</p>
-          </div>
-          <div class="spec-item reveal">
-            <p class="spec-item__label">Capacidad</p>
-            <p class="spec-item__value">800ml</p>
-          </div>
-          <div class="spec-item reveal">
-            <p class="spec-item__label">Peso</p>
-            <p class="spec-item__value">1.2kg</p>
-          </div>
-          <div class="spec-item reveal">
-            <p class="spec-item__label">Compatibilidad</p>
-            <p class="spec-item__value">Makita</p>
-          </div>
+        <h2 class="section__title section__title--center">Pequeña en tamaño. Grande en prestaciones.</h2>
+        <div class="mt-40" style="max-width:600px;margin-left:auto;margin-right:auto;">
+          <details class="faq-item">
+            <summary class="faq-item__question">Potencia y rendimiento</summary>
+            <div class="faq-item__answer">
+              <p>Motor de alto rendimiento con control de flujo continuo. Regulación precisa del caudal de pintura para adaptarse a cada superficie y tipo de proyecto.</p>
+              <ul style="margin-top:8px;padding-left:20px;color:#6e6e73;font-size:14px;line-height:1.8;">
+                <li>Potencia: 400W</li>
+                <li>Caudal ajustable: 0-800 ml/min</li>
+                <li>Viscosidad máxima: 150 KU</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Batería y autonomía</summary>
+            <div class="faq-item__answer">
+              <p>Batería de iones de litio recargable con autonomía suficiente para proyectos completos. Carga rápida vía USB-C.</p>
+              <ul style="margin-top:8px;padding-left:20px;color:#6e6e73;font-size:14px;line-height:1.8;">
+                <li>Capacidad: 4000mAh</li>
+                <li>Autonomía: 45-60 min continuos</li>
+                <li>Tiempo de carga: 2 horas</li>
+                <li>Carga vía USB-C</li>
+              </ul>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__question">Diseño y dimensiones</summary>
+            <div class="faq-item__answer">
+              <p>Diseño ergonómico para uso prolongado sin fatiga. Ligera y equilibrada para alcanzar cualquier ángulo con comodidad.</p>
+              <ul style="margin-top:8px;padding-left:20px;color:#6e6e73;font-size:14px;line-height:1.8;">
+                <li>Peso: 1.2 kg</li>
+                <li>Dimensiones: 28 x 12 x 25 cm</li>
+                <li>Capacidad del depósito: 800 ml</li>
+                <li>Incluye: 3 boquillas, cepillo de limpieza, cargador USB-C</li>
+              </ul>
+            </div>
+          </details>
         </div>
       </div>
     </section>
 
-    <section class="section section--dark" id="gallery" aria-label="Galería">
+    <!-- CTA Final -->
+    <section class="section section--dark cta-final" id="cta" aria-label="Compra ahora">
       <div class="container">
-        <p class="section__label">Galería</p>
-        <h2 class="section__title">Así se ve la potencia.</h2>
-        <p class="section__subtitle">Diseño industrial pensado para el rendimiento y la durabilidad.</p>
-        <div class="gallery-grid">
-          <div class="gallery-item reveal">
-            <img src="images/hastahoy.webp" alt="PaintPro — diseño ergonómico para máximo confort" loading="lazy" class="gallery-item__img" width="400" height="400">
-            <p class="gallery-item__label">Diseño premium</p>
-          </div>
-          <div class="gallery-item reveal">
-            <img src="images/thc_3.webp" alt="PaintPro — control de flujo ajustable" loading="lazy" class="gallery-item__img" width="400" height="400">
-            <p class="gallery-item__label">Control de flujo</p>
-          </div>
-          <div class="gallery-item reveal">
-            <img src="images/superficies.webp" alt="PaintPro — superficies: madera, paredes, metal, vidrio" loading="lazy" class="gallery-item__img" width="400" height="400">
-            <p class="gallery-item__label">Todas las superficies</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--dark cta-final" id="cta" aria-label="Compra PaintPro">
-      <div class="container">
-        <p class="section__label">Oferta</p>
-        <h2 class="cta-final__title">Transforma cualquier superficie.</h2>
-        <p class="cta-final__subtitle">Precio especial de lanzamiento. Calidad profesional al alcance de tu mano.</p>
+        <p class="section__label">Oferta por tiempo limitado</p>
+        <h2 class="cta-final__title">Tu próximo proyecto merece PaintPro™.</h2>
+        <p class="cta-final__subtitle">Únete a miles de profesionales que ya transforman sus espacios con resultados que hablan por sí solos.</p>
         <div class="cta-final__price">
           <span class="cta-final__price-current">€69,90</span>
           <span class="cta-final__price-original">€102,90</span>
         </div>
         <div class="cta-final__badge">32% OFF</div>
+        <div class="urgency-timer">
+          <svg class="urgency-timer__clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Oferta termina en: </span>
+          <span class="urgency-timer__hours">48</span>:<span class="urgency-timer__mins">00</span>:<span class="urgency-timer__secs">00</span>
+        </div>
         <div>
-          <a href="#" class="btn btn--trust">COMPRAR AHORA</a>
+          <a href="#" class="btn btn--trust">COMPRAR AHORA — ENVÍO 24-48H</a>
         </div>
         <div class="cta-final__trust">
           <span class="cta-final__trust-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Envío 24-48h
-          </span>
-          <span class="cta-final__trust-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
             Pago contra entrega
           </span>
           <span class="cta-final__trust-item">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Garantía incluida
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Envío gratis
+          </span>
+          <span class="cta-final__trust-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Garantía 30 días
           </span>
         </div>
       </div>
@@ -183,14 +397,13 @@
         <h3 class="footer__column-title">Producto</h3>
         <ul class="footer__column-list">
           <li><a href="producto.html" class="footer__column-link">PaintPro</a></li>
-          <li><a href="producto.html#specs" class="footer__column-link">Especificaciones</a></li>
+          <li><a href="#specs" class="footer__column-link">Especificaciones</a></li>
         </ul>
       </div>
       <div class="footer__column">
         <h3 class="footer__column-title">Empresa</h3>
         <ul class="footer__column-list">
           <li><a href="sobre.html" class="footer__column-link">Sobre AltaPro</a></li>
-          <li><a href="#" class="footer__column-link">Blog</a></li>
         </ul>
       </div>
       <div class="footer__column">
@@ -198,7 +411,6 @@
         <ul class="footer__column-list">
           <li><a href="faq.html" class="footer__column-link">FAQ</a></li>
           <li><a href="contacto.html" class="footer__column-link">Contacto</a></li>
-          <li><a href="contacto.html" class="footer__column-link">WhatsApp</a></li>
         </ul>
       </div>
       <div class="footer__column">

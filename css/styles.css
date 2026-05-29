@@ -927,3 +927,516 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   margin-bottom: 4px;
 }
 .values-item__text { color: var(--text-secondary); font-size: 0.938rem; line-height: 1.6; }
+
+/* ==========================================
+   BRAND OVERHAUL v3 — New Components
+   ========================================== */
+
+/* --- Pain/Solution Comparison Cards --- */
+.pain-solution {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.pain-solution__card {
+  background: var(--bg-secondary, #f5f5f7);
+  border: 1px solid #e8e8ed;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+}
+.pain-solution__card--pain {
+  background: #fff5f5;
+  border-color: #ffd4d4;
+}
+.pain-solution__card--solution {
+  background: #f0fff4;
+  border-color: #b2f5c0;
+}
+.pain-solution__icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+}
+.pain-solution__card--pain .pain-solution__icon {
+  stroke: #e53e3e;
+}
+.pain-solution__card--solution .pain-solution__icon {
+  stroke: #2ecc71;
+}
+.pain-solution__label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.pain-solution__card--pain .pain-solution__label {
+  color: #e53e3e;
+}
+.pain-solution__card--solution .pain-solution__label {
+  color: #2ecc71;
+}
+.pain-solution__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #1d1d1f;
+}
+.pain-solution__text {
+  font-size: 14px;
+  color: #6e6e73;
+  line-height: 1.5;
+}
+.pain-solution__vs {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e94560;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 8px;
+}
+
+@media (max-width: 768px) {
+  .pain-solution {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .pain-solution__vs {
+    text-align: center;
+    padding: 8px 0;
+  }
+}
+
+/* --- Comparison Slider (Before/After) --- */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.comparison-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #e8e8ed;
+  background: #fff;
+  cursor: ew-resize;
+  aspect-ratio: 3 / 2;
+}
+.comparison-slider__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.comparison-slider__img--after {
+  clip-path: inset(0 50% 0 0);
+}
+.comparison-slider__img--before {
+  clip-path: inset(0 0 0 50%);
+}
+.comparison-slider__handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #fff;
+  transform: translateX(-2px);
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+.comparison-slider__label {
+  position: absolute;
+  top: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  z-index: 3;
+  pointer-events: none;
+}
+.comparison-slider__label--before {
+  left: 12px;
+  background: rgba(0,0,0,0.6);
+}
+.comparison-slider__label--after {
+  right: 12px;
+  background: #2ecc71;
+}
+.comparison-slider__caption {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #1d1d1f;
+}
+
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* --- Video Grid 2x2 --- */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.video-grid__item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e8e8ed;
+  background: #1d1d1f;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.video-grid__item:hover {
+  transform: scale(1.02);
+}
+.video-grid__thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.video-grid__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+.video-grid__item:hover .video-grid__play {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.video-grid__play svg {
+  width: 20px;
+  height: 20px;
+  fill: #1d1d1f;
+  margin-left: 3px;
+}
+.video-grid__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 2;
+}
+.video-grid__video {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-grid__item--playing .video-grid__thumbnail,
+.video-grid__item--playing .video-grid__play {
+  display: none;
+}
+.video-grid__item--playing .video-grid__video {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Testimonials with Photos --- */
+.testimonials-grid--with-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.testimonial-card--photo {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #e8e8ed;
+  border-radius: 16px;
+  padding: 24px;
+}
+.testimonial-card__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.testimonial-card__body {
+  flex: 1;
+}
+.testimonial-card__stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+.testimonial-card__star {
+  width: 14px;
+  height: 14px;
+  color: #f59e0b;
+}
+.testimonial-card__text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+.testimonial-card__author {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6e6e73;
+}
+
+@media (max-width: 640px) {
+  .testimonials-grid--with-photos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Urgency / Stats Bar --- */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.stats-bar__number {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1d1d1f;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stats-bar__label {
+  font-size: 12px;
+  color: #6e6e73;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Story Section --- */
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.story__content {
+  max-width: 420px;
+}
+.story__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e94560;
+  margin-bottom: 12px;
+}
+.story__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1d1d1f;
+  margin-bottom: 16px;
+}
+.story__text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #6e6e73;
+  margin-bottom: 16px;
+}
+.story__image {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #e8e8ed;
+}
+
+@media (max-width: 768px) {
+  .story {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .story__content {
+    max-width: 100%;
+  }
+}
+
+/* --- Product Grid (Homepage) --- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.product-card {
+  background: #fff;
+  border: 1px solid #e8e8ed;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: #d2d2d7;
+}
+.product-card__img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin: 0 auto 16px;
+  border-radius: 12px;
+}
+.product-card__badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.product-card__badge--hot {
+  background: #e94560;
+  color: #fff;
+}
+.product-card__badge--soon {
+  background: #e8e8ed;
+  color: #6e6e73;
+}
+.product-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+}
+.product-card__desc {
+  font-size: 14px;
+  color: #6e6e73;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.product-card__price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 16px;
+}
+.product-card__price-original {
+  font-size: 14px;
+  color: #6e6e73;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+.product-card--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.product-card--disabled:hover {
+  transform: none;
+}
+
+/* --- Product Hero (Landing Page) --- */
+.hero--product {
+  padding: 120px 0 60px;
+}
+.hero--product .hero--split {
+  align-items: center;
+}
+.hero__video {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #e8e8ed;
+}
+.hero__pain-headline {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e94560;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.hero__headline--product {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.hero__subheadline--product {
+  font-size: 18px;
+  color: #a1a1a6;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .hero__headline--product {
+    font-size: 28px;
+  }
+}
+
+/* --- Urgency Timer --- */
+.urgency-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #fff5f5;
+  border: 1px solid #ffd4d4;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e53e3e;
+  margin-bottom: 16px;
+}
+.urgency-timer__clock {
+  width: 16px;
+  height: 16px;
+}
