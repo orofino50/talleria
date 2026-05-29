@@ -1469,7 +1469,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .sticky-media__section.is-active .sticky-media__stat:nth-child(4) { transition-delay: 0.36s; }
 
 .sticky-media__stat-value {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
   color: #1d1d1f;
   line-height: 1;
@@ -1477,18 +1477,18 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .sticky-media__stat-unit {
-  font-size: 14px;
-  font-weight: 600;
-  color: #6e6e73;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8e8e93;
   margin-left: 2px;
 }
 
 .sticky-media__stat-label {
-  font-size: 11px;
-  font-weight: 600;
-  color: #6e6e73;
+  font-size: 10px;
+  font-weight: 500;
+  color: #8e8e93;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   display: block;
   margin-top: 2px;
 }
@@ -2007,11 +2007,40 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 
 .sticky-media__section {
   margin-bottom: 60px;
-  padding: 24px 0;
+  padding: 40px 32px;
+  border-radius: var(--radius-card);
+  transition: background 0.4s ease;
+}
+
+.sticky-media__section:nth-child(odd) {
+  background: transparent;
+}
+
+.sticky-media__section:nth-child(even) {
+  background: #f0f0f2;
 }
 
 .sticky-media__section:last-child {
   margin-bottom: 0;
+}
+
+/* Staggered entrance animations */
+.sticky-media__label,
+.sticky-media__title,
+.sticky-media__text,
+.sticky-media__stats,
+.sticky-media__stars,
+.sticky-media__attribution {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.sticky-media__section .stagger-enter {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--stagger-i, 0) * 80ms);
 }
 
 .sticky-media__label {
@@ -2036,42 +2065,44 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   color: #6e6e73;
 }
 
+/* Testimonial sections */
+.sticky-media__section[data-section="augusto"],
+.sticky-media__section[data-section="luis"],
+.sticky-media__section[data-section="carlos"] {
+  text-align: center;
+  padding: 48px 32px;
+  margin-bottom: 40px;
+  background: #fff !important;
+  border: 1px solid var(--border-light);
+}
+
+.sticky-media__stars {
+  font-size: 1.25rem;
+  letter-spacing: 4px;
+  color: #f5a623;
+  margin-bottom: 16px;
+}
+
+.sticky-media__section[data-section="augusto"] .sticky-media__title,
+.sticky-media__section[data-section="luis"] .sticky-media__title,
+.sticky-media__section[data-section="carlos"] .sticky-media__title {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  color: var(--accent);
+}
+
 .sticky-media__section[data-section="augusto"] .sticky-media__text,
 .sticky-media__section[data-section="luis"] .sticky-media__text,
 .sticky-media__section[data-section="carlos"] .sticky-media__text {
-  font-size: 1.125rem;
-  color: #1d1d1f;
-  background: #fff;
-  padding: 28px 24px 24px 28px;
-  border-radius: var(--radius-card);
-  border: 1px solid var(--border-light);
-  position: relative;
-  margin-top: 16px;
+  font-size: 1rem;
+  color: #6e6e73;
+  margin-top: 12px;
 }
 
-.sticky-media__section[data-section="augusto"] .sticky-media__text::before,
-.sticky-media__section[data-section="luis"] .sticky-media__text::before,
-.sticky-media__section[data-section="carlos"] .sticky-media__text::before {
-  content: '"';
-  font-size: 3.5rem;
-  line-height: 0;
-  color: var(--accent);
-  position: absolute;
-  top: 32px;
-  left: 16px;
-  opacity: 0.25;
-  font-family: Georgia, serif;
-}
-
-.sticky-media__section[data-section="augusto"] .sticky-media__title::after,
-.sticky-media__section[data-section="luis"] .sticky-media__title::after,
-.sticky-media__section[data-section="carlos"] .sticky-media__title::after {
-  content: ' ★★★★★';
-  display: block;
+.sticky-media__attribution {
   font-size: 0.875rem;
-  color: #f5a623;
+  font-weight: 600;
+  color: #1d1d1f;
   margin-top: 8px;
-  letter-spacing: 2px;
 }
 
 /* --- D. Paint Reveal --- */

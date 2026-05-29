@@ -287,7 +287,7 @@ document.querySelectorAll('.comparison-slider').forEach(function(slider) {
 (function() {
   'use strict';
 
-  // 1. Continuous Sticky Media Transition (scroll-progress based)
+  // 1. Continuous Sticky Media Transition — staggered element reveal
   var stickySections = document.querySelectorAll('.sticky-media__section');
   var stickyImages = document.querySelectorAll('.sticky-media__image');
 
@@ -297,24 +297,39 @@ document.querySelectorAll('.comparison-slider').forEach(function(slider) {
         var section = entry.target;
         var sectionId = section.getAttribute('data-section');
         var ratio = entry.intersectionRatio;
-
-        // Set section opacity based on intersection ratio (peaks at 50%)
-        var opacity = Math.min(1, ratio * 2);
-        section.style.opacity = opacity;
-
-        // Smoothly scale active image — slight parallax feel
         var img = document.querySelector('.sticky-media__image[data-section="' + sectionId + '"]');
-        if (img && opacity < 1) {
-          img.style.transform = 'scale(' + (0.96 + opacity * 0.04) + ')';
+
+        // Image parallax scale (scroll-driven)
+        if (img && ratio > 0 && ratio < 0.6) {
+          img.style.transform = 'scale(' + (0.96 + ratio * 0.06) + ')';
+        } else if (img) {
+          img.style.transform = 'scale(1)';
         }
 
-        // Activate image when section is most visible (ratio > 0.35)
+        // Activate section when crossing threshold
         if (ratio > 0.35) {
-          stickyImages.forEach(function(img) { img.classList.remove('is-active'); });
+          var wasInactive = !section.classList.contains('is-active');
+          stickyImages.forEach(function(i) { i.classList.remove('is-active'); });
           stickySections.forEach(function(s) { s.classList.remove('is-active'); });
-          var activeImg = document.querySelector('.sticky-media__image[data-section="' + sectionId + '"]');
-          if (activeImg) activeImg.classList.add('is-active');
+          if (img) img.classList.add('is-active');
           section.classList.add('is-active');
+
+          // Trigger stagger animation on first activation
+          if (wasInactive) {
+            var kids = section.querySelectorAll('.sticky-media__label, .sticky-media__title, .sticky-media__text, .sticky-media__stats, .sticky-media__stars, .sticky-media__attribution');
+            kids.forEach(function(k, i) {
+              k.classList.add('stagger-enter');
+              k.style.setProperty('--stagger-i', i);
+            });
+          }
+        } else if (section.classList.contains('is-active')) {
+          // Reset stagger when leaving
+          var kids = section.querySelectorAll('.sticky-media__label, .sticky-media__title, .sticky-media__text, .sticky-media__stats, .sticky-media__stars, .sticky-media__attribution');
+          kids.forEach(function(k) {
+            k.classList.remove('stagger-enter');
+            k.style.removeProperty('--stagger-i');
+          });
+          section.classList.remove('is-active');
         }
       });
     }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] });
