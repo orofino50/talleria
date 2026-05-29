@@ -41,9 +41,9 @@
 
   <nav class="product-nav" aria-label="Producto">
     <div class="product-nav__inner">
-      <a href="producto.html" class="product-nav__name">PaintPro™</a>
+      <a href="producto.html" class="product-nav__name" aria-current="page">PaintPro™</a>
       <ul class="product-nav__links">
-        <li><a href="#" class="product-nav__link">Visión general</a></li>
+        <li><a href="#hero" class="product-nav__link">Visión general</a></li>
         <li><a href="#specs" class="product-nav__link">Especificaciones</a></li>
         <li><a href="#cta-final" class="product-nav__link">Comprar</a></li>
       </ul>
@@ -54,7 +54,7 @@
   <main id="main">
 
     <!-- HERO (com classe 3D) -->
-    <section class="hero--apple is-3d">
+    <section class="hero--apple is-3d" id="hero" data-nav="hero">
       <img src="images/alsavo-1.webp" alt="PaintPro — pistola pulverizadora inalámbrica" class="hero--apple__bg" fetchpriority="high">
       <div class="hero--apple__overlay"></div>
       <div class="hero--apple__content">
@@ -63,17 +63,17 @@
           Nuevo
         </div>
         <h1 class="hero--apple__headline">PaintPro.<br>Acabado profesional.</h1>
-        <p class="hero--apple__subheadline">Pinta madera, paredes, metal y vidrio con un solo dispositivo. Sin compresor, sin cables, sin complicaciones. Resultados de taller desde tu casa.</p>
+        <p class="hero--apple__subheadline">Pinta madera, paredes, metal y vidrio con un solo dispositivo. Resultados de taller desde casa.</p>
         <div class="hero--apple__actions">
           <a href="#cta-final" class="btn btn--accent">Comprar ahora →</a>
           <a href="#diseno" class="btn btn--outline-light">Ver en detalle</a>
         </div>
-        <p class="hero--apple__price">desde <strong>€69,90</strong> <s>€102,90</s></p>
+        <p class="hero--apple__price"><strong>€69,90</strong> <s>€102,90</s></p>
       </div>
     </section>
 
     <!-- STICKY MEDIA ENRIQUECIDO — 8 panels + stats badges -->
-    <section class="sticky-media" id="diseno">
+    <section class="sticky-media" id="diseno" data-nav="diseno">
       <div class="sticky-media__visual">
         <div class="sticky-media__stack">
           <img src="images/alsavo-1.webp" alt="PaintPro diseño" class="sticky-media__image is-active" data-section="design" loading="lazy">
@@ -341,7 +341,7 @@
     </section>
 
     <!-- SPECS -->
-    <section class="section section--blend section--flow" id="specs">
+    <section class="section section--blend section--flow" id="specs" data-nav="specs">
       <div class="container">
         <p class="section__label">Especificaciones</p>
         <h2 class="sticky-media__title">Pequeña en tamaño.<br>Grande en prestaciones.</h2>
@@ -385,35 +385,16 @@
 
     <!-- CTA -->
     <section class="apple-cta section--flow" id="cta-final">
-      <div class="apple-cta__badge">Oferta por tiempo limitado</div>
+
       <h2 class="apple-cta__title">Tu proyecto merece<br>PaintPro™.</h2>
       <p class="apple-cta__subtitle">Únete a miles de personas que ya obtienen resultados profesionales desde casa.</p>
       <div class="apple-cta__price">
         <span class="apple-cta__price-current">€69,90</span>
         <span class="apple-cta__price-original">€102,90</span>
       </div>
-      <p class="apple-cta__savings">Ahorras €33 — 32% OFF</p>
-      <div class="apple-cta__timer">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span>Oferta termina en: <strong>48:00:00</strong></span>
-      </div>
-      <div style="margin-bottom:16px;">
-        <a href="https://lapurasalud.com/products/pistola-paintpro" class="btn btn--trust">COMPRAR AHORA — ENVÍO 24-48H</a>
-      </div>
-      <div class="apple-cta__trust">
-        <span class="apple-cta__trust-item">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          Pago contra entrega
-        </span>
-        <span class="apple-cta__trust-item">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          Envío gratis
-        </span>
-        <span class="apple-cta__trust-item">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          Garantía 30 días
-        </span>
-      </div>
+
+      <a href="https://lapurasalud.com/products/pistola-paintpro" class="btn btn--trust">Comprar PaintPro — Envío gratis</a>
+
     </section>
   </main>
 

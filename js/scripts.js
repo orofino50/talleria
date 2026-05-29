@@ -148,30 +148,6 @@ document.querySelectorAll('.comparison-slider').forEach(function(slider) {
   });
 });
 
-// Urgency timer countdown (48h from page load)
-document.querySelectorAll('.urgency-timer').forEach(function(timer) {
-  var hoursSpan = timer.querySelector('.urgency-timer__hours');
-  var minsSpan = timer.querySelector('.urgency-timer__mins');
-  var secsSpan = timer.querySelector('.urgency-timer__secs');
-  if (!hoursSpan || !minsSpan || !secsSpan) return;
-
-  var end = new Date();
-  end.setHours(end.getHours() + 48);
-
-  function update() {
-    var diff = end - new Date();
-    if (diff <= 0) { timer.textContent = 'Oferta finalizada'; return; }
-    var h = Math.floor(diff / 3600000);
-    var m = Math.floor((diff % 3600000) / 60000);
-    var s = Math.floor((diff % 60000) / 1000);
-    hoursSpan.textContent = String(h).padStart(2, '0');
-    minsSpan.textContent = String(m).padStart(2, '0');
-    secsSpan.textContent = String(s).padStart(2, '0');
-  }
-  update();
-  setInterval(update, 1000);
-});
-
 /* ==========================================
    APPLE-STYLE LANDING PAGE — Interactions
    ========================================== */
@@ -280,34 +256,6 @@ document.querySelectorAll('.urgency-timer').forEach(function(timer) {
     revealObserver.observe(paintReveal);
   }
 
-  // 3. CTA Timer — dynamic countdown
-  var ctaTimer = document.querySelector('.apple-cta__timer');
-  if (ctaTimer) {
-    var timerSpan = ctaTimer.querySelector('strong');
-    if (timerSpan) {
-      var endTime = new Date();
-      endTime.setHours(endTime.getHours() + 48);
-
-      function updateTimer() {
-        var diff = endTime - new Date();
-        if (diff <= 0) {
-          timerSpan.textContent = 'Oferta finalizada';
-          return;
-        }
-        var h = Math.floor(diff / 3600000);
-        var m = Math.floor((diff % 3600000) / 60000);
-        var s = Math.floor((diff % 60000) / 1000);
-        timerSpan.textContent =
-          String(h).padStart(2, '0') + ':' +
-          String(m).padStart(2, '0') + ':' +
-          String(s).padStart(2, '0');
-      }
-
-      updateTimer();
-      setInterval(updateTimer, 1000);
-    }
-  }
-
   // 4. Gallery items — reveal on scroll
   var galleryItems = document.querySelectorAll('.gallery-apps__item');
 
@@ -388,9 +336,22 @@ document.querySelectorAll('.urgency-timer').forEach(function(timer) {
       });
 
       card.addEventListener('keydown', function(e) {
+        var cards = Array.from(tabCards);
+        var idx = cards.indexOf(this);
+        
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           this.click();
+        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          var nextIdx = (idx + 1) % cards.length;
+          cards[nextIdx].click();
+          cards[nextIdx].focus();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          var prevIdx = (idx - 1 + cards.length) % cards.length;
+          cards[prevIdx].click();
+          cards[prevIdx].focus();
         }
       });
     });
@@ -453,6 +414,36 @@ document.querySelectorAll('.urgency-timer').forEach(function(timer) {
 
     var whyBuySection = document.querySelector('.whybuy');
     if (whyBuySection) whyBuyObserver.observe(whyBuySection);
+  }
+
+  // 5. Scroll-spy for product nav
+  var navLinks = document.querySelectorAll('.product-nav__link');
+  var navSections = document.querySelectorAll('[data-nav]');
+
+  if (navLinks.length && navSections.length) {
+    var spyObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var sectionId = entry.target.getAttribute('data-nav');
+          navLinks.forEach(function(link) {
+            link.removeAttribute('aria-current');
+            link.style.fontWeight = '';
+          });
+          var activeLink = document.querySelector('.product-nav__link[href="#' + sectionId + '"]');
+          if (activeLink) {
+            activeLink.setAttribute('aria-current', 'section');
+            activeLink.style.fontWeight = '700';
+          }
+          // Also update product-nav name for hero
+          var navName = document.querySelector('.product-nav__name');
+          if (sectionId === 'hero' && navName) {
+            navName.textContent = 'PaintPro™';
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    navSections.forEach(function(s) { spyObserver.observe(s); });
   }
 
 })();
