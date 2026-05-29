@@ -79,74 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/* ==========================================
-   BRAND OVERHAUL v3 — Interactions
-   ========================================== */
 
-// Video grid click-to-play
-document.querySelectorAll('.video-grid__item').forEach(function(item) {
-  item.addEventListener('click', function() {
-    var video = this.querySelector('.video-grid__video');
-    if (this.classList.contains('video-grid__item--playing')) {
-      video.pause();
-      video.currentTime = 0;
-      this.classList.remove('video-grid__item--playing');
-    } else {
-      document.querySelectorAll('.video-grid__item--playing').forEach(function(p) {
-        p.querySelector('.video-grid__video').pause();
-        p.querySelector('.video-grid__video').currentTime = 0;
-        p.classList.remove('video-grid__item--playing');
-      });
-      video.play();
-      this.classList.add('video-grid__item--playing');
-    }
-  });
-});
-
-// Comparison slider drag-to-compare
-document.querySelectorAll('.comparison-slider').forEach(function(slider) {
-  var beforeImg = slider.querySelector('.comparison-slider__img--before');
-  var afterImg = slider.querySelector('.comparison-slider__img--after');
-  var handle = slider.querySelector('.comparison-slider__handle');
-
-  function setPosition(x) {
-    var rect = slider.getBoundingClientRect();
-    var pos = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
-    var pct = pos * 100;
-    afterImg.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
-    beforeImg.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
-    if (handle) {
-      handle.style.left = pct + '%';
-    }
-  }
-
-  function onMove(e) {
-    var clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    setPosition(clientX);
-  }
-
-  slider.addEventListener('mousedown', function(e) {
-    onMove(e);
-    function onMouseMove(ev) { onMove(ev); }
-    function onMouseUp() {
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseup', onMouseUp);
-    }
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', onMouseUp);
-  });
-
-  slider.addEventListener('touchstart', function(e) {
-    onMove(e);
-    function onTouchMove(ev) { onMove(ev); }
-    function onTouchEnd() {
-      slider.removeEventListener('touchmove', onTouchMove);
-      slider.removeEventListener('touchend', onTouchEnd);
-    }
-    slider.addEventListener('touchmove', onTouchMove);
-    slider.addEventListener('touchend', onTouchEnd);
-  });
-});
 
 /* ==========================================
    APPLE-STYLE LANDING PAGE — Interactions
@@ -173,45 +106,7 @@ document.querySelectorAll('.comparison-slider').forEach(function(slider) {
     updateNav();
   }
 
-  // 2. Sticky Media Image + Section Swap
-  var visual = document.querySelector('.sticky-media__visual');
-  var sections = document.querySelectorAll('.sticky-media__section');
-  var images = document.querySelectorAll('.sticky-media__image');
 
-  if (sections.length && images.length) {
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var sectionId = entry.target.getAttribute('data-section');
-          // Deactivate all sections and images
-          sections.forEach(function(s) { s.classList.remove('is-active'); });
-          images.forEach(function(img) { img.classList.remove('is-active'); });
-          // Activate matching section and image
-          var activeSection = document.querySelector('.sticky-media__section[data-section="' + sectionId + '"]');
-          var activeImage = document.querySelector('.sticky-media__image[data-section="' + sectionId + '"]');
-          if (activeSection) activeSection.classList.add('is-active');
-          if (activeImage) activeImage.classList.add('is-active');
-        }
-      });
-    }, { threshold: 0.45 });
-
-    sections.forEach(function(s) { observer.observe(s); });
-  }
-
-  // 3. Sticky media height fix for mobile
-  if (visual) {
-    function fixStickyHeight() {
-      if (window.innerWidth <= 768) {
-        visual.style.position = 'relative';
-        visual.style.height = 'auto';
-      } else {
-        visual.style.position = '';
-        visual.style.height = '';
-      }
-    }
-    window.addEventListener('resize', fixStickyHeight);
-    fixStickyHeight();
-  }
 
 })();
 
@@ -222,24 +117,7 @@ document.querySelectorAll('.comparison-slider').forEach(function(slider) {
 (function() {
   'use strict';
 
-  // 1. Testimonial Scroll — fade in/out on scroll
-  var testimonialItems = document.querySelectorAll('.testimonial-scroll__item');
 
-  if (testimonialItems.length) {
-    var testimonialObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        } else {
-          entry.target.classList.remove('is-visible');
-        }
-      });
-    }, { threshold: 0.4 });
-
-    testimonialItems.forEach(function(item) {
-      testimonialObserver.observe(item);
-    });
-  }
 
   // 2. Paint Reveal — trigger clip-path animation on scroll
   var paintReveal = document.querySelector('.paint-reveal');
@@ -256,27 +134,7 @@ document.querySelectorAll('.comparison-slider').forEach(function(slider) {
     revealObserver.observe(paintReveal);
   }
 
-  // 4. Gallery items — reveal on scroll
-  var galleryItems = document.querySelectorAll('.gallery-apps__item');
 
-  if (galleryItems.length) {
-    var galleryObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0) scale(1)';
-          galleryObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    galleryItems.forEach(function(item) {
-      item.style.opacity = '0';
-      item.style.transform = 'translateY(20px) scale(0.97)';
-      item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      galleryObserver.observe(item);
-    });
-  }
 
 })();
 
