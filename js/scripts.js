@@ -377,12 +377,21 @@ document.querySelectorAll('.urgency-timer').forEach(function(timer) {
       card.addEventListener('click', function() {
         var highlight = this.getAttribute('data-highlight');
 
-        tabCards.forEach(function(c) { c.classList.remove('is-active'); });
+        tabCards.forEach(function(c) { c.classList.remove('is-active'); c.setAttribute('aria-selected', 'false'); c.setAttribute('tabindex', '-1'); });
         tabImages.forEach(function(img) { img.classList.remove('is-active'); });
 
         this.classList.add('is-active');
+        this.setAttribute('aria-selected', 'true');
+        this.setAttribute('tabindex', '0');
         var activeImg = document.querySelector('.highlights--tabs .highlights__img[data-highlight="' + highlight + '"]');
         if (activeImg) activeImg.classList.add('is-active');
+      });
+
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
       });
     });
   }
@@ -391,6 +400,9 @@ document.querySelectorAll('.urgency-timer').forEach(function(timer) {
   var hero3d = document.querySelector('.hero--apple');
 
   if (hero3d) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
     hero3d.classList.add('is-3d');
 
     hero3d.addEventListener('mousemove', function(e) {
@@ -422,7 +434,6 @@ document.querySelectorAll('.urgency-timer').forEach(function(timer) {
     whyBuyCards.forEach(function(card) {
       card.style.opacity = '0';
       card.style.transform = 'translateY(20px)';
-      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
 
     var whyBuyObserver = new IntersectionObserver(function(entries) {
