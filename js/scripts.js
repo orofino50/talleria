@@ -147,11 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Continuous Sticky Media Transition — staggered element reveal + 360 spin
   var stickySections = document.querySelectorAll('.sticky-media__section');
-  var stickySpinFrame = document.getElementById('spin-frame-sticky');
   var stickyMedia = document.querySelector('.sticky-media');
 
-  if (stickySections.length && stickySpinFrame && stickyMedia) {
+  if (stickySections.length && stickyMedia) {
     var SPIN_TOTAL = 8;
+    var frameA = document.getElementById('spin-frame-a');
+    var frameB = document.getElementById('spin-frame-b');
     // Preload 8 spin frames
     for (var si = 0; si < SPIN_TOTAL; si++) {
       var snum = (si + 1).toString().padStart(2, '0');
@@ -161,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var currentFrame = -1;
     var scrollTicking = false;
+    var activeImg = frameA;
 
     function setFrame(idx) {
       idx = Math.round(idx);
@@ -168,7 +170,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (idx === currentFrame) return;
       currentFrame = idx;
       var num = (idx + 1).toString().padStart(2, '0');
-      stickySpinFrame.src = 'images/spin-' + num + '.webp';
+      var inactiveImg = (activeImg === frameA) ? frameB : frameA;
+      inactiveImg.src = 'images/spin-' + num + '.webp';
+      activeImg.style.opacity = '0';
+      inactiveImg.style.opacity = '1';
+      activeImg = inactiveImg;
     }
 
     // Smooth scroll-driven rotation
