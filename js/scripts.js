@@ -164,16 +164,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Lazy-load spin frames when showcase enters viewport
+  // Lazy-load spin frames when any viewer enters viewport
   var productSpin = document.getElementById('product-spin');
-  if (productSpin && 'IntersectionObserver' in window) {
+  var spinMobile = document.getElementById('spin-mobile');
+  var spinTargets = [productSpin, spinMobile].filter(Boolean);
+
+  if (spinTargets.length && 'IntersectionObserver' in window) {
     var spinObserver = new IntersectionObserver(function(entries) {
       if (entries[0].isIntersecting) {
         preloadSpinFrames();
         spinObserver.disconnect();
       }
     }, { rootMargin: '200px' });
-    spinObserver.observe(productSpin);
+    spinTargets.forEach(function(el) { spinObserver.observe(el); });
   } else {
     preloadSpinFrames();
   }
@@ -197,37 +200,40 @@ document.addEventListener('DOMContentLoaded', () => {
     activeImg = inactiveImg;
   }
 
-  // Touch-driven rotation
-  var touchLastX = 0;
-  var touchSpinProgress = 0;
+  // Touch-driven rotation — reusable for any viewer
+  function setupTouchSpin(viewer) {
+    if (!viewer) return;
+    var lastX = 0;
+    var progress = 0;
 
-  if (productSpin) {
-    productSpin.addEventListener('touchstart', function(e) {
-      touchLastX = e.touches[0].clientX;
-      touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
+    viewer.addEventListener('touchstart', function(e) {
+      lastX = e.touches[0].clientX;
+      progress = currentFrame / (SPIN_TOTAL - 1) || 0;
     }, { passive: true });
 
-    productSpin.addEventListener('touchmove', function(e) {
-      var dx = e.touches[0].clientX - touchLastX;
-      touchLastX = e.touches[0].clientX;
-      var viewW = productSpin.offsetWidth;
-      touchSpinProgress += dx / (viewW * 0.6);
-      touchSpinProgress = Math.max(0, Math.min(1, touchSpinProgress));
-      setFrame(touchSpinProgress * (SPIN_TOTAL - 1));
+    viewer.addEventListener('touchmove', function(e) {
+      var dx = e.touches[0].clientX - lastX;
+      lastX = e.touches[0].clientX;
+      var viewW = viewer.offsetWidth;
+      progress += dx / (viewW * 0.6);
+      progress = Math.max(0, Math.min(1, progress));
+      setFrame(progress * (SPIN_TOTAL - 1));
     }, { passive: true });
 
-    productSpin.addEventListener('touchend', function() {
-      touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
+    viewer.addEventListener('touchend', function() {
+      progress = currentFrame / (SPIN_TOTAL - 1) || 0;
     }, { passive: true });
 
-    // Hide scroll hint after first interaction
-    var hint = productSpin.querySelector('.spin-360__scroll-hint');
+    var hint = viewer.querySelector('.spin-360__scroll-hint');
     if (hint) {
-      productSpin.addEventListener('touchstart', function() {
+      viewer.addEventListener('touchstart', function() {
         hint.classList.add('is-hidden');
       }, { once: true, passive: true });
     }
   }
+
+  setupTouchSpin(productSpin);
+  setupTouchSpin(document.getElementById('spin-mobile'));
 
   // Simple reveal on scroll for showcase sections (all viewports)
   var showcaseSections = document.querySelectorAll('.product-showcase__section');
