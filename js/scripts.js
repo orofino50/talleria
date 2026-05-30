@@ -148,43 +148,55 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Continuous Sticky Media Transition — staggered element reveal + 360 spin
   var stickySections = document.querySelectorAll('.sticky-media__section');
   var stickySpinFrame = document.getElementById('spin-frame-sticky');
+  var stickyMedia = document.querySelector('.sticky-media');
 
-  if (stickySections.length && stickySpinFrame) {
-    // Preload 8 spin frames
+  if (stickySections.length && stickySpinFrame && stickyMedia) {
     var SPIN_TOTAL = 8;
-    var spinImages = [];
+    // Preload 8 spin frames
     for (var si = 0; si < SPIN_TOTAL; si++) {
       var snum = (si + 1).toString().padStart(2, '0');
       var simg = new Image();
       simg.src = 'images/spin-' + snum + '.webp';
-      spinImages.push(simg);
     }
 
-    function showSpin(idx) {
+    var currentFrame = -1;
+    var scrollTicking = false;
+
+    function setFrame(idx) {
       idx = Math.round(idx);
       idx = ((idx % SPIN_TOTAL) + SPIN_TOTAL) % SPIN_TOTAL;
+      if (idx === currentFrame) return;
+      currentFrame = idx;
       var num = (idx + 1).toString().padStart(2, '0');
       stickySpinFrame.src = 'images/spin-' + num + '.webp';
     }
 
+    // Smooth scroll-driven rotation
+    window.addEventListener('scroll', function() {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(function() {
+          var rect = stickyMedia.getBoundingClientRect();
+          var viewH = window.innerHeight;
+          var totalH = stickyMedia.offsetHeight;
+          var progress = (viewH - rect.top) / (totalH + viewH);
+          progress = Math.max(0, Math.min(1, progress));
+          setFrame(progress * (SPIN_TOTAL - 1));
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
     var stickyScroll = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         var section = entry.target;
-        var sectionId = section.getAttribute('data-section');
         var ratio = entry.intersectionRatio;
-
-        // Map section index to spin frame
-        var sectionIdx = Array.prototype.indexOf.call(stickySections, section);
-        // Interpolate: when ratio goes 0→1, add 0→1 to the frame
-        var frame = sectionIdx + ratio;
-        showSpin(frame);
 
         // Activate section when crossing threshold
         if (ratio > 0.35) {
           var wasInactive = !section.classList.contains('is-active');
           stickySections.forEach(function(s) { s.classList.remove('is-active'); });
           section.classList.add('is-active');
-          // Trigger stagger animation on first activation
           if (wasInactive) {
             var kids = section.querySelectorAll('.sticky-media__label, .sticky-media__title, .sticky-media__text, .sticky-media__stats, .sticky-media__stars, .sticky-media__attribution');
             kids.forEach(function(k, i) {
