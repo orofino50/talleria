@@ -417,20 +417,13 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 /* ==========================================
-   SLIDE STORY — Mobile interactive slides
+   MOBILE PANELS — Simple reveal + 360 touch
    ========================================== */
 
 (function() {
   'use strict';
 
-  var track = document.querySelector('.slide-story__track');
-  var slides = document.querySelectorAll('.slide-story__slide');
-  var dotsContainer = document.querySelector('.slide-story__dots');
-  if (!track || !slides.length) return;
-
-  var totalSlides = slides.length;
-
-  // Preload spin frames for mobile 360
+  // Preload spin frames
   var mobileSpinA = document.getElementById('slide-spin-a');
   var mobileSpinB = document.getElementById('slide-spin-b');
   var SPIN_TOTAL = 8;
@@ -459,16 +452,14 @@ document.addEventListener('DOMContentLoaded', () => {
     activeImg = inactiveImg;
   }
 
-  // Touch-driven rotation on mobile
+  // Touch-driven rotation
   var slideSpinViewer = document.getElementById('slide-spin');
-  var touchStartX = 0;
   var touchLastX = 0;
   var touchSpinProgress = 0;
 
   if (slideSpinViewer) {
     slideSpinViewer.addEventListener('touchstart', function(e) {
-      touchStartX = e.touches[0].clientX;
-      touchLastX = touchStartX;
+      touchLastX = e.touches[0].clientX;
       touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
     }, { passive: true });
 
@@ -484,76 +475,30 @@ document.addEventListener('DOMContentLoaded', () => {
     slideSpinViewer.addEventListener('touchend', function() {
       touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
     }, { passive: true });
+
+    // Hide scroll hint after first interaction
+    var hint = slideSpinViewer.querySelector('.spin-360__scroll-hint');
+    if (hint) {
+      slideSpinViewer.addEventListener('touchstart', function() {
+        hint.classList.add('is-hidden');
+      }, { once: true, passive: true });
+    }
   }
 
-  // Create progress dots
-  for (var d = 0; d < totalSlides; d++) {
-    var dot = document.createElement('div');
-    dot.className = 'slide-story__dot' + (d === 0 ? ' is-active' : '');
-    dot.setAttribute('data-dot', d);
-    dot.addEventListener('click', function() {
-      var idx = parseInt(this.getAttribute('data-dot'));
-      var targetSlide = slides[idx];
-      if (targetSlide) targetSlide.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-    dotsContainer.appendChild(dot);
-  }
+  // Simple reveal on scroll for mobile panels
+  var mobilePanels = document.querySelectorAll('.mobile-panel:not(.mobile-panel--360)');
 
-  var dots = dotsContainer.querySelectorAll('.slide-story__dot');
-
-  // IntersectionObserver for slide visibility + animations
-  var currentActive = 0;
-
-  var slideObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      var slide = entry.target;
-      var idx = parseInt(slide.getAttribute('data-slide'));
-
-      if (entry.isIntersecting) {
-        if (!slide.classList.contains('is-visible')) {
-          slide.classList.add('is-visible');
-          animateCounters(slide);
+  if (mobilePanels.length) {
+    var panelObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          panelObserver.unobserve(entry.target);
         }
+      });
+    }, { threshold: 0.15 });
 
-        if (idx >= 0 && idx < totalSlides) {
-          currentActive = idx;
-          dots.forEach(function(d, i) {
-            d.classList.toggle('is-active', i === idx);
-          });
-        }
-      }
-    });
-  }, { threshold: 0.3 });
-
-  slides.forEach(function(s) { slideObserver.observe(s); });
-
-  function animateCounters(slide) {
-    var counters = slide.querySelectorAll('.slide-story__stat-value[data-target]');
-    counters.forEach(function(el) {
-      var target = parseFloat(el.getAttribute('data-target'));
-      if (isNaN(target)) return;
-      var duration = 600;
-      var startTime = null;
-
-      function step(timestamp) {
-        if (!startTime) startTime = timestamp;
-        var progress = Math.min((timestamp - startTime) / duration, 1);
-        var eased = 1 - Math.pow(1 - progress, 3);
-        var current = eased * target;
-
-        if (Number.isInteger(target)) {
-          el.textContent = Math.round(current);
-        } else {
-          el.textContent = current.toFixed(1);
-        }
-
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
-        }
-      }
-
-      window.requestAnimationFrame(step);
-    });
+    mobilePanels.forEach(function(p) { panelObserver.observe(p); });
   }
 
 })();
