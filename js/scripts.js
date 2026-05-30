@@ -54,6 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = item.classList.contains('is-open');
       item.classList.toggle('is-open');
       btn.setAttribute('aria-expanded', !isOpen);
+      if (isOpen) {
+        item.removeAttribute('open');
+      } else {
+        item.setAttribute('open', '');
+      }
     });
   });
 
@@ -147,11 +152,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1. Unified 360 Touch Rotation + Section Reveal
   var SPIN_TOTAL = 8;
-  // Preload spin frames
-  for (var si = 0; si < SPIN_TOTAL; si++) {
-    var snum = (si + 1).toString().padStart(2, '0');
-    var simg = new Image();
-    simg.src = 'images/spin-' + snum + '.webp';
+  var spinPreloaded = false;
+
+  function preloadSpinFrames() {
+    if (spinPreloaded) return;
+    spinPreloaded = true;
+    for (var si = 0; si < SPIN_TOTAL; si++) {
+      var snum = (si + 1).toString().padStart(2, '0');
+      var simg = new Image();
+      simg.src = 'images/spin-' + snum + '.webp';
+    }
+  }
+
+  // Lazy-load spin frames when showcase enters viewport
+  var productSpin = document.getElementById('product-spin');
+  if (productSpin && 'IntersectionObserver' in window) {
+    var spinObserver = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) {
+        preloadSpinFrames();
+        spinObserver.disconnect();
+      }
+    }, { rootMargin: '200px' });
+    spinObserver.observe(productSpin);
+  } else {
+    preloadSpinFrames();
   }
 
   var spinA = document.getElementById('spin-a');
@@ -174,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Touch-driven rotation
-  var productSpin = document.getElementById('product-spin');
   var touchLastX = 0;
   var touchSpinProgress = 0;
 
