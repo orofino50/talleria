@@ -1827,6 +1827,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: 85% center;
   padding: 20px;
 }
 
@@ -1838,15 +1839,46 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   padding: 120px 24px 80px;
   color: var(--text-inverse);
 }
+
 @media (min-width: 768px) {
-  .hero--apple__content::before {
-    content: "";
-    position: absolute;
-    inset: -60px -80px;
-    background: radial-gradient(ellipse at center, rgba(26,26,46,0.7) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: -1;
-    pointer-events: none;
+  .hero--apple {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 40px;
+  }
+  .hero--apple__bg {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    max-height: 600px;
+    object-fit: contain;
+    object-position: center center;
+    padding: 20px;
+    inset: auto;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .hero--apple__content {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+    padding: 80px 40px 80px 0;
+    max-width: 520px;
+  }
+  .hero--apple__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero--apple {
+    padding: 0 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .hero--apple__content {
+    padding: 80px 60px 80px 0;
   }
 }
 
@@ -1860,16 +1892,18 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   .hero--apple__bg {
     position: relative;
     width: 100%;
-    height: 45vh;
-    min-height: 260px;
+    height: 55vh;
+    min-height: 300px;
     padding: 40px;
     flex-shrink: 0;
     object-fit: contain;
+    object-position: center center;
   }
   .hero--apple__content {
     padding: 24px 24px 40px;
     width: 100%;
     max-width: 100%;
+    text-align: center;
     color: var(--text-inverse);
   }
   .hero--apple__badge {
@@ -1949,12 +1983,6 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   margin-top: 16px;
 }
 .hero--apple__price strong { color: #fff; }
-
-@media (min-width: 768px) and (max-width: 968px) {
-  .hero--apple {
-    min-height: 80vh;
-  }
-}
 
 /* --- B. Product Nav --- */
 .product-nav {
