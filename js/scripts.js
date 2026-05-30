@@ -268,10 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. 3D Parallax Hero
   var hero3d = document.querySelector('.hero--apple');
 
-  if (hero3d) {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return;
-    }
+  if (hero3d && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     hero3d.classList.add('is-3d');
 
     hero3d.addEventListener('mousemove', function(e) {
@@ -342,11 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
             activeLink.setAttribute('aria-current', 'section');
             activeLink.style.fontWeight = '700';
           }
-          // Also update product-nav name for hero
-          var navName = document.querySelector('.product-nav__name');
-          if (sectionId === 'hero' && navName) {
-            navName.textContent = 'PaintPro™';
-          }
+          // Nav name stays as brand logo; no update needed
         }
       });
     }, { threshold: 0.3 });

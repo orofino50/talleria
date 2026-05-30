@@ -130,7 +130,7 @@ ul { list-style: none; }
 .btn--outline-dark:hover { border-color: var(--text-primary); }
 
 .btn--trust {
-  background: var(--trust);
+  background: #1a9e58;
   color: #fff;
   padding: 20px 64px;
   border-radius: var(--radius-button);
@@ -210,7 +210,7 @@ ul { list-style: none; }
 .header.is-scrolled .nav__link--active { color: var(--text-primary); }
 
 .btn--accent-header {
-  background: var(--accent);
+  background: #d62d4a;
   color: #fff;
   padding: 8px 20px;
   border-radius: var(--radius-sm);
@@ -976,14 +976,14 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 .pain-solution__card {
   background: var(--bg-secondary, #f5f5f7);
-  border: 1px solid #e8e8ed;
+  border: 1px solid var(--border-light);
   border-radius: 16px;
   padding: 28px 24px;
   text-align: center;
 }
 .pain-solution__card--pain {
-  background: #f5f5f7;
-  border-color: #e8e8ed;
+  background: var(--bg-light);
+  border-color: var(--border-light);
 }
 .pain-solution__card--solution {
   background: var(--bg-light);
@@ -1020,11 +1020,11 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 6px;
-  color: #1d1d1f;
+  color: var(--text-primary);
 }
 .pain-solution__text {
   font-size: 14px;
-  color: #6e6e73;
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 .pain-solution__vs {
@@ -1057,8 +1057,8 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  border: 1px solid #e8e8ed;
-  background: #fff;
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
   cursor: ew-resize;
   aspect-ratio: 3 / 2;
 }
@@ -1083,7 +1083,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   bottom: 0;
   left: 50%;
   width: 4px;
-  background: #fff;
+  background: var(--bg-white);
   transform: translateX(-2px);
   z-index: 2;
   pointer-events: none;
@@ -1114,7 +1114,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   font-size: 14px;
   font-weight: 600;
   margin-top: 8px;
-  color: #1d1d1f;
+  color: var(--text-primary);
 }
 
 @media (max-width: 768px) {
@@ -1137,8 +1137,8 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #e8e8ed;
-  background: #1d1d1f;
+  border: 1px solid var(--border-light);
+  background: var(--text-primary);
   aspect-ratio: 16 / 9;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -1173,7 +1173,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .video-grid__play svg {
   width: 20px;
   height: 20px;
-  fill: #1d1d1f;
+  fill: var(--text-primary);
   margin-left: 3px;
 }
 .video-grid__title {
@@ -1220,8 +1220,8 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  background: #fff;
-  border: 1px solid #e8e8ed;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
   border-radius: 16px;
   padding: 24px;
 }
@@ -1248,14 +1248,14 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .testimonial-card__text {
   font-size: 14px;
   line-height: 1.6;
-  color: #1d1d1f;
+  color: var(--text-primary);
   margin-bottom: 8px;
   font-style: italic;
 }
 .testimonial-card__author {
   font-size: 12px;
   font-weight: 700;
-  color: #6e6e73;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 640px) {
@@ -1276,13 +1276,13 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .stats-bar__number {
   font-size: 36px;
   font-weight: 900;
-  color: #1d1d1f;
+  color: var(--text-primary);
   line-height: 1;
   margin-bottom: 4px;
 }
 .stats-bar__label {
   font-size: 12px;
-  color: #6e6e73;
+  color: var(--text-secondary);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1312,19 +1312,19 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
-  color: #1d1d1f;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 .story__text {
   font-size: 15px;
   line-height: 1.7;
-  color: #6e6e73;
+  color: var(--text-secondary);
   margin-bottom: 16px;
 }
 .story__image {
   width: 100%;
   border-radius: 16px;
-  border: 1px solid #e8e8ed;
+  border: 1px solid var(--border-light);
 }
 
 @media (max-width: 768px) {
@@ -1346,8 +1346,8 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   margin: 0 auto;
 }
 .product-card {
-  background: #fff;
-  border: 1px solid #e8e8ed;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
   border-radius: 16px;
   padding: 24px;
   text-align: center;
@@ -1379,30 +1379,30 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   color: #fff;
 }
 .product-card__badge--soon {
-  background: #e8e8ed;
-  color: #6e6e73;
+  background: var(--border-light);
+  color: var(--text-secondary);
 }
 .product-card__title {
   font-size: 20px;
   font-weight: 700;
-  color: #1d1d1f;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 .product-card__desc {
   font-size: 14px;
-  color: #6e6e73;
+  color: var(--text-secondary);
   line-height: 1.5;
   margin-bottom: 16px;
 }
 .product-card__price {
   font-size: 24px;
   font-weight: 700;
-  color: #1d1d1f;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 .product-card__price-original {
   font-size: 14px;
-  color: #6e6e73;
+  color: var(--text-secondary);
   text-decoration: line-through;
   margin-left: 8px;
 }
@@ -1424,7 +1424,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .hero__video {
   width: 100%;
   border-radius: 16px;
-  border: 1px solid #e8e8ed;
+  border: 1px solid var(--border-light);
 }
 .hero__pain-headline {
   font-size: 14px;
@@ -1503,7 +1503,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .sticky-media__stat-value {
   font-size: 22px;
   font-weight: 700;
-  color: #1d1d1f;
+  color: var(--text-primary);
   line-height: 1;
   display: block;
 }
@@ -1528,7 +1528,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 /* --- Highlights Interactive Tabs --- */
 .highlights--tabs {
   padding: 80px 0;
-  background: #f5f5f7;
+  background: var(--bg-light);
   overflow: hidden;
 }
 
@@ -1546,7 +1546,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
   line-height: 1.1;
-  color: #1d1d1f;
+  color: var(--text-primary);
   letter-spacing: -0.5px;
   text-align: center;
   margin-bottom: 40px;
@@ -1565,8 +1565,8 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .highlights--tabs .highlights__card {
   min-width: 180px;
   flex: 1;
-  background: #fff;
-  border: 1px solid #e8e8ed;
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
   border-radius: 16px;
   padding: 20px 16px;
   text-align: center;
@@ -1580,31 +1580,31 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .highlights--tabs .highlights__card.is-active {
-  border-color: #1d1d1f;
-  box-shadow: 0 0 0 1px #1d1d1f;
+  border-color: var(--text-primary);
+  border-color: var(--text-primary);
 }
 
 .highlights--tabs .highlights__card-icon {
   width: 28px;
   height: 28px;
-  color: #6e6e73;
+  color: var(--text-secondary);
   margin-bottom: 8px;
   transition: color 0.3s ease;
 }
 
 .highlights--tabs .highlights__card.is-active .highlights__card-icon {
-  color: #1d1d1f;
+  color: var(--text-primary);
 }
 
 .highlights--tabs .highlights__card-title {
   font-size: 13px;
   font-weight: 700;
-  color: #1d1d1f;
+  color: var(--text-primary);
 }
 
 .highlights--tabs .highlights__card-text {
   font-size: 12px;
-  color: #6e6e73;
+  color: var(--text-secondary);
   margin-top: 4px;
 }
 
@@ -1616,7 +1616,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   border-radius: 16px;
   overflow: hidden;
   aspect-ratio: 1;
-  background: #fff;
+  background: var(--bg-white);
 }
 
 .highlights--tabs .highlights__img {
@@ -1743,21 +1743,21 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 /* --- Why Buy Section --- */
 .whybuy {
   padding: 80px 24px;
-  background: #fff;
+  background: var(--bg-white);
   text-align: center;
 }
 
 .whybuy__title {
   font-size: clamp(28px, 4vw, 36px);
   font-weight: 700;
-  color: #1d1d1f;
+  color: var(--text-primary);
   letter-spacing: -0.5px;
   margin-bottom: 8px;
 }
 
 .whybuy__sub {
   font-size: 17px;
-  color: #6e6e73;
+  color: var(--text-secondary);
   margin-bottom: 48px;
 }
 
@@ -1770,7 +1770,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .whybuy__card {
-  background: #f5f5f7;
+  background: var(--bg-light);
   border-radius: 16px;
   padding: 24px 20px;
   text-align: center;
@@ -1792,13 +1792,13 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .whybuy__card-title {
   font-size: 15px;
   font-weight: 700;
-  color: #1d1d1f;
+  color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .whybuy__card-text {
   font-size: 13px;
-  color: #6e6e73;
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 
@@ -1816,7 +1816,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 
 /* --- Blended Section Transitions --- */
 .section--blend {
-  background: #f5f5f7;
+  background: var(--bg-light);
   padding: 80px 0;
 }
 
@@ -1826,7 +1826,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 
 /* remove alternating backgrounds — all blend sections use same bg */
 .section--blend.section--white {
-  background: #f5f5f7;
+  background: var(--bg-light);
 }
 
 /* --- Slightly slower section reveal --- */
@@ -1846,7 +1846,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #f5f5f7;
+  background: var(--bg-light);
 }
 
 .hero--apple__bg {
@@ -1964,7 +1964,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   background: rgba(255,255,255,0.9);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e8e8ed;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .product-nav__inner {
@@ -2015,11 +2015,36 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .product-nav--scrolled .product-nav__link {
-  color: #6e6e73;
+  color: var(--text-secondary);
 }
 
 .product-nav--scrolled .product-nav__link:hover {
-  color: #1d1d1f;
+  color: var(--text-primary);
+}
+
+.product-nav__links--site {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.product-nav__links--site .product-nav__link {
+  font-size: 0.813rem;
+}
+
+@media (max-width: 900px) {
+  .product-nav__links--site {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-nav__links {
+    gap: 16px;
+  }
+  .product-nav__link {
+    font-size: 0.75rem;
+  }
 }
 
 /* --- C. Sticky Media --- */
@@ -2041,7 +2066,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   top: 100px;
   height: 85vh;
   overflow: hidden;
-  background: #f5f5f7;
+  background: var(--bg-light);
   border-radius: var(--radius-card);
 }
 
@@ -2077,7 +2102,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 0.75rem;
-  color: #6e6e73;
+  color: var(--text-secondary);
   font-weight: 500;
   letter-spacing: 0.3px;
   pointer-events: none;
@@ -2151,7 +2176,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .sticky-media__text {
-  color: #6e6e73;
+  color: var(--text-secondary);
 }
 
 /* Testimonial sections */
@@ -2161,7 +2186,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   text-align: center;
   padding: 56px 40px;
   margin-bottom: 40px;
-  background: #fff !important;
+  background: var(--bg-white) !important;
   border: 1px solid var(--border-light);
   position: relative;
 }
@@ -2201,7 +2226,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .sticky-media__section[data-section="luis"] .sticky-media__text,
 .sticky-media__section[data-section="carlos"] .sticky-media__text {
   font-size: 1rem;
-  color: #6e6e73;
+  color: var(--text-secondary);
   margin-top: 12px;
 }
 
@@ -2283,7 +2308,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .paint-reveal__text {
-  color: #6e6e73;
+  color: var(--text-secondary);
   line-height: 1.7;
 }
 
@@ -2321,7 +2346,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .box-item__label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #1d1d1f;
+  color: var(--text-primary);
 }
 
 /* --- F. Compare Table --- */
@@ -2339,14 +2364,14 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 
 .compare-table__cell {
   padding: 16px 12px;
-  border-bottom: 1px solid #e8e8ed;
+  border-bottom: 1px solid var(--border-light);
   font-size: 0.875rem;
-  color: #6e6e73;
+  color: var(--text-secondary);
 }
 
 .compare-table__cell--header {
   font-weight: 700;
-  color: #1d1d1f;
+  color: var(--text-primary);
   text-align: left;
 }
 
@@ -2358,7 +2383,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 /* --- G. Apple CTA --- */
 .apple-cta {
   text-align: center;
-  background: #f5f5f7;
+  background: var(--bg-light);
   padding: var(--section-pad);
 }
 
@@ -2385,7 +2410,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .apple-cta__subtitle {
-  color: #6e6e73;
+  color: var(--text-secondary);
   max-width: 500px;
   margin: 0 auto 24px;
   line-height: 1.7;
@@ -2403,7 +2428,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 
 .apple-cta__price-original {
   font-size: 1.125rem;
-  color: #6e6e73;
+  color: var(--text-secondary);
   text-decoration: line-through;
   margin-left: 12px;
 }
@@ -2421,7 +2446,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   align-items: center;
   gap: 8px;
   font-size: 0.875rem;
-  color: #6e6e73;
+  color: var(--text-secondary);
   margin-bottom: 24px;
 } */
 
@@ -2439,7 +2464,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   align-items: center;
   gap: 6px;
   font-size: 0.813rem;
-  color: #6e6e73;
+  color: var(--text-secondary);
 }
 
 .apple-cta__trust-item svg {
