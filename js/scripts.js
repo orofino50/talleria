@@ -145,122 +145,79 @@ document.addEventListener('DOMContentLoaded', () => {
 (function() {
   'use strict';
 
-  // 1. Continuous Sticky Media Transition — staggered element reveal + 360 spin
-  var stickySections = document.querySelectorAll('.sticky-media__section');
-  var stickyMedia = document.querySelector('.sticky-media');
+  // 1. Unified 360 Touch Rotation + Section Reveal
+  var SPIN_TOTAL = 8;
+  // Preload spin frames
+  for (var si = 0; si < SPIN_TOTAL; si++) {
+    var snum = (si + 1).toString().padStart(2, '0');
+    var simg = new Image();
+    simg.src = 'images/spin-' + snum + '.webp';
+  }
 
-  if (stickySections.length && stickyMedia) {
-    var SPIN_TOTAL = 8;
-    var frameA = document.getElementById('spin-frame-a');
-    var frameB = document.getElementById('spin-frame-b');
-    // Preload 8 spin frames
-    for (var si = 0; si < SPIN_TOTAL; si++) {
-      var snum = (si + 1).toString().padStart(2, '0');
-      var simg = new Image();
-      simg.src = 'images/spin-' + snum + '.webp';
-    }
+  var spinA = document.getElementById('spin-a');
+  var spinB = document.getElementById('spin-b');
+  var currentFrame = -1;
+  var activeImg = spinA;
 
-    var currentFrame = -1;
-    var scrollTicking = false;
-    var activeImg = frameA;
+  function setFrame(idx) {
+    if (!spinA) return;
+    idx = Math.round(idx);
+    idx = ((idx % SPIN_TOTAL) + SPIN_TOTAL) % SPIN_TOTAL;
+    if (idx === currentFrame) return;
+    currentFrame = idx;
+    var num = (idx + 1).toString().padStart(2, '0');
+    var inactiveImg = (activeImg === spinA) ? spinB : spinA;
+    inactiveImg.src = 'images/spin-' + num + '.webp';
+    activeImg.style.opacity = '0';
+    inactiveImg.style.opacity = '1';
+    activeImg = inactiveImg;
+  }
 
-    function setFrame(idx) {
-      idx = Math.round(idx);
-      idx = ((idx % SPIN_TOTAL) + SPIN_TOTAL) % SPIN_TOTAL;
-      if (idx === currentFrame) return;
-      currentFrame = idx;
-      var num = (idx + 1).toString().padStart(2, '0');
-      var inactiveImg = (activeImg === frameA) ? frameB : frameA;
-      inactiveImg.src = 'images/spin-' + num + '.webp';
-      activeImg.style.opacity = '0';
-      inactiveImg.style.opacity = '1';
-      activeImg = inactiveImg;
-    }
+  // Touch-driven rotation
+  var productSpin = document.getElementById('product-spin');
+  var touchLastX = 0;
+  var touchSpinProgress = 0;
 
-    // Smooth scroll-driven rotation
-    window.addEventListener('scroll', function() {
-      if (!scrollTicking) {
-        window.requestAnimationFrame(function() {
-          var rect = stickyMedia.getBoundingClientRect();
-          var viewH = window.innerHeight;
-          var totalH = stickyMedia.offsetHeight;
-          var progress = (viewH - rect.top) / (totalH + viewH);
-          progress = Math.max(0, Math.min(1, progress));
-          setFrame(progress * (SPIN_TOTAL - 1));
-          scrollTicking = false;
-        });
-        scrollTicking = true;
-      }
+  if (productSpin) {
+    productSpin.addEventListener('touchstart', function(e) {
+      touchLastX = e.touches[0].clientX;
+      touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
     }, { passive: true });
 
-    // Touch-driven rotation for mobile
-    var spinViewer = document.getElementById('sticky-spin');
-    var touchStartX = 0;
-    var touchLastX = 0;
-    var touchSpinProgress = 0;
+    productSpin.addEventListener('touchmove', function(e) {
+      var dx = e.touches[0].clientX - touchLastX;
+      touchLastX = e.touches[0].clientX;
+      var viewW = productSpin.offsetWidth;
+      touchSpinProgress += dx / (viewW * 0.6);
+      touchSpinProgress = Math.max(0, Math.min(1, touchSpinProgress));
+      setFrame(touchSpinProgress * (SPIN_TOTAL - 1));
+    }, { passive: true });
 
-    if (spinViewer) {
-      spinViewer.addEventListener('touchstart', function(e) {
-        touchStartX = e.touches[0].clientX;
-        touchLastX = touchStartX;
-        touchSpinProgress = currentFrame / (SPIN_TOTAL - 1);
-      }, { passive: true });
+    productSpin.addEventListener('touchend', function() {
+      touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
+    }, { passive: true });
 
-      spinViewer.addEventListener('touchmove', function(e) {
-        var dx = e.touches[0].clientX - touchLastX;
-        touchLastX = e.touches[0].clientX;
-        var viewW = spinViewer.offsetWidth;
-        touchSpinProgress += dx / (viewW * 0.6);
-        touchSpinProgress = Math.max(0, Math.min(1, touchSpinProgress));
-        setFrame(touchSpinProgress * (SPIN_TOTAL - 1));
-      }, { passive: true });
-
-      spinViewer.addEventListener('touchend', function() {
-        touchSpinProgress = currentFrame / (SPIN_TOTAL - 1);
-      }, { passive: true });
+    // Hide scroll hint after first interaction
+    var hint = productSpin.querySelector('.spin-360__scroll-hint');
+    if (hint) {
+      productSpin.addEventListener('touchstart', function() {
+        hint.classList.add('is-hidden');
+      }, { once: true, passive: true });
     }
+  }
 
-    var stickyScroll = new IntersectionObserver(function(entries) {
+  // Simple reveal on scroll for showcase sections (all viewports)
+  var showcaseSections = document.querySelectorAll('.product-showcase__section');
+  if (showcaseSections.length) {
+    var secObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
-        var section = entry.target;
-        var ratio = entry.intersectionRatio;
-
-        // Activate section when crossing threshold
-        if (ratio > 0.3) {
-          var wasInactive = !section.classList.contains('is-active');
-          if (wasInactive) {
-            // Activate new section BEFORE deactivating others to avoid flash
-            section.classList.add('is-active');
-            stickySections.forEach(function(s) {
-              if (s !== section) s.classList.remove('is-active');
-            });
-            var kids = section.querySelectorAll('.sticky-media__label, .sticky-media__title, .sticky-media__text, .sticky-media__stats, .sticky-media__stars, .sticky-media__attribution');
-            kids.forEach(function(k, i) {
-              k.classList.add('stagger-enter');
-              k.style.setProperty('--stagger-i', i);
-            });
-          }
-        } else if (section.classList.contains('is-active')) {
-          section.classList.remove('is-active');
-          var leavingKids = section.querySelectorAll('.sticky-media__label, .sticky-media__title, .sticky-media__text, .sticky-media__stats, .sticky-media__stars, .sticky-media__attribution');
-          leavingKids.forEach(function(k) {
-            k.classList.remove('stagger-enter');
-            k.classList.add('stagger-leave');
-            k.style.removeProperty('--stagger-i');
-          });
-          // Clean up stagger-leave after animation completes
-          if (section._leaveTimer) clearTimeout(section._leaveTimer);
-          const sec = section;
-          sec._leaveTimer = setTimeout(function() {
-            sec.querySelectorAll('.sticky-media__label, .sticky-media__title, .sticky-media__text, .sticky-media__stats, .sticky-media__stars, .sticky-media__attribution').forEach(function(k) {
-              k.classList.remove('stagger-leave');
-            });
-          }, 1100);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          secObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] });
-
-    stickySections.forEach(function(s) { stickyScroll.observe(s); });
+    }, { threshold: 0.15 });
+    showcaseSections.forEach(function(s) { secObserver.observe(s); });
   }
 
   // 2. Highlights Interactive Tabs
@@ -416,90 +373,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })();
 
-/* ==========================================
-   MOBILE PANELS — Simple reveal + 360 touch
-   ========================================== */
 
-(function() {
-  'use strict';
-
-  // Preload spin frames
-  var mobileSpinA = document.getElementById('slide-spin-a');
-  var mobileSpinB = document.getElementById('slide-spin-b');
-  var SPIN_TOTAL = 8;
-  var currentFrame = -1;
-  var activeImg = mobileSpinA;
-
-  if (mobileSpinA) {
-    for (var si = 0; si < SPIN_TOTAL; si++) {
-      var snum = (si + 1).toString().padStart(2, '0');
-      var simg = new Image();
-      simg.src = 'images/spin-' + snum + '.webp';
-    }
-  }
-
-  function setFrame(idx) {
-    if (!mobileSpinA) return;
-    idx = Math.round(idx);
-    idx = ((idx % SPIN_TOTAL) + SPIN_TOTAL) % SPIN_TOTAL;
-    if (idx === currentFrame) return;
-    currentFrame = idx;
-    var num = (idx + 1).toString().padStart(2, '0');
-    var inactiveImg = (activeImg === mobileSpinA) ? mobileSpinB : mobileSpinA;
-    inactiveImg.src = 'images/spin-' + num + '.webp';
-    activeImg.style.opacity = '0';
-    inactiveImg.style.opacity = '1';
-    activeImg = inactiveImg;
-  }
-
-  // Touch-driven rotation
-  var slideSpinViewer = document.getElementById('slide-spin');
-  var touchLastX = 0;
-  var touchSpinProgress = 0;
-
-  if (slideSpinViewer) {
-    slideSpinViewer.addEventListener('touchstart', function(e) {
-      touchLastX = e.touches[0].clientX;
-      touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
-    }, { passive: true });
-
-    slideSpinViewer.addEventListener('touchmove', function(e) {
-      var dx = e.touches[0].clientX - touchLastX;
-      touchLastX = e.touches[0].clientX;
-      var viewW = slideSpinViewer.offsetWidth;
-      touchSpinProgress += dx / (viewW * 0.6);
-      touchSpinProgress = Math.max(0, Math.min(1, touchSpinProgress));
-      setFrame(touchSpinProgress * (SPIN_TOTAL - 1));
-    }, { passive: true });
-
-    slideSpinViewer.addEventListener('touchend', function() {
-      touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
-    }, { passive: true });
-
-    // Hide scroll hint after first interaction
-    var hint = slideSpinViewer.querySelector('.spin-360__scroll-hint');
-    if (hint) {
-      slideSpinViewer.addEventListener('touchstart', function() {
-        hint.classList.add('is-hidden');
-      }, { once: true, passive: true });
-    }
-  }
-
-  // Simple reveal on scroll for mobile panels
-  var mobilePanels = document.querySelectorAll('.mobile-panel:not(.mobile-panel--360)');
-
-  if (mobilePanels.length) {
-    var panelObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          panelObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    mobilePanels.forEach(function(p) { panelObserver.observe(p); });
-  }
-
-})();
 
