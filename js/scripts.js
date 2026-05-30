@@ -416,4 +416,145 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })();
 
+/* ==========================================
+   SLIDE STORY — Mobile interactive slides
+   ========================================== */
+
+(function() {
+  'use strict';
+
+  var track = document.querySelector('.slide-story__track');
+  var slides = document.querySelectorAll('.slide-story__slide');
+  var dotsContainer = document.querySelector('.slide-story__dots');
+  if (!track || !slides.length) return;
+
+  var totalSlides = slides.length;
+
+  // Preload spin frames for mobile 360
+  var mobileSpinA = document.getElementById('slide-spin-a');
+  var mobileSpinB = document.getElementById('slide-spin-b');
+  var SPIN_TOTAL = 8;
+  var currentFrame = -1;
+  var activeImg = mobileSpinA;
+
+  if (mobileSpinA) {
+    for (var si = 0; si < SPIN_TOTAL; si++) {
+      var snum = (si + 1).toString().padStart(2, '0');
+      var simg = new Image();
+      simg.src = 'images/spin-' + snum + '.webp';
+    }
+  }
+
+  function setFrame(idx) {
+    if (!mobileSpinA) return;
+    idx = Math.round(idx);
+    idx = ((idx % SPIN_TOTAL) + SPIN_TOTAL) % SPIN_TOTAL;
+    if (idx === currentFrame) return;
+    currentFrame = idx;
+    var num = (idx + 1).toString().padStart(2, '0');
+    var inactiveImg = (activeImg === mobileSpinA) ? mobileSpinB : mobileSpinA;
+    inactiveImg.src = 'images/spin-' + num + '.webp';
+    activeImg.style.opacity = '0';
+    inactiveImg.style.opacity = '1';
+    activeImg = inactiveImg;
+  }
+
+  // Touch-driven rotation on mobile
+  var slideSpinViewer = document.getElementById('slide-spin');
+  var touchStartX = 0;
+  var touchLastX = 0;
+  var touchSpinProgress = 0;
+
+  if (slideSpinViewer) {
+    slideSpinViewer.addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].clientX;
+      touchLastX = touchStartX;
+      touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
+    }, { passive: true });
+
+    slideSpinViewer.addEventListener('touchmove', function(e) {
+      var dx = e.touches[0].clientX - touchLastX;
+      touchLastX = e.touches[0].clientX;
+      var viewW = slideSpinViewer.offsetWidth;
+      touchSpinProgress += dx / (viewW * 0.6);
+      touchSpinProgress = Math.max(0, Math.min(1, touchSpinProgress));
+      setFrame(touchSpinProgress * (SPIN_TOTAL - 1));
+    }, { passive: true });
+
+    slideSpinViewer.addEventListener('touchend', function() {
+      touchSpinProgress = currentFrame / (SPIN_TOTAL - 1) || 0;
+    }, { passive: true });
+  }
+
+  // Create progress dots
+  for (var d = 0; d < totalSlides; d++) {
+    var dot = document.createElement('div');
+    dot.className = 'slide-story__dot' + (d === 0 ? ' is-active' : '');
+    dot.setAttribute('data-dot', d);
+    dot.addEventListener('click', function() {
+      var idx = parseInt(this.getAttribute('data-dot'));
+      var targetSlide = slides[idx];
+      if (targetSlide) targetSlide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    dotsContainer.appendChild(dot);
+  }
+
+  var dots = dotsContainer.querySelectorAll('.slide-story__dot');
+
+  // IntersectionObserver for slide visibility + animations
+  var currentActive = 0;
+
+  var slideObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      var slide = entry.target;
+      var idx = parseInt(slide.getAttribute('data-slide'));
+
+      if (entry.isIntersecting) {
+        if (!slide.classList.contains('is-visible')) {
+          slide.classList.add('is-visible');
+          animateCounters(slide);
+        }
+
+        if (idx >= 0 && idx < totalSlides) {
+          currentActive = idx;
+          dots.forEach(function(d, i) {
+            d.classList.toggle('is-active', i === idx);
+          });
+        }
+      }
+    });
+  }, { threshold: 0.3 });
+
+  slides.forEach(function(s) { slideObserver.observe(s); });
+
+  function animateCounters(slide) {
+    var counters = slide.querySelectorAll('.slide-story__stat-value[data-target]');
+    counters.forEach(function(el) {
+      var target = parseFloat(el.getAttribute('data-target'));
+      if (isNaN(target)) return;
+      var duration = 600;
+      var startTime = null;
+
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = eased * target;
+
+        if (Number.isInteger(target)) {
+          el.textContent = Math.round(current);
+        } else {
+          el.textContent = current.toFixed(1);
+        }
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      }
+
+      window.requestAnimationFrame(step);
+    });
+  }
+
+})();
 
