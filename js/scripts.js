@@ -145,33 +145,45 @@ document.addEventListener('DOMContentLoaded', () => {
 (function() {
   'use strict';
 
-  // 1. Continuous Sticky Media Transition — staggered element reveal
+  // 1. Continuous Sticky Media Transition — staggered element reveal + 360 spin
   var stickySections = document.querySelectorAll('.sticky-media__section');
-  var stickyImages = document.querySelectorAll('.sticky-media__image');
+  var stickySpinFrame = document.getElementById('spin-frame-sticky');
 
-  if (stickySections.length && stickyImages.length) {
+  if (stickySections.length && stickySpinFrame) {
+    // Preload 8 spin frames
+    var SPIN_TOTAL = 8;
+    var spinImages = [];
+    for (var si = 0; si < SPIN_TOTAL; si++) {
+      var snum = (si + 1).toString().padStart(2, '0');
+      var simg = new Image();
+      simg.src = 'images/spin-' + snum + '.webp';
+      spinImages.push(simg);
+    }
+
+    function showSpin(idx) {
+      idx = Math.round(idx);
+      idx = ((idx % SPIN_TOTAL) + SPIN_TOTAL) % SPIN_TOTAL;
+      var num = (idx + 1).toString().padStart(2, '0');
+      stickySpinFrame.src = 'images/spin-' + num + '.webp';
+    }
+
     var stickyScroll = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         var section = entry.target;
         var sectionId = section.getAttribute('data-section');
         var ratio = entry.intersectionRatio;
-        var img = document.querySelector('.sticky-media__image[data-section="' + sectionId + '"]');
 
-        // Image parallax scale (scroll-driven)
-        if (img && ratio > 0 && ratio < 0.6) {
-          img.style.transform = 'scale(' + (0.96 + ratio * 0.06) + ')';
-        } else if (img) {
-          img.style.transform = 'scale(1)';
-        }
+        // Map section index to spin frame
+        var sectionIdx = Array.prototype.indexOf.call(stickySections, section);
+        // Interpolate: when ratio goes 0→1, add 0→1 to the frame
+        var frame = sectionIdx + ratio;
+        showSpin(frame);
 
         // Activate section when crossing threshold
         if (ratio > 0.35) {
           var wasInactive = !section.classList.contains('is-active');
-          stickyImages.forEach(function(i) { i.classList.remove('is-active'); });
           stickySections.forEach(function(s) { s.classList.remove('is-active'); });
-          if (img) img.classList.add('is-active');
           section.classList.add('is-active');
-
           // Trigger stagger animation on first activation
           if (wasInactive) {
             var kids = section.querySelectorAll('.sticky-media__label, .sticky-media__title, .sticky-media__text, .sticky-media__stats, .sticky-media__stars, .sticky-media__attribution');
@@ -181,7 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
           }
         } else if (section.classList.contains('is-active')) {
-          // Reset stagger when leaving
           var kids = section.querySelectorAll('.sticky-media__label, .sticky-media__title, .sticky-media__text, .sticky-media__stats, .sticky-media__stars, .sticky-media__attribution');
           kids.forEach(function(k) {
             k.classList.remove('stagger-enter');
@@ -327,139 +338,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })();
 
-/* ==========================================
-   VISTA 360° — Spin Viewer
-   ========================================== */
 
-(function() {
-  'use strict';
-
-  var frame = document.getElementById('spin-frame');
-  if (!frame) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  var TOTAL = 10;
-  var images = [];
-  var current = 0;
-  var isDragging = false;
-  var startX = 0;
-  var autoTimer = null;
-  var viewer = frame.parentElement;
-  var dots = document.getElementById('spin-dots');
-  var hint = viewer.querySelector('.spin-360__hint');
-  var loaded = 0;
-
-  // Preload all frames
-  for (var i = 0; i < TOTAL; i++) {
-    var num = (i + 1).toString().padStart(2, '0');
-    var img = new Image();
-    img.onload = function() { loaded++; };
-    img.src = 'images/spin-' + num + '.webp';
-    images.push(img);
-  }
-
-  // Create dots
-  for (var i = 0; i < TOTAL; i++) {
-    var dot = document.createElement('button');
-    dot.className = 'spin-360__dot' + (i === 0 ? ' is-active' : '');
-    dot.setAttribute('data-dot', i);
-    dot.setAttribute('aria-label', 'Angulo ' + (i + 1));
-    dot.addEventListener('click', function() {
-      var idx = parseInt(this.getAttribute('data-dot'));
-      showFrame(idx);
-    });
-    dots.appendChild(dot);
-  }
-
-  function showFrame(idx) {
-    if (idx < 0) idx = TOTAL - 1;
-    if (idx >= TOTAL) idx = 0;
-    current = idx;
-    var num = (current + 1).toString().padStart(2, '0');
-    frame.src = 'images/spin-' + num + '.webp';
-    var allDots = dots.querySelectorAll('.spin-360__dot');
-    allDots.forEach(function(d, i) {
-      d.classList.toggle('is-active', i === current);
-    });
-  }
-
-  function autoRotate() {
-    showFrame(current + 1);
-  }
-
-  function startAuto() {
-    stopAuto();
-    autoTimer = setInterval(autoRotate, 200);
-  }
-
-  function stopAuto() {
-    if (autoTimer) {
-      clearInterval(autoTimer);
-      autoTimer = null;
-    }
-  }
-
-  // Mouse drag
-  viewer.addEventListener('mousedown', function(e) {
-    isDragging = true;
-    startX = e.clientX;
-    stopAuto();
-    if (hint) hint.classList.add('is-hidden');
-    e.preventDefault();
-  });
-
-  window.addEventListener('mousemove', function(e) {
-    if (!isDragging) return;
-    var delta = e.clientX - startX;
-    if (Math.abs(delta) > 30) {
-      var dir = delta > 0 ? 1 : -1;
-      showFrame(current + dir);
-      startX = e.clientX;
-    }
-  });
-
-  window.addEventListener('mouseup', function() {
-    if (isDragging) {
-      isDragging = false;
-      startAuto();
-    }
-  });
-
-  // Touch support
-  viewer.addEventListener('touchstart', function(e) {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    stopAuto();
-    if (hint) hint.classList.add('is-hidden');
-  }, { passive: true });
-
-  viewer.addEventListener('touchmove', function(e) {
-    if (!isDragging) return;
-    var delta = e.touches[0].clientX - startX;
-    if (Math.abs(delta) > 30) {
-      var dir = delta > 0 ? 1 : -1;
-      showFrame(current + dir);
-      startX = e.touches[0].clientX;
-    }
-  }, { passive: true });
-
-  viewer.addEventListener('touchend', function() {
-    if (isDragging) {
-      isDragging = false;
-      startAuto();
-    }
-  }, { passive: true });
-
-  // Start auto-rotate
-  startAuto();
-
-  // Stop on visibility change
-  document.addEventListener('visibilitychange', function() {
-    if (document.hidden) {
-      stopAuto();
-    } else {
-      startAuto();
-    }
-  });
-
-})();
