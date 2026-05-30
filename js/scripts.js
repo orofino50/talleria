@@ -326,3 +326,140 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 })();
+
+/* ==========================================
+   VISTA 360° — Spin Viewer
+   ========================================== */
+
+(function() {
+  'use strict';
+
+  var frame = document.getElementById('spin-frame');
+  if (!frame) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var TOTAL = 10;
+  var images = [];
+  var current = 0;
+  var isDragging = false;
+  var startX = 0;
+  var autoTimer = null;
+  var viewer = frame.parentElement;
+  var dots = document.getElementById('spin-dots');
+  var hint = viewer.querySelector('.spin-360__hint');
+  var loaded = 0;
+
+  // Preload all frames
+  for (var i = 0; i < TOTAL; i++) {
+    var num = (i + 1).toString().padStart(2, '0');
+    var img = new Image();
+    img.onload = function() { loaded++; };
+    img.src = 'images/spin-' + num + '.webp';
+    images.push(img);
+  }
+
+  // Create dots
+  for (var i = 0; i < TOTAL; i++) {
+    var dot = document.createElement('button');
+    dot.className = 'spin-360__dot' + (i === 0 ? ' is-active' : '');
+    dot.setAttribute('data-dot', i);
+    dot.setAttribute('aria-label', 'Angulo ' + (i + 1));
+    dot.addEventListener('click', function() {
+      var idx = parseInt(this.getAttribute('data-dot'));
+      showFrame(idx);
+    });
+    dots.appendChild(dot);
+  }
+
+  function showFrame(idx) {
+    if (idx < 0) idx = TOTAL - 1;
+    if (idx >= TOTAL) idx = 0;
+    current = idx;
+    var num = (current + 1).toString().padStart(2, '0');
+    frame.src = 'images/spin-' + num + '.webp';
+    var allDots = dots.querySelectorAll('.spin-360__dot');
+    allDots.forEach(function(d, i) {
+      d.classList.toggle('is-active', i === current);
+    });
+  }
+
+  function autoRotate() {
+    showFrame(current + 1);
+  }
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(autoRotate, 200);
+  }
+
+  function stopAuto() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  // Mouse drag
+  viewer.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    startX = e.clientX;
+    stopAuto();
+    if (hint) hint.classList.add('is-hidden');
+    e.preventDefault();
+  });
+
+  window.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    var delta = e.clientX - startX;
+    if (Math.abs(delta) > 30) {
+      var dir = delta > 0 ? 1 : -1;
+      showFrame(current + dir);
+      startX = e.clientX;
+    }
+  });
+
+  window.addEventListener('mouseup', function() {
+    if (isDragging) {
+      isDragging = false;
+      startAuto();
+    }
+  });
+
+  // Touch support
+  viewer.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    stopAuto();
+    if (hint) hint.classList.add('is-hidden');
+  }, { passive: true });
+
+  viewer.addEventListener('touchmove', function(e) {
+    if (!isDragging) return;
+    var delta = e.touches[0].clientX - startX;
+    if (Math.abs(delta) > 30) {
+      var dir = delta > 0 ? 1 : -1;
+      showFrame(current + dir);
+      startX = e.touches[0].clientX;
+    }
+  }, { passive: true });
+
+  viewer.addEventListener('touchend', function() {
+    if (isDragging) {
+      isDragging = false;
+      startAuto();
+    }
+  }, { passive: true });
+
+  // Start auto-rotate
+  startAuto();
+
+  // Stop on visibility change
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      stopAuto();
+    } else {
+      startAuto();
+    }
+  });
+
+})();

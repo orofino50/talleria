@@ -316,6 +316,14 @@ ul { list-style: none; }
 
 .section__title--center { text-align: center; }
 
+.section__desc {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto 0;
+  line-height: 1.7;
+}
+
 .section__subtitle {
   font-size: var(--text-body);
   color: var(--text-secondary);
@@ -2366,4 +2374,97 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 
 .btn--outline-light:hover {
   border-color: #fff;
+}
+
+/* ===========================================
+   VISTA 360° — Spin Viewer
+   =========================================== */
+
+.spin-360 {
+  text-align: center;
+  padding: 100px 0;
+  background: #fff;
+}
+
+.spin-360__viewer {
+  position: relative;
+  max-width: 500px;
+  margin: 40px auto 0;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.spin-360__viewer:active {
+  cursor: grabbing;
+}
+
+.spin-360__frame {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.spin-360__hint {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(29,29,31,0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.813rem;
+  color: #6e6e73;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.spin-360__hint.is-hidden {
+  opacity: 0;
+}
+
+.spin-360__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.spin-360__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: #d2d2d7;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.spin-360__dot.is-active {
+  background: var(--accent);
+  transform: scale(1.4);
+}
+
+@media (min-width: 768px) {
+  .spin-360__viewer {
+    max-width: 600px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin-360__viewer {
+    cursor: default;
+  }
+  .spin-360__hint {
+    display: none;
+  }
 }
