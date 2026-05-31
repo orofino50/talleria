@@ -183,21 +183,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var spinA = document.getElementById('spin-a');
   var spinB = document.getElementById('spin-b');
+  var spinMobileA = document.getElementById('spin-mobile-a');
+  var spinMobileB = document.getElementById('spin-mobile-b');
   var currentFrame = -1;
   var activeImg = spinA;
+  var activeMobileImg = spinMobileA;
 
   function setFrame(idx) {
-    if (!spinA) return;
     idx = Math.round(idx);
     idx = ((idx % SPIN_TOTAL) + SPIN_TOTAL) % SPIN_TOTAL;
     if (idx === currentFrame) return;
     currentFrame = idx;
     var num = (idx + 1).toString().padStart(2, '0');
-    var inactiveImg = (activeImg === spinA) ? spinB : spinA;
-    inactiveImg.src = 'images/spin-' + num + '.webp';
-    activeImg.style.opacity = '0';
-    inactiveImg.style.opacity = '1';
-    activeImg = inactiveImg;
+    var src = 'images/spin-' + num + '.webp';
+
+    // Update desktop frames
+    if (spinA) {
+      var inactiveImg = (activeImg === spinA) ? spinB : spinA;
+      inactiveImg.src = src;
+      activeImg.style.opacity = '0';
+      inactiveImg.style.opacity = '1';
+      activeImg = inactiveImg;
+    }
+
+    // Update mobile frames
+    if (spinMobileA) {
+      var inactiveMobile = (activeMobileImg === spinMobileA) ? spinMobileB : spinMobileA;
+      inactiveMobile.src = src;
+      activeMobileImg.style.opacity = '0';
+      inactiveMobile.style.opacity = '1';
+      activeMobileImg = inactiveMobile;
+    }
   }
 
   // Touch-driven rotation — reusable for any viewer

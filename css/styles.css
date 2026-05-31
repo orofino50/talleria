@@ -1796,7 +1796,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .section--blend + .section--blend {
-  padding-top: 0;
+  padding-top: 24px;
 }
 
 /* remove alternating backgrounds — all blend sections use same bg */
@@ -1901,10 +1901,10 @@ textarea.form__input { resize: vertical; min-height: 120px; }
     flex-shrink: 0;
     object-fit: contain;
     object-position: center center;
-    background: var(--bg-white);
+    background: linear-gradient(180deg, #111122 0%, var(--bg-dark) 100%);
   }
   .hero--apple__content {
-    padding: 16px 24px 40px;
+    padding: 32px 24px 60px;
     width: 100%;
     max-width: 100%;
     text-align: center;
@@ -1917,23 +1917,23 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   }
   .hero--apple__badge svg { display: none; }
   .hero--apple__headline {
-    font-size: 1.75rem;
+    font-size: clamp(2rem, 7vw, 3rem);
   }
   .hero--apple__subheadline {
-    font-size: 0.875rem;
-    color: rgba(255,255,255,0.65);
-    margin-bottom: 24px;
+    font-size: 0.938rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 28px;
   }
   .hero--apple__actions {
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
     margin: 0 auto;
+    gap: 12px;
   }
   .hero--apple__actions .btn { width: 100%; }
   .hero--apple__actions .btn--outline-light {
-    border-color: rgba(255,255,255,0.25);
-    color: rgba(255,255,255,0.75);
+    display: none;
   }
   .hero--apple__price {
     color: rgba(255,255,255,0.5);
@@ -2019,12 +2019,15 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 .product-nav__name {
   font-weight: 900;
   font-size: 1.25rem;
-  color: var(--text-primary);
+  color: #fff;
   letter-spacing: -0.5px;
   transition: color 300ms ease;
 }
 
 .product-nav--scrolled .product-nav__name {
+  color: var(--text-primary);
+}
+.product-nav--scrolled .product-nav__name span {
   color: var(--text-primary);
 }
 
@@ -2044,14 +2047,14 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .product-nav__link {
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.7);
   font-size: 0.875rem;
   font-weight: 500;
   transition: color 200ms ease;
 }
 
 .product-nav__link:hover {
-  color: var(--text-primary);
+  color: #fff;
 }
 
 .product-nav--scrolled .product-nav__link {
@@ -2563,6 +2566,16 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 0;
   min-width: 580px;
+}
+@media (max-width: 767px) {
+  .compare-table {
+    grid-template-columns: 1fr 1fr;
+    min-width: auto;
+  }
+  .compare-table__cell {
+    font-size: 0.813rem;
+    padding: 12px 10px;
+  }
 }
 
 .compare-table__cell {
