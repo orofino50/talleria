@@ -94,7 +94,7 @@
           <a href="#cta-final" class="btn btn--accent">Comprar ahora →</a>
           <a href="#diseno" class="btn btn--outline-light">Ver en detalle</a>
         </div>
-        <p class="hero--apple__price"><strong>€69,90</strong></p>
+        <p class="hero--apple__price"><strong>€69,90</strong> <s>€102,90</s></p>
       </div>
     </section>
 
@@ -155,13 +155,15 @@
           <h2 class="product-showcase__title">Lo que dicen nuestros clientes.</h2>
           <div class="product-showcase__cards">
             <div class="product-showcase__card">
+              <img src="images/testimonial-augusto.webp" alt="Augusto" class="product-showcase__card-avatar" loading="lazy" width="48" height="48">
               <p class="product-showcase__stars">★★★★★</p>
-              <p class="product-showcase__quote">"Pinté todo el salón en una tarde."</p>
+              <p class="product-showcase__quote">"Pinté todo el salón en una tarde. El acabado quedó perfecto, sin una sola marca de brocha."</p>
               <p class="product-showcase__author">— Augusto, Madrid</p>
             </div>
             <div class="product-showcase__card">
+              <img src="images/testimonial-luis.webp" alt="Luis" class="product-showcase__card-avatar" loading="lazy" width="48" height="48">
               <p class="product-showcase__stars">★★★★★</p>
-              <p class="product-showcase__quote">"Renové todos los muebles de la cocina."</p>
+              <p class="product-showcase__quote">"Renové todos los muebles de la cocina. Parecen nuevos. Mi mujer no se lo creía."</p>
               <p class="product-showcase__author">— Luis, Barcelona</p>
             </div>
           </div>
@@ -180,7 +182,7 @@
           En acción
         </div>
         <h2 class="lifestyle__title">En tus manos.<br>Tu mejor proyecto.</h2>
-        <p class="lifestyle__text">Ligera, potente, precisa. PaintPro cabe en cualquier mano y transforma cualquier superficie en minutos. Sin compresor, sin cables, sin complicaciones. Solo resultados profesionales al alcance de tu mano.</p>
+        <p class="lifestyle__text">Ligera, potente, precisa. PaintPro cabe en cualquier mano y transforma cualquier superficie en minutos. Sin compresor, sin cables, sin complicaciones. Acabado de taller al alcance de tu mano.</p>
         <div class="lifestyle__stats">
           <div class="lifestyle__stat">
             <span class="lifestyle__stat-value">400W</span>
@@ -201,7 +203,7 @@
     <!-- HIGHLIGHTS INTERACTIVO — TABS -->
     <section class="highlights--tabs section--flow">
       <div class="container">
-        <p class="highlights__title">Destaques</p>
+        <p class="highlights__title">Diferenciales</p>
         <p class="highlights__sub">Descubre PaintPro.</p>
         <div class="highlights__track" role="tablist">
           <article class="highlights__card is-active" id="tab-diseno" data-highlight="diseno" role="tab" tabindex="0" aria-selected="true">
@@ -388,13 +390,29 @@
     <section class="apple-cta section--flow" id="cta-final">
 
       <h2 class="apple-cta__title">Tu proyecto merece<br>PaintPro™.</h2>
-      <p class="apple-cta__subtitle">Únete a miles de personas que ya obtienen resultados profesionales desde casa.</p>
+      <p class="apple-cta__subtitle">Únete a miles de personas que ya transforman sus proyectos con PaintPro.</p>
       <div class="apple-cta__price">
         <span class="apple-cta__price-current">€69,90</span>
-        <span class="apple-cta__price-savings">Ahorra €33</span>
+        <span class="apple-cta__price-original">€102,90</span>
+        <span class="apple-cta__price-savings">Ahorra €33 (32%)</span>
       </div>
 
       <a href="https://lapurasalud.com/products/pistola-paintpro" class="btn btn--trust">Comprar PaintPro — Envío gratis</a>
+
+      <div class="apple-cta__trust">
+        <div class="apple-cta__trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Garantía 30 días
+        </div>
+        <div class="apple-cta__trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l4-4m0 0l4 4m-4-4v12"/></svg>
+          Pago contra entrega
+        </div>
+        <div class="apple-cta__trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Devolución gratis
+        </div>
+      </div>
 
     </section>
   </main>
@@ -425,8 +443,8 @@
       <div class="footer__column">
         <h3 class="footer__column-title">Legal</h3>
         <ul class="footer__column-list">
-          <li><a href="#" class="footer__column-link">Privacidad</a></li>
-          <li><a href="#" class="footer__column-link">Términos</a></li>
+          <li><span class="footer__column-link footer__column-link--disabled">Privacidad (próximamente)</span></li>
+          <li><span class="footer__column-link footer__column-link--disabled">Términos (próximamente)</span></li>
         </ul>
       </div>
     </div>

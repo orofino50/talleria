@@ -8,7 +8,7 @@
   --text-secondary: #6e6e73;
   --text-inverse: #ffffff;
   --accent: #e94560;
-  --trust: #2ecc71;
+  --trust: #1a9e58;
   --bg-hover: #eeeef0;
   --bg-alt: #f0f0f2;
 
@@ -132,7 +132,7 @@ ul { list-style: none; }
 .btn--outline-dark:hover { border-color: var(--text-primary); }
 
 .btn--trust {
-  background: #1a9e58;
+  background: var(--trust);
   color: #fff;
   padding: 20px 64px;
   border-radius: var(--radius-button);
@@ -447,7 +447,7 @@ ul { list-style: none; }
   transition: transform 300ms ease;
 }
 @media (max-width: 480px) { .card { padding: 20px; } }
-.card:hover { transform: translateY(-2px); }
+.card:hover { transform: translateY(-4px); }
 .card--dark { background: var(--bg-dark-alt); border-color: rgba(255,255,255,0.06); }
 
 .card__icon {
@@ -497,7 +497,7 @@ ul { list-style: none; }
   color: var(--text-inverse);
   transition: transform 300ms ease;
 }
-.gallery-item:hover { transform: translateY(-2px); }
+.gallery-item:hover { transform: translateY(-4px); }
 .gallery-item__img {
   position: absolute;
   inset: 0;
@@ -1372,7 +1372,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 .product-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   border-color: #d2d2d7;
 }
 .product-card__img {
@@ -1548,7 +1548,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .highlights--tabs .highlights__card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   border-color: #d2d2d7;
 }
 
@@ -1613,7 +1613,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: #000;
+  background: var(--bg-dark);
 }
 
 .lifestyle__bg {
@@ -1753,7 +1753,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 }
 
 .whybuy__card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   background: var(--bg-hover);
 }
 
@@ -1999,7 +1999,6 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   line-height: 1.05;
   color: #fff;
   margin-bottom: 16px;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
 .hero--apple__subheadline {
@@ -2441,6 +2440,15 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   flex: 1;
 }
 
+.product-showcase__card-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 2px solid var(--border-light);
+}
+
 .product-showcase__stars {
   font-size: 1rem;
   letter-spacing: 3px;
@@ -2636,8 +2644,9 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 /* --- G. Apple CTA --- */
 .apple-cta {
   text-align: center;
-  background: var(--bg-light);
+  background: var(--bg-dark);
   padding: var(--section-pad);
+  color: var(--text-inverse);
 }
 
 .apple-cta__badge {
@@ -2660,10 +2669,11 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   letter-spacing: -0.5px;
   line-height: 1.1;
   margin-bottom: 16px;
+  color: #fff;
 }
 
 .apple-cta__subtitle {
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.7);
   max-width: 500px;
   margin: 0 auto 24px;
   line-height: 1.7;
@@ -2678,6 +2688,7 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   font-size: 2.5rem;
   font-weight: 900;
   letter-spacing: -1px;
+  color: #fff;
 }
 
 .apple-cta__price-savings {
@@ -2686,6 +2697,35 @@ textarea.form__input { resize: vertical; min-height: 120px; }
   color: var(--trust);
   font-weight: 600;
   margin-top: 4px;
+}
+
+.apple-cta__price-original {
+  font-size: 1.125rem;
+  color: rgba(255,255,255,0.4);
+  text-decoration: line-through;
+  margin-left: 12px;
+}
+
+.apple-cta__trust {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.apple-cta__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.813rem;
+  color: rgba(255,255,255,0.6);
+  font-weight: 500;
+}
+
+.apple-cta__trust-item svg {
+  color: var(--trust);
+  flex-shrink: 0;
 }
 
 /* .apple-cta__savings {
