@@ -489,7 +489,24 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
 
-      // UNIFIED IntersectionObserver — P2: merge 4 observers into 1
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // ==========================================
+      // SCROLL PROGRESS BAR
+      // ==========================================
+      var progressBar = document.createElement('div');
+      progressBar.className = 'scroll-progress';
+      document.body.appendChild(progressBar);
+
+      window.addEventListener('scroll', function() {
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = (window.scrollY / docHeight) * 100;
+        progressBar.style.width = progress + '%';
+      }, { passive: true });
+
+      // ==========================================
+      // UNIFIED INTERSECTION OBSERVER
+      // ==========================================
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
@@ -499,11 +516,63 @@
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-      document.querySelectorAll('.animate-in').forEach(function(el) {
+      document.querySelectorAll('.animate-in, .animate-fade, .animate-scale, .animate-slide-left, .animate-slide-right, .text-mask').forEach(function(el) {
         observer.observe(el);
       });
 
-      // Product nav scroll
+      // ==========================================
+      // IMAGE REVEAL MASK
+      // ==========================================
+      var imageRevealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            setTimeout(function() {
+              entry.target.classList.add('is-revealed');
+            }, 200);
+            imageRevealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.apple-design__image').forEach(function(el) {
+        imageRevealObserver.observe(el);
+      });
+
+      // ==========================================
+      // PARALLAX ON HERO IMAGE
+      // ==========================================
+      if (!prefersReducedMotion) {
+        var heroImg = document.querySelector('.hero--apple__visual img');
+        if (heroImg) {
+          window.addEventListener('scroll', function() {
+            var scrolled = window.scrollY;
+            if (scrolled < window.innerHeight) {
+              heroImg.style.transform = 'translateY(' + (scrolled * 0.15) + 'px) scale(1)';
+            }
+          }, { passive: true });
+        }
+
+        // Bento card subtle parallax
+        var bentoCards = document.querySelectorAll('.bento-card__image');
+        bentoCards.forEach(function(img) {
+          var card = img.closest('.bento-card');
+          if (card) {
+            card.addEventListener('mousemove', function(e) {
+              var rect = card.getBoundingClientRect();
+              var x = (e.clientX - rect.left) / rect.width - 0.5;
+              var y = (e.clientY - rect.top) / rect.height - 0.5;
+              img.style.transform = 'scale(1.05) translate(' + (x * 8) + 'px, ' + (y * 8) + 'px)';
+            });
+            card.addEventListener('mouseleave', function() {
+              img.style.transform = '';
+            });
+          }
+        });
+      }
+
+      // ==========================================
+      // PRODUCT NAV SCROLL
+      // ==========================================
       var nav = document.querySelector('.product-nav');
       window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -511,9 +580,11 @@
         } else {
           nav.classList.remove('product-nav--scrolled');
         }
-      });
+      }, { passive: true });
 
-      // Hamburger menu
+      // ==========================================
+      // HAMBURGER MENU
+      // ==========================================
       var hamburger = document.querySelector('.product-nav__hamburger');
       var mobileMenu = document.querySelector('.product-nav__mobile');
       if (hamburger && mobileMenu) {
@@ -530,7 +601,9 @@
         });
       }
 
-      // CTA sticky mobile — show after scrolling past hero
+      // ==========================================
+      // CTA STICKY MOBILE
+      // ==========================================
       var ctaSticky = document.getElementById('cta-sticky');
       var heroSection = document.getElementById('hero');
       if (ctaSticky && heroSection) {
@@ -546,7 +619,9 @@
         heroObserver.observe(heroSection);
       }
 
-      // Countdown timer — P3
+      // ==========================================
+      // COUNTDOWN TIMER
+      // ==========================================
       var countdownEl = document.getElementById('countdown-time');
       if (countdownEl) {
         var endTime = new Date();
@@ -569,6 +644,19 @@
         }
         updateCountdown();
       }
+
+      // ==========================================
+      // SMOOTH SCROLL FOR ANCHOR LINKS
+      // ==========================================
+      document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var target = document.querySelector(link.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
     });
   </script>
 

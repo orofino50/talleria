@@ -1396,13 +1396,14 @@ details[open] .faq-icon { transform: rotate(45deg); }
 }
 
 /* ==========================================
-   ANIMATIONS
+   ANIMATIONS — Premium Effects
    ========================================== */
 
+/* --- Scroll Reveal Base --- */
 .animate-in {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .animate-in.is-visible {
@@ -1410,10 +1411,269 @@ details[open] .faq-icon { transform: rotate(45deg); }
   transform: translateY(0);
 }
 
-/* Stagger for whybuy cards */
+/* --- Fade Variants --- */
+.animate-fade {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.animate-fade.is-visible { opacity: 1; }
+
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-slide-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- Stagger Delays --- */
 .whybuy__card.animate-in:nth-child(1) { transition-delay: 0ms; }
-.whybuy__card.animate-in:nth-child(2) { transition-delay: 80ms; }
-.whybuy__card.animate-in:nth-child(3) { transition-delay: 160ms; }
-.whybuy__card.animate-in:nth-child(4) { transition-delay: 240ms; }
-.whybuy__card.animate-in:nth-child(5) { transition-delay: 320ms; }
-.whybuy__card.animate-in:nth-child(6) { transition-delay: 400ms; }
+.whybuy__card.animate-in:nth-child(2) { transition-delay: 100ms; }
+.whybuy__card.animate-in:nth-child(3) { transition-delay: 200ms; }
+.whybuy__card.animate-in:nth-child(4) { transition-delay: 300ms; }
+.whybuy__card.animate-in:nth-child(5) { transition-delay: 400ms; }
+.whybuy__card.animate-in:nth-child(6) { transition-delay: 500ms; }
+
+.bento-card.animate-in:nth-child(1) { transition-delay: 0ms; }
+.bento-card.animate-in:nth-child(2) { transition-delay: 150ms; }
+.bento-card.animate-in:nth-child(3) { transition-delay: 300ms; }
+
+.testimonial-card.animate-in:nth-child(1) { transition-delay: 0ms; }
+.testimonial-card.animate-in:nth-child(2) { transition-delay: 120ms; }
+.testimonial-card.animate-in:nth-child(3) { transition-delay: 240ms; }
+
+.apple-box__item.animate-in:nth-child(1) { transition-delay: 0ms; }
+.apple-box__item.animate-in:nth-child(2) { transition-delay: 100ms; }
+.apple-box__item.animate-in:nth-child(3) { transition-delay: 200ms; }
+.apple-box__item.animate-in:nth-child(4) { transition-delay: 300ms; }
+
+.apple-specs__item.animate-in:nth-child(1) { transition-delay: 0ms; }
+.apple-specs__item.animate-in:nth-child(2) { transition-delay: 80ms; }
+.apple-specs__item.animate-in:nth-child(3) { transition-delay: 160ms; }
+.apple-specs__item.animate-in:nth-child(4) { transition-delay: 240ms; }
+.apple-specs__item.animate-in:nth-child(5) { transition-delay: 320ms; }
+
+/* --- Hero Fade-In on Load --- */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero--apple__text > * {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero--apple__badge { animation-delay: 0.1s; }
+.hero--apple__headline { animation-delay: 0.25s; }
+.hero--apple__subheadline { animation-delay: 0.4s; }
+.hero--apple__actions { animation-delay: 0.55s; }
+.hero--apple__price { animation-delay: 0.7s; }
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.hero--apple__visual img {
+  animation: heroFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+/* --- Parallax Effect (set via JS) --- */
+.parallax-slow { will-change: transform; }
+
+/* --- Floating Animation --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.float-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-element--delay { animation-delay: -2s; }
+
+/* --- Pulse Glow on CTA --- */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(26, 158, 88, 0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(26, 158, 88, 0); }
+}
+
+.btn--trust {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+/* --- Shimmer on Hero Badge --- */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.hero--apple__badge {
+  background: linear-gradient(90deg, var(--accent) 0%, #ff5a75 50%, var(--accent) 100%);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* --- Counter Animation --- */
+.counter {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Gradient Animation on CTA --- */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.apple-cta {
+  background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #000000 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* --- Magnetic Hover on Cards --- */
+.magnetic-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-8px) scale(1.01);
+}
+
+.whybuy__card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.whybuy__card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+.testimonial-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+/* --- Image Reveal Mask --- */
+@keyframes imageReveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+.apple-design__image {
+  position: relative;
+}
+
+.apple-design__image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg-white);
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform 1.2s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.apple-design__image.is-revealed::before {
+  transform: translateX(100%);
+}
+
+/* --- Text Mask Reveal --- */
+.text-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.text-mask > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.text-mask.is-visible > span {
+  transform: translateY(0);
+}
+
+/* --- 3D Tilt on Hover --- */
+.tilt-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+/* --- Smooth Section Borders --- */
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(233, 69, 96, 0.2); }
+  50% { border-color: rgba(233, 69, 96, 0.5); }
+}
+
+/* --- Smooth Scroll Progress Bar --- */
+.scroll-progress {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  z-index: 99;
+  width: 0%;
+  transition: width 100ms linear;
+  pointer-events: none;
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in,
+  .animate-fade,
+  .animate-scale,
+  .animate-slide-left,
+  .animate-slide-right,
+  .text-mask > span,
+  .hero--apple__text > *,
+  .hero--apple__visual img {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .float-element,
+  .btn--trust,
+  .hero--apple__badge,
+  .apple-cta {
+    animation: none !important;
+  }
+
+  .apple-design__image::before {
+    display: none;
+  }
+}
