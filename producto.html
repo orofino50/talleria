@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="PaintPro — Acabado profesional | AltaPro">
   <meta property="og:description" content="Pinta madera, paredes, metal y vidrio con un solo dispositivo. Sin compresor, sin cables, sin complicaciones.">
-  <meta property="og:image" content="https://orofino50.github.io/alta-pro/images/alsavo-1.webp">
+  <meta property="og:image" content="https://orofino50.github.io/alta-pro/images/foto-hero.webp">
   <meta property="og:url" content="https://orofino50.github.io/alta-pro/producto.html">
   <meta property="og:type" content="product">
   <meta property="og:locale" content="es_ES">
@@ -36,11 +36,1117 @@
       "availability": "https://schema.org/InStock",
       "url": "https://orofino50.github.io/alta-pro/producto.html"
     },
-    "image": "https://orofino50.github.io/alta-pro/images/alsavo-1.webp"
+    "image": "https://orofino50.github.io/alta-pro/images/foto-hero.webp"
   }
   </script>
   <link rel="alternate" hreflang="es" href="https://orofino50.github.io/alta-pro/producto.html">
   <link rel="alternate" hreflang="x-default" href="https://orofino50.github.io/alta-pro/producto.html">
+  <style>
+    /* Apple Mac Mini Style — Premium Product Page */
+    
+    /* --- Hero Apple --- */
+    .hero--apple {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #000;
+    }
+    
+    .hero--apple__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: 85% center;
+      padding: 20px;
+      mix-blend-mode: screen;
+      filter: brightness(1.1) contrast(1.05);
+    }
+    
+    .hero--apple::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #000 0%, transparent 40%, transparent 60%, rgba(0,0,0,0.3) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .hero--apple__content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      text-align: center;
+      padding: 120px 24px 80px;
+      color: #fff;
+    }
+    
+    @media (min-width: 768px) {
+      .hero--apple {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 0 40px;
+      }
+      .hero--apple__bg {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        max-height: 600px;
+        object-fit: contain;
+        object-position: center center;
+        padding: 20px;
+        inset: auto;
+        grid-column: 2;
+        grid-row: 1;
+        mix-blend-mode: screen;
+        filter: brightness(1.1) contrast(1.05);
+      }
+      .hero--apple__content {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+        padding: 80px 40px 80px 0;
+        max-width: 520px;
+      }
+      .hero--apple__actions {
+        justify-content: flex-start;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .hero--apple {
+        padding: 0 80px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .hero--apple__content {
+        padding: 80px 60px 80px 0;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .hero--apple::after {
+        display: none;
+      }
+      .hero--apple {
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: auto;
+        background: #000;
+      }
+      .hero--apple__bg {
+        position: relative;
+        width: 100%;
+        height: 55vh;
+        min-height: 300px;
+        padding: 0;
+        flex-shrink: 0;
+        object-fit: cover;
+        object-position: center 30%;
+        background: #000;
+        mix-blend-mode: normal;
+        filter: brightness(1.05) contrast(1.02);
+      }
+      .hero--apple__content {
+        padding: 32px 24px 60px;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        color: #fff;
+        background: #000;
+      }
+      .hero--apple__badge {
+        background: var(--accent);
+        color: #fff;
+        margin-bottom: 16px;
+      }
+      .hero--apple__badge svg { display: none; }
+      .hero--apple__headline {
+        font-size: clamp(2rem, 7vw, 3rem);
+      }
+      .hero--apple__subheadline {
+        font-size: 0.938rem;
+        color: rgba(255,255,255,0.7);
+        margin-bottom: 28px;
+      }
+      .hero--apple__actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 12px;
+      }
+      .hero--apple__actions .btn { width: 100%; }
+      .hero--apple__actions .btn--outline-light {
+        display: none;
+      }
+      .hero--apple__price {
+        color: rgba(255,255,255,0.5);
+        margin-top: 12px;
+      }
+      .hero--apple__price strong { color: #fff; }
+      .hero--apple__price s { display: none; }
+    }
+    
+    .hero--apple__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: var(--radius-badge);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 20px;
+    }
+    
+    .hero--apple__headline {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    
+    .hero--apple__subheadline {
+      font-size: clamp(1.125rem, 1.3vw, 1.375rem);
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    
+    .hero--apple__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .hero--apple__price {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 16px;
+    }
+    .hero--apple__price strong { color: #fff; }
+    .hero--apple__price s { display: none; }
+    
+    /* --- Design Section (Apple Style) --- */
+    .apple-design {
+      padding: 120px 24px;
+      background: #fff;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .apple-design {
+        padding: 160px 80px;
+      }
+    }
+    
+    .apple-design__label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    
+    .apple-design__headline {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+    }
+    
+    .apple-design__sub {
+      font-size: clamp(1.125rem, 1.3vw, 1.375rem);
+      color: #6e6e73;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      line-height: 1.6;
+    }
+    
+    .apple-design__image {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+    
+    .apple-design__image img {
+      width: 100%;
+      height: auto;
+      filter: brightness(1.05) contrast(1.02) saturate(1.05);
+      transition: transform 600ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    
+    .apple-design__image:hover img {
+      transform: scale(1.02);
+    }
+    
+    /* --- Bento Grid (Apple Style) --- */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 120px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    @media (min-width: 768px) {
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 160px 80px;
+        gap: 24px;
+      }
+    }
+    
+    .bento-card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #f5f5f7;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+    }
+    
+    @media (min-width: 768px) {
+      .bento-card--large {
+        grid-column: span 2;
+        min-height: 500px;
+      }
+    }
+    
+    .bento-card__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(1.05) contrast(1.02) saturate(1.05);
+      transition: transform 600ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    
+    .bento-card:hover .bento-card__image {
+      transform: scale(1.03);
+    }
+    
+    .bento-card__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    
+    .bento-card__content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+    
+    .bento-card__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    
+    .bento-card__title {
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    
+    .bento-card__text {
+      font-size: 0.938rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+    
+    /* --- Lifestyle Section (Apple Style) --- */
+    .apple-lifestyle {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #1a1a2e;
+    }
+    
+    .apple-lifestyle__image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.9) contrast(1.1) saturate(1.1);
+      mix-blend-mode: luminosity;
+    }
+    
+    .apple-lifestyle__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(26,26,46,0.3) 0%, rgba(26,26,46,0.8) 100%);
+      pointer-events: none;
+    }
+    
+    .apple-lifestyle__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 120px 24px;
+      color: #fff;
+      max-width: 800px;
+    }
+    
+    .apple-lifestyle__headline {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    
+    .apple-lifestyle__text {
+      font-size: clamp(1.125rem, 1.3vw, 1.375rem);
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    
+    .apple-lifestyle__stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    
+    .apple-lifestyle__stat {
+      text-align: center;
+    }
+    
+    .apple-lifestyle__stat-value {
+      display: block;
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    
+    .apple-lifestyle__stat-label {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    /* --- Specs Section (Apple Style) --- */
+    .apple-specs {
+      padding: 120px 24px;
+      background: #f5f5f7;
+    }
+    
+    @media (min-width: 768px) {
+      .apple-specs {
+        padding: 160px 80px;
+      }
+    }
+    
+    .apple-specs__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .apple-specs__label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    
+    .apple-specs__headline {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: #1d1d1f;
+      margin-bottom: 60px;
+    }
+    
+    .apple-specs__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    
+    @media (min-width: 768px) {
+      .apple-specs__grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+    
+    .apple-specs__item {
+      text-align: center;
+      padding: 32px 16px;
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #e8e8ed;
+    }
+    
+    .apple-specs__value {
+      display: block;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      color: #1d1d1f;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    
+    .apple-specs__label-text {
+      font-size: 0.875rem;
+      color: #6e6e73;
+    }
+    
+    /* --- CTA Final (Apple Style) --- */
+    .apple-cta {
+      text-align: center;
+      background: #000;
+      padding: 120px 24px;
+      color: #fff;
+    }
+    
+    @media (min-width: 768px) {
+      .apple-cta {
+        padding: 160px 80px;
+      }
+    }
+    
+    .apple-cta__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 20px;
+    }
+    
+    .apple-cta__title {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    
+    .apple-cta__subtitle {
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+      margin: 0 auto 24px;
+      line-height: 1.7;
+    }
+    
+    .apple-cta__price {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    
+    .apple-cta__price-current {
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: #fff;
+    }
+    
+    .apple-cta__price-savings {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--trust);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    
+    .apple-cta__price-original {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,0.4);
+      text-decoration: line-through;
+      margin-left: 12px;
+    }
+    
+    .apple-cta__trust {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .apple-cta__trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.813rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+    }
+    
+    .apple-cta__trust-item svg {
+      color: var(--trust);
+      flexrink: 0;
+    }
+    
+    /* --- Footer (Apple Style) --- */
+    .footer {
+      background: #f5f5f7;
+      padding: 48px 24px;
+      border-top: 1px solid #e8e8ed;
+    }
+    
+    @media (min-width: 768px) {
+      .footer {
+        padding: 48px 80px;
+      }
+    }
+    
+    .footer__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    
+    @media (min-width: 768px) {
+      .footer__inner {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .footer__column-title {
+      font-size: 0.813rem;
+      font-weight: 700;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .footer__column-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .footer__column-link {
+      font-size: 0.875rem;
+      color: #6e6e73;
+      transition: color 200ms ease;
+    }
+    
+    .footer__column-link:hover {
+      color: #1d1d1f;
+    }
+    
+    .footer__column-link--disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .footer__bottom {
+      max-width: 1200px;
+      margin: 32px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid #e8e8ed;
+      text-align: center;
+      font-size: 0.813rem;
+      color: #6e6e73;
+    }
+    
+    /* --- Animations --- */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    
+    .animate-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* --- Premium Image Treatment --- */
+    .premium-image {
+      filter: brightness(1.05) contrast(1.02) saturate(1.05);
+      transition: filter 600ms ease, transform 600ms ease;
+    }
+    
+    .premium-image:hover {
+      filter: brightness(1.1) contrast(1.05) saturate(1.1);
+      transform: scale(1.02);
+    }
+    
+    /* --- Product Nav (Apple Style) --- */
+    .product-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: transparent;
+      transition: background 300ms ease, border-color 300ms ease;
+    }
+    
+    .product-nav--scrolled {
+      background: rgba(255,255,255,0.9);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e8e8ed;
+    }
+    
+    .product-nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    @media (min-width: 768px) {
+      .product-nav__inner {
+        padding: 0 80px;
+      }
+    }
+    
+    .product-nav__name {
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: #fff;
+      letter-spacing: -0.5px;
+      transition: color 300ms ease;
+    }
+    
+    .product-nav--scrolled .product-nav__name {
+      color: #1d1d1f;
+    }
+    
+    .product-nav__links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    
+    @media (max-width: 900px) {
+      .product-nav__links {
+        display: none;
+      }
+    }
+    
+    .product-nav__link {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 200ms ease;
+    }
+    
+    .product-nav__link:hover {
+      color: #fff;
+    }
+    
+    .product-nav--scrolled .product-nav__link {
+      color: #6e6e73;
+    }
+    
+    .product-nav--scrolled .product-nav__link:hover {
+      color: #1d1d1f;
+    }
+    
+    .btn--accent {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: opacity 200ms ease;
+    }
+    
+    .btn--accent:hover {
+      opacity: 0.9;
+    }
+    
+    .btn--accent-header {
+      background: #d62d4a;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.813rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: opacity 200ms ease;
+      min-height: 44px;
+    }
+    
+    .btn--accent-header:hover {
+      opacity: 0.9;
+    }
+    
+    /* Hamburger */
+    .product-nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 101;
+      min-height: 44px;
+      min-width: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    @media (max-width: 900px) {
+      .product-nav__hamburger {
+        display: flex;
+      }
+    }
+    
+    .product-nav__hamburger-line {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      transition: transform 300ms ease, opacity 200ms ease;
+    }
+    
+    .product-nav--scrolled .product-nav__hamburger-line {
+      background: #1d1d1f;
+    }
+    
+    .product-nav__hamburger[aria-expanded="true"] .product-nav__hamburger-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    
+    .product-nav__hamburger[aria-expanded="true"] .product-nav__hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .product-nav__hamburger[aria-expanded="true"] .product-nav__hamburger-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    /* Mobile Menu */
+    .product-nav__mobile {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 60px);
+      background: #fff;
+      padding: 24px;
+      z-index: 100;
+      overflow-y: auto;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 300ms ease, opacity 300ms ease;
+      border-bottom: 1px solid #e8e8ed;
+    }
+    
+    .product-nav__mobile.is-open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    @media (max-width: 900px) {
+      .product-nav__mobile {
+        display: block;
+      }
+    }
+    
+    .product-nav__mobile-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .product-nav__mobile-link {
+      display: block;
+      padding: 14px 0;
+      font-size: 1rem;
+      color: #6e6e73;
+      font-weight: 500;
+      min-height: 44px;
+    }
+    
+    .product-nav__mobile-link--cta {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    
+    /* --- Why Buy (Apple Style) --- */
+    .whybuy {
+      padding: 120px 24px;
+      background: #fff;
+    }
+    
+    @media (min-width: 768px) {
+      .whybuy {
+        padding: 160px 80px;
+      }
+    }
+    
+    .whybuy__title {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: #1d1d1f;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    
+    .whybuy__sub {
+      font-size: clamp(1.125rem, 1.3vw, 1.375rem);
+      color: #6e6e73;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      line-height: 1.6;
+    }
+    
+    .whybuy__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    @media (min-width: 768px) {
+      .whybuy__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .whybuy__card {
+      text-align: center;
+      padding: 32px 24px;
+      background: #f5f5f7;
+      border-radius: 16px;
+      border: 1px solid #e8e8ed;
+      transition: transform 300ms ease;
+    }
+    
+    .whybuy__card:hover {
+      transform: translateY(-4px);
+    }
+    
+    .whybuy__card-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 16px;
+      color: var(--accent);
+    }
+    
+    .whybuy__card-title {
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: #1d1d1f;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+    
+    .whybuy__card-text {
+      color: #6e6e73;
+      font-size: 0.938rem;
+      line-height: 1.6;
+    }
+    
+    /* --- Compare Table (Apple Style) --- */
+    .apple-compare {
+      padding: 120px 24px;
+      background: #f5f5f7;
+    }
+    
+    @media (min-width: 768px) {
+      .apple-compare {
+        padding: 160px 80px;
+      }
+    }
+    
+    .apple-compare__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .apple-compare__label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    
+    .apple-compare__headline {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: #1d1d1f;
+      margin-bottom: 60px;
+    }
+    
+    .apple-compare__table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e8e8ed;
+    }
+    
+    .apple-compare__table th,
+    .apple-compare__table td {
+      padding: 16px 24px;
+      text-align: left;
+      border-bottom: 1px solid #e8e8ed;
+      font-size: 0.938rem;
+    }
+    
+    .apple-compare__table th {
+      font-weight: 700;
+      color: #1d1d1f;
+      background: #f5f5f7;
+    }
+    
+    .apple-compare__table td {
+      color: #6e6e73;
+    }
+    
+    .apple-compare__table td.highlight {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    
+    .apple-compare__table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    /* --- Box Grid (Apple Style) --- */
+    .apple-box {
+      padding: 120px 24px;
+      background: #fff;
+    }
+    
+    @media (min-width: 768px) {
+      .apple-box {
+        padding: 160px 80px;
+      }
+    }
+    
+    .apple-box__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .apple-box__label {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    
+    .apple-box__headline {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: #1d1d1f;
+      margin-bottom: 60px;
+    }
+    
+    .apple-box__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    
+    @media (min-width: 768px) {
+      .apple-box__grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .apple-box__item {
+      text-align: center;
+    }
+    
+    .apple-box__image {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      filter: brightness(1.05) contrast(1.02) saturate(1.05);
+      transition: transform 300ms ease;
+    }
+    
+    .apple-box__image:hover {
+      transform: scale(1.03);
+    }
+    
+    .apple-box__label-text {
+      font-size: 0.938rem;
+      font-weight: 600;
+      color: #1d1d1f;
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -48,17 +1154,13 @@
   <nav class="product-nav" aria-label="Producto">
     <div class="product-nav__inner">
       <a href="index.html" class="product-nav__name">Alta<span style="font-weight:400">Pro</span></a>
-      <ul class="product-nav__links product-nav__links--site">
+      <ul class="product-nav__links">
         <li><a href="index.html" class="product-nav__link">Inicio</a></li>
         <li><a href="sobre.html" class="product-nav__link">Sobre</a></li>
         <li><a href="faq.html" class="product-nav__link">FAQ</a></li>
         <li><a href="contacto.html" class="product-nav__link">Contacto</a></li>
       </ul>
-      <ul class="product-nav__links">
-        <li><a href="#hero" class="product-nav__link">Visión general</a></li>
-        <li><a href="#specs" class="product-nav__link">Especificaciones</a></li>
-      </ul>
-      <a href="#cta-final" class="btn btn--accent">Comprar</a>
+      <a href="#cta-final" class="btn--accent-header">Comprar</a>
       <button class="product-nav__hamburger" aria-label="Menú" aria-expanded="false">
         <span class="product-nav__hamburger-line"></span>
         <span class="product-nav__hamburger-line"></span>
@@ -71,8 +1173,6 @@
         <li><a href="sobre.html" class="product-nav__mobile-link">Sobre</a></li>
         <li><a href="faq.html" class="product-nav__mobile-link">FAQ</a></li>
         <li><a href="contacto.html" class="product-nav__mobile-link">Contacto</a></li>
-        <li><a href="#hero" class="product-nav__mobile-link">Visión general</a></li>
-        <li><a href="#specs" class="product-nav__mobile-link">Especificaciones</a></li>
         <li><a href="#cta-final" class="product-nav__mobile-link product-nav__mobile-link--cta">Comprar</a></li>
       </ul>
     </div>
@@ -80,9 +1180,9 @@
 
   <main id="main">
 
-    <!-- HERO (com classe 3D) -->
-    <section class="hero--apple is-3d" id="hero" data-nav="hero">
-      <img src="images/foto-hero.webp" alt="PaintPro — pistola pulverizadora inalámbrica profesional" width="1500" height="1500" class="hero--apple__bg" fetchpriority="high">
+    <!-- HERO — Apple Style with Real Product Photo -->
+    <section class="hero--apple" id="hero">
+      <img src="images/foto-hero.webp" alt="PaintPro — pistola pulverizadora inalámbrica profesional" width="1500" height="1500" class="hero--apple__bg premium-image" fetchpriority="high">
       <div class="hero--apple__content">
         <div class="hero--apple__badge">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83l-.06.06a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
@@ -91,214 +1191,165 @@
         <h1 class="hero--apple__headline">PaintPro.<br>Acabado profesional.</h1>
         <p class="hero--apple__subheadline">Pinta madera, paredes, metal y vidrio con un solo dispositivo. Resultados de taller desde casa.</p>
         <div class="hero--apple__actions">
-          <a href="#cta-final" class="btn btn--accent">Comprar ahora →</a>
-          <a href="#diseno" class="btn btn--outline-light">Ver en detalle</a>
+          <a href="#cta-final" class="btn--accent" style="padding: 16px 40px; font-size: 1rem;">Comprar ahora →</a>
+          <a href="#diseno" class="btn--outline-light">Ver en detalle</a>
         </div>
         <p class="hero--apple__price"><strong>€69,90</strong> <s>€102,90</s></p>
       </div>
     </section>
 
-    <!-- MOBILE 360 VIEWER — shown only below hero on mobile -->
-    <section class="spin-mobile" aria-label="Vista 360° del producto">
-      <div class="spin-mobile__viewer" id="spin-mobile" role="img" aria-label="Arrastra para rotar el producto 360°">
-        <img src="images/spin-01.webp" alt="" class="spin-360__frame" id="spin-mobile-a">
-        <img src="images/spin-01.webp" alt="" class="spin-360__frame" id="spin-mobile-b" aria-hidden="true">
-        <div class="spin-360__scroll-hint">Arrastra para rotar</div>
+    <!-- DESIGN SECTION — Apple Style -->
+    <section class="apple-design" id="diseno">
+      <p class="apple-design__label animate-in">Diseño</p>
+      <h2 class="apple-design__headline animate-in">Parece compacta.<br>Es una potencia.</h2>
+      <p class="apple-design__sub animate-in">PaintPro fue diseñada desde cero para ofrecer el máximo rendimiento en el mínimo espacio. Su formato ergonómico se adapta a cualquier mano.</p>
+      <div class="apple-design__image animate-in">
+        <img src="images/spin-02.webp" alt="PaintPro — Diseño compacto y ergonómico" width="900" height="600" class="premium-image" loading="lazy">
       </div>
     </section>
 
-    <!-- PRODUCT SHOWCASE — 360 viewer + content panels (responsive) -->
-    <section class="product-showcase" id="diseno" data-nav="diseno">
-
-      <div class="product-showcase__visual">
-        <div class="spin-360__viewer" id="product-spin" role="img" aria-label="Vista 360° del producto">
-          <img src="images/spin-01.webp" alt="" class="spin-360__frame" data-frame="0" id="spin-a">
-          <img src="images/spin-01.webp" alt="" class="spin-360__frame" data-frame="0" id="spin-b" aria-hidden="true">
-          <div class="spin-360__scroll-hint">Arrastra para rotar</div>
+    <!-- BENTO GRID — Apple Style -->
+    <section class="bento-grid">
+      <article class="bento-card bento-card--large animate-in">
+        <img src="images/spin-03.webp" alt="PaintPro — Control de flujo preciso" class="bento-card__image premium-image" loading="lazy">
+        <div class="bento-card__overlay"></div>
+        <div class="bento-card__content">
+          <p class="bento-card__label">Tecnología</p>
+          <h3 class="bento-card__title">Control de flujo preciso. Resultado perfecto.</h3>
+          <p class="bento-card__text">El sistema THC-3 regula el caudal con precisión milimétrica. Desde un velado suave hasta cobertura completa.</p>
         </div>
-      </div>
-
-      <div class="product-showcase__content">
-        <div class="product-showcase__section" data-section="design">
-          <span class="product-showcase__label">Diseño</span>
-          <h2 class="product-showcase__title">Parece compacta. Es una potencia.</h2>
-          <p class="product-showcase__text">PaintPro fue diseñada desde cero para ofrecer el máximo rendimiento en el mínimo espacio. Su formato ergonómico se adapta a cualquier mano.</p>
-          <p class="product-showcase__stats">1.2 kg &middot; 28 cm &middot; 800 ml</p>
+      </article>
+      <article class="bento-card animate-in">
+        <img src="images/spin-04.webp" alt="PaintPro — Potencia 400W" class="bento-card__image premium-image" loading="lazy">
+        <div class="bento-card__overlay"></div>
+        <div class="bento-card__content">
+          <p class="bento-card__label">Potencia</p>
+          <h3 class="bento-card__title">400W de rendimiento puro.</h3>
+          <p class="bento-card__text">Motor de alto rendimiento con control de flujo continuo.</p>
         </div>
-
-        <div class="product-showcase__section" data-section="dores">
-          <h2 class="product-showcase__title">Brochas vs PaintPro. La diferencia es nítida.</h2>
-          <p class="product-showcase__text">Mientras las brochas dejan marcas y grumos, PaintPro pulveriza de forma uniforme en una sola pasada.</p>
-          <p class="product-showcase__stats">1 pasada &middot; 10 min preparación</p>
+      </article>
+      <article class="bento-card animate-in">
+        <img src="images/spin-05.webp" alt="PaintPro — Batería 88Vf" class="bento-card__image premium-image" loading="lazy">
+        <div class="bento-card__overlay"></div>
+        <div class="bento-card__content">
+          <p class="bento-card__label">Autonomía</p>
+          <h3 class="bento-card__title">60 minutos de autonomía.</h3>
+          <p class="bento-card__text">Batería de iones de litio recargable. Carga completa en 2h vía USB-C.</p>
         </div>
-
-        <div class="product-showcase__section" data-section="transformacion">
-          <h2 class="product-showcase__title">La misma superficie. Resultados diferentes.</h2>
-          <p class="product-showcase__text">Paredes descascaradas, muebles desgastados, metal oxidado. Con PaintPro, cualquier superficie vuelve a lucir como nueva.</p>
-          <p class="product-showcase__stats">5 min limpieza &middot; 60 min autonomía</p>
-        </div>
-
-        <div class="product-showcase__section" data-section="superficies">
-          <h2 class="product-showcase__title">Madera, metal, paredes, vidrio. Un solo dispositivo.</h2>
-          <p class="product-showcase__text">PaintPro se adapta a cualquier proyecto. Boquilla ajustable y control de flujo variable para cada superficie.</p>
-          <p class="product-showcase__stats">4 tipos &middot; 150 KU viscosidad máx</p>
-        </div>
-
-        <div class="product-showcase__section" data-section="tecnologia">
-          <span class="product-showcase__label">Tecnología</span>
-          <h2 class="product-showcase__title">Control de flujo preciso. Resultado perfecto.</h2>
-          <p class="product-showcase__text">El sistema THC-3 regula el caudal con precisión milimétrica. Desde un velado suave hasta cobertura completa.</p>
-          <p class="product-showcase__stats">400W &middot; 800 ml/min caudal</p>
-        </div>
-
-        <div class="product-showcase__section product-showcase__section--testimonial">
-          <h2 class="product-showcase__title">Lo que dicen nuestros clientes.</h2>
-          <div class="product-showcase__cards">
-            <div class="product-showcase__card">
-              <img src="images/testimonial-augusto.webp" alt="Augusto" class="product-showcase__card-avatar" loading="lazy" width="48" height="48">
-              <p class="product-showcase__stars">★★★★★</p>
-              <p class="product-showcase__quote">"Pinté todo el salón en una tarde. El acabado quedó perfecto, sin una sola marca de brocha."</p>
-              <p class="product-showcase__author">— Augusto, Madrid</p>
-            </div>
-            <div class="product-showcase__card">
-              <img src="images/testimonial-luis.webp" alt="Luis" class="product-showcase__card-avatar" loading="lazy" width="48" height="48">
-              <p class="product-showcase__stars">★★★★★</p>
-              <p class="product-showcase__quote">"Renové todos los muebles de la cocina. Parecen nuevos. Mi mujer no se lo creía."</p>
-              <p class="product-showcase__author">— Luis, Barcelona</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      </article>
     </section>
 
-    <!-- LIFESTYLE SECTION -->
-    <section class="lifestyle section--flow">
-      <img src="images/alsavo-8.webp" alt="PaintPro en acción" class="lifestyle__bg" loading="lazy">
-      <div class="lifestyle__overlay"></div>
-      <div class="lifestyle__content">
-        <div class="lifestyle__badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          En acción
-        </div>
-        <h2 class="lifestyle__title">En tus manos.<br>Tu mejor proyecto.</h2>
-        <p class="lifestyle__text">Ligera, potente, precisa. PaintPro cabe en cualquier mano y transforma cualquier superficie en minutos. Sin compresor, sin cables, sin complicaciones. Acabado de taller al alcance de tu mano.</p>
-        <div class="lifestyle__stats">
-          <div class="lifestyle__stat">
-            <span class="lifestyle__stat-value">400W</span>
-            <span class="lifestyle__stat-label">Potencia</span>
+    <!-- LIFESTYLE — Apple Style -->
+    <section class="apple-lifestyle">
+      <img src="images/foto-9.webp" alt="PaintPro en acción" class="apple-lifestyle__image premium-image" loading="lazy">
+      <div class="apple-lifestyle__overlay"></div>
+      <div class="apple-lifestyle__content">
+        <h2 class="apple-lifestyle__headline animate-in">En tus manos.<br>Tu mejor proyecto.</h2>
+        <p class="apple-lifestyle__text animate-in">Ligera, potente, precisa. PaintPro cabe en cualquier mano y transforma cualquier superficie en minutos. Sin compresor, sin cables, sin complicaciones.</p>
+        <div class="apple-lifestyle__stats animate-in">
+          <div class="apple-lifestyle__stat">
+            <span class="apple-lifestyle__stat-value">400W</span>
+            <span class="apple-lifestyle__stat-label">Potencia</span>
           </div>
-          <div class="lifestyle__stat">
-            <span class="lifestyle__stat-value">60min</span>
-            <span class="lifestyle__stat-label">Autonomía</span>
+          <div class="apple-lifestyle__stat">
+            <span class="apple-lifestyle__stat-value">60min</span>
+            <span class="apple-lifestyle__stat-label">Autonomía</span>
           </div>
-          <div class="lifestyle__stat">
-            <span class="lifestyle__stat-value">1.2kg</span>
-            <span class="lifestyle__stat-label">Peso</span>
+          <div class="apple-lifestyle__stat">
+            <span class="apple-lifestyle__stat-value">1.2kg</span>
+            <span class="apple-lifestyle__stat-label">Peso</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- HIGHLIGHTS INTERACTIVO — TABS -->
-    <section class="highlights--tabs section--flow">
-      <div class="container">
-        <p class="highlights__title">Diferenciales</p>
-        <p class="highlights__sub">Descubre PaintPro.</p>
-        <div class="highlights__track" role="tablist">
-          <article class="highlights__card is-active" id="tab-diseno" data-highlight="diseno" role="tab" tabindex="0" aria-selected="true">
-            <svg class="highlights__card-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            <h3 class="highlights__card-title">Diseño</h3>
-            <p class="highlights__card-text">Compacta y ergonómica</p>
-          </article>
-          <article class="highlights__card" id="tab-potencia" data-highlight="potencia" role="tab" tabindex="-1" aria-selected="false">
-            <svg class="highlights__card-icon" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            <h3 class="highlights__card-title">Potencia</h3>
-            <p class="highlights__card-text">400W de rendimiento</p>
-          </article>
-          <article class="highlights__card" id="tab-versatilidad" data-highlight="versatilidad" role="tab" tabindex="-1" aria-selected="false">
-            <svg class="highlights__card-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <h3 class="highlights__card-title">Versatilidad</h3>
-            <p class="highlights__card-text">4 superficies, 1 dispositivo</p>
-          </article>
-        </div>
-        <div class="highlights__display" role="tabpanel" aria-labelledby="tab-diseno">
-          <img src="images/alsavo-1.webp" alt="Diseño PaintPro" class="highlights__img is-active" data-highlight="diseno" loading="lazy">
-          <img src="images/alsavo-3.webp" alt="Potencia PaintPro" class="highlights__img" data-highlight="potencia" loading="lazy">
-          <img src="images/alsavo-5.webp" alt="Versatilidad PaintPro" class="highlights__img" data-highlight="versatilidad" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- PAINT REVEAL -->
-    <section class="paint-reveal section--flow" id="reveal">
-      <div class="paint-reveal__container">
-        <img src="images/foto-9.webp" alt="PaintPro" class="paint-reveal__before" loading="lazy">
-        <img src="images/foto-10.webp" alt="PaintPro" class="paint-reveal__after" loading="lazy">
-      </div>
-      <div class="paint-reveal__content">
-        <h2 class="paint-reveal__title">Un solo pase.</h2>
-        <p class="paint-reveal__text">Resultado uniforme en una sola capa. Sin marcas, sin grumos, sin repetir.</p>
-      </div>
-    </section>
-
-    <!-- WHAT'S IN THE BOX -->
-    <section class="section section--blend section--flow">
-      <div class="container">
-        <p class="section__label">Contenido</p>
-        <h2 class="section__title">Qué incluye la caja.</h2>
-        <div class="box-grid">
-          <div class="box-item">
-            <img src="images/alsavo-3.webp" alt="PaintPro" class="box-item__img" loading="lazy">
-            <p class="box-item__label">PaintPro™</p>
+    <!-- SPECS — Apple Style -->
+    <section class="apple-specs">
+      <div class="apple-specs__inner">
+        <p class="apple-specs__label animate-in">Especificaciones</p>
+        <h2 class="apple-specs__headline animate-in">Pequeña en tamaño.<br>Grande en prestaciones.</h2>
+        <div class="apple-specs__grid animate-in">
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">400W</span>
+            <span class="apple-specs__label-text">Potencia</span>
           </div>
-          <div class="box-item">
-            <img src="images/alsavo-12.webp" alt="Boquilla" class="box-item__img" loading="lazy">
-            <p class="box-item__label">Boquilla ajustable</p>
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">1.2 kg</span>
+            <span class="apple-specs__label-text">Peso ligero</span>
           </div>
-          <div class="box-item">
-            <img src="images/spin-01.webp" alt="Accesorios" class="box-item__img" loading="lazy">
-            <p class="box-item__label">Cepillo + USB-C</p>
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">60 min</span>
+            <span class="apple-specs__label-text">Autonomía</span>
           </div>
-          <div class="box-item">
-            <img src="images/alsavo-5.webp" alt="Manual" class="box-item__img" loading="lazy">
-            <p class="box-item__label">Manual de usuario</p>
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">800 ml</span>
+            <span class="apple-specs__label-text">Depósito</span>
+          </div>
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">USB-C</span>
+            <span class="apple-specs__label-text">Carga rápida</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHY BUY — 6 cards de confianza -->
-    <section class="whybuy section--flow">
-      <h2 class="whybuy__title">Por qué comprar PaintPro.</h2>
-      <p class="whybuy__sub">Compra con total confianza.</p>
+    <!-- BOX GRID — Apple Style -->
+    <section class="apple-box">
+      <div class="apple-box__inner">
+        <p class="apple-box__label animate-in">Contenido</p>
+        <h2 class="apple-box__headline animate-in">Qué incluye la caja.</h2>
+        <div class="apple-box__grid animate-in">
+          <div class="apple-box__item">
+            <img src="images/spin-01.webp" alt="PaintPro" class="apple-box__image premium-image" loading="lazy">
+            <p class="apple-box__label-text">PaintPro™</p>
+          </div>
+          <div class="apple-box__item">
+            <img src="images/spin-06.webp" alt="Boquilla" class="apple-box__image premium-image" loading="lazy">
+            <p class="apple-box__label-text">Boquilla ajustable</p>
+          </div>
+          <div class="apple-box__item">
+            <img src="images/spin-07.webp" alt="Accesorios" class="apple-box__image premium-image" loading="lazy">
+            <p class="apple-box__label-text">Cargador + Viscosímetro</p>
+          </div>
+          <div class="apple-box__item">
+            <img src="images/spin-08.webp" alt="Batería" class="apple-box__image premium-image" loading="lazy">
+            <p class="apple-box__label-text">Batería 88Vf</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY BUY — Apple Style -->
+    <section class="whybuy">
+      <h2 class="whybuy__title animate-in">Por qué comprar PaintPro.</h2>
+      <p class="whybuy__sub animate-in">Compra con total confianza.</p>
       <ul class="whybuy__grid">
-        <li class="whybuy__card">
+        <li class="whybuy__card animate-in">
           <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <h3 class="whybuy__card-title">Garantía 30 días</h3>
           <p class="whybuy__card-text">Devuelve si no te encanta, sin preguntas.</p>
         </li>
-        <li class="whybuy__card">
+        <li class="whybuy__card animate-in">
           <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           <h3 class="whybuy__card-title">Envío rápido</h3>
           <p class="whybuy__card-text">24-48h en toda España peninsular.</p>
         </li>
-        <li class="whybuy__card">
+        <li class="whybuy__card animate-in">
           <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l4-4m0 0l4 4m-4-4v12"/></svg>
           <h3 class="whybuy__card-title">Pago contra entrega</h3>
           <p class="whybuy__card-text">Pagas solo cuando recibes el producto.</p>
         </li>
-        <li class="whybuy__card">
+        <li class="whybuy__card animate-in">
           <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           <h3 class="whybuy__card-title">Pago seguro</h3>
           <p class="whybuy__card-text">Conexión cifrada SSL. Tus datos protegidos.</p>
         </li>
-        <li class="whybuy__card">
+        <li class="whybuy__card animate-in">
           <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           <h3 class="whybuy__card-title">Soporte directo</h3>
           <p class="whybuy__card-text">WhatsApp + Email. Respondemos en horas.</p>
         </li>
-        <li class="whybuy__card">
+        <li class="whybuy__card animate-in">
           <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           <h3 class="whybuy__card-title">+2.000 clientes</h3>
           <p class="whybuy__card-text">Compra verificada por miles de hogares.</p>
@@ -306,98 +1357,67 @@
       </ul>
     </section>
 
-    <!-- COMPARE -->
-    <section class="section section--blend section--flow">
-      <div class="container">
-        <p class="section__label">Comparativa</p>
-        <h2 class="section__title">PaintPro vs el resto.</h2>
-        <div class="compare-table__wrap">
-        <div class="compare-table">
-          <div class="compare-table__cell compare-table__cell--header"></div>
-          <div class="compare-table__cell compare-table__cell--header">Brochas/Rodillos</div>
-          <div class="compare-table__cell compare-table__cell--header compare-table__cell--highlight">PaintPro™</div>
-          <div class="compare-table__cell compare-table__cell--header">Tiempo</div>
-          <div class="compare-table__cell">Horas por capa</div>
-          <div class="compare-table__cell compare-table__cell--highlight">Minutos</div>
-          <div class="compare-table__cell compare-table__cell--header">Acabado</div>
-          <div class="compare-table__cell">Irregular, marcas</div>
-          <div class="compare-table__cell compare-table__cell--highlight">Uniforme, profesional</div>
-          <div class="compare-table__cell compare-table__cell--header">Superficies</div>
-          <div class="compare-table__cell">Limitado</div>
-          <div class="compare-table__cell compare-table__cell--highlight">Madera, metal, paredes, vidrio</div>
-          <div class="compare-table__cell compare-table__cell--header">Portabilidad</div>
-          <div class="compare-table__cell">Requiere cubeta</div>
-          <div class="compare-table__cell compare-table__cell--highlight">Inalámbrica, 1.2 kg</div>
-          <div class="compare-table__cell compare-table__cell--header">Limpieza</div>
-          <div class="compare-table__cell">30+ min</div>
-          <div class="compare-table__cell compare-table__cell--highlight">5 min bajo el grifo</div>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SPECS -->
-    <section class="section section--blend section--flow" id="specs" data-nav="specs">
-      <div class="container">
-        <p class="section__label">Especificaciones</p>
-        <h2 class="section__title">Pequeña en tamaño. Grande en prestaciones.</h2>
-        <div class="specs-strip">
-          <div class="specs-strip__item"><span class="specs-strip__value">400W</span><span class="specs-strip__label">Potencia</span></div>
-          <div class="specs-strip__item"><span class="specs-strip__value">1.2 kg</span><span class="specs-strip__label">Peso ligero</span></div>
-          <div class="specs-strip__item"><span class="specs-strip__value">60 min</span><span class="specs-strip__label">Autonomía</span></div>
-          <div class="specs-strip__item"><span class="specs-strip__value">800 ml</span><span class="specs-strip__label">Depósito</span></div>
-          <div class="specs-strip__item"><span class="specs-strip__value">USB-C</span><span class="specs-strip__label">Carga rápida</span></div>
-        </div>
-        <div class="specs-faq-container">
-          <details class="faq-item">
-            <summary class="faq-question">Potencia y rendimiento <span class="faq-icon">+</span></summary>
-            <div class="faq-answer">
-              <p>Motor de alto rendimiento con control de flujo continuo.</p>
-              <ul class="specs-answer-list">
-                <li>Potencia: 400W</li>
-                <li>Caudal ajustable: 0-800 ml/min</li>
-                <li>Viscosidad máxima: 150 KU</li>
-              </ul>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">Batería y autonomía <span class="faq-icon">+</span></summary>
-            <div class="faq-answer">
-              <p>Batería de iones de litio recargable.</p>
-              <ul class="specs-answer-list">
-                <li>Capacidad: 4000mAh</li>
-                <li>Autonomía: 45-60 min continuos</li>
-                <li>Carga: 2h vía USB-C</li>
-              </ul>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">Dimensiones y diseño <span class="faq-icon">+</span></summary>
-            <div class="faq-answer">
-              <p>Diseño ergonómico para uso prolongado.</p>
-              <ul class="specs-answer-list">
-                <li>Peso: 1.2 kg</li>
-                <li>Dimensiones: 28 x 12 x 25 cm</li>
-                <li>Depósito: 800 ml</li>
-              </ul>
-            </div>
-          </details>
+    <!-- COMPARE — Apple Style -->
+    <section class="apple-compare">
+      <div class="apple-compare__inner">
+        <p class="apple-compare__label animate-in">Comparativa</p>
+        <h2 class="apple-compare__headline animate-in">PaintPro vs el resto.</h2>
+        <div class="animate-in">
+          <table class="apple-compare__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Brochas/Rodillos</th>
+                <th style="color: var(--accent);">PaintPro™</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: 700; color: #1d1d1f;">Tiempo</td>
+                <td>Horas por capa</td>
+                <td class="highlight">Minutos</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: #1d1d1f;">Acabado</td>
+                <td>Irregular, marcas</td>
+                <td class="highlight">Uniforme, profesional</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: #1d1d1f;">Superficies</td>
+                <td>L限ado</td>
+                <td class="highlight">Madera, metal, paredes, vidrio</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: #1d1d1f;">Portabilidad</td>
+                <td>Requiere cubeta</td>
+                <td class="highlight">Inalámbrica, 1.2 kg</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: #1d1d1f;">Limpieza</td>
+                <td>30+ min</td>
+                <td class="highlight">5 min bajo el grifo</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="apple-cta section--flow" id="cta-final">
-
-      <h2 class="apple-cta__title">Tu proyecto merece<br>PaintPro™.</h2>
-      <p class="apple-cta__subtitle">Únete a miles de personas que ya transforman sus proyectos con PaintPro.</p>
-      <div class="apple-cta__price">
+    <!-- CTA FINAL — Apple Style -->
+    <section class="apple-cta" id="cta-final">
+      <div class="apple-cta__badge">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83l-.06.06a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Oferta limitada
+      </div>
+      <h2 class="apple-cta__title animate-in">Tu proyecto merece<br>PaintPro™.</h2>
+      <p class="apple-cta__subtitle animate-in">Únete a miles de personas que ya transforman sus proyectos con PaintPro.</p>
+      <div class="apple-cta__price animate-in">
         <span class="apple-cta__price-current">€69,90</span>
         <span class="apple-cta__price-original">€102,90</span>
         <span class="apple-cta__price-savings">Ahorra €33 (32%)</span>
       </div>
 
-      <a href="https://lapurasalud.com/products/pistola-paintpro" class="btn btn--trust">Comprar PaintPro — Envío gratis</a>
+      <a href="https://lapurasalud.com/products/pistola-paintpro" class="btn--accent" style="padding: 20px 64px; font-size: 1.125rem; letter-spacing: 0.02em;">Comprar PaintPro — Envío gratis</a>
 
       <div class="apple-cta__trust">
         <div class="apple-cta__trust-item">
@@ -413,7 +1433,6 @@
           Devolución gratis
         </div>
       </div>
-
     </section>
   </main>
 
@@ -452,6 +1471,56 @@
       <p>&copy; 2026 AltaPro — Potencia. Control. Resultado.</p>
     </div>
   </footer>
+
+  <script>
+    // IntersectionObserver for scroll animations
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      document.querySelectorAll('.animate-in').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Product nav scroll effect
+      const nav = document.querySelector('.product-nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          nav.classList.add('product-nav--scrolled');
+        } else {
+          nav.classList.remove('product-nav--scrolled');
+        }
+      });
+
+      // Hamburger menu
+      const hamburger = document.querySelector('.product-nav__hamburger');
+      const mobileMenu = document.querySelector('.product-nav__mobile');
+      
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !isOpen);
+          mobileMenu.classList.toggle('is-open');
+        });
+
+        // Close menu when clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.classList.remove('is-open');
+          });
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
