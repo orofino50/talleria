@@ -1,0 +1,11 @@
+<svg viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(8, 8)" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 4 L13 60"/>
+    <path d="M32 4 L51 60"/>
+    <path d="M19 40 L45 40"/>
+  </g>
+  <g fill="currentColor" font-family="Inter, -apple-system, system-ui, sans-serif" letter-spacing="-1.5">
+    <text x="80" y="55" font-weight="900" font-size="38">Alta</text>
+    <text x="171" y="55" font-weight="300" font-size="38">Pro</text>
+  </g>
+</svg>
