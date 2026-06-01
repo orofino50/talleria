@@ -2773,16 +2773,16 @@ textarea.form__input { resize: vertical; min-height: 120px; }
 /* --- H. Btn Outline Light --- */
 .btn--outline-light {
   background: transparent;
-  color: #1d1d1f;
-  border: 2px solid #e8e8ed;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.3);
   padding: 14px 36px;
   border-radius: var(--radius-button);
   font-size: 0.938rem;
 }
 
 .btn--outline-light:hover {
-  border-color: #1d1d1f;
-  background: rgba(0,0,0,0.03);
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.05);
 }
 
 /* ==========================================
