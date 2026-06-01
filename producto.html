@@ -9,7 +9,7 @@
   <meta property="og:url" content="https://orofino50.github.io/alta-pro/producto.html">
   <meta property="og:type" content="product">
   <meta property="og:locale" content="es_ES">
-  <meta name="theme-color" content="#f5f5f7">
+  <meta name="theme-color" content="#1a1a2e">
   <link rel="canonical" href="https://orofino50.github.io/alta-pro/producto.html">
   <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
   <link rel="icon" href="images/favicon-16.png" type="image/png" sizes="16x16">
@@ -21,7 +21,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <script defer src="js/scripts.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,1137 +40,11 @@
   </script>
   <link rel="alternate" hreflang="es" href="https://orofino50.github.io/alta-pro/producto.html">
   <link rel="alternate" hreflang="x-default" href="https://orofino50.github.io/alta-pro/producto.html">
-  <style>
-    /* Apple Mac Mini Style — Premium Product Page */
-    
-    /* --- Hero Apple --- */
-    .hero--apple {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: #1a1a2e;
-    }
-    
-    .hero--apple__bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center center;
-      padding: 20px;
-      mix-blend-mode: screen;
-      filter: brightness(1.3) contrast(1.15) saturate(1.1);
-    }
-    
-    .hero--apple::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, #1a1a2e 0%, rgba(26,26,46,0.6) 30%, transparent 50%, rgba(26,26,46,0.3) 80%, #1a1a2e 100%);
-      pointer-events: none;
-      z-index: 1;
-    }
-    
-    .hero--apple__content {
-      position: relative;
-      z-index: 2;
-      max-width: 680px;
-      text-align: center;
-      padding: 120px 24px 80px;
-      color: #fff;
-    }
-    
-    @media (min-width: 768px) {
-      .hero--apple__content {
-        text-align: left;
-        padding: 80px 40px 80px 0;
-        max-width: 520px;
-      }
-    }
-    
-    @media (min-width: 768px) {
-      .hero--apple {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        padding: 0 40px;
-      }
-      .hero--apple__bg {
-        position: relative;
-        width: 100%;
-        height: 70vh;
-        max-height: 600px;
-        object-fit: contain;
-        object-position: center center;
-        padding: 20px;
-        inset: auto;
-        grid-column: 2;
-        grid-row: 1;
-        mix-blend-mode: screen;
-        filter: brightness(1.3) contrast(1.15) saturate(1.1);
-      }
-      .hero--apple__content {
-        grid-column: 1;
-        grid-row: 1;
-        text-align: left;
-        padding: 80px 40px 80px 0;
-        max-width: 520px;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .hero--apple {
-        padding: 0 80px;
-        max-width: 1400px;
-        margin: 0 auto;
-      }
-      .hero--apple__content {
-        padding: 80px 60px 80px 0;
-      }
-    }
-    
-    @media (max-width: 767px) {
-      .hero--apple::after {
-        display: none;
-      }
-      .hero--apple {
-        flex-direction: column;
-        justify-content: flex-start;
-        min-height: auto;
-        background: #1a1a2e;
-      }
-      .hero--apple__bg {
-        position: relative;
-        width: 100%;
-        height: 55vh;
-        min-height: 300px;
-        padding: 0;
-        flex-shrink: 0;
-        object-fit: contain;
-        object-position: center center;
-        background: #1a1a2e;
-        mix-blend-mode: screen;
-        filter: brightness(1.3) contrast(1.15) saturate(1.1);
-      }
-      .hero--apple__content {
-        padding: 40px 24px 60px;
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
-        color: #fff;
-        background: #1a1a2e;
-      }
-      .hero--apple__badge {
-        background: var(--accent);
-        color: #fff;
-        margin-bottom: 16px;
-      }
-      .hero--apple__badge svg { display: none; }
-      .hero--apple__headline {
-        font-size: clamp(2rem, 8vw, 3rem);
-        color: #fff;
-      }
-      .hero--apple__subheadline {
-        font-size: 0.938rem;
-        color: rgba(255,255,255,0.7);
-        margin-bottom: 28px;
-      }
-      .hero--apple__actions {
-        flex-direction: column;
-        width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
-        gap: 12px;
-      }
-      .hero--apple__actions .btn--accent { 
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-      .hero--apple__price {
-        color: rgba(255,255,255,0.5);
-        margin-top: 12px;
-      }
-      .hero--apple__price strong { color: #fff; }
-      .hero--apple__price s { display: none; }
-    }
-    
-    .hero--apple__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--accent);
-      color: #fff;
-      padding: 6px 14px;
-      border-radius: var(--radius-badge);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      margin-bottom: 20px;
-    }
-    
-    .hero--apple__headline {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.05;
-      color: #fff;
-      margin-bottom: 16px;
-    }
-    
-    .hero--apple__subheadline {
-      font-size: clamp(1.125rem, 1.3vw, 1.375rem);
-      color: rgba(255,255,255,0.7);
-      line-height: 1.6;
-      margin-bottom: 32px;
-      max-width: 480px;
-    }
-    
-    .hero--apple__actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    @media (min-width: 768px) {
-      .hero--apple__actions {
-        justify-content: flex-start;
-      }
-    }
-    
-    .hero--apple__price {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.6);
-      margin-top: 16px;
-    }
-    .hero--apple__price strong { color: #fff; }
-    .hero--apple__price s { display: none; }
-    
-    /* --- Design Section (Apple Style) --- */
-    .apple-design {
-      padding: 120px 24px;
-      background: #1a1a2e;
-      text-align: center;
-    }
-    
-    @media (min-width: 768px) {
-      .apple-design {
-        padding: 160px 80px;
-      }
-    }
-    
-    .apple-design__label {
-      font-size: 0.875rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    
-    .apple-design__headline {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-      color: #fff;
-      margin-bottom: 16px;
-    }
-    
-    .apple-design__sub {
-      font-size: clamp(1.125rem, 1.3vw, 1.375rem);
-      color: rgba(255,255,255,0.6);
-      max-width: 600px;
-      margin: 0 auto 60px;
-      line-height: 1.6;
-    }
-    
-    .apple-design__image {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      border-radius: 24px;
-      overflow: hidden;
-      background: #16213e;
-    }
-    
-    .apple-design__image img {
-      width: 100%;
-      height: auto;
-      filter: brightness(1.1) contrast(1.05) saturate(1.1);
-      transition: transform 600ms cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-    
-    .apple-design__image:hover img {
-      transform: scale(1.02);
-    }
-    
-    /* --- Bento Grid (Apple Style) --- */
-    .bento-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 0 24px 120px;
-      max-width: 1200px;
-      margin: 0 auto;
-      background: #1a1a2e;
-    }
-    
-    @media (min-width: 768px) {
-      .bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 80px 160px;
-        gap: 24px;
-      }
-    }
-    
-    .bento-card {
-      position: relative;
-      border-radius: 24px;
-      overflow: hidden;
-      background: #16213e;
-      min-height: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 40px;
-    }
-    
-    @media (min-width: 768px) {
-      .bento-card--large {
-        grid-column: span 2;
-        min-height: 500px;
-      }
-    }
-    
-    .bento-card__image {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(1.05) contrast(1.02) saturate(1.05);
-      transition: transform 600ms cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-    
-    .bento-card:hover .bento-card__image {
-      transform: scale(1.03);
-    }
-    
-    .bento-card__overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    
-    .bento-card__content {
-      position: relative;
-      z-index: 2;
-      color: #fff;
-    }
-    
-    .bento-card__label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 8px;
-    }
-    
-    .bento-card__title {
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      font-weight: 700;
-      letter-spacing: -0.3px;
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
-    
-    .bento-card__text {
-      font-size: 0.938rem;
-      color: rgba(255,255,255,0.8);
-      line-height: 1.6;
-    }
-    
-    /* --- Lifestyle Section (Apple Style) --- */
-    .apple-lifestyle {
-      position: relative;
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: #16213e;
-    }
-    
-    .apple-lifestyle__image {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.9) contrast(1.1) saturate(1.1);
-      mix-blend-mode: luminosity;
-    }
-    
-    .apple-lifestyle__overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(26,26,46,0.3) 0%, rgba(26,26,46,0.8) 100%);
-      pointer-events: none;
-    }
-    
-    .apple-lifestyle__content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 120px 24px;
-      color: #fff;
-      max-width: 800px;
-    }
-    
-    .apple-lifestyle__headline {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-      margin-bottom: 24px;
-    }
-    
-    .apple-lifestyle__text {
-      font-size: clamp(1.125rem, 1.3vw, 1.375rem);
-      color: rgba(255,255,255,0.8);
-      line-height: 1.6;
-      margin-bottom: 40px;
-    }
-    
-    .apple-lifestyle__stats {
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      flex-wrap: wrap;
-    }
-    
-    .apple-lifestyle__stat {
-      text-align: center;
-    }
-    
-    .apple-lifestyle__stat-value {
-      display: block;
-      font-size: clamp(2rem, 3vw, 2.5rem);
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.5px;
-    }
-    
-    .apple-lifestyle__stat-label {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.6);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-    
-    /* --- Specs Section (Apple Style) --- */
-    .apple-specs {
-      padding: 120px 24px;
-      background: #ffffff;
-    }
-    
-    @media (min-width: 768px) {
-      .apple-specs {
-        padding: 160px 80px;
-      }
-    }
-    
-    .apple-specs__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .apple-specs__label {
-      font-size: 0.875rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    
-    .apple-specs__headline {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-      color: #1d1d1f;
-      margin-bottom: 60px;
-    }
-    
-    .apple-specs__grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-    
-    @media (min-width: 768px) {
-      .apple-specs__grid {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-    
-    .apple-specs__item {
-      text-align: center;
-      padding: 32px 16px;
-      background: #f5f5f7;
-      border-radius: 16px;
-      border: 1px solid #e8e8ed;
-    }
-    
-    .apple-specs__value {
-      display: block;
-      font-size: clamp(1.5rem, 2.5vw, 2rem);
-      font-weight: 700;
-      color: #1d1d1f;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
-    
-    .apple-specs__label-text {
-      font-size: 0.875rem;
-      color: #6e6e73;
-    }
-    
-    /* --- CTA Final (Apple Style) --- */
-    .apple-cta {
-      text-align: center;
-      background: #000;
-      padding: 120px 24px;
-      color: #fff;
-    }
-    
-    @media (min-width: 768px) {
-      .apple-cta {
-        padding: 160px 80px;
-      }
-    }
-    
-    .apple-cta__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--accent);
-      color: #fff;
-      padding: 6px 14px;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      margin-bottom: 20px;
-    }
-    
-    .apple-cta__title {
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-      margin-bottom: 16px;
-      color: #fff;
-    }
-    
-    .apple-cta__subtitle {
-      color: rgba(255,255,255,0.7);
-      max-width: 500px;
-      margin: 0 auto 24px;
-      line-height: 1.7;
-    }
-    
-    .apple-cta__price {
-      margin-bottom: 24px;
-      text-align: center;
-    }
-    
-    .apple-cta__price-current {
-      font-size: 2.5rem;
-      font-weight: 900;
-      letter-spacing: -1px;
-      color: #fff;
-    }
-    
-    .apple-cta__price-savings {
-      display: block;
-      font-size: 0.875rem;
-      color: var(--trust);
-      font-weight: 600;
-      margin-top: 4px;
-    }
-    
-    .apple-cta__price-original {
-      font-size: 1.125rem;
-      color: rgba(255,255,255,0.4);
-      text-decoration: line-through;
-      margin-left: 12px;
-    }
-    
-    .apple-cta__trust {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-top: 24px;
-      flex-wrap: wrap;
-    }
-    
-    .apple-cta__trust-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.813rem;
-      color: rgba(255,255,255,0.6);
-      font-weight: 500;
-    }
-    
-    .apple-cta__trust-item svg {
-      color: var(--trust);
-      flexrink: 0;
-    }
-    
-    /* --- Footer (Apple Style) --- */
-    .footer {
-      background: #f5f5f7;
-      padding: 48px 24px;
-      border-top: 1px solid #e8e8ed;
-    }
-    
-    @media (min-width: 768px) {
-      .footer {
-        padding: 48px 80px;
-      }
-    }
-    
-    .footer__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-    }
-    
-    @media (min-width: 768px) {
-      .footer__inner {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-    
-    .footer__column-title {
-      font-size: 0.813rem;
-      font-weight: 700;
-      color: #1d1d1f;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    
-    .footer__column-list {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    
-    .footer__column-link {
-      font-size: 0.875rem;
-      color: #6e6e73;
-      transition: color 200ms ease;
-    }
-    
-    .footer__column-link:hover {
-      color: #1d1d1f;
-    }
-    
-    .footer__column-link--disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-    
-    .footer__bottom {
-      max-width: 1200px;
-      margin: 32px auto 0;
-      padding-top: 24px;
-      border-top: 1px solid #e8e8ed;
-      text-align: center;
-      font-size: 0.813rem;
-      color: #6e6e73;
-    }
-    
-    /* --- Animations --- */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .animate-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-    
-    .animate-in.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    /* --- Premium Image Treatment --- */
-    .premium-image {
-      filter: brightness(1.05) contrast(1.02) saturate(1.05);
-      transition: filter 600ms ease, transform 600ms ease;
-    }
-    
-    .premium-image:hover {
-      filter: brightness(1.1) contrast(1.05) saturate(1.1);
-      transform: scale(1.02);
-    }
-    
-    /* --- Product Nav (Apple Style) --- */
-    .product-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      background: transparent;
-      transition: background 300ms ease, border-color 300ms ease;
-    }
-    
-    .product-nav--scrolled {
-      background: rgba(255,255,255,0.92);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid #e8e8ed;
-    }
-    
-    .product-nav__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    
-    @media (min-width: 768px) {
-      .product-nav__inner {
-        padding: 0 80px;
-      }
-    }
-    
-    .product-nav__name {
-      font-weight: 900;
-      font-size: 1.25rem;
-      color: #fff;
-      letter-spacing: -0.5px;
-      transition: color 300ms ease;
-    }
-    
-    .product-nav--scrolled .product-nav__name {
-      color: #1d1d1f;
-    }
-    
-    .product-nav--scrolled .product-nav__name span {
-      color: #1d1d1f;
-    }
-    
-    .product-nav__links {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-    }
-    
-    @media (max-width: 900px) {
-      .product-nav__links {
-        display: none;
-      }
-    }
-    
-    .product-nav__link {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 200ms ease;
-    }
-    
-    .product-nav__link:hover {
-      color: #fff;
-    }
-    
-    .product-nav--scrolled .product-nav__link {
-      color: #6e6e73;
-    }
-    
-    .product-nav--scrolled .product-nav__link:hover {
-      color: #1d1d1f;
-    }
-    
-    .btn--accent {
-      background: var(--accent);
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 0.875rem;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      transition: opacity 200ms ease;
-    }
-    
-    .btn--accent:hover {
-      opacity: 0.9;
-    }
-    
-    .btn--accent-header {
-      background: #d62d4a;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 0.813rem;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      transition: opacity 200ms ease;
-      min-height: 44px;
-    }
-    
-    .btn--accent-header:hover {
-      opacity: 0.9;
-    }
-    
-    /* Hamburger */
-    .product-nav__hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      z-index: 101;
-      min-height: 44px;
-      min-width: 44px;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    @media (max-width: 900px) {
-      .product-nav__hamburger {
-        display: flex;
-      }
-    }
-    
-    .product-nav__hamburger-line {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: #fff;
-      transition: transform 300ms ease, opacity 200ms ease;
-    }
-    
-    .product-nav--scrolled .product-nav__hamburger-line {
-      background: #1d1d1f;
-    }
-    
-    .product-nav__hamburger[aria-expanded="true"] .product-nav__hamburger-line:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-    
-    .product-nav__hamburger[aria-expanded="true"] .product-nav__hamburger-line:nth-child(2) {
-      opacity: 0;
-    }
-    
-    .product-nav__hamburger[aria-expanded="true"] .product-nav__hamburger-line:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-    
-    /* Mobile Menu */
-    .product-nav__mobile {
-      display: none;
-      position: fixed;
-      top: 64px;
-      left: 0;
-      width: 100%;
-      height: calc(100vh - 60px);
-      background: #fff;
-      padding: 24px;
-      z-index: 100;
-      overflow-y: auto;
-      transform: translateY(-100%);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 300ms ease, opacity 300ms ease;
-      border-bottom: 1px solid #e8e8ed;
-    }
-    
-    .product-nav__mobile.is-open {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: all;
-    }
-    
-    @media (max-width: 900px) {
-      .product-nav__mobile {
-        display: block;
-      }
-    }
-    
-    .product-nav__mobile-list {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    
-    .product-nav__mobile-link {
-      display: block;
-      padding: 14px 0;
-      font-size: 1rem;
-      color: #6e6e73;
-      font-weight: 500;
-      min-height: 44px;
-    }
-    
-    .product-nav__mobile-link--cta {
-      color: var(--accent);
-      font-weight: 700;
-    }
-    
-    /* --- Why Buy (Apple Style) --- */
-    .whybuy {
-      padding: 120px 24px;
-      background: #ffffff;
-    }
-    
-    @media (min-width: 768px) {
-      .whybuy {
-        padding: 160px 80px;
-      }
-    }
-    
-    .whybuy__title {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-      color: #1d1d1f;
-      text-align: center;
-      margin-bottom: 16px;
-    }
-    
-    .whybuy__sub {
-      font-size: clamp(1.125rem, 1.3vw, 1.375rem);
-      color: #6e6e73;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 60px;
-      line-height: 1.6;
-    }
-    
-    .whybuy__grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    @media (min-width: 768px) {
-      .whybuy__grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    
-    .whybuy__card {
-      text-align: center;
-      padding: 32px 24px;
-      background: #f5f5f7;
-      border-radius: 16px;
-      border: 1px solid #e8e8ed;
-      transition: transform 300ms ease;
-    }
-    
-    .whybuy__card:hover {
-      transform: translateY(-4px);
-    }
-    
-    .whybuy__card-icon {
-      width: 48px;
-      height: 48px;
-      margin: 0 auto 16px;
-      color: var(--accent);
-    }
-    
-    .whybuy__card-title {
-      font-weight: 700;
-      font-size: 1.125rem;
-      color: #1d1d1f;
-      margin-bottom: 8px;
-      letter-spacing: -0.3px;
-    }
-    
-    .whybuy__card-text {
-      color: #6e6e73;
-      font-size: 0.938rem;
-      line-height: 1.6;
-    }
-    
-    /* --- Compare Table (Apple Style) --- */
-    .apple-compare {
-      padding: 120px 24px;
-      background: #1a1a2e;
-    }
-    
-    @media (min-width: 768px) {
-      .apple-compare {
-        padding: 160px 80px;
-      }
-    }
-    
-    .apple-compare__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .apple-compare__label {
-      font-size: 0.875rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    
-    .apple-compare__headline {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-      color: #fff;
-      margin-bottom: 60px;
-    }
-    
-    .apple-compare__table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #16213e;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    
-    .apple-compare__table th,
-    .apple-compare__table td {
-      padding: 16px 24px;
-      text-align: left;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      font-size: 0.938rem;
-    }
-    
-    .apple-compare__table th {
-      font-weight: 700;
-      color: #fff;
-      background: rgba(255,255,255,0.04);
-    }
-    
-    .apple-compare__table td {
-      color: rgba(255,255,255,0.6);
-    }
-    
-    .apple-compare__table td.highlight {
-      color: var(--accent);
-      font-weight: 700;
-    }
-    
-    .apple-compare__table tr:last-child td {
-      border-bottom: none;
-    }
-    
-    /* --- Box Grid (Apple Style) --- */
-    .apple-box {
-      padding: 120px 24px;
-      background: #1a1a2e;
-    }
-    
-    @media (min-width: 768px) {
-      .apple-box {
-        padding: 160px 80px;
-      }
-    }
-    
-    .apple-box__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .apple-box__label {
-      font-size: 0.875rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    
-    .apple-box__headline {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1.1;
-      color: #fff;
-      margin-bottom: 60px;
-    }
-    
-    .apple-box__grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-    
-    @media (min-width: 768px) {
-      .apple-box__grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-    
-    .apple-box__item {
-      text-align: center;
-    }
-    
-    .apple-box__image {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      border-radius: 16px;
-      margin-bottom: 16px;
-      background: #16213e;
-      filter: brightness(1.1) contrast(1.05) saturate(1.1);
-      transition: transform 300ms ease;
-    }
-    
-    .apple-box__image:hover {
-      transform: scale(1.03);
-    }
-    
-    .apple-box__label-text {
-      font-size: 0.938rem;
-      font-weight: 600;
-      color: #fff;
-    }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
+  <!-- NAV -->
   <nav class="product-nav" aria-label="Producto">
     <div class="product-nav__inner">
       <a href="index.html" class="product-nav__name">Alta<span style="font-weight:400">Pro</span></a>
@@ -1201,38 +74,51 @@
 
   <main id="main">
 
-    <!-- HERO — Apple Style with Real Product Photo -->
+    <!-- HERO -->
     <section class="hero--apple" id="hero">
-      <img src="images/foto-hero.webp" alt="PaintPro — pistola pulverizadora inalámbrica profesional" width="1500" height="1500" class="hero--apple__bg premium-image" fetchpriority="high">
       <div class="hero--apple__content">
-        <div class="hero--apple__badge">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83l-.06.06a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          Nuevo
+        <div class="hero--apple__text">
+          <div class="hero--apple__badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83l-.06.06a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            Nuevo
+          </div>
+          <h1 class="hero--apple__headline">PaintPro.<br>Acabado profesional.</h1>
+          <p class="hero--apple__subheadline">Pinta madera, paredes, metal y vidrio con un solo dispositivo. Resultados de taller desde casa.</p>
+          <div class="hero--apple__actions">
+            <a href="#cta-final" class="btn btn--accent">Comprar ahora →</a>
+            <a href="#diseno" class="btn btn--outline-light">Ver en detalle</a>
+          </div>
+          <p class="hero--apple__price"><strong>€69,90</strong> <s>€102,90</s></p>
         </div>
-        <h1 class="hero--apple__headline">PaintPro.<br>Acabado profesional.</h1>
-        <p class="hero--apple__subheadline">Pinta madera, paredes, metal y vidrio con un solo dispositivo. Resultados de taller desde casa.</p>
-        <div class="hero--apple__actions">
-          <a href="#cta-final" class="btn--accent" style="padding: 16px 40px; font-size: 1rem;">Comprar ahora →</a>
-          <a href="#diseno" class="btn--outline-light">Ver en detalle</a>
+        <div class="hero--apple__visual">
+          <img src="images/foto-hero.webp" alt="PaintPro — pistola pulverizadora inalámbrica profesional" width="1500" height="1500" fetchpriority="high" decoding="async">
         </div>
-        <p class="hero--apple__price"><strong>€69,90</strong> <s>€102,90</s></p>
       </div>
     </section>
 
-    <!-- DESIGN SECTION — Apple Style -->
+    <!-- MOBILE 360 VIEWER -->
+    <section class="spin-mobile" aria-label="Vista 360° del producto">
+      <div class="spin-mobile__viewer" id="spin-mobile" role="img" aria-label="Arrastra para rotar el producto 360°">
+        <img src="images/spin-01.webp" alt="" class="spin-360__frame" id="spin-mobile-a" decoding="async">
+        <img src="images/spin-01.webp" alt="" class="spin-360__frame" id="spin-mobile-b" aria-hidden="true" decoding="async">
+        <div class="spin-360__scroll-hint">Arrastra para rotar</div>
+      </div>
+    </section>
+
+    <!-- DESIGN — Light -->
     <section class="apple-design" id="diseno">
       <p class="apple-design__label animate-in">Diseño</p>
       <h2 class="apple-design__headline animate-in">Parece compacta.<br>Es una potencia.</h2>
       <p class="apple-design__sub animate-in">PaintPro fue diseñada desde cero para ofrecer el máximo rendimiento en el mínimo espacio. Su formato ergonómico se adapta a cualquier mano.</p>
       <div class="apple-design__image animate-in">
-        <img src="images/spin-02.webp" alt="PaintPro — Diseño compacto y ergonómico" width="900" height="600" class="premium-image" loading="lazy">
+        <img src="images/spin-02.webp" alt="PaintPro — Diseño compacto y ergonómico" width="900" height="600" loading="lazy" decoding="async">
       </div>
     </section>
 
-    <!-- BENTO GRID — Apple Style -->
+    <!-- BENTO GRID — Dark -->
     <section class="bento-grid">
       <article class="bento-card bento-card--large animate-in">
-        <img src="images/spin-03.webp" alt="PaintPro — Control de flujo preciso" class="bento-card__image premium-image" loading="lazy">
+        <img src="images/spin-03.webp" alt="PaintPro — Control de flujo preciso" class="bento-card__image" loading="lazy" decoding="async">
         <div class="bento-card__overlay"></div>
         <div class="bento-card__content">
           <p class="bento-card__label">Tecnología</p>
@@ -1241,7 +127,7 @@
         </div>
       </article>
       <article class="bento-card animate-in">
-        <img src="images/spin-04.webp" alt="PaintPro — Potencia 400W" class="bento-card__image premium-image" loading="lazy">
+        <img src="images/spin-04.webp" alt="PaintPro — Potencia 400W" class="bento-card__image" loading="lazy" decoding="async">
         <div class="bento-card__overlay"></div>
         <div class="bento-card__content">
           <p class="bento-card__label">Potencia</p>
@@ -1250,7 +136,7 @@
         </div>
       </article>
       <article class="bento-card animate-in">
-        <img src="images/spin-05.webp" alt="PaintPro — Batería 88Vf" class="bento-card__image premium-image" loading="lazy">
+        <img src="images/spin-05.webp" alt="PaintPro — Batería 88Vf" class="bento-card__image" loading="lazy" decoding="async">
         <div class="bento-card__overlay"></div>
         <div class="bento-card__content">
           <p class="bento-card__label">Autonomía</p>
@@ -1260,9 +146,9 @@
       </article>
     </section>
 
-    <!-- LIFESTYLE — Apple Style -->
+    <!-- LIFESTYLE — Dark -->
     <section class="apple-lifestyle">
-      <img src="images/foto-9.webp" alt="PaintPro en acción" class="apple-lifestyle__image premium-image" loading="lazy">
+      <img src="images/foto-9.webp" alt="PaintPro en acción" class="apple-lifestyle__image" loading="lazy" decoding="async">
       <div class="apple-lifestyle__overlay"></div>
       <div class="apple-lifestyle__content">
         <h2 class="apple-lifestyle__headline animate-in">En tus manos.<br>Tu mejor proyecto.</h2>
@@ -1284,7 +170,7 @@
       </div>
     </section>
 
-    <!-- SPECS — Apple Style -->
+    <!-- SPECS — Light -->
     <section class="apple-specs">
       <div class="apple-specs__inner">
         <p class="apple-specs__label animate-in">Especificaciones</p>
@@ -1314,33 +200,33 @@
       </div>
     </section>
 
-    <!-- BOX GRID — Apple Style -->
+    <!-- BOX — Dark -->
     <section class="apple-box">
       <div class="apple-box__inner">
         <p class="apple-box__label animate-in">Contenido</p>
         <h2 class="apple-box__headline animate-in">Qué incluye la caja.</h2>
         <div class="apple-box__grid animate-in">
           <div class="apple-box__item">
-            <img src="images/spin-01.webp" alt="PaintPro" class="apple-box__image premium-image" loading="lazy">
+            <img src="images/spin-01.webp" alt="PaintPro" class="apple-box__image" loading="lazy" decoding="async">
             <p class="apple-box__label-text">PaintPro™</p>
           </div>
           <div class="apple-box__item">
-            <img src="images/spin-06.webp" alt="Boquilla" class="apple-box__image premium-image" loading="lazy">
+            <img src="images/spin-06.webp" alt="Boquilla" class="apple-box__image" loading="lazy" decoding="async">
             <p class="apple-box__label-text">Boquilla ajustable</p>
           </div>
           <div class="apple-box__item">
-            <img src="images/spin-07.webp" alt="Accesorios" class="apple-box__image premium-image" loading="lazy">
+            <img src="images/spin-07.webp" alt="Accesorios" class="apple-box__image" loading="lazy" decoding="async">
             <p class="apple-box__label-text">Cargador + Viscosímetro</p>
           </div>
           <div class="apple-box__item">
-            <img src="images/spin-08.webp" alt="Batería" class="apple-box__image premium-image" loading="lazy">
+            <img src="images/spin-08.webp" alt="Batería" class="apple-box__image" loading="lazy" decoding="async">
             <p class="apple-box__label-text">Batería 88Vf</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHY BUY — Apple Style -->
+    <!-- WHY BUY — Light -->
     <section class="whybuy">
       <h2 class="whybuy__title animate-in">Por qué comprar PaintPro.</h2>
       <p class="whybuy__sub animate-in">Compra con total confianza.</p>
@@ -1378,12 +264,55 @@
       </ul>
     </section>
 
-    <!-- COMPARE — Apple Style -->
+    <!-- TESTIMONIALS — Light -->
+    <section class="testimonials">
+      <div class="testimonials__inner">
+        <p class="testimonials__label animate-in">Opiniones</p>
+        <h2 class="testimonials__headline animate-in">Lo que dicen nuestros clientes.</h2>
+        <div class="testimonials__grid">
+          <article class="testimonial-card animate-in">
+            <p class="testimonial-card__stars">★★★★★</p>
+            <p class="testimonial-card__quote">"Pinté todo el salón en una tarde. El acabado quedó perfecto, sin una sola marca de brocha. La recomiendo al 100%."</p>
+            <div class="testimonial-card__author">
+              <img src="images/testimonial-augusto.webp" alt="" class="testimonial-card__avatar" loading="lazy" decoding="async" width="44" height="44">
+              <div>
+                <p class="testimonial-card__name">Augusto</p>
+                <p class="testimonial-card__location">Madrid</p>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card animate-in">
+            <p class="testimonial-card__stars">★★★★★</p>
+            <p class="testimonial-card__quote">"Renové todos los muebles de la cocina. Parecen nuevos. Mi mujer no se lo creía. Mejor inversión que he hecho."</p>
+            <div class="testimonial-card__author">
+              <img src="images/testimonial-luis.webp" alt="" class="testimonial-card__avatar" loading="lazy" decoding="async" width="44" height="44">
+              <div>
+                <p class="testimonial-card__name">Luis</p>
+                <p class="testimonial-card__location">Barcelona</p>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card animate-in">
+            <p class="testimonial-card__stars">★★★★★</p>
+            <p class="testimonial-card__quote">"La usé para pintar la valla del jardín. En 2 horas tenía todo hecho. Antes me llevaba un fin de semana entero con brocha."</p>
+            <div class="testimonial-card__author">
+              <div style="width:44px;height:44px;border-radius:50%;background:#e8e8ed;display:flex;align-items:center;justify-content:center;font-weight:700;color:#6e6e73;font-size:0.875rem;">MC</div>
+              <div>
+                <p class="testimonial-card__name">María C.</p>
+                <p class="testimonial-card__location">Valencia</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE — Dark -->
     <section class="apple-compare">
       <div class="apple-compare__inner">
         <p class="apple-compare__label animate-in">Comparativa</p>
         <h2 class="apple-compare__headline animate-in">PaintPro vs el resto.</h2>
-        <div class="animate-in">
+        <div class="compare-table__wrap animate-in">
           <table class="apple-compare__table">
             <thead>
               <tr>
@@ -1394,54 +323,27 @@
             </thead>
             <tbody>
               <tr>
-                <td style="font-weight: 700; color: #fff;">Tiempo</td>
+                <td style="font-weight:700;color:#fff;">Tiempo</td>
                 <td>Horas por capa</td>
                 <td class="highlight">Minutos</td>
               </tr>
               <tr>
-                <td style="font-weight: 700; color: #fff;">Acabado</td>
+                <td style="font-weight:700;color:#fff;">Acabado</td>
                 <td>Irregular, marcas</td>
                 <td class="highlight">Uniforme, profesional</td>
               </tr>
               <tr>
-                <td style="font-weight: 700; color: #fff;">Superficies</td>
+                <td style="font-weight:700;color:#fff;">Superficies</td>
                 <td>Limited</td>
                 <td class="highlight">Madera, metal, paredes, vidrio</td>
               </tr>
               <tr>
-                <td style="font-weight: 700; color: #fff;">Portabilidad</td>
+                <td style="font-weight:700;color:#fff;">Portabilidad</td>
                 <td>Requiere cubeta</td>
                 <td class="highlight">Inalámbrica, 1.2 kg</td>
               </tr>
               <tr>
-                <td style="font-weight: 700; color: #fff;">Limpieza</td>
-                <td>30+ min</td>
-                <td class="highlight">5 min bajo el grifo</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="font-weight: 700; color: #1d1d1f;">Tiempo</td>
-                <td>Horas por capa</td>
-                <td class="highlight">Minutos</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 700; color: #1d1d1f;">Acabado</td>
-                <td>Irregular, marcas</td>
-                <td class="highlight">Uniforme, profesional</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 700; color: #1d1d1f;">Superficies</td>
-                <td>L限ado</td>
-                <td class="highlight">Madera, metal, paredes, vidrio</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 700; color: #1d1d1f;">Portabilidad</td>
-                <td>Requiere cubeta</td>
-                <td class="highlight">Inalámbrica, 1.2 kg</td>
-              </tr>
-              <tr>
-                <td style="font-weight: 700; color: #1d1d1f;">Limpieza</td>
+                <td style="font-weight:700;color:#fff;">Limpieza</td>
                 <td>30+ min</td>
                 <td class="highlight">5 min bajo el grifo</td>
               </tr>
@@ -1451,10 +353,49 @@
       </div>
     </section>
 
-    <!-- CTA FINAL — Apple Style -->
+    <!-- SPECS FAQ — Light -->
+    <section class="specs-faq">
+      <div class="specs-faq__inner">
+        <details class="faq-item">
+          <summary class="faq-question">Potencia y rendimiento <span class="faq-icon">+</span></summary>
+          <div class="faq-answer">
+            <p>Motor de alto rendimiento con control de flujo continuo.</p>
+            <ul class="specs-answer-list">
+              <li>Potencia: 400W</li>
+              <li>Caudal ajustable: 0-800 ml/min</li>
+              <li>Viscosidad máxima: 150 KU</li>
+            </ul>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Batería y autonomía <span class="faq-icon">+</span></summary>
+          <div class="faq-answer">
+            <p>Batería de iones de litio recargable.</p>
+            <ul class="specs-answer-list">
+              <li>Capacidad: 4000mAh</li>
+              <li>Autonomía: 45-60 min continuos</li>
+              <li>Carga: 2h vía USB-C</li>
+            </ul>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Dimensiones y diseño <span class="faq-icon">+</span></summary>
+          <div class="faq-answer">
+            <p>Diseño ergonómico para uso prolongado.</p>
+            <ul class="specs-answer-list">
+              <li>Peso: 1.2 kg</li>
+              <li>Dimensiones: 28 x 12 x 25 cm</li>
+              <li>Depósito: 800 ml</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA FINAL — Dark -->
     <section class="apple-cta" id="cta-final">
       <div class="apple-cta__badge">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83l-.06.06a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83l-.06.06a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         Oferta limitada
       </div>
       <h2 class="apple-cta__title animate-in">Tu proyecto merece<br>PaintPro™.</h2>
@@ -1464,9 +405,8 @@
         <span class="apple-cta__price-original">€102,90</span>
         <span class="apple-cta__price-savings">Ahorra €33 (32%)</span>
       </div>
-
-      <a href="https://lapurasalud.com/products/pistola-paintpro" class="btn--accent" style="padding: 20px 64px; font-size: 1.125rem; letter-spacing: 0.02em;">Comprar PaintPro — Envío gratis</a>
-
+      <div id="countdown" class="animate-in" style="margin-bottom:24px;font-size:0.938rem;color:rgba(255,255,255,0.7);">Oferta termina en: <strong id="countdown-time" style="color:#fff;"></strong></div>
+      <a href="https://lapurasalud.com/products/pistola-paintpro" class="btn btn--trust">Comprar PaintPro — Envío gratis</a>
       <div class="apple-cta__trust">
         <div class="apple-cta__trust-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1484,13 +424,25 @@
     </section>
   </main>
 
+  <!-- CTA STICKY MOBILE -->
+  <div class="cta-sticky" id="cta-sticky">
+    <div class="cta-sticky__inner">
+      <div class="cta-sticky__info">
+        <span class="cta-sticky__price">€69,90</span>
+        <span class="cta-sticky__original">€102,90</span>
+      </div>
+      <a href="https://lapurasalud.com/products/pistola-paintpro" class="cta-sticky__btn">Comprar</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="footer__inner">
       <div class="footer__column">
         <h3 class="footer__column-title">Producto</h3>
         <ul class="footer__column-list">
           <li><a href="producto.html" class="footer__column-link">PaintPro</a></li>
-          <li><a href="#specs" class="footer__column-link">Especificaciones</a></li>
+          <li><a href="#diseno" class="footer__column-link">Diseño</a></li>
         </ul>
       </div>
       <div class="footer__column">
@@ -1504,14 +456,13 @@
         <ul class="footer__column-list">
           <li><a href="faq.html" class="footer__column-link">FAQ</a></li>
           <li><a href="contacto.html" class="footer__column-link">Contacto</a></li>
-          <li><span class="footer__column-link footer__column-link--disabled">WhatsApp (próximamente)</span></li>
         </ul>
       </div>
       <div class="footer__column">
         <h3 class="footer__column-title">Legal</h3>
         <ul class="footer__column-list">
-          <li><span class="footer__column-link footer__column-link--disabled">Privacidad (próximamente)</span></li>
-          <li><span class="footer__column-link footer__column-link--disabled">Términos (próximamente)</span></li>
+          <li><span class="footer__column-link footer__column-link--disabled">Privacidad</span></li>
+          <li><span class="footer__column-link footer__column-link--disabled">Términos</span></li>
         </ul>
       </div>
     </div>
@@ -1520,27 +471,27 @@
     </div>
   </footer>
 
+  <script defer src="js/scripts.js"></script>
   <script>
-    // IntersectionObserver for scroll animations
     document.addEventListener('DOMContentLoaded', function() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+
+      // UNIFIED IntersectionObserver — P2: merge 4 observers into 1
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
           }
         });
-      }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-      document.querySelectorAll('.animate-in').forEach(el => {
+      document.querySelectorAll('.animate-in').forEach(function(el) {
         observer.observe(el);
       });
 
-      // Product nav scroll effect
-      const nav = document.querySelector('.product-nav');
-      window.addEventListener('scroll', () => {
+      // Product nav scroll
+      var nav = document.querySelector('.product-nav');
+      window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
           nav.classList.add('product-nav--scrolled');
         } else {
@@ -1549,23 +500,60 @@
       });
 
       // Hamburger menu
-      const hamburger = document.querySelector('.product-nav__hamburger');
-      const mobileMenu = document.querySelector('.product-nav__mobile');
-      
+      var hamburger = document.querySelector('.product-nav__hamburger');
+      var mobileMenu = document.querySelector('.product-nav__mobile');
       if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', () => {
-          const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.addEventListener('click', function() {
+          var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
           hamburger.setAttribute('aria-expanded', !isOpen);
           mobileMenu.classList.toggle('is-open');
         });
-
-        // Close menu when clicking links
-        mobileMenu.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
             hamburger.setAttribute('aria-expanded', 'false');
             mobileMenu.classList.remove('is-open');
           });
         });
+      }
+
+      // CTA sticky mobile — show after scrolling past hero
+      var ctaSticky = document.getElementById('cta-sticky');
+      var heroSection = document.getElementById('hero');
+      if (ctaSticky && heroSection) {
+        var heroObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (!entry.isIntersecting) {
+              ctaSticky.classList.add('is-visible');
+            } else {
+              ctaSticky.classList.remove('is-visible');
+            }
+          });
+        }, { threshold: 0 });
+        heroObserver.observe(heroSection);
+      }
+
+      // Countdown timer — P3
+      var countdownEl = document.getElementById('countdown-time');
+      if (countdownEl) {
+        var endTime = new Date();
+        endTime.setHours(23, 59, 59, 999);
+        function updateCountdown() {
+          var now = new Date();
+          var diff = endTime - now;
+          if (diff <= 0) {
+            countdownEl.textContent = '00:00:00';
+            return;
+          }
+          var h = Math.floor(diff / 3600000);
+          var m = Math.floor((diff % 3600000) / 60000);
+          var s = Math.floor((diff % 60000) / 1000);
+          countdownEl.textContent =
+            String(h).padStart(2, '0') + ':' +
+            String(m).padStart(2, '0') + ':' +
+            String(s).padStart(2, '0');
+          requestAnimationFrame(updateCountdown);
+        }
+        updateCountdown();
       }
     });
   </script>
