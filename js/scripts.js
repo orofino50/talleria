@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Video player (autoplay muted, pauda off-screen, click to toggle)
+  // 6. Video player (autoplay muted, pause off-screen, click to toggle)
   var videoPlayers = document.querySelectorAll('[data-video-player]');
   videoPlayers.forEach(function(videoPlayer) {
     var videoPlayBtn = videoPlayer.querySelector('[data-video-play]');
@@ -434,16 +434,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (videoPlayBtn) videoPlayBtn.addEventListener('click', togglePlay);
     videoPlayer.addEventListener('click', togglePlay);
 
-    // Sincronizar classe is-playing com estado real do vídeo
-    video.addEventListener('play', function() {
-      videoPlayer.classList.add('is-playing');
-    });
-    video.addEventListener('pause', function() {
-      videoPlayer.classList.remove('is-playing');
-    });
-    video.addEventListener('ended', function() {
-      videoPlayer.classList.remove('is-playing');
-    });
+    // Sincronizar classe is-paused com estado real do vídeo
+    // - playing event: vídeo começou a tocar (autoplay ou click)
+    // - pause event: usuário pausou
+    // - ended event: vídeo terminou
+    function setPaused(paused) {
+      if (paused) {
+        videoPlayer.classList.add('is-paused');
+      } else {
+        videoPlayer.classList.remove('is-paused');
+      }
+    }
+    video.addEventListener('playing', function() { setPaused(false); });
+    video.addEventListener('pause', function() { setPaused(true); });
+    video.addEventListener('ended', function() { setPaused(true); });
+
+    // Estado inicial: se o vídeo já está tocando (autoplay começou antes do listener),
+    // remove is-paused; se está pausado (autoplay bloqueado), mostra play button
+    if (!video.paused) {
+      setPaused(false);
+    } else {
+      // Esperar 300ms para ver se autoplay começa
+      setTimeout(function() {
+        if (video.paused) setPaused(true);
+      }, 300);
+    }
 
     // Pausar quando sai do viewport (performance: não toca áudio/vídeo off-screen)
     if ('IntersectionObserver' in window) {
