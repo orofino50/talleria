@@ -416,31 +416,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Video player (light, plays on click anywhere)
-  var videoPlayer = document.querySelector('[data-video-player]');
-  var videoPlayBtn = document.querySelector('[data-video-play]');
-  if (videoPlayer && videoPlayBtn) {
+  // 6. Video player (autoplay muted, pauda off-screen, click to toggle)
+  var videoPlayers = document.querySelectorAll('[data-video-player]');
+  videoPlayers.forEach(function(videoPlayer) {
+    var videoPlayBtn = videoPlayer.querySelector('[data-video-play]');
     var video = videoPlayer.querySelector('video');
-    if (video) {
-      function togglePlay() {
-        if (video.paused) {
-          video.play();
-          videoPlayer.classList.add('is-playing');
-        } else {
-          video.pause();
-          videoPlayer.classList.remove('is-playing');
-        }
+    if (!video) return;
+
+    function togglePlay(e) {
+      if (e) e.stopPropagation();
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
       }
-      videoPlayBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        togglePlay();
-      });
-      videoPlayer.addEventListener('click', togglePlay);
-      video.addEventListener('ended', function() {
-        videoPlayer.classList.remove('is-playing');
-      });
     }
-  }
+    if (videoPlayBtn) videoPlayBtn.addEventListener('click', togglePlay);
+    videoPlayer.addEventListener('click', togglePlay);
+
+    // Sincronizar classe is-playing com estado real do vídeo
+    video.addEventListener('play', function() {
+      videoPlayer.classList.add('is-playing');
+    });
+    video.addEventListener('pause', function() {
+      videoPlayer.classList.remove('is-playing');
+    });
+    video.addEventListener('ended', function() {
+      videoPlayer.classList.remove('is-playing');
+    });
+
+    // Pausar quando sai do viewport (performance: não toca áudio/vídeo off-screen)
+    if ('IntersectionObserver' in window) {
+      var videoObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+            // Tentar reproduzir (silencia erros de autoplay bloqueado)
+            video.play().catch(function() { /* autoplay bloqueado, sem problema */ });
+          } else {
+            video.pause();
+          }
+        });
+      }, { threshold: [0, 0.3, 0.5] });
+      videoObserver.observe(videoPlayer);
+    }
+  });
 
 })();
 
