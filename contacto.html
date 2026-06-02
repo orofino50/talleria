@@ -76,33 +76,47 @@
     <section class="about-hero">
       <div class="about-hero__inner">
         <p class="about-hero__brand animate-in">AltaPro — Potencia. Control. Resultado.</p>
-        <h1 class="about-hero__headline animate-in">Contacto</h1>
-        <p class="about-hero__sub animate-in">¿Tienes preguntas? Estamos aquí para ayudarte.</p>
+        <h1 class="about-hero__headline animate-in">Estamos para ayudarte.</h1>
+        <p class="about-hero__sub animate-in">Te respondemos en menos de 24 horas laborables, sin bots, sin formularios infinitos.</p>
       </div>
     </section>
 
     <section class="contact-info">
       <div class="contact-info__inner">
+        <p class="contact-info__label animate-in">Canales directos</p>
+        <h2 class="contact-info__headline animate-in">Elige cómo prefieres contactarnos.</h2>
         <div class="contact-info__grid">
           <article class="contact-card animate-in">
             <div class="contact-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <h3 class="contact-card__title">Email</h3>
             <p class="contact-card__value"><a href="mailto:hola@altapro.es">hola@altapro.es</a></p>
+            <p class="contact-card__hint">Para consultas, soporte y prensa</p>
           </article>
           <article class="contact-card animate-in">
             <div class="contact-card__icon contact-card__icon--trust">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
             <h3 class="contact-card__title">WhatsApp</h3>
-            <p class="contact-card__value"><a href="https://wa.me/34987654321" target="_blank" rel="noopener">Escríbenos por WhatsApp</a></p>
+            <p class="contact-card__value"><a href="https://wa.me/34987654321" target="_blank" rel="noopener">+34 987 65 43 21</a></p>
+            <p class="contact-card__hint">Respuesta más rápida, en horario comercial</p>
+          </article>
+          <article class="contact-card animate-in">
+            <div class="contact-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="contact-card__title">Oficina</h3>
+            <p class="contact-card__value">Madrid, España</p>
+            <p class="contact-card__hint">Envío desde almacén en 24-48h</p>
           </article>
         </div>
-        <p class="contact-info__response animate-in">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Tiempo de respuesta: en menos de 24 horas laborables.
-        </p>
+        <div class="contact-info__response-wrapper animate-in">
+          <p class="contact-info__response">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Tiempo de respuesta: en menos de 24 horas laborables.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -110,15 +124,28 @@
       <div class="contact-form-section__inner">
         <p class="contact-form-section__label animate-in">Formulario</p>
         <h2 class="contact-form-section__headline animate-in">Envíanos un mensaje</h2>
-        <p class="contact-form-section__sub animate-in">Cuéntanos en qué podemos ayudarte y te responderemos lo antes posible.</p>
+        <p class="contact-form-section__sub animate-in">Cuéntanos en qué podemos ayudarte. Te respondemos personalmente.</p>
         <form action="#" method="POST" class="contact-form animate-in" novalidate id="contact-form">
-          <div class="contact-form__group">
-            <label for="contact-name" class="contact-form__label">Nombre</label>
-            <input type="text" id="contact-name" name="name" required class="contact-form__input" placeholder="Tu nombre" aria-label="Tu nombre">
+          <div class="contact-form__row">
+            <div class="contact-form__group">
+              <label for="contact-name" class="contact-form__label">Nombre</label>
+              <input type="text" id="contact-name" name="name" required class="contact-form__input" placeholder="Tu nombre" aria-label="Tu nombre">
+            </div>
+            <div class="contact-form__group">
+              <label for="contact-email" class="contact-form__label">Email</label>
+              <input type="email" id="contact-email" name="email" required class="contact-form__input" placeholder="tu@email.com" aria-label="Tu email">
+            </div>
           </div>
           <div class="contact-form__group">
-            <label for="contact-email" class="contact-form__label">Email</label>
-            <input type="email" id="contact-email" name="email" required class="contact-form__input" placeholder="tu@email.com" aria-label="Tu email">
+            <label for="contact-subject" class="contact-form__label">Asunto</label>
+            <select id="contact-subject" name="subject" class="contact-form__input contact-form__select" aria-label="Asunto">
+              <option value="">Selecciona un asunto</option>
+              <option value="pedido">Consulta sobre un pedido</option>
+              <option value="soporte">Soporte técnico</option>
+              <option value="devolucion">Devolución o cambio</option>
+              <option value="prensa">Prensa / Colaboración</option>
+              <option value="otro">Otro</option>
+            </select>
           </div>
           <div class="contact-form__group">
             <label for="contact-message" class="contact-form__label">Mensaje</label>
@@ -128,11 +155,20 @@
         </form>
         <div class="contact-form__success" id="form-success">
           <div class="contact-form__success-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
           <p class="contact-form__success-title">Mensaje enviado</p>
           <p class="contact-form__success-text">Gracias por contactarnos. Te responderemos en menos de 24 horas laborables.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="contact-faq">
+      <div class="contact-faq__inner">
+        <p class="contact-faq__label animate-in">Antes de escribirnos</p>
+        <h2 class="contact-faq__headline animate-in">¿Es una pregunta rápida?</h2>
+        <p class="contact-faq__sub animate-in">Las respuestas a las preguntas más comunes están en nuestra sección de FAQ.</p>
+        <a href="faq.html" class="btn btn--outline-dark animate-in">Ver preguntas frecuentes</a>
       </div>
     </section>
 
@@ -267,6 +303,7 @@
           var valid = true;
 
           inputs.forEach(function(input) {
+            if (input.tagName === 'SELECT' && !input.value) return; // Optional
             var error = errorEls[input.id];
             input.classList.remove('is-error', 'is-success');
             error.textContent = '';
