@@ -1030,17 +1030,16 @@ ul { list-style: none; }
   aspect-ratio: 9 / 16;
   border-radius: 14px;
   overflow: hidden;
-  background: #1a1a2e;
-  border: 1px solid #e8e8ed;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.14);
 }
 .video-feature__player video {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
-  background: #1a1a2e;
+  background: transparent;
 }
 .video-feature__play {
   position: absolute;
