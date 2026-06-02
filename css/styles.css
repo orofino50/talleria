@@ -784,6 +784,56 @@ ul { list-style: none; }
   margin: 0 auto 48px;
   line-height: 1.5;
 }
+.apple-video__tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 1080px;
+  margin: 0 auto 24px;
+}
+@media (max-width: 768px) {
+  .apple-video__tabs { grid-template-columns: 1fr; gap: 8px; }
+}
+.apple-video__tab {
+  background: #ffffff;
+  border: 1px solid #e8e8ed;
+  border-radius: 12px;
+  padding: 16px 20px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+.apple-video__tab:hover { border-color: #d1d1d6; transform: translateY(-2px); }
+.apple-video__tab.is-active {
+  border-color: var(--accent);
+  background: rgba(233, 69, 96, 0.04);
+}
+.apple-video__tab-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+.apple-video__tab-label {
+  flex: 1;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+}
+.apple-video__tab-duration {
+  font-size: 0.8125rem;
+  color: #6e6e73;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 .apple-video__player {
   position: relative;
   width: 100%;
