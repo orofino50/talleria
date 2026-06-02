@@ -191,74 +191,35 @@
       </div>
     </section>
 
-    <!-- VIDEO — PaintPro en acción (3 vídeos oficiais) -->
-    <section class="apple-video">
-      <div class="apple-video__inner">
-        <p class="apple-video__label animate-in">En acción</p>
-        <h2 class="apple-video__headline animate-in">Mira PaintPro en acción.</h2>
-        <p class="apple-video__sub animate-in">Tres vídeos oficiales. Sin cortes, sin trucos. Solo el acabado que vas a conseguir en tu próximo proyecto.</p>
-        <div class="apple-video__tabs animate-in" role="tablist" aria-label="Selección de vídeo">
-          <button class="apple-video__tab is-active" type="button" role="tab" aria-selected="true" data-video-tab="0" data-video-src="images/paintpro-1-overview.mp4" data-video-poster="images/paintpro-1-overview.jpg">
-            <span class="apple-video__tab-num">01</span>
-            <span class="apple-video__tab-label">Visión general</span>
-            <span class="apple-video__tab-duration">23s</span>
-          </button>
-          <button class="apple-video__tab" type="button" role="tab" aria-selected="false" data-video-tab="1" data-video-src="images/paintpro-2-demo.mp4" data-video-poster="images/paintpro-2-demo.jpg">
-            <span class="apple-video__tab-num">02</span>
-            <span class="apple-video__tab-label">Demostración</span>
-            <span class="apple-video__tab-duration">16s</span>
-          </button>
-          <button class="apple-video__tab" type="button" role="tab" aria-selected="false" data-video-tab="2" data-video-src="images/paintpro-3-results.mp4" data-video-poster="images/paintpro-3-results.jpg">
-            <span class="apple-video__tab-num">03</span>
-            <span class="apple-video__tab-label">Resultados</span>
-            <span class="apple-video__tab-duration">30s</span>
-          </button>
+    <!-- VIDEO — PaintPro en acción (Vídeo 2: Demostración) -->
+    <section class="video-feature">
+      <div class="video-feature__inner">
+        <div class="video-feature__content animate-in">
+          <p class="video-feature__label">En acción</p>
+          <h2 class="video-feature__headline">Mira lo fácil que es.</h2>
+          <p class="video-feature__text">16 segundos. Sin cortes. Una capa y el acabado ya está hecho.</p>
+          <ul class="video-feature__list">
+            <li>Cero curva de aprendizaje</li>
+            <li>Control de flujo ajustable</li>
+            <li>Resultado uniforme desde la primera pasada</li>
+          </ul>
         </div>
-        <div class="apple-video__player animate-in" data-video-player>
+        <div class="video-feature__player animate-in" data-video-player>
           <video
-            class="apple-video__video"
-            poster="images/paintpro-1-overview.jpg"
+            class="video-feature__video"
+            poster="images/paintpro-2-demo.jpg"
             preload="metadata"
             playsinline
             muted
             loop
             aria-label="Demostración de PaintPro en uso real">
-            <source src="images/paintpro-1-overview.mp4" type="video/mp4">
+            <source src="images/paintpro-2-demo.mp4" type="video/mp4">
             Tu navegador no soporta video HTML5.
           </video>
-          <button class="apple-video__play" type="button" aria-label="Reproducir video" data-video-play>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" data-video-play>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           </button>
-          <div class="apple-video__overlay" data-video-overlay></div>
-        </div>
-        <div class="apple-video__features animate-in">
-          <div class="apple-video__feature">
-            <div class="apple-video__feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <p class="apple-video__feature-title">0 a listo en 30 segundos</p>
-              <p class="apple-video__feature-text">Sin tiempo de preparación, sin mezclas, sin esperas.</p>
-            </div>
-          </div>
-          <div class="apple-video__feature">
-            <div class="apple-video__feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <div>
-              <p class="apple-video__feature-title">Acabado uniforme</p>
-              <p class="apple-video__feature-text">Sin marcas de rodillo, sin goteos, sin zonas desiguales.</p>
-            </div>
-          </div>
-          <div class="apple-video__feature">
-            <div class="apple-video__feature-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <div>
-              <p class="apple-video__feature-title">Sin experiencia previa</p>
-              <p class="apple-video__feature-text">La curva de aprendizaje es de minutos, no de días.</p>
-            </div>
-          </div>
+          <div class="video-feature__overlay" data-video-overlay></div>
         </div>
       </div>
     </section>
@@ -737,61 +698,6 @@
         });
       });
 
-      // ==========================================
-      // VIDEO PLAYER (com troca de vídeo via tabs)
-      // ==========================================
-      var videoPlayer = document.querySelector('[data-video-player]');
-      var videoPlayBtn = document.querySelector('[data-video-play]');
-      var videoTabs = document.querySelectorAll('[data-video-tab]');
-      if (videoPlayer && videoPlayBtn) {
-        var video = videoPlayer.querySelector('video');
-        var videoSource = video ? video.querySelector('source') : null;
-        if (video) {
-          function togglePlay() {
-            if (video.paused) {
-              video.play();
-              videoPlayer.classList.add('is-playing');
-            } else {
-              video.pause();
-              videoPlayer.classList.remove('is-playing');
-            }
-          }
-          videoPlayBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            togglePlay();
-          });
-          videoPlayer.addEventListener('click', togglePlay);
-          video.addEventListener('ended', function() {
-            videoPlayer.classList.remove('is-playing');
-          });
-
-          // Trocar vídeo via tabs
-          videoTabs.forEach(function(tab) {
-            tab.addEventListener('click', function() {
-              var newSrc = tab.getAttribute('data-video-src');
-              var newPoster = tab.getAttribute('data-video-poster');
-              if (!newSrc) return;
-
-              // Pausar e resetar player
-              video.pause();
-              videoPlayer.classList.remove('is-playing');
-
-              // Trocar source
-              if (videoSource) videoSource.setAttribute('src', newSrc);
-              video.setAttribute('poster', newPoster);
-              video.load();
-
-              // Atualizar tabs (estado ativo)
-              videoTabs.forEach(function(t) {
-                t.classList.remove('is-active');
-                t.setAttribute('aria-selected', 'false');
-              });
-              tab.classList.add('is-active');
-              tab.setAttribute('aria-selected', 'true');
-            });
-          });
-        }
-      }
     });
   </script>
 

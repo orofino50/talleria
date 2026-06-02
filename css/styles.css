@@ -933,6 +933,155 @@ ul { list-style: none; }
   margin: 0;
 }
 
+/* ============================================
+   VIDEO FEATURE — compact, side-by-side com texto
+   (substitui apple-video nas páginas onde o vídeo
+   deve estar menos dominante)
+   ============================================ */
+.video-feature {
+  padding: 96px 24px;
+  background: #f5f5f7;
+}
+.video-feature--alt { background: #1a1a2e; color: #ffffff; }
+.video-feature--alt .video-feature__headline { color: #ffffff; }
+.video-feature--alt .video-feature__text { color: #b8b8c8; }
+.video-feature--alt .video-feature__list li { color: #d4d4dc; }
+
+.video-feature__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.video-feature--reverse .video-feature__inner { direction: rtl; }
+.video-feature--reverse .video-feature__inner > * { direction: ltr; }
+
+.video-feature__label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+.video-feature__headline {
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+}
+.video-feature__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6e6e73;
+  margin: 0 0 24px;
+}
+.video-feature__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.video-feature__list li {
+  padding-left: 24px;
+  position: relative;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #424245;
+}
+.video-feature__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(233, 69, 96, 0.12);
+}
+.video-feature__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 12px 20px;
+  background: #1d1d1f;
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.video-feature__cta:hover { background: var(--accent); transform: translateY(-2px); }
+
+.video-feature__player {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1a1a2e;
+  border: 1px solid #e8e8ed;
+  cursor: pointer;
+  box-shadow: 0 16px 40px -16px rgba(0, 0, 0, 0.18);
+}
+.video-feature__player video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #1a1a2e;
+}
+.video-feature__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.video-feature__play:hover { transform: translate(-50%, -50%) scale(1.08); }
+.video-feature__play svg { width: 24px; height: 24px; margin-left: 3px; }
+.video-feature__player.is-playing .video-feature__play { opacity: 0; pointer-events: none; }
+.video-feature__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.3) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.video-feature__player.is-playing .video-feature__overlay { opacity: 0; }
+
+@media (max-width: 900px) {
+  .video-feature { padding: 64px 20px; }
+  .video-feature__inner { grid-template-columns: 1fr; gap: 32px; }
+  .video-feature--reverse .video-feature__inner { direction: ltr; }
+  .video-feature__player { max-width: 100%; }
+  .video-feature__play { width: 56px; height: 56px; }
+  .video-feature__play svg { width: 20px; height: 20px; }
+}
+
 .apple-specs {
   padding: clamp(80px, 10vw, 160px) 24px;
   background: var(--bg-white);

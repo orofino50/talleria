@@ -416,6 +416,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 6. Video player (light, plays on click anywhere)
+  var videoPlayer = document.querySelector('[data-video-player]');
+  var videoPlayBtn = document.querySelector('[data-video-play]');
+  if (videoPlayer && videoPlayBtn) {
+    var video = videoPlayer.querySelector('video');
+    if (video) {
+      function togglePlay() {
+        if (video.paused) {
+          video.play();
+          videoPlayer.classList.add('is-playing');
+        } else {
+          video.pause();
+          videoPlayer.classList.remove('is-playing');
+        }
+      }
+      videoPlayBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        togglePlay();
+      });
+      videoPlayer.addEventListener('click', togglePlay);
+      video.addEventListener('ended', function() {
+        videoPlayer.classList.remove('is-playing');
+      });
+    }
+  }
+
 })();
 
 
