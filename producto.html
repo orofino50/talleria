@@ -191,6 +191,61 @@
       </div>
     </section>
 
+    <!-- VIDEO — PaintPro en acción -->
+    <section class="apple-video">
+      <div class="apple-video__inner">
+        <p class="apple-video__label animate-in">En acción</p>
+        <h2 class="apple-video__headline animate-in">Mira PaintPro en acción.</h2>
+        <p class="apple-video__sub animate-in">Resultados reales. Sin cortes, sin trucos. Solo el acabado que vas a conseguir en tu próximo proyecto.</p>
+        <div class="apple-video__player animate-in" data-video-player>
+          <video
+            class="apple-video__video"
+            poster="images/paintpro-demo-poster.jpg"
+            preload="metadata"
+            playsinline
+            muted
+            loop
+            aria-label="Demostración de PaintPro en uso real">
+            <source src="images/paintpro-demo-hd.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <button class="apple-video__play" type="button" aria-label="Reproducir video" data-video-play>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <div class="apple-video__overlay" data-video-overlay></div>
+        </div>
+        <div class="apple-video__features animate-in">
+          <div class="apple-video__feature">
+            <div class="apple-video__feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <p class="apple-video__feature-title">0 a listo en 30 segundos</p>
+              <p class="apple-video__feature-text">Sin tiempo de preparación, sin mezclas, sin esperas.</p>
+            </div>
+          </div>
+          <div class="apple-video__feature">
+            <div class="apple-video__feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div>
+              <p class="apple-video__feature-title">Acabado uniforme</p>
+              <p class="apple-video__feature-text">Sin marcas de rodillo, sin goteos, sin zonas desiguales.</p>
+            </div>
+          </div>
+          <div class="apple-video__feature">
+            <div class="apple-video__feature-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <p class="apple-video__feature-title">Sin experiencia previa</p>
+              <p class="apple-video__feature-text">La curva de aprendizaje es de minutos, no de días.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SPECS — Light -->
     <section class="apple-specs">
       <div class="apple-specs__inner">
@@ -664,6 +719,34 @@
           }
         });
       });
+
+      // ==========================================
+      // VIDEO PLAYER
+      // ==========================================
+      var videoPlayer = document.querySelector('[data-video-player]');
+      var videoPlayBtn = document.querySelector('[data-video-play]');
+      if (videoPlayer && videoPlayBtn) {
+        var video = videoPlayer.querySelector('video');
+        if (video) {
+          function togglePlay() {
+            if (video.paused) {
+              video.play();
+              videoPlayer.classList.add('is-playing');
+            } else {
+              video.pause();
+              videoPlayer.classList.remove('is-playing');
+            }
+          }
+          videoPlayBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            togglePlay();
+          });
+          videoPlayer.addEventListener('click', togglePlay);
+          video.addEventListener('ended', function() {
+            videoPlayer.classList.remove('is-playing');
+          });
+        }
+      }
     });
   </script>
 
