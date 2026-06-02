@@ -312,22 +312,33 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hero3d && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     hero3d.classList.add('is-3d');
 
+    var heroTicking = false;
+    var heroLastEvent = null;
     hero3d.addEventListener('mousemove', function(e) {
-      var bg = this.querySelector('.hero--apple__bg');
-      if (!bg) return;
+      heroLastEvent = e;
+      if (heroTicking) return;
+      heroTicking = true;
+      requestAnimationFrame(function() {
+        heroTicking = false;
+        var ev = heroLastEvent;
+        if (!ev) return;
+        var bg = hero3d.querySelector('.hero--apple__bg');
+        if (!bg) return;
 
-      var rect = this.getBoundingClientRect();
-      var x = (e.clientX - rect.left) / rect.width - 0.5;
-      var y = (e.clientY - rect.top) / rect.height - 0.5;
+        var rect = hero3d.getBoundingClientRect();
+        var x = (ev.clientX - rect.left) / rect.width - 0.5;
+        var y = (ev.clientY - rect.top) / rect.height - 0.5;
 
-      var rotateY = x * 8;
-      var rotateX = -y * 8;
+        var rotateY = x * 8;
+        var rotateX = -y * 8;
 
-      bg.style.transform = 'perspective(1000px) rotateY(' + rotateY + 'deg) rotateX(' + rotateX + 'deg) scale(1.05)';
+        bg.style.transform = 'perspective(1000px) rotateY(' + rotateY + 'deg) rotateX(' + rotateX + 'deg) scale(1.05)';
+      });
     });
 
     hero3d.addEventListener('mouseleave', function() {
-      var bg = this.querySelector('.hero--apple__bg');
+      heroLastEvent = null;
+      var bg = hero3d.querySelector('.hero--apple__bg');
       if (bg) {
         bg.style.transform = '';
       }
@@ -433,6 +444,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (videoPlayBtn) videoPlayBtn.addEventListener('click', togglePlay);
     videoPlayer.addEventListener('click', togglePlay);
+    videoPlayer.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        togglePlay();
+      }
+    });
 
     // Sincronizar classe is-paused com estado real do vídeo
     // - playing event: vídeo começou a tocar (autoplay ou click)
@@ -441,8 +458,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function setPaused(paused) {
       if (paused) {
         videoPlayer.classList.add('is-paused');
+        if (videoPlayBtn) {
+          videoPlayBtn.setAttribute('aria-label', 'Reproducir video');
+          videoPlayBtn.setAttribute('aria-pressed', 'false');
+        }
       } else {
         videoPlayer.classList.remove('is-paused');
+        if (videoPlayBtn) {
+          videoPlayBtn.setAttribute('aria-label', 'Pausar video');
+          videoPlayBtn.setAttribute('aria-pressed', 'true');
+        }
       }
     }
     video.addEventListener('playing', function() { setPaused(false); });

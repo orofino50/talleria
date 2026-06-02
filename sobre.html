@@ -43,7 +43,7 @@
           <path d="M50 6 L80 94"/>
           <path d="M30 62 L70 62"/>
         </svg>
-        <span>Alta<span style="font-weight:300">Pro</span></span>
+        <span>Alta<span class="brand-light">Pro</span></span>
       </a>
       <ul class="product-nav__links">
         <li><a href="index.html" class="product-nav__link">Inicio</a></li>
@@ -53,7 +53,7 @@
         <li><a href="contacto.html" class="product-nav__link">Contacto</a></li>
       </ul>
       <a href="producto.html" class="btn--accent-header">Comprar</a>
-      <button class="product-nav__hamburger" aria-label="Menú" aria-expanded="false">
+      <button class="product-nav__hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
         <span class="product-nav__hamburger-line"></span>
         <span class="product-nav__hamburger-line"></span>
         <span class="product-nav__hamburger-line"></span>
@@ -155,7 +155,7 @@
             <li>Respuesta inmediata, sin vibración residual</li>
           </ul>
         </div>
-        <div class="video-feature__player animate-in" data-video-player>
+        <div class="video-feature__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor de video PaintPro en acción">
           <video
             class="video-feature__video"
             poster="images/gisam-paintpro-poster.jpg"
@@ -165,13 +165,14 @@
             playsinline
             preload="metadata"
             aria-label="PaintPro real pintando madera">
+            <source src="images/gisam-paintpro.webm" type="video/webm">
             <source src="images/gisam-paintpro.mp4" type="video/mp4">
+            <track kind="captions" srclang="es" src="images/gisam-paintpro.vtt" label="Español" default>
             Tu navegador no soporta video HTML5.
           </video>
-          <button class="video-feature__play" type="button" aria-label="Reproducir video" data-video-play>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           </button>
-          <div class="video-feature__overlay" data-video-overlay></div>
         </div>
       </div>
     </section>
@@ -255,7 +256,7 @@
             <path d="M50 6 L80 94"/>
             <path d="M30 62 L70 62"/>
           </svg>
-          <span>Alta<span style="font-weight:300">Pro</span></span>
+          <span>Alta<span class="brand-light">Pro</span></span>
         </a>
         <p class="footer__tagline">Potencia. Control. Resultado.</p>
         <p class="footer__about">Herramientas eléctricas portátiles con estándar profesional.</p>

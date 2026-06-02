@@ -53,7 +53,7 @@
           <path d="M50 6 L80 94"/>
           <path d="M30 62 L70 62"/>
         </svg>
-        <span>Alta<span style="font-weight:300">Pro</span></span>
+        <span>Alta<span class="brand-light">Pro</span></span>
       </a>
       <ul class="product-nav__links">
         <li><a href="index.html" class="product-nav__link">Inicio</a></li>
@@ -62,7 +62,7 @@
         <li><a href="contacto.html" class="product-nav__link">Contacto</a></li>
       </ul>
       <a href="#cta-final" class="btn--accent-header">Comprar</a>
-      <button class="product-nav__hamburger" aria-label="Menú" aria-expanded="false">
+      <button class="product-nav__hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
         <span class="product-nav__hamburger-line"></span>
         <span class="product-nav__hamburger-line"></span>
         <span class="product-nav__hamburger-line"></span>
@@ -204,7 +204,7 @@
             <li>Acabado profesional en una sola capa</li>
           </ul>
         </div>
-        <div class="video-feature__player animate-in" data-video-player>
+        <div class="video-feature__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro pintando madera">
           <video
             class="video-feature__video"
             poster="images/gisam-paintpro-poster.jpg"
@@ -214,13 +214,14 @@
             playsinline
             preload="metadata"
             aria-label="PaintPro pintando una cerca de madera">
+            <source src="images/gisam-paintpro.webm" type="video/webm">
             <source src="images/gisam-paintpro.mp4" type="video/mp4">
+            <track kind="captions" srclang="es" src="images/gisam-paintpro.vtt" label="Español" default>
             Tu navegador no soporta video HTML5.
           </video>
-          <button class="video-feature__play" type="button" aria-label="Reproducir video" data-video-play>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           </button>
-          <div class="video-feature__overlay" data-video-overlay></div>
         </div>
       </div>
     </section>
@@ -238,7 +239,7 @@
             <li>Funciona en vertical sin chorretones</li>
           </ul>
         </div>
-        <div class="video-feature__player animate-in" data-video-player>
+        <div class="video-feature__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro en superficie metálica">
           <video
             class="video-feature__video"
             poster="images/cultivo-paintpro-poster.jpg"
@@ -248,13 +249,13 @@
             playsinline
             preload="metadata"
             aria-label="Pintura en directo sobre superficie metálica">
+            <source src="images/cultivo-paintpro.webm" type="video/webm">
             <source src="images/cultivo-paintpro.mp4" type="video/mp4">
             Tu navegador no soporta video HTML5.
           </video>
-          <button class="video-feature__play" type="button" aria-label="Reproducir video" data-video-play>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           </button>
-          <div class="video-feature__overlay" data-video-overlay></div>
         </div>
       </div>
     </section>
@@ -328,7 +329,7 @@
             <li>Limpieza completa en 3 pasos</li>
           </ul>
         </div>
-        <div class="video-feature__player animate-in" data-video-player>
+        <div class="video-feature__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro montaje DIY">
           <video
             class="video-feature__video"
             poster="images/diy-paintpro-poster.jpg"
@@ -338,13 +339,13 @@
             playsinline
             preload="metadata"
             aria-label="Montaje y resultado de PaintPro en una cerca">
+            <source src="images/diy-paintpro.webm" type="video/webm">
             <source src="images/diy-paintpro.mp4" type="video/mp4">
             Tu navegador no soporta video HTML5.
           </video>
-          <button class="video-feature__play" type="button" aria-label="Reproducir video" data-video-play>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           </button>
-          <div class="video-feature__overlay" data-video-overlay></div>
         </div>
       </div>
     </section>
@@ -362,7 +363,7 @@
             <li>Resultado consistente en cada pasada</li>
           </ul>
         </div>
-        <div class="video-feature__player animate-in" data-video-player>
+        <div class="video-feature__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro sobre metal">
           <video
             class="video-feature__video"
             poster="images/temu-paintpro-poster.jpg"
@@ -372,13 +373,13 @@
             playsinline
             preload="metadata"
             aria-label="PaintPro cubriendo metal oxidado con pintura nueva">
+            <source src="images/temu-paintpro.webm" type="video/webm">
             <source src="images/temu-paintpro.mp4" type="video/mp4">
             Tu navegador no soporta video HTML5.
           </video>
-          <button class="video-feature__play" type="button" aria-label="Reproducir video" data-video-play>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           </button>
-          <div class="video-feature__overlay" data-video-overlay></div>
         </div>
       </div>
     </section>
@@ -453,7 +454,7 @@
             <p class="testimonial-card__stars">★★★★★</p>
             <p class="testimonial-card__quote">"La usé para pintar la valla del jardín. En 2 horas tenía todo hecho. Antes me llevaba un fin de semana entero con brocha."</p>
             <div class="testimonial-card__author">
-              <div style="width:44px;height:44px;border-radius:50%;background:#e8e8ed;display:flex;align-items:center;justify-content:center;font-weight:700;color:#6e6e73;font-size:0.875rem;">MC</div>
+              <div class="testimonial-card__avatar-placeholder" aria-hidden="true">MC</div>
               <div>
                 <p class="testimonial-card__name">María C.</p>
                 <p class="testimonial-card__location">Valencia</p>
@@ -475,32 +476,32 @@
               <tr>
                 <th></th>
                 <th>Brochas/Rodillos</th>
-                <th style="color: var(--accent);">PaintPro™</th>
+                <th class="compare-table__col-highlight">PaintPro™</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="font-weight:700;color:#fff;">Tiempo</td>
+                <td class="compare-table__row-label">Tiempo</td>
                 <td>Horas por capa</td>
                 <td class="highlight">Minutos</td>
               </tr>
               <tr>
-                <td style="font-weight:700;color:#fff;">Acabado</td>
+                <td class="compare-table__row-label">Acabado</td>
                 <td>Irregular, marcas</td>
                 <td class="highlight">Uniforme, profesional</td>
               </tr>
               <tr>
-                <td style="font-weight:700;color:#fff;">Superficies</td>
+                <td class="compare-table__row-label">Superficies</td>
                 <td>Limited</td>
                 <td class="highlight">Madera, metal, paredes, vidrio</td>
               </tr>
               <tr>
-                <td style="font-weight:700;color:#fff;">Portabilidad</td>
+                <td class="compare-table__row-label">Portabilidad</td>
                 <td>Requiere cubeta</td>
                 <td class="highlight">Inalámbrica, 1.2 kg</td>
               </tr>
               <tr>
-                <td style="font-weight:700;color:#fff;">Limpieza</td>
+                <td class="compare-table__row-label">Limpieza</td>
                 <td>30+ min</td>
                 <td class="highlight">5 min bajo el grifo</td>
               </tr>
@@ -562,7 +563,7 @@
         <span class="apple-cta__price-original">€102,90</span>
         <span class="apple-cta__price-savings">Ahorra €33 (32%)</span>
       </div>
-      <div id="countdown" class="animate-in" style="margin-bottom:24px;font-size:0.938rem;color:rgba(255,255,255,0.7);">Oferta termina en: <strong id="countdown-time" style="color:#fff;"></strong></div>
+      <div id="countdown" class="cta-countdown animate-in">Oferta termina en: <strong id="countdown-time"></strong></div>
       <a href="https://lapurasalud.com/products/pistola-paintpro" class="btn btn--trust">Comprar PaintPro — Envío gratis</a>
       <div class="apple-cta__trust">
         <div class="apple-cta__trust-item">
