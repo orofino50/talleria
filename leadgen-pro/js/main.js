@@ -53,7 +53,7 @@
 
   /* ---- 4. Scroll reveal (IntersectionObserver) -------------- */
   const revealTargets = document.querySelectorAll(
-    '.section__title, .section__lead, .section-label, .module-card, .mock-search, .timeline__step, .extension-card, .ia-card, .kanban__col, .dash-card, .price-card, .faq__item, .split__bullets li, .features-grid li, .feature-row, .hero__metrics, .hero__ctas, .hero__sub'
+    '.section__title, .section__lead, .section-label, .module-card, .mock-search, .timeline__step, .extension-card, .ia-card, .kanban__col, .dash-card, .price-card, .faq__item, .split__bullets li, .features-grid li, .feature-row, .hero__proof, .hero__ctas, .hero__sub'
   );
   revealTargets.forEach(function (el) { el.setAttribute('data-reveal', ''); });
 
@@ -105,10 +105,10 @@
     sections.forEach(function (s) { activeIO.observe(s); });
   }
 
-  /* ---- 7. Animate hero metrics on load --------------------- */
-  const heroMetrics = document.querySelector('.hero__metrics');
-  if (heroMetrics) {
-    setTimeout(function () { heroMetrics.classList.add('is-visible'); }, 100);
+  /* ---- 7. Animate hero proof on load ----------------------- */
+  const heroProof = document.querySelector('.hero__proof');
+  if (heroProof) {
+    setTimeout(function () { heroProof.classList.add('is-visible'); }, 100);
   }
 
   /* ---- 8. Animate bars on dashboard cards ------------------- */
