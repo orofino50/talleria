@@ -124,4 +124,17 @@
     }, { threshold: 0.3 });
     barCards.forEach(function (b) { barIO.observe(b); });
   }
+
+  /* ---- 9. Mobile sticky CTA: hide when pricing is in view --- */
+  const mobileCta = document.querySelector('.mobile-cta');
+  const precosSection = document.getElementById('precos');
+  if (mobileCta && precosSection && 'IntersectionObserver' in window) {
+    document.body.classList.add('has-mobile-cta');
+    const ctaIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        mobileCta.classList.toggle('is-hidden', entry.isIntersecting);
+      });
+    }, { rootMargin: '-20% 0px -20% 0px' });
+    ctaIO.observe(precosSection);
+  }
 })();

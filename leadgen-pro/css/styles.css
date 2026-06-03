@@ -233,6 +233,19 @@ p { text-wrap: pretty; }
   transition: color 150ms var(--ease-out);
 }
 .nav__links a:hover { color: var(--ink-100); }
+.nav__links a.is-active { color: var(--ink-100); }
+.nav__links a.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+.nav__links a { position: relative; }
+.nav__drawer a.is-active { color: var(--ink-100); border-left: 2px solid var(--accent); padding-left: 10px; }
 .nav__cta { margin-left: 8px; }
 .nav__toggle {
   display: none;
@@ -340,6 +353,19 @@ p { text-wrap: pretty; }
   font-weight: 500;
 }
 .hero__proof span[aria-hidden] { color: var(--ink-600); }
+.hero__price-hint {
+  font-size: 14px;
+  color: var(--ink-300);
+  font-weight: 500;
+  text-align: center;
+  margin: 20px auto 0;
+  max-width: 720px;
+  width: 100%;
+}
+.hero__price-hint strong {
+  color: var(--ink-100);
+  font-weight: 700;
+}
 .hero__product {
   position: relative;
   z-index: 1;
@@ -1392,6 +1418,130 @@ p { text-wrap: pretty; }
 .forecast__big span { font-size: 12px; color: var(--text-muted-light); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
 .forecast__line { width: 100%; height: 60px; }
 
+/* ---- 14b. Social proof (stats + testimonials) ----------------- */
+.proof__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 48px 0 64px;
+  padding: 32px;
+  background: var(--surface-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-lg);
+}
+.proof__stat {
+  text-align: left;
+  padding: 0 8px;
+  border-left: 1px solid var(--border-light);
+}
+.proof__stat:first-child { border-left: 0; padding-left: 0; }
+.proof__stat-value {
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--accent-2);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.proof__stat-value span {
+  font-size: 0.5em;
+  font-weight: 700;
+  color: var(--ink-400);
+  margin-left: 2px;
+}
+.proof__stat-label {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-muted-light);
+  font-weight: 500;
+}
+
+.proof__testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.proof__card {
+  background: var(--surface-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--r-lg);
+  padding: clamp(28px, 3vw, 40px);
+  position: relative;
+  transition: transform 250ms var(--ease-out), border-color 250ms var(--ease-out);
+}
+.proof__card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-3);
+}
+.proof__card blockquote {
+  margin: 0 0 24px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-light);
+  font-weight: 500;
+}
+.proof__card blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--accent-3);
+  font-weight: 800;
+  opacity: 0.4;
+  font-family: Georgia, serif;
+}
+.proof__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+.proof__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  font-family: ui-monospace, monospace;
+  flex-shrink: 0;
+}
+.proof__avatar--a { background: linear-gradient(135deg, var(--avatar-1-a), var(--avatar-1-b)); }
+.proof__avatar--b { background: linear-gradient(135deg, var(--avatar-2-a), var(--avatar-2-b)); }
+.proof__who strong {
+  display: block;
+  font-size: 14px;
+  color: var(--text-light);
+  font-weight: 700;
+}
+.proof__who span {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted-light);
+  margin-top: 2px;
+}
+.proof__disclaimer {
+  font-size: 12px;
+  color: var(--text-muted-light);
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .proof__stats { grid-template-columns: repeat(2, 1fr); gap: 16px; padding: 24px; }
+  .proof__stat { border-left: 0; padding: 0; }
+  .proof__stat:nth-child(odd) { border-right: 1px solid var(--border-light); padding-right: 16px; }
+  .proof__testimonials { grid-template-columns: 1fr; }
+}
+
 /* ---- 15. Pricing ------------------------------------------- */
 .pricing {
   display: grid;
@@ -1625,6 +1775,54 @@ p { text-wrap: pretty; }
   }
 }
 
+/* ---- 19b. Mobile sticky CTA bar ----------------------------- */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 50;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--ink-700);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.3);
+}
+.mobile-cta.is-hidden { display: none !important; }
+.mobile-cta__price {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.mobile-cta__from {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-400);
+  font-weight: 600;
+}
+.mobile-cta__price strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink-100);
+  letter-spacing: -0.01em;
+}
+.mobile-cta__price strong small {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-400);
+  margin-left: 2px;
+}
+.mobile-cta__btn {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 /* ---- 20. Responsive ---------------------------------------- */
 @media (max-width: 1024px) {
   .split { grid-template-columns: 1fr; }
@@ -1649,6 +1847,8 @@ p { text-wrap: pretty; }
   .footer__bottom { flex-direction: column; gap: 8px; }
   .chrome__body { grid-template-columns: 1fr; }
   .chrome__sidebar { border-left: 0; border-top: 1px solid var(--ink-700); }
+  .mobile-cta { display: flex; }
+  body.has-mobile-cta { padding-bottom: 72px; }
 }
 @media (max-width: 480px) {
   .hero__title { font-size: clamp(40px, 13vw, 64px); }

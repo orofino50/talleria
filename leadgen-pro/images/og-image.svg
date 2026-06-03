@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="LeadGen Pro — Encontre. Engaje. Converta.">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="70%" stop-color="#0a0a0f"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="success" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(99,102,241,0.08)" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <circle cx="1080" cy="120" r="180" fill="url(#accent)" opacity="0.18" filter="url(#soft)"/>
+  <circle cx="120" cy="560" r="160" fill="url(#success)" opacity="0.10" filter="url(#soft)"/>
+
+  <g transform="translate(80, 90)">
+    <rect width="44" height="44" rx="10" fill="url(#accent)"/>
+    <text x="22" y="32" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="white">LP</text>
+    <text x="58" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700" fill="#f5f5f7">LeadGen</text>
+    <text x="186" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="700" fill="#818cf8">Pro</text>
+  </g>
+
+  <g transform="translate(80, 200)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="600" letter-spacing="0.5" fill="#818cf8">B2B SALES INTELLIGENCE</text>
+    <text x="0" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="84" font-weight="800" fill="#f5f5f7" letter-spacing="-2">Encontre.</text>
+    <text x="0" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="84" font-weight="800" fill="url(#success)" letter-spacing="-2">Engaje.</text>
+    <text x="0" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="84" font-weight="800" fill="#f5f5f7" letter-spacing="-2">Converta.</text>
+  </g>
+
+  <g transform="translate(80, 560)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="500" fill="#a1a1aa">Prospecção B2B · Cadências multicanal · Extensões de navegador</text>
+    <text x="0" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="400" fill="#71717a">A partir de R$ 50/mês · leadgen.pro</text>
+  </g>
+
+  <g transform="translate(820, 180)" opacity="0.92">
+    <rect width="320" height="340" rx="20" fill="#13131a" stroke="rgba(255,255,255,0.08)"/>
+    <rect x="20" y="20" width="280" height="40" rx="8" fill="rgba(99,102,241,0.12)"/>
+    <circle cx="40" cy="40" r="6" fill="#ef4444"/>
+    <circle cx="58" cy="40" r="6" fill="#f59e0b"/>
+    <circle cx="76" cy="40" r="6" fill="#10b981"/>
+    <text x="170" y="46" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#a1a1aa">painel-hoje</text>
+
+    <g transform="translate(20, 80)">
+      <rect width="280" height="60" rx="10" fill="rgba(255,255,255,0.04)"/>
+      <circle cx="30" cy="30" r="14" fill="url(#accent)"/>
+      <text x="30" y="35" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="white">AM</text>
+      <text x="56" y="26" font-family="ui-monospace, monospace" font-size="12" font-weight="600" fill="#f5f5f7">Ana Martins</text>
+      <text x="56" y="42" font-family="ui-monospace, monospace" font-size="10" fill="#71717a">Head of Growth · Acme</text>
+      <rect x="220" y="20" width="44" height="20" rx="6" fill="rgba(16,185,129,0.18)"/>
+      <text x="242" y="34" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" font-weight="600" fill="#10b981">87</text>
+    </g>
+
+    <g transform="translate(20, 152)">
+      <rect width="280" height="60" rx="10" fill="rgba(255,255,255,0.04)"/>
+      <circle cx="30" cy="30" r="14" fill="url(#success)"/>
+      <text x="30" y="35" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="white">RS</text>
+      <text x="56" y="26" font-family="ui-monospace, monospace" font-size="12" font-weight="600" fill="#f5f5f7">Rafael Silva</text>
+      <text x="56" y="42" font-family="ui-monospace, monospace" font-size="10" fill="#71717a">CTO · Beta</text>
+      <rect x="220" y="20" width="44" height="20" rx="6" fill="rgba(99,102,241,0.18)"/>
+      <text x="242" y="34" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" font-weight="600" fill="#818cf8">72</text>
+    </g>
+
+    <g transform="translate(20, 224)">
+      <rect width="280" height="60" rx="10" fill="rgba(255,255,255,0.04)"/>
+      <circle cx="30" cy="30" r="14" fill="#f59e0b"/>
+      <text x="30" y="35" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" font-weight="700" fill="white">CM</text>
+      <text x="56" y="26" font-family="ui-monospace, monospace" font-size="12" font-weight="600" fill="#f5f5f7">Carla Mendes</text>
+      <text x="56" y="42" font-family="ui-monospace, monospace" font-size="10" fill="#71717a">VP Sales · Gamma</text>
+      <rect x="220" y="20" width="44" height="20" rx="6" fill="rgba(16,185,129,0.18)"/>
+      <text x="242" y="34" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" font-weight="600" fill="#10b981">94</text>
+    </g>
+
+    <g transform="translate(20, 296)">
+      <rect width="280" height="28" rx="8" fill="rgba(16,185,129,0.12)"/>
+      <text x="14" y="18" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#10b981">+ 47 leads qualificados hoje</text>
+    </g>
+  </g>
+</svg>
