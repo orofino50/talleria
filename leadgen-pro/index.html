@@ -622,46 +622,54 @@
           Funil visual que mostra em que estágio cada oportunidade está. Múltiplos pipelines por time. Estágios e campos que você define. Motivo de perda registrado para análise.
         </p>
         <div class="kanban" aria-label="Pipeline exemplo com 4 estágios">
-          <div class="kanban__col">
-            <header><span>Prospecção</span><em>5</em></header>
-            <div class="kanban__card">
-              <strong>Nutri Foods Brasil</strong>
-              <span class="kanban__tag">R$ 45k</span>
-              <footer><span class="dot dot--indigo"></span>Carla</footer>
-            </div>
-            <div class="kanban__card">
-              <strong>Cereais Boa Vista</strong>
-              <span class="kanban__tag">R$ 28k</span>
-              <footer><span class="dot dot--emerald"></span>Bruno</footer>
-            </div>
-          </div>
-          <div class="kanban__col">
-            <header><span>Qualificação</span><em>3</em></header>
-            <div class="kanban__card">
-              <strong>Alimentos Marfim</strong>
-              <span class="kanban__tag">R$ 92k</span>
-              <footer><span class="dot dot--indigo"></span>Carla</footer>
-            </div>
-            <div class="kanban__card">
-              <strong>Pastifício Aurora</strong>
-              <span class="kanban__tag">R$ 18k</span>
-              <footer><span class="dot dot--indigo"></span>Carla</footer>
+          <div class="kanban__col" data-stage="prospeccao">
+            <header><span>Prospecção</span><em class="kanban__count">5</em></header>
+            <div class="kanban__cards">
+              <div class="kanban__card" draggable="true">
+                <strong>Nutri Foods Brasil</strong>
+                <span class="kanban__tag">R$ 45k</span>
+                <footer><span class="dot dot--indigo"></span>Carla</footer>
+              </div>
+              <div class="kanban__card" draggable="true">
+                <strong>Cereais Boa Vista</strong>
+                <span class="kanban__tag">R$ 28k</span>
+                <footer><span class="dot dot--emerald"></span>Bruno</footer>
+              </div>
             </div>
           </div>
-          <div class="kanban__col">
-            <header><span>Proposta</span><em>2</em></header>
-            <div class="kanban__card">
-              <strong>Têxtil Brasil</strong>
-              <span class="kanban__tag">R$ 134k</span>
-              <footer><span class="dot dot--amber"></span>Diego</footer>
+          <div class="kanban__col" data-stage="qualificacao">
+            <header><span>Qualificação</span><em class="kanban__count">3</em></header>
+            <div class="kanban__cards">
+              <div class="kanban__card" draggable="true">
+                <strong>Alimentos Marfim</strong>
+                <span class="kanban__tag">R$ 92k</span>
+                <footer><span class="dot dot--indigo"></span>Carla</footer>
+              </div>
+              <div class="kanban__card" draggable="true">
+                <strong>Pastifício Aurora</strong>
+                <span class="kanban__tag">R$ 18k</span>
+                <footer><span class="dot dot--indigo"></span>Carla</footer>
+              </div>
             </div>
           </div>
-          <div class="kanban__col kanban__col--win">
-            <header><span>Fechamento</span><em>1</em></header>
-            <div class="kanban__card kanban__card--win">
-              <strong>Frigorífico Norte</strong>
-              <span class="kanban__tag">R$ 67k</span>
-              <footer><span class="dot dot--emerald"></span>Bruno</footer>
+          <div class="kanban__col" data-stage="proposta">
+            <header><span>Proposta</span><em class="kanban__count">2</em></header>
+            <div class="kanban__cards">
+              <div class="kanban__card" draggable="true">
+                <strong>Têxtil Brasil</strong>
+                <span class="kanban__tag">R$ 134k</span>
+                <footer><span class="dot dot--amber"></span>Diego</footer>
+              </div>
+            </div>
+          </div>
+          <div class="kanban__col kanban__col--win" data-stage="fechamento">
+            <header><span>Fechamento</span><em class="kanban__count">1</em></header>
+            <div class="kanban__cards">
+              <div class="kanban__card kanban__card--win" draggable="true">
+                <strong>Frigorífico Norte</strong>
+                <span class="kanban__tag">R$ 67k</span>
+                <footer><span class="dot dot--emerald"></span>Bruno</footer>
+              </div>
             </div>
           </div>
         </div>

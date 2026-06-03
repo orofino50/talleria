@@ -1264,6 +1264,17 @@ p { text-wrap: pretty; }
   border-radius: var(--r-lg);
   padding: 16px;
   min-width: 220px;
+  transition: border-color 200ms, background 200ms;
+}
+.kanban__col.drag-over {
+  border-color: var(--accent);
+  background: rgba(99,102,241,0.08);
+}
+.kanban__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 80px;
 }
 .kanban__col header {
   display: flex;
@@ -1299,6 +1310,7 @@ p { text-wrap: pretty; }
   transition: transform 200ms var(--ease-out), border-color 200ms;
 }
 .kanban__card:hover { transform: translateY(-2px); border-color: var(--accent); }
+.kanban__card.is-dragging { opacity: 0.5; transform: rotate(3deg); border-color: var(--accent-3); }
 .kanban__card strong { display: block; font-size: 14px; color: var(--ink-100); font-weight: 600; margin-bottom: 6px; }
 .kanban__tag {
   display: inline-block;

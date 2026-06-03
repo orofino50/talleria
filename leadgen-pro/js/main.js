@@ -138,4 +138,55 @@
     }, { rootMargin: '-20% 0px -20% 0px' });
     ctaIO.observe(precosSection);
   }
+
+  /* ---- 10. Kanban drag and drop ---------------------------- */
+  var kanbanCards = document.querySelectorAll('.kanban__card');
+  var kanbanCols = document.querySelectorAll('.kanban__col');
+
+  function updateKanbanCounts() {
+    kanbanCols.forEach(function (col) {
+      var cards = col.querySelectorAll('.kanban__card');
+      var count = col.querySelector('.kanban__count');
+      if (count) count.textContent = cards.length;
+    });
+  }
+
+  kanbanCards.forEach(function (card) {
+    card.addEventListener('dragstart', function (e) {
+      card.classList.add('is-dragging');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', '');
+    });
+    card.addEventListener('dragend', function () {
+      card.classList.remove('is-dragging');
+      kanbanCols.forEach(function (col) { col.classList.remove('drag-over'); });
+    });
+  });
+
+  kanbanCols.forEach(function (col) {
+    var cardsContainer = col.querySelector('.kanban__cards');
+    if (!cardsContainer) return;
+
+    col.addEventListener('dragover', function (e) {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      col.classList.add('drag-over');
+    });
+
+    col.addEventListener('dragleave', function (e) {
+      if (!col.contains(e.relatedTarget)) {
+        col.classList.remove('drag-over');
+      }
+    });
+
+    col.addEventListener('drop', function (e) {
+      e.preventDefault();
+      col.classList.remove('drag-over');
+      var dragging = document.querySelector('.is-dragging');
+      if (dragging && dragging !== col) {
+        cardsContainer.appendChild(dragging);
+        updateKanbanCounts();
+      }
+    });
+  });
 })();
