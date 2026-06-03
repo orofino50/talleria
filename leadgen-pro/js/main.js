@@ -1,0 +1,127 @@
+/* LeadGen Pro — main.js
+   Vanilla JS for nav, scroll reveal, drawer, FAQ, smooth scroll.
+   No dependencies. */
+(function () {
+  'use strict';
+
+  const nav = document.getElementById('nav');
+  const navToggle = document.getElementById('navToggle');
+  const navDrawer = document.getElementById('navDrawer');
+  const navLinks = document.querySelectorAll('.nav__links a, .nav__drawer a[href^="#"]');
+
+  /* ---- 1. Nav scroll state ---------------------------------- */
+  let lastScroll = 0;
+  function onScroll() {
+    const y = window.scrollY;
+    nav.classList.toggle('is-scrolled', y > 50);
+    lastScroll = y;
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- 2. Mobile drawer ------------------------------------- */
+  if (navToggle && navDrawer) {
+    navToggle.addEventListener('click', function () {
+      const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+      navDrawer.classList.toggle('is-open', !isOpen);
+      navDrawer.hidden = isOpen;
+      document.body.style.overflow = isOpen ? '' : 'hidden';
+    });
+    navDrawer.addEventListener('click', function (e) {
+      if (e.target.matches('a')) {
+        navToggle.click();
+      }
+    });
+  }
+
+  /* ---- 3. Smooth scroll for in-page anchors ----------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      const id = link.getAttribute('href');
+      if (id === '#' || id.length < 2) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const navHeight = nav ? nav.offsetHeight : 0;
+      const y = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      history.pushState(null, '', id);
+    });
+  });
+
+  /* ---- 4. Scroll reveal (IntersectionObserver) -------------- */
+  const revealTargets = document.querySelectorAll(
+    '.section__title, .section__lead, .section-label, .module-card, .mock-search, .timeline__step, .extension-card, .ia-card, .kanban__col, .dash-card, .price-card, .faq__item, .split__bullets li, .features-grid li, .feature-row, .hero__metrics, .hero__ctas, .hero__sub'
+  );
+  revealTargets.forEach(function (el) { el.setAttribute('data-reveal', ''); });
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealTargets.forEach(function (el) { io.observe(el); });
+  } else {
+    revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ---- 5. FAQ: close others when one opens ----------------- */
+  const faqItems = document.querySelectorAll('.faq__item');
+  faqItems.forEach(function (item) {
+    item.addEventListener('toggle', function () {
+      if (item.open) {
+        faqItems.forEach(function (other) {
+          if (other !== item) other.open = false;
+        });
+      }
+    });
+  });
+
+  /* ---- 6. Active section highlight in nav ------------------- */
+  if ('IntersectionObserver' in window) {
+    const sections = document.querySelectorAll('main section[id]');
+    const navMap = new Map();
+    navLinks.forEach(function (a) {
+      const href = a.getAttribute('href');
+      if (href && href.startsWith('#')) navMap.set(href.slice(1), a);
+    });
+    const activeIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navMap.forEach(function (a) { a.classList.remove('is-active'); });
+          const active = navMap.get(id);
+          if (active) active.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(function (s) { activeIO.observe(s); });
+  }
+
+  /* ---- 7. Animate hero metrics on load --------------------- */
+  const heroMetrics = document.querySelector('.hero__metrics');
+  if (heroMetrics) {
+    setTimeout(function () { heroMetrics.classList.add('is-visible'); }, 100);
+  }
+
+  /* ---- 8. Animate bars on dashboard cards ------------------- */
+  const barCards = document.querySelectorAll('.bars');
+  if ('IntersectionObserver' in window && barCards.length) {
+    const barIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          barIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    barCards.forEach(function (b) { barIO.observe(b); });
+  }
+})();
