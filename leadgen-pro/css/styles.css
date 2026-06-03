@@ -230,6 +230,7 @@ p { text-wrap: pretty; }
   font-size: 14px;
   font-weight: 500;
   color: var(--ink-300);
+  position: relative;
   transition: color 150ms var(--ease-out);
 }
 .nav__links a:hover { color: var(--ink-100); }
@@ -244,7 +245,6 @@ p { text-wrap: pretty; }
   background: var(--accent);
   border-radius: 1px;
 }
-.nav__links a { position: relative; }
 .nav__drawer a.is-active { color: var(--ink-100); border-left: 2px solid var(--accent); padding-left: 10px; }
 .nav__cta { margin-left: 8px; }
 .nav__toggle {
@@ -1758,12 +1758,15 @@ p { text-wrap: pretty; }
 }
 
 /* ---- 19. Scroll reveal ------------------------------------- */
+/* Content visible by default; JS adds .has-reveals to body to enable animation */
 [data-reveal] {
-  opacity: 0;
-  transform: translateY(24px);
   transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
 }
-[data-reveal].is-visible {
+.has-reveals [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.has-reveals [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1781,15 +1784,13 @@ p { text-wrap: pretty; }
   position: fixed;
   left: 0; right: 0; bottom: 0;
   z-index: 50;
-  background: rgba(10, 10, 15, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(10, 10, 15, 0.96);
   border-top: 1px solid var(--ink-700);
   padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.3);
 }
 .mobile-cta.is-hidden { display: none !important; }
 .mobile-cta__price {

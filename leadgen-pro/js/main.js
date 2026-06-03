@@ -53,11 +53,12 @@
 
   /* ---- 4. Scroll reveal (IntersectionObserver) -------------- */
   const revealTargets = document.querySelectorAll(
-    '.section__title, .section__lead, .section-label, .module-card, .mock-search, .timeline__step, .extension-card, .ia-card, .kanban__col, .dash-card, .price-card, .faq__item, .split__bullets li, .features-grid li, .feature-row, .hero__proof, .hero__ctas, .hero__sub'
+    '.section__title, .section__lead, .section-label, .module-card, .mock-search, .timeline__step, .extension-card, .ia-card, .kanban__col, .dash-card, .price-card, .faq__item, .split__bullets li, .features-grid li, .feature-row, .hero__proof, .hero__ctas, .hero__sub, .proof__stats, .proof__card, .proof__disclaimer'
   );
   revealTargets.forEach(function (el) { el.setAttribute('data-reveal', ''); });
 
   if ('IntersectionObserver' in window) {
+    document.body.classList.add('has-reveals');
     const io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
