@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-05-29T00:15:00+02:00",
-  "title": "Design System: AltaPro",
+  "title": "Design System: Talleria",
   "extensions": {
     "colorMeta": {
       "primary": { "role": "primary", "displayName": "Coral Elétrico", "canonical": "#e94560", "tonalRamp": ["#4a151e", "#7a1f30", "#a32a42", "#c93554", "#e94560", "#f0607a", "#f58a9e", "#fbb5c3"] },

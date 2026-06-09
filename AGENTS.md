@@ -3,7 +3,7 @@
 ## Design System
 
 - **North Star:** Luz de Estúdio
-- **Register:** Brand (landing page de produto físico — AltaPro multi-tool)
+- **Register:** Brand (landing page de produto físico — Talleria multi-tool)
 - **Personalidade:** Profissional, premium, confiável
 - **Fonte:** Inter (monofamília, pesos 400/600/700/900)
 - **Paleta v2:** Light-first (#f5f5f7 bg, #ffffff cards, #1d1d1f text) — Apple-inspired
@@ -19,8 +19,8 @@
 - v2 completa: 5 páginas (index, producto, sobre, faq, contacto) com CSS de 20KB + JS 2.7KB
 - Imagens reais do produto via Shopify CDN, baixadas para `images/`
 - Audit score: 19/20 | Critique UX: 33/40
-- Publicado em: https://orofino50.github.io/alta-pro/
-- Repo: https://github.com/orofino50/alta-pro
+- Publicado em: https://orofino50.github.io/talleria/
+- Repo: https://github.com/orofino50/talleria
 
 ## Comandos disponíveis
 

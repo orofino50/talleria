@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://orofino50.github.io/alta-pro/sitemap.xml
+Sitemap: https://orofino50.github.io/talleria/sitemap.xml

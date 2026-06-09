@@ -1,5 +1,5 @@
 ---
-name: AltaPro
+name: Talleria
 description: Sitio web premium de herramientas eléctricas portátiles
 colors:
   primary: "#e94560"
@@ -96,7 +96,7 @@ components:
     padding: "8px 20px"
 ---
 
-# Design System: AltaPro
+# Design System: Talleria
 
 ## 1. Overview
 
@@ -182,7 +182,7 @@ Em fundos escuros (Noche Azul, Azul Profundo), a distinção entre seções vem 
 ### Navigation
 
 - **Style:** Header fixo no topo (z-index 100), transparente no topo da página, transiciona para branco com blur (rgba(255,255,255,0.9) + backdrop-filter: blur(12px)) ao scrollar.
-- **Logo:** AltaPro, peso 900, 1.25rem, letter-spacing -0.5px. "Alta" em branco (inverso) ou Casi Negro (scrolled), "Pro" em Coral Elétrico.
+- **Logo:** Talleria, peso 900, 1.25rem, letter-spacing -0.5px. "Taller" em branco (inverso) ou Casi Negro (scrolled), "ia" em Coral Elétrico.
 - **Links:** 0.875rem, peso 500, cor rgba(255,255,255,0.7) → branco no hover (dark bg). No scroll: Gris Medio → Casi Negro no hover.
 - **Active:** Peso 600, cor branca (dark) ou Casi Negro (scrolled).
 - **Mobile:** Hamburger icon (3 linhas, 22px, animação X ao abrir). Menu slide-down com fundo branco, links peso normal.

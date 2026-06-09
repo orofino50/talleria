@@ -10,7 +10,7 @@ Compradores españoles (particulares e profissionais) que buscam ferramentas el�
 
 ## Product Purpose
 
-Posicionar **AltaPro** como marca premium de herramientas eléctricas portátiles en España. Comenzando con PaintPro™ (pistola de pintura inalámbrica) como producto estrella, con planes de expansión a atornilladores, soldadores y otras herramientas. El sitio web debe convertir visitantes en compradores y construir reconocimiento de marca para lanzamientos futuros. Sucesso = branding sólido + conversión en ventas.
+Posicionar **Talleria** como marca premium de herramientas eléctricas portátiles en España. Comenzando con PaintPro™ (pistola de pintura inalámbrica) como producto estrella, con planes de expansión a atornilladores, soldadores y otras herramientas. El sitio web debe convertir visitantes en compradores y construir reconocimiento de marca para lanzamientos futuros. Sucesso = branding sólido + conversión en ventas.
 
 ## Brand Personality
 
