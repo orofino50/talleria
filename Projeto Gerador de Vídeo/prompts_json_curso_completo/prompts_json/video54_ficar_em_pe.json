@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 54: Ficar em Pé",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is in a sit position. The trainer holds a treat above its nose, luring it to lift its rear end off the ground into a standing position. 8k quality.",
+      "grok_movement": "A side-on shot that clearly shows the transition from sitting to standing, guided by the treat.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The moment the dog is in a full standing position, the trainer says \"Sim!\" and gives the treat. The command \"Em Pé!\" is introduced. 8k quality.",
+      "grok_movement": "The camera focuses on the dog holding the standing position for a second before the reward is given.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog is in a down position. The trainer says \"Em Pé!\" and uses a treat to lure it directly from lying down to standing up. 8k quality.",
+      "grok_movement": "A smooth shot that captures the more complex movement from a down to a stand, showing the dog's strength and coordination.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A practical application: the dog is standing on a scale at the vet's office, holding its position calmly for weighing. 8k quality.",
+      "grok_movement": "A static shot showing the digital scale with the dog standing perfectly still, demonstrating the usefulness of the command.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog standing proudly on a rock during a hike, looking out at the view like a majestic wolf. Text overlay: \"Fique em Pé, Conquiste o Mundo\". 8k quality.",
+      "grok_movement": "A heroic, low-angle cinematic shot of the dog against a beautiful landscape. The text appears with a strong, adventurous font.",
+      "use_previous_frame": true
+    }
+  ]
+}

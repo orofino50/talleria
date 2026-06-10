@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 30: Fica com Distância",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is in a sit-stay at one end of a long hallway. The trainer is at the other end, about 10 meters away, holding up a clear 'stay' hand signal. A graphic on the floor marks the distance. 8k quality.",
+      "grok_movement": "A dolly zoom effect (Vertigo shot), where the camera moves backward while zooming in, keeping the dog the same size while the hallway appears to stretch, emphasizing the distance.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer calls the dog with a cheerful 'Vem!'. The dog immediately breaks the stay and runs happily down the hallway towards the trainer. 8k quality.",
+      "grok_movement": "A dynamic tracking shot that follows the dog as it runs the full length of the hallway, capturing its speed and excitement.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog arrives at the trainer and receives a huge celebration with praise, petting, and a favorite toy. A moment of great success. 8k quality.",
+      "grok_movement": "A 360-degree orbiting shot around the trainer and dog celebrating, capturing the joy of the reunion and successful command.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "An infographic showing a person icon and a dog icon with a stretching arrow between them. The arrow gets longer as labels appear: '5m', '10m', '20m', 'Parque'. 8k quality.",
+      "grok_movement": "The arrow animates, stretching further and further as each new distance label pops up, showing the progression of the training.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog in a stay on one side of a quiet park, while its owner is on the other side, holding a frisbee. A demonstration of ultimate trust and control. Text overlay: 'Distância Não é Barreira para a Conexão'. 8k quality.",
+      "grok_movement": "A beautiful, wide cinematic shot of the entire park scene. The text fades in with an epic, inspiring font.",
+      "use_previous_frame": true
+    }
+  ]
+}

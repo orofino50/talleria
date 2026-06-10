@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 33: Prática do Junto",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog and owner practicing the 'Junto' command in an empty parking lot. The owner is making sharp 90-degree turns, and the dog is staying perfectly in the heel position. 8k quality.",
+      "grok_movement": "A top-down drone shot that clearly shows the precision of the turns and the dog's ability to maintain position.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The owner changes pace, walking slowly and then speeding up to a light jog. The dog adjusts its speed accordingly, never leaving the heel position. 8k quality.",
+      "grok_movement": "A side-on tracking shot that matches the owner's pace, showing the dog's seamless speed adjustments.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The owner is walking and suddenly stops. The dog performs an immediate, crisp, automatic sit in the heel position. A perfect stop. 8k quality.",
+      "grok_movement": "The camera is focused on the dog's feet and rear end, capturing the quick and precise automatic sit in slow-motion.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A diagram showing a path with various challenges: a sharp turn, a speed change section, a sudden stop. A dog and owner icon navigate the path perfectly. 8k quality.",
+      "grok_movement": "The icons animate along the path, with little checkmarks appearing as they successfully complete each challenge.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a person and dog walking through a busy farmers market, the dog in a perfect heel, completely focused on its owner amidst the chaos. Text overlay: 'Sincronia Perfeita em Qualquer Lugar'. 8k quality.",
+      "grok_movement": "A cinematic shot where the crowd is in slight motion blur, but the dog and owner are in sharp focus, creating a bubble of concentration. The text fades in with a confident font.",
+      "use_previous_frame": true
+    }
+  ]
+}

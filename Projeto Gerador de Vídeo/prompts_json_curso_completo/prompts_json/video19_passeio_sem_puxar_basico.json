@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 19: Passeio sem Puxar (Básico)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A person and a dog are standing indoors. The leash is held loosely in a J-shape, not tight. The dog is standing calmly by the person's side. 8k quality.",
+      "grok_movement": "Static shot, with a graphic overlay highlighting the loose J-shape of the leash. The text 'Guia Frouxa = Passeio Feliz' appears.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The person takes one step forward. The dog moves with them, keeping the leash loose. The person immediately gives the dog a treat right by their leg. 8k quality.",
+      "grok_movement": "The camera is focused on the person's leg and the dog's head, showing the precise location of the reward.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog starts to pull slightly, and the leash tightens. The person instantly stops walking, becoming 'a tree'. The dog looks back, confused. 8k quality.",
+      "grok_movement": "A sudden stop in camera movement as the person stops. The camera zooms in on the dog's confused expression.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog feels the lack of movement, turns back towards the person, and the leash becomes loose again. The person immediately says 'Sim!' and starts walking again. 8k quality.",
+      "grok_movement": "The camera follows the dog's movement as it turns back, and then the forward motion resumes smoothly as the walk continues.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the person and dog walking a few steps in perfect sync with a loose leash in a quiet backyard. Text overlay: 'Cada Passo, uma Conexão'. 8k quality.",
+      "grok_movement": "A smooth, satisfying tracking shot from the side, showing the synchronized walking. The text fades in elegantly.",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 61: Truques em Sequência (Nível Mestre)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog performs a rapid-fire sequence of tricks based on hand signals alone, no verbal cues: Pata -> Toca Aqui -> Gira -> Reverência. 8k quality.",
+      "grok_movement": "Fast-paced cuts showing the owner giving a quick sequence of hand signals and the dog responding instantly and flawlessly.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The dog is performing a story-based routine. The owner says \"Oh não, um vilão!\". The dog barks (\"Fala!\"). The owner says \"Bang!\". The dog plays \"Morto!\". The owner says \"Ufa, você o pegou!\". The dog takes a \"Reverência\". 8k quality.",
+      "grok_movement": "A fun, theatrical sequence that tells a mini-story, showcasing the dog's ability to chain tricks together contextually.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog is helping with chores: it picks up a toy (\"Busca\"), puts it in the box (\"Guarda\"), then goes to the door and rings a bell (\"Sinetinha\") to ask to go outside as a reward. 8k quality.",
+      "grok_movement": "A continuous shot that follows the dog as it completes a useful chain of household tasks.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A split screen showing three different dogs performing three different long trick sequences simultaneously, showcasing the versatility and potential of chaining. 8k quality.",
+      "grok_movement": "The three videos play in sync, creating a dynamic and impressive display of what's possible.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog and owner taking a final bow together to an imaginary audience, as if they've just finished a Broadway show. Text overlay: \"O Show é Todo de Vocês\". 8k quality.",
+      "grok_movement": "A grand, theatrical final shot with spotlights and a red curtain. The text appears in a dazzling, Broadway-style font.",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 48: Pegar a Cerveja (ou Refri)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is being taught to open a mini-fridge that has a rope tied to the handle. The dog is tugging the rope and the fridge door is opening. 8k quality.",
+      "grok_movement": "A clear shot of the dog successfully opening the fridge door using the rope.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A specific can (e.g., a can of soda) inside the fridge has a special koozie or fabric wrap around it to make it easy for the dog to grab with its mouth without puncturing it. 8k quality.",
+      "grok_movement": "A close-up shot inside the fridge, highlighting the specially prepared can.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog is taught to gently take only the wrapped can from the fridge, ignoring other items. The trainer rewards this specific retrieval. 8k quality.",
+      "grok_movement": "The camera follows the dog as it carefully selects and removes the correct can.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog brings the can to the owner, who is sitting on the sofa, and gently gives it to them. Jackpot reward. 8k quality.",
+      "grok_movement": "A satisfying shot of the successful delivery and the happy owner giving a huge reward.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a person watching a football game, saying \"Cerveja, por favor!\", and the dog proudly delivering the can. Text overlay: \"O Melhor Companheiro de Jogo do Mundo\". 8k quality.",
+      "grok_movement": "A fun, cinematic shot that looks like a beer commercial. The text appears with a cool, sporty font.",
+      "use_previous_frame": true
+    }
+  ]
+}

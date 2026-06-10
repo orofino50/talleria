@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 47: Tocar a Sinetinha",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A small, pleasant-sounding bell is placed on the floor near the door to the outside. A dog is curiously sniffing it. 8k quality.",
+      "grok_movement": "Static shot, establishing the bell and the dog's initial curiosity.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer puts a tiny bit of peanut butter on the bell. The dog licks or touches the bell with its nose, making it ring. The trainer immediately opens the door and lets the dog out. 8k quality.",
+      "grok_movement": "A close-up on the bell ringing, followed by a quick cut to the door opening, creating a strong cause-and-effect link.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Now, without the lure, the dog wants to go outside and deliberately touches the bell with its nose or paw. The door opens immediately. Jackpot reward (the walk itself). 8k quality.",
+      "grok_movement": "The camera captures the dog's intentional action and the immediate, desired consequence. A 'Success!' graphic appears.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A diagram showing a sequence: Dog needs to pee -> Touches Bell -> Door Opens -> Happy Dog. A simple, clear flowchart. 8k quality.",
+      "grok_movement": "The flowchart animates, with each step lighting up in sequence to illustrate the process.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog confidently ringing the bell and looking expectantly at its owner, who is smiling and grabbing the leash. Text overlay: 'A Comunicação Clara e Sem Latidos'. 8k quality.",
+      "grok_movement": "A heartwarming shot of clear communication between dog and owner. The text appears in a clean, easy-to-read font.",
+      "use_previous_frame": true
+    }
+  ]
+}

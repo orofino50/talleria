@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 23: Comandos em Sequência",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog successfully performs a 'Senta' command, and immediately after, the trainer gives the 'Deita' command. The dog transitions smoothly from sitting to lying down. Indoor setting. 8k quality.",
+      "grok_movement": "A smooth, continuous shot that follows the dog's movement from a sit to a down, highlighting the fluid transition.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A sequence of commands shown with text overlays: 1. 'Vem'. The dog runs to the trainer. 2. 'Senta'. The dog sits in front of the trainer. 3. 'Fica'. The dog stays. 8k quality.",
+      "grok_movement": "The camera follows the dog through the sequence. As each command is performed, the corresponding text overlay appears with a satisfying checkmark.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "An infographic showing building blocks. The bottom block is 'Senta'. The next block placed on top is 'Deita'. The next is 'Fica'. Building a tower of commands. 8k quality.",
+      "grok_movement": "The blocks animate, stacking one on top of the other to visually represent the concept of chaining commands.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer uses a single reward at the end of a three-command sequence (e.g., Vem-Senta-Deita -> Reward). The dog looks proud after completing the chain. 8k quality.",
+      "grok_movement": "The camera focuses on the dog's performance, and only at the very end does a large 'Jackpot!' reward animation appear.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog looking like a little genius with a graduation cap on, surrounded by icons of the commands it has learned. Text overlay: 'Combinando Habilidades, Criando Inteligência'. 8k quality.",
+      "grok_movement": "A fun, celebratory shot. The command icons orbit around the dog's head like planets. The text appears with a smart, academic-style font.",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 7: Revisão da Semana 1",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dynamic montage of short clips from the week's training: a dog looking up at its name, making eye contact, running when called, all in quick succession, high energy and positive, cinematic quality, 8k detail",
+      "grok_movement": "Fast-paced cuts and energetic transitions between the different learned behaviors, creating a summary of the week's progress",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A checklist infographic with the week's lessons: 'Poder do Nome', 'Contato Visual', 'Marcador Sim!', 'Comando Vem'. Each item gets a satisfying green checkmark next to it, 8k detail",
+      "grok_movement": "Each checkmark animates in with a satisfying 'ding' sound effect, confirming the completion of each lesson",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A person and their dog playing tug-of-war with a rope toy in a sunny living room, both having a great time, celebrating the end of a successful week of training, cinematic quality, 8k detail",
+      "grok_movement": "Dynamic, playful camera movement that captures the fun and energy of the game",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Close-up on a calendar showing Week 1 being circled and a star sticker placed on it, symbolizing accomplishment, 8k detail",
+      "grok_movement": "The circle and star animate onto the calendar, giving a sense of achievement and progression",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen with text 'Parabéns! Você completou a Semana 1!', with a preview of next week's topic 'Próxima Semana: Primeiros Comandos', encouraging and forward-looking, 8k quality",
+      "grok_movement": "Confetti and celebration graphics animate in the background as the text appears, building excitement for the next module",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 1: Boas-Vindas ao AdaptaCão",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "AdaptaCão logo in the center with gradient orange and blue colors, surrounded by happy dogs of various breeds (Golden Retriever, Labrador, Poodle, German Shepherd) playing in a sunny park, vibrant and welcoming atmosphere, professional 8k quality, cinematic shot",
+      "grok_movement": "Slow zoom in on the logo, dogs playfully moving in the background, subtle lens flare",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "Diverse group of happy people of all ages interacting lovingly with their well-behaved dogs in a beautiful park, sunny day, genuine smiles, dogs responding to commands, sense of community and connection, cinematic quality, 8k detail",
+      "grok_movement": "Slow panning shot across the group, capturing different interactions, smooth and continuous movement",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Clean and modern infographic with a large number '15' in the center, surrounded by icons representing a clock, a happy dog, and a brain with a lightbulb, text 'Minutos por Dia' below, blue and orange color scheme, educational and professional design",
+      "grok_movement": "Subtle zoom and pulse effect on the number '15', icons gently animating",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Close-up shot of a person's hand holding a small treat, a cute puppy gently taking the treat, focus on the positive interaction, warm indoor lighting, sense of reward and gentleness, cinematic depth of field, 8k quality",
+      "grok_movement": "Slow motion effect as the puppy takes the treat, subtle camera pull-back to reveal the happy faces of the person and puppy",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen with the AdaptaCão logo, text 'Próxima Aula: O Poder do SIM!', and a call-to-action button 'Começar Agora', clean and professional design, blue and orange colors, subtle background animation of happy dogs",
+      "grok_movement": "Static shot with the button pulsing gently, encouraging a click",
+      "use_previous_frame": true
+    }
+  ]
+}

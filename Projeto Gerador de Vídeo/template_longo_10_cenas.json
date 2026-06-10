@@ -1,0 +1,83 @@
+{
+  "projeto": "Video Longo - 3 a 5 minutos",
+  "descricao": "Template para videos mais longos com multiplas cenas conectadas",
+  "cenas": [
+    {
+      "numero": 1,
+      "descricao": "Abertura - Vista aerea da cidade ao amanhecer",
+      "use_previous_frame": false,
+      "dalle_prompt": "Aerial view of a modern city at dawn, golden sunlight illuminating skyscrapers, morning mist between buildings, cinematic wide angle, photorealistic, 4K quality",
+      "grok_movement": "Slow aerial descent from high above the city, gradually revealing street level details, smooth cinematic motion"
+    },
+    {
+      "numero": 2,
+      "descricao": "Transicao - Zoom nas ruas da cidade",
+      "use_previous_frame": true,
+      "dalle_prompt": "",
+      "grok_movement": "Continue descending, camera tilts down focusing on busy morning streets, people starting their day"
+    },
+    {
+      "numero": 3,
+      "descricao": "Rua movimentada - Pessoas caminhando",
+      "use_previous_frame": false,
+      "dalle_prompt": "Busy city street at morning rush hour, people walking to work, coffee shops opening, warm morning light, urban lifestyle, street photography style, high detail",
+      "grok_movement": "Steady cam moving forward through the crowd, following the flow of people, dynamic urban energy"
+    },
+    {
+      "numero": 4,
+      "descricao": "Foco em cafe - Exterior",
+      "use_previous_frame": true,
+      "dalle_prompt": "",
+      "grok_movement": "Camera stops and pans right towards a cozy coffee shop entrance, focusing on the welcoming atmosphere"
+    },
+    {
+      "numero": 5,
+      "descricao": "Interior do cafe - Ambiente acolhedor",
+      "use_previous_frame": false,
+      "dalle_prompt": "Cozy coffee shop interior, warm lighting, wooden furniture, barista preparing coffee, customers reading books, plants by the window, inviting atmosphere, lifestyle photography",
+      "grok_movement": "Slow dolly forward into the cafe, camera weaving between tables, capturing intimate morning moments"
+    },
+    {
+      "numero": 6,
+      "descricao": "Detalhe - Xicara de cafe sendo preparada",
+      "use_previous_frame": true,
+      "dalle_prompt": "",
+      "grok_movement": "Smooth zoom focusing on coffee being poured, close-up shot with shallow depth of field, steam rising"
+    },
+    {
+      "numero": 7,
+      "descricao": "Transicao para o parque",
+      "use_previous_frame": false,
+      "dalle_prompt": "City park in morning light, joggers on paths, dog walkers, green trees, fountain in center, peaceful urban oasis, natural lighting, wide landscape shot",
+      "grok_movement": "Wide establishing shot of the park, slow pan from left to right showing the full scope of green space"
+    },
+    {
+      "numero": 8,
+      "descricao": "Caminho no parque - Pessoas se exercitando",
+      "use_previous_frame": true,
+      "dalle_prompt": "",
+      "grok_movement": "Camera moves along the jogging path, following runners and cyclists, capturing active morning lifestyle"
+    },
+    {
+      "numero": 9,
+      "descricao": "Lago no parque - Reflexos",
+      "use_previous_frame": false,
+      "dalle_prompt": "Serene park lake with perfect reflections of trees and sky, ducks swimming peacefully, morning sunlight creating golden ripples, tranquil nature scene, cinematic composition",
+      "grok_movement": "Slow circular orbit around the lake, revealing different perspectives and reflections, peaceful and meditative"
+    },
+    {
+      "numero": 10,
+      "descricao": "Encerramento - Nascer do sol sobre a agua",
+      "use_previous_frame": true,
+      "dalle_prompt": "",
+      "grok_movement": "Camera rises slowly above the lake, revealing the full sunrise over the water, fade to bright golden light as ending"
+    }
+  ],
+  "configuracoes": {
+    "resolucao": "1920x1080",
+    "fps": 30,
+    "duracao_total_estimada": "3-5 minutos",
+    "duracao_por_cena": "18-30 segundos",
+    "notas": "Cada cena gera aproximadamente 5-10 segundos de video. Com 10 cenas, voce tera entre 50 segundos e 1:40 minutos. Para videos mais longos, adicione mais cenas seguindo este modelo."
+  }
+}

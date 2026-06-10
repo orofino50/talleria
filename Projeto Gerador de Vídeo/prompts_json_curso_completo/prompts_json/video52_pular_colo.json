@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 52: Pular no Colo",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A person is sitting on the floor. A small-to-medium sized dog is nearby. The person pats their lap invitingly. 8k quality.",
+      "grok_movement": "Static shot establishing the safe, low-level starting position.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The person uses a treat to lure the dog to place its front paws on their lap. The moment the paws touch, the person gives the treat and praise. 8k quality.",
+      "grok_movement": "A close-up on the paws making contact with the lap, followed by the immediate reward.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The person now says a cue like \"Colo!\" and pats their lap. The dog jumps fully into their lap. Jackpot reward and lots of affection. 8k quality.",
+      "grok_movement": "A slow-motion shot of the dog jumping into the lap. A heart animation appears as the dog lands, symbolizing the affection.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The person is now sitting on a low sofa. They give the cue, and the dog successfully jumps from the floor onto their lap on the sofa. 8k quality.",
+      "grok_movement": "The camera captures the jump from a side angle, showing the change in height and the dog's successful adaptation.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog curled up comfortably and happily in its owner's lap, a perfect picture of trust and affection. Text overlay: \"Colo: O Melhor Lugar do Mundo\". 8k quality.",
+      "grok_movement": "A warm, intimate close-up shot of the dog and owner cuddling. The text appears in a soft, loving font.",
+      "use_previous_frame": true
+    }
+  ]
+}

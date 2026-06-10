@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 17: Comando Larga",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is happily chewing on a simple rope toy. A trainer is sitting nearby with a very high-value treat (like a piece of chicken) ready in their hand. 8k quality.",
+      "grok_movement": "Static shot establishing the scene: the dog is engaged with its toy, and the trainer has a superior reward.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer says the word 'Larga' in a cheerful tone and presents the high-value treat near the dog's nose. The dog's attention shifts from the toy to the amazing treat. 8k quality.",
+      "grok_movement": "Rack focus from the toy in the dog's mouth to the delicious treat being presented by the trainer.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog opens its mouth and drops the rope toy to get the chicken. The trainer immediately gives the chicken and praise. A clear trade is made. 8k quality.",
+      "grok_movement": "Slow-motion as the toy drops from the dog's mouth. A sparkle effect appears on the chicken to emphasize its value.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer immediately gives the rope toy back to the dog, showing that 'Larga' doesn't mean losing the toy forever. The dog happily takes the toy back. 8k quality.",
+      "grok_movement": "The camera follows the toy as it's given back to the dog, highlighting this crucial step in building trust.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot showing a diagram: Toy (Good) <-> Larga <-> Chicken (Better!). It illustrates the concept of a positive trade. Text overlay: 'Larga: A Troca Justa'. 8k quality.",
+      "grok_movement": "The diagram animates, with arrows showing the trade. The 'Better!' text glows. The final text overlay fades in.",
+      "use_previous_frame": true
+    }
+  ]
+}

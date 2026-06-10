@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 59: Polimento de Comandos (Latência e Precisão)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A split screen. On the left, a dog takes 3 seconds to sit after the command. A timer graphic shows \"3.2s\". On the right, a dog sits instantly. The timer shows \"0.5s\". 8k quality.",
+      "grok_movement": "The timers animate, clearly showing the difference in response time (latency). The right side gets a green checkmark.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A trainer gives the command \"Senta\". The dog immediately snaps into a perfect, crisp sit position. The trainer gives a very high-value reward (a piece of chicken). 8k quality.",
+      "grok_movement": "A slow-motion shot of the dog snapping into the sit, emphasizing the speed and precision. A sparkle effect highlights the high-value reward.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A dog is in a \"Junto\" (heel) position, but it is slightly crooked. A graphic overlay shows a red, crooked line. The trainer resets the dog. 8k quality.",
+      "grok_movement": "The red line graphic highlights the imperfection.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Now, the dog is in a perfect, straight \"Junto\" position, perfectly aligned with the owner. A graphic overlay shows a green, straight line. Jackpot reward. 8k quality.",
+      "grok_movement": "The green line graphic highlights the perfect precision. A \"Jackpot!\" animation celebrates the improvement.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog performing commands with the precision and speed of a professional competition dog. Text overlay: \"Do Bom ao Brilhante: A Arte do Polimento\". 8k quality.",
+      "grok_movement": "A cinematic montage of flawless, high-speed commands. The text appears in a sharp, elegant, professional font.",
+      "use_previous_frame": true
+    }
+  ]
+}

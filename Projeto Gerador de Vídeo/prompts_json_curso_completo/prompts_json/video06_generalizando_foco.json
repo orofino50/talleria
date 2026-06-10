@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 6: Generalizando o Foco",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog and owner in a quiet backyard, the owner is holding a high-value treat, the dog is looking intently at the owner, ignoring a single, distant bird in the background, cinematic quality, 8k detail",
+      "grok_movement": "Slow zoom in on the dog's focused face, keeping the distracting bird out of focus in the background",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The owner asks for a simple command like 'Senta', the dog obeys instantly despite the outdoor environment, the owner gives a big reward, cinematic quality, 8k detail",
+      "grok_movement": "The camera circles around the pair as the command is given and executed, showing the 360-degree environment",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Infographic showing a central icon of a dog's brain, with arrows pointing outwards to icons of different distractions (a squirrel, another dog, a car, a person), symbolizing the brain learning to filter them out, 8k detail",
+      "grok_movement": "The distraction icons start large and then shrink and fade as the central brain icon glows brighter, symbolizing increased focus",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog and owner are now in a slightly busier park, the dog successfully maintains eye contact with the owner while another person walks by in the background, cinematic quality, 8k detail",
+      "grok_movement": "The camera holds on the steady eye contact between the dog and owner, while the background shows gentle, normal park activity",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog and owner sitting together on a park bench, both looking relaxed and confident, text overlay 'Foco em Qualquer Lugar', professional and empowering, 8k quality",
+      "grok_movement": "Static, peaceful shot. The text fades in, and a gentle breeze rustles the leaves in the background",
+      "use_previous_frame": true
+    }
+  ]
+}

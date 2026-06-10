@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 57: Correntes de Comandos (Behavior Chains)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A diagram showing a sequence of commands linked together like a chain: Senta -> Deita -> Rola -> Em Pé. Each command is a link in the chain. 8k quality.",
+      "grok_movement": "The camera pans across the chain, with each link glowing as it's highlighted.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A dog performs a simple two-command chain: the owner says 'Senta', the dog sits, then the owner immediately says 'Pata', and the dog gives the paw. The reward comes only after the second command. 8k quality.",
+      "grok_movement": "A clear, continuous shot showing the two commands and the single reward at the very end, emphasizing the concept of 'back-chaining'.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog performs a more complex three-command chain: Senta -> Deita -> Rola. The reward is given only after the final 'Rola'. 8k quality.",
+      "grok_movement": "A dynamic shot that follows the dog through the fluid sequence of movements. A '3x Combo!' graphic appears.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The owner gives a single cue, 'Rotina', and the dog performs a pre-taught sequence of four tricks automatically. Senta -> Gira -> Reverência -> Toca Aqui. 8k quality.",
+      "grok_movement": "An impressive single-take shot showcasing the dog's intelligence and memory, performing the entire routine from one word.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog and owner performing a synchronized dance routine, a perfect example of advanced behavior chains. Text overlay: 'Correntes de Comandos: A Dança da Sincronia'. 8k quality.",
+      "grok_movement": "A fun, cinematic shot with music and cool lighting. The text appears in a stylish, rhythmic font.",
+      "use_previous_frame": true
+    }
+  ]
+}

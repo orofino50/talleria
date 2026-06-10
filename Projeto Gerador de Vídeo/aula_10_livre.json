@@ -1,0 +1,78 @@
+{
+  "projeto": "AdaptaCão - Aula 10: Comando LIVRE",
+  "descricao": "Décima e última aula do curso AdaptaCão ensinando o comando LIVRE para cães — a maior conquista do adestramento. O instrutor demonstra como alcançar a liberdade segura com obediência total.",
+  "cenas": [
+    {
+      "scene_number": 1,
+      "descricao": "Abertura visual — Silhueta de cachorro correndo livre",
+      "dalle_prompt": "Silhueta estilizada de um cão correndo livremente com patas esticadas e pelo esvoaçante, gradiente que vai do azul profundo (#4A90E2) ao laranja quente (#F5A623), fundo branco limpo com leve textura de luz, estilo minimalista premium, iluminação cinematográfica suave, composição dinâmica de liberdade, 4K",
+      "grok_movement": "Fade in do branco, a silhueta do cachorro correndo livre surge gradualmente com o gradiente fluindo por suas curvas, sutil efeito de partículas de luz, revelação elegante de 3 segundos com expansão de liberdade"
+    },
+    {
+      "scene_number": 2,
+      "descricao": "LIVRE — A maior conquista do adestramento",
+      "dalle_prompt": "Golden retriever correndo livremente sem coleira em campo dourado de grama ao pôr do sol, conquista máxima do adestramento, iluminação dramática de costas em tons dourados, fotorealista cinematográfica, 4K",
+      "grok_movement": "Câmera em slow motion 120fps captura o cachorro correndo livre pelo campo, energia épica de conquista, pan right acompanhando a liberdade"
+    },
+    {
+      "scene_number": 3,
+      "descricao": "Cachorro executando LIVRE — Liberdade com obediência",
+      "dalle_prompt": "Golden retriever explorando livremente um parque seguro sem coleira, mas olhando periodicamente para o treinador ao fundo e retornando imediatamente ao chamado, perfeita combinação de liberdade e obediência, iluminação natural dourada, fotorealista, 4K",
+      "grok_movement": "Câmera acompanha o cachorro explorando, depois foca no olhar de retorno ao treinador, rack focus entre a liberdade e a conexão"
+    },
+    {
+      "scene_number": 4,
+      "descricao": "Demonstração — Cão solto e obediente retornando sempre",
+      "dalle_prompt": "Golden retriever sem coleira em parque seguro, ouvindo o chamado do treinador e correndo de volta imediatamente com alegria, momento de sucesso total, parque amplo com grama verde, iluminação natural abundante, fotorealista de conquista, 4K",
+      "grok_movement": "Plano amplo mostrando o cachorro à distância, pan rápido seguindo o retorno ao treinador, slow motion no momento do reencontro"
+    },
+    {
+      "scene_number": 5,
+      "descricao": "Pré-requisitos — Todos os comandos anteriores dominados",
+      "dalle_prompt": "Sequência visual de oito momentos do mesmo golden retriever demonstrando cada comando aprendido: sentado, deitado, parado, vindo, pegando objeto, oferecendo pata, indo ao lugar, respondendo ao não, cada cena em miniatura com moldura azul clara, fotorealista, 4K",
+      "grok_movement": "Cada comando aparece sequencialmente com slide-in, a câmera faz zoom out gradual revelando a jornada completa de aprendizado"
+    },
+    {
+      "scene_number": 6,
+      "descricao": "Passo 1 — Começar em área fechada e segura",
+      "dalle_prompt": "Quintal cercado e seguro como espaço controlado, golden retriever com guia longa de treinamento, ambiente protegido com cerca visível ao redor, segurança em primeiro lugar, iluminação natural, fotorealista, 4K",
+      "grok_movement": "Plano amplo mostrando o perímetro cercado, a câmera faz um pan revelando a segurança do ambiente, o cachorro no centro com a guia longa"
+    },
+    {
+      "scene_number": 7,
+      "descricao": "Passo 2 — Praticar VEM à distância com a guia longa",
+      "dalle_prompt": "Golden retriever na ponta da guia longa de treinamento voltando ao treinador ao comando VEM, trabalho à distância em progressão, área fechada segura, guia visível no chão, iluminação natural, fotorealista, 4K",
+      "grok_movement": "Tracking shot acompanhando o cachorro percorrendo a distância da guia até o treinador, slow motion no momento da chegada"
+    },
+    {
+      "scene_number": 8,
+      "descricao": "Passo 3 — Tirar a guia gradualmente em ambiente controlado",
+      "dalle_prompt": "Golden retriever agora completamente sem coleira no quintal cercado, respondendo perfeitamente ao comando VEM do treinador, prova final do treinamento, expressão orgulhosa do treinador, iluminação natural quente, fotorealista, 4K",
+      "grok_movement": "Plano detalhe da guia sendo removida, depois amplo mostrando o cachorro respondendo perfeitamente, slow motion na celebração do sucesso"
+    },
+    {
+      "scene_number": 9,
+      "descricao": "Dica — Nunca tirar a guia em área pública antes de estar 100% pronto",
+      "dalle_prompt": "Dois cenários lado a lado: à esquerda cachorro sem coleira em área cercada segura com luz verde; à direita cachorro solto em rua com carros ao fundo e luz avermelhada de alerta, contraste entre segurança e perigo, fotorealista, 4K",
+      "grok_movement": "Lado seguro aparece com luz verde suave, lado perigoso surge com luz avermelhada e sutil vibração na câmera, contraste visual claro"
+    },
+    {
+      "scene_number": 10,
+      "descricao": "Progressão — Testar em ambientes gradualmente mais desafiadores",
+      "dalle_prompt": "Três ambientes de progressão: quintal cercado, parque tranquilo com poucas pessoas, praia movimentada, cada um com golden retriever respondendo perfeitamente ao comando, iluminação natural consistente, fotorealista de progressão, 4K",
+      "grok_movement": "Cada ambiente aparece com transição suave, a câmera faz zoom out progressivo mostrando o aumento do desafio e a maestria crescente"
+    },
+    {
+      "scene_number": 11,
+      "descricao": "Parabéns — Curso completo com sucesso",
+      "dalle_prompt": "Golden retriever e treinador celebrando juntos em campo aberto ao pôr do sol, cachorro pulando alegremente ao redor do humano, ambos com expressões de pura alegria e orgulho, iluminação dourada dramática, fotorealista de celebração, 4K",
+      "grok_movement": "Slow motion 120fps capturando a celebração, pan circular ao redor do duo, zoom out gradual revelando o campo aberto, energia de conquista"
+    },
+    {
+      "scene_number": 12,
+      "descricao": "Encerramento final — Silhueta do treinador e cachorro ao pôr do sol",
+      "dalle_prompt": "Silhuetas do treinador e golden retriever lado a lado contemplando o pôr do sol, gradiente do céu indo do laranja quente ao azul profundo, cão livre ao lado do humano em pose de conexão profunda, campo aberto com grama alta em silhueta, iluminação dramática de costas, composição cinematográfica ampla, fotorealista, 4K",
+      "grok_movement": "Fade in do pôr do sol com cores vibrantes e épicas, silhuetas surgem gradualmente em contra-luz, dolly out lento revelando a paisagem completa, energia grandiosa e contemplativa de encerramento final"
+    }
+  ]
+}

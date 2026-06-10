@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 31: Vem em Ambientes Abertos",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is on a long 10-meter training leash in an open, empty park. The dog is sniffing the ground a few meters away from the owner. 8k quality.",
+      "grok_movement": "A wide shot establishing the open environment and the freedom the long leash provides.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The owner calls the dog with an enthusiastic, high-pitched 'Vem!'. The dog's head snaps up, and it immediately turns and starts running towards the owner, ignoring the interesting smells. 8k quality.",
+      "grok_movement": "A quick zoom in on the dog's head as it reacts to the call, followed by a tracking shot as it begins to run.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog reaches the owner and is met with a huge celebration, a 'treat party' where multiple high-value treats are thrown on the ground for the dog to find. 8k quality.",
+      "grok_movement": "A fun, low-angle shot of the dog excitedly finding and eating the scattered treats. A 'FESTA!' text graphic animates on screen.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A diagram showing the owner as the 'Most Interesting Thing in the Park'. Arrows from distractions (squirrel, other dog, frisbee) are shown bouncing off a 'Focus Shield' around the owner. 8k quality.",
+      "grok_movement": "The distraction arrows animate, hitting the shield and deflecting, while the owner icon glows brightly, symbolizing high value.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog running joyfully towards its owner in a beautiful, sunny field, the epitome of a reliable recall. Text overlay: 'Seja Sempre a Melhor Aventura do Seu Cão'. 8k quality.",
+      "grok_movement": "A cinematic, slow-motion shot of the dog running, with lens flare from the sun. The text fades in with a beautiful, flowing font.",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 41: Truque Vergonha",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A person has placed a sticky note on a dog's nose. The dog is trying to get it off by using its paw. 8k quality.",
+      "grok_movement": "A close-up, slightly humorous shot of the dog being mildly annoyed by the sticky note and trying to remove it.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The moment the dog's paw touches its nose to remove the sticky note, the trainer says 'Sim!' and gives a treat. Capturing the desired motion. 8k quality.",
+      "grok_movement": "Slow-motion as the paw makes contact with the nose. A sparkle effect highlights the moment of contact and the subsequent reward.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Now, without the sticky note, the trainer says 'Vergonha!' and the dog brings its paw up to cover its nose/eyes. Jackpot reward. 8k quality.",
+      "grok_movement": "The camera focuses on the dog's face as it performs the cute 'shy' gesture. A 'Jackpot!' animation celebrates the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A split screen showing the dog covering its eyes with one paw, and then the other paw, showing versatility. 8k quality.",
+      "grok_movement": "The two variations are shown side-by-side for clear comparison.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog in the 'Vergonha' pose, looking incredibly cute and shy. Text overlay: 'Que Vergonha! A Fofura em Pessoa'. 8k quality.",
+      "grok_movement": "A super cute, close-up shot of the final pose. The text appears in a soft, rounded, friendly font.",
+      "use_previous_frame": true
+    }
+  ]
+}

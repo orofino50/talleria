@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 13: Prática do Deita",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A family is watching TV on the sofa. The dog is lying calmly on its bed nearby, not begging or jumping. A practical use of the 'down' command. Cozy evening atmosphere. 8k quality.",
+      "grok_movement": "A slow pan across the living room, showing the calm family and the relaxed dog, highlighting the peaceful coexistence.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A person is working at a home office desk. The dog is lying quietly under the desk, staying out of the way but still close to the owner. 8k quality.",
+      "grok_movement": "A top-down shot showing the person working and the dog peacefully resting under the desk.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "At a cafe with outdoor seating, a person is having coffee. Their well-behaved dog is lying down calmly by the table, ignoring passersby. 8k quality.",
+      "grok_movement": "The camera is at a low angle, showing the dog's perspective. It remains calm as feet and other dogs walk past in the background (out of focus).",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A montage of the dog in a 'down' position in various places: on a picnic blanket in the park, in the back of a car, at the vet's waiting room. Generalizing the command. 8k quality.",
+      "grok_movement": "Quick cuts between the different scenes, each showing the dog in a calm 'down' position, with location text overlaid (e.g., 'Parque', 'Carro', 'Veterinário').",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog and owner relaxing together, the dog in a 'down' position with its head on the owner's lap. A moment of trust and calm. Text overlay: 'Um Cão Calmo é um Cão Feliz'. 8k quality.",
+      "grok_movement": "A very slow, intimate zoom in on the connection between the dog and owner. The text fades in gently.",
+      "use_previous_frame": true
+    }
+  ]
+}

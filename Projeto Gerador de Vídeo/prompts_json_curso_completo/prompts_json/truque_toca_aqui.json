@@ -1,0 +1,32 @@
+{
+  "titulo": "Truque: Toca Aqui (High Five)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Trainer holding a treat in a closed fist, dog sniffing the fist trying to get the treat, indoor setting, 8k quality",
+      "grok_movement": "Static shot, focus on the dog's curiosity and the closed fist",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "Dog lifting its paw to touch the trainer's fist, the exact moment of contact, trainer immediately says 'Sim!' and opens the fist to give the treat, 8k quality",
+      "grok_movement": "Slow-motion freeze frame on the paw-to-fist contact, followed by the reward",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Trainer presenting an open palm (no treat) and saying 'Toca Aqui', dog touching the open palm with its paw, successful high five, 8k quality",
+      "grok_movement": "Static shot, capturing the clean high five without the lure of a treat",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Dog giving a high five to different people, including a child and another adult, showing the trick can be done with anyone, fun and social interaction, 8k quality",
+      "grok_movement": "Quick cuts of the dog giving high fives to different people, creating a fun and impressive montage",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog giving a perfect high five to the camera, as if high-fiving the viewer, text overlay 'High Five! Você Conseguiu!', 8k quality",
+      "grok_movement": "Dog's paw comes towards the camera for a high five, text appears with a celebratory effect",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "projeto": "AdaptaCão - Aula 07: Comando JOGA",
+  "descricao": "Sétima aula do curso AdaptaCão ensinando o comando JOGA para cães — exercício físico e mental que fortalece o vínculo. O instrutor demonstra como ensinar o cão a buscar e devolver objetos.",
+  "cenas": [
+    {
+      "scene_number": 1,
+      "descricao": "Abertura visual — Silhueta de cachorro buscando bola",
+      "dalle_prompt": "Silhueta estilizada de um cão correndo com uma bola na boca, gradiente que vai do azul profundo (#4A90E2) ao laranja quente (#F5A623), fundo branco limpo com leve textura de luz, estilo minimalista premium, iluminação cinematográfica suave, composição dinâmica, 4K",
+      "grok_movement": "Fade in do branco, a silhueta do cachorro buscando a bola surge gradualmente com o gradiente fluindo por suas curvas, sutil efeito de partículas de luz, revelação elegante de 3 segundos com movimento de corrida"
+    },
+    {
+      "scene_number": 2,
+      "descricao": "JOGA — Exercício físico e mental para o cão",
+      "dalle_prompt": "Golden retriever correndo alegremente em parque com bola na boca, expressão de pura felicidade, pelos voando com o movimento, grama verde vibrante, iluminação natural dourada de golden hour, fotorealista de exercício alegre, 4K",
+      "grok_movement": "Câmera em slow motion 120fps captura o cachorro correndo com a bola, pan right acompanhando o movimento, energia contagiante de diversão"
+    },
+    {
+      "scene_number": 3,
+      "descricao": "Cachorro executando JOGA — Sequência completa",
+      "dalle_prompt": "Golden retriever em posição deitada olhando atentamente para a mão do treinador que segura uma bola colorida, expressão de expectativa e foco, ambiente de treino externo com grama macia, iluminação natural suave, fotorealista, 4K",
+      "grok_movement": "Plano detalhe com rack focus da bola para o focinho atento do cachorro, câmera acompanha a expectativa do animal, steadicam mantendo enquadramento estável"
+    },
+    {
+      "scene_number": 4,
+      "descricao": "Demonstração — Sequência completa de buscar",
+      "dalle_prompt": "Quatro momentos sequenciais do mesmo golden retriever: correndo atrás da bola, pegando a boca, voltando com a bola, soltando na mão do treinador, cada cena em miniatura com moldura azul clara, fundo de grama natural, fotorealista, 4K",
+      "grok_movement": "Cada fase aparece sequencialmente com slide-in suave, a câmera faz zoom out gradual revelando as quatro etapas lado a lado, composição final equilibrada"
+    },
+    {
+      "scene_number": 5,
+      "descricao": "Escolher o brinquedo certo — Bola ou brinquedo favorito",
+      "dalle_prompt": "Três opções de brinquedos para cães dispostos em superfície: bola de tênis amarela, brinquedo de corda colorido, frisbee azul, todos vibrantes e atrativos, fotografia de produto com fundo neutro, iluminação natural suave, fotorealista, 4K",
+      "grok_movement": "Cada brinquedo aparece um por um com animação de slide-in, o brinquedo escolhido é destacado com leve brilho dourado ao redor"
+    },
+    {
+      "scene_number": 6,
+      "descricao": "Passo 1 — Mostrar brinquedo, despertar interesse do cão",
+      "dalle_prompt": "Treinador segurando bola brilhante na frente do focinho de golden retriever, olhos do cachorro fixos na bola com foco intenso e excitação, momento de antecipação, campo de treino externo, iluminação natural, fotorealista, 4K",
+      "grok_movement": "Close up do encontro visual entre a bola e os olhos do cachorro, momento de foco intenso, antecipação máxima"
+    },
+    {
+      "scene_number": 7,
+      "descricao": "Passo 2 — Jogar o brinquedo a curta distância",
+      "dalle_prompt": "Plano detalhe da bola voando em arco pelo ar, golden retriever já iniciando a corrida atrás dela, treinador visível ao fundo com braço estendido de lançamento, parque ensolarado, movimento dinâmico capturado, fotorealista, 4K",
+      "grok_movement": "A bola voa em slow motion em arco suave, o cachorro parte atrás dela, tracking shot suave acompanhando o projétil e o perseguidor"
+    },
+    {
+      "scene_number": 8,
+      "descricao": "Passo 3 — Cão pega o brinquedo, volta e solta na mão",
+      "dalle_prompt": "Golden retriever voltando correndo com a bola na boca, soltando gentilmente na mão aberta do treinador, conclusão bem-sucedida do buscar, parque externo, expressão feliz no cachorro, fotorealista, 4K",
+      "grok_movement": "O cachorro chega triunfante, solta a bola na mão, treinador celebra, ciclo completo de sucesso com slow motion na entrega"
+    },
+    {
+      "scene_number": 9,
+      "descricao": "Dica — Usar sempre o mesmo comando e brinquedo no início",
+      "dalle_prompt": "Três cenas idênticas mostrando consistência: treinador jogando a mesma bola amarela, golden retriever buscando alegremente, cada cena com moldura azul clara, fundo de grama natural, demonstração visual de repetição consistente, fotorealista, 4K",
+      "grok_movement": "As três cenas aparecem sequencialmente com slide-in, cada uma reforçando o princípio de consistência, composição final com as três imagens"
+    },
+    {
+      "scene_number": 10,
+      "descricao": "Progressão — Aumentar distância e esconder o brinquedo",
+      "dalle_prompt": "Três fases de progressão: golden retriever buscando bola visível perto, depois bola visível mais longe, finalmente bola escondida sob um arbusto que o cachorro encontra farejando, cada fase com sucesso, fundo de parque, iluminação natural consistente, fotorealista, 4K",
+      "grok_movement": "Cada fase de progressão ilumina sequencialmente do mais fácil ao avançado, a câmera faz zoom out gradual mostrando o aumento da distância"
+    },
+    {
+      "scene_number": 11,
+      "descricao": "Preview do próximo comando — Cachorro indo ao seu lugar",
+      "dalle_prompt": "Golden retriever caminhando calmamente em direção a um tapete macio no chão de sala de estar, expressão relaxada e determinada, ambiente doméstico acolhedor com iluminação quente, fundo desfocado em tons de azul e laranja suaves, fotorealista, 4K",
+      "grok_movement": "Transição dinâmica revelando o próximo comando, a câmera acompanha o cachorro caminhando em direção ao tapete em slow motion 120fps, antecipação construída"
+    },
+    {
+      "scene_number": 12,
+      "descricao": "Encerramento — Silhueta do treinador e cachorro ao pôr do sol",
+      "dalle_prompt": "Silhuetas do treinador e golden retriever lado a lado contemplando o pôr do sol, gradiente do céu indo do laranja quente ao azul profundo, cão com uma pata sobre a bola ao lado do humano, campo aberto com grama alta em silhueta, iluminação dramática de costas, fotorealista, 4K",
+      "grok_movement": "Fade in do pôr do sol com cores vibrantes, silhuetas surgem gradualmente em contra-luz, dolly out lento revelando a paisagem completa, energia serena de encerramento"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 50: Andar para Trás",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is standing in a narrow hallway or between two chairs, creating a channel. The trainer is in front of the dog, holding a treat. 8k quality.",
+      "grok_movement": "Static shot establishing the setup, which encourages backward movement instead of turning around.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer takes a step towards the dog, invading its space slightly. The dog naturally takes a step back to maintain distance. The trainer immediately says 'Sim!' and gives the treat. 8k quality.",
+      "grok_movement": "The camera is at a low angle, capturing the dog's backward step clearly. The reward is given instantly.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer repeats the process, now adding the word 'Para Trás' just before stepping forward. The dog takes a few steps back. Jackpot reward. 8k quality.",
+      "grok_movement": "The camera follows the dog as it takes several successful backward steps. A 'Jackpot!' animation celebrates the learning.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Now in an open space, the trainer gives the hand signal (a flat palm moving towards the dog) and says 'Para Trás'. The dog walks backward several feet in a straight line. 8k quality.",
+      "grok_movement": "A clear shot of the dog performing the behavior on command, without the hallway channel, showing generalization.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog doing the 'moonwalk' with Michael Jackson-style graphics and lighting. A fun, cool way to show off the trick. Text overlay: 'Para Trás: O Passo de Mágica'. 8k quality.",
+      "grok_movement": "A humorous and stylish shot with fun animations. The text appears in a cool, retro font.",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "projeto": "AdaptaCão - Aula 03: Comando FICA",
+  "descricao": "Terceira aula do curso AdaptaCão ensinando o comando FICA para cães. O instrutor aborda o conceito de autocontrole, demonstra a importância do contato visual e guia os 3 passos com progressão de distância, duração e distração.",
+  "cenas": [
+    {
+      "scene_number": 1,
+      "descricao": "Abertura visual — Silhueta de cachorro parado em posição de permanência",
+      "dalle_prompt": "Silhueta estilizada de um cão sentado e imóvel em perfil, postura firme e atenta, gradiente que vai do azul profundo (#4A90E2) ao laranja quente (#F5A623), fundo branco limpo com leve textura de luz, estilo minimalista premium, iluminação cinematográfica suave, composição centralizada, 4K",
+      "grok_movement": "Fade in do branco, a silhueta do cachorro imóvel surge gradualmente com o gradiente fluindo por suas curvas, sutil efeito de partículas de luz flutuando, revelação elegante de 3 segundos com contração centrada"
+    },
+    {
+      "scene_number": 2,
+      "descricao": "Conceito de autocontrole — Cão parado com distrações ao fundo",
+      "dalle_prompt": "Golden retriever perfeitamente parado e focado em primeiro plano, expressão concentrada e olhar fixo, ao fundo desfocado distrações visíveis: esquilo correndo, bola colorida quicando, outro cachorro passando, campo de treinamento aberto, iluminação natural de tarde, fotorealista, 4K",
+      "grok_movement": "Câmera estável focada no cachorro imóvel em primeiro plano, as distrações ao fundo pulsam suavemente com leve movimento, rack focus sutil alternando entre o cão focado e as distrações ao fundo"
+    },
+    {
+      "scene_number": 3,
+      "descricao": "Cachorro executando FICA perfeito — Imobilidade e foco",
+      "dalle_prompt": "Golden retriever em posição de FICA absoluta, corpo completamente imóvel, patas firmes no chão, cabeça erguida com orelhas atentas, olhar fixo e disciplinado, campo de treinamento com grama natural, luz dourada de golden hour, fotorealista, 4K",
+      "grok_movement": "Dolly in lento em direção ao rosto do cachorro, slow motion 120fps destacando a imobilidade e o foco absoluto do animal, a câmera se aproxima mantendo a tensão do momento"
+    },
+    {
+      "scene_number": 4,
+      "descricao": "Demonstração — Distância e duração no FICA",
+      "dalle_prompt": "Composição ampla mostrando golden retriever sentado e imóvel em primeiro plano, treinador em segundo plano a vários metros de distância com mão levantada em sinal de permanência, campo de treinamento aberto com grama verde, luz natural difusa, demonstração visual de distância e tempo, fotorealista, 4K",
+      "grok_movement": "Câmera em position estável com profundidade de campo, o cachorro em foco nítido em primeiro plano, treinador levemente desfocado ao fundo, a câmera faz um leve zoom out revelando a distância entre eles"
+    },
+    {
+      "scene_number": 5,
+      "descricao": "Passo 1 — Pedir SENTA e estabelecer contato visual",
+      "dalle_prompt": "Plano detalhe do golden retriever em posição sentada olhando diretamente nos olhos do treinador, contato visual forte e atento, expressão concentrada e receptiva, mão do treinador visível na borda do enquadramento mostrando palma aberta, ambiente de treino externo, luz natural suave, fotorealista, 4K",
+      "grok_movement": "Zoom in lento focando no contato visual entre o cachorro e o treinador, a câmera se aproxima do rosto do animal, o olhar fixo é destacado com foco nítido"
+    },
+    {
+      "scene_number": 6,
+      "descricao": "Passo 2 — Palma aberta, sinal de FICA, 1 passo para trás",
+      "dalle_prompt": "Mão do treinador aberta com palma voltada para o cachorro em sinal claro de permanência, treinador dando um passo para trás mantendo a mão erguida, golden retriever parado e observando o sinal, campo de treinamento com iluminação dourada de golden hour, linguagem corporal clara, fotorealista, 4K",
+      "grok_movement": "Plano detalhe da mão do treinador mantendo o sinal estável em primeiro plano, o cachorro permanece parado no campo médio, a câmera faz um leve pull back mostrando o aumento gradual da distância"
+    },
+    {
+      "scene_number": 7,
+      "descricao": "Passo 3 — Voltar e recompensar o cão por ter ficado",
+      "dalle_prompt": "Treinador voltando em direção ao golden retriever depois do FICA, ajoelhando-se para entregar petisco com gesto de aprovação e sorriso, cachorro quebrando a imobilidade com expressão alegre abanando o rabo, momento de reencontro alegre, parque externo com luz solar quente, fotorealista, 4K",
+      "grok_movement": "A câmera acompanha o treinador caminhando de volta ao cachorro em steady cam suave, o animal quebra o FICA com excitação, petisco entregue com celebração, transição de tensão para alegria"
+    },
+    {
+      "scene_number": 8,
+      "descricao": "Progressão visual — Aumentar distância e duração gradualmente",
+      "dalle_prompt": "Quatro cenas sequenciais mostrando progressão: primeiro cachorro com treinador muito perto e tempo curto, depois distância média e tempo médio, depois distância longa e tempo longo, finalmente distância muito longa e tempo prolongado, todas com golden retriever feliz mantendo o FICA, fundo de campo de treino, fotorealista, 4K",
+      "grok_movement": "Cada nível de progressão ilumina sequencialmente do mais fácil ao avançado, a câmera faz zoom out gradual mostrando a evolução, visualização de complexidade crescente"
+    },
+    {
+      "scene_number": 9,
+      "descricao": "Prática — Dificuldade progressiva do FICA",
+      "dalle_prompt": "Sequência de golden retriever mantendo FICA enquanto treinador aumenta gradualmente a distância e o tempo, mostrando dificuldade progressiva em sessão de treino real, campo de treinamento externo, cachorro mantendo foco e disciplina, iluminação cinematográfica quente, fotorealista, 4K",
+      "grok_movement": "Montagem de FICAs progressivamente mais difíceis, distância do treinador aumenta a cada cena, o cachorro mantém disciplina, energia de construção de habilidade com transições dinâmicas"
+    },
+    {
+      "scene_number": 10,
+      "descricao": "Os 3 pilares do FICA — Distância, Duração, Distração",
+      "dalle_prompt": "Três elementos visuais dispostos em formação triangular: à esquerda cachorro com treinador longe (distância), ao centro relogio dourado ao lado do cachorro (duração), à direita cachorro com esquilo e bola ao fundo (distração), cada elemento com borda azul clara, fundo neutro, composição educacional equilibrada, fotorealista, 4K",
+      "grok_movement": "Cada pilar aparece sequencialmente com slide-in lateral, a câmera faz zoom out gradual revelando a formação triangular completa, composição final estável com os três conceitos"
+    },
+    {
+      "scene_number": 11,
+      "descricao": "Preview do próximo comando — Cachorro rolando",
+      "dalle_prompt": "Golden retriever em transição dinâmica do FICA para um movimento de rolar, corpo começando a se inclinar lateralmente, expressão divertida e brincalhona, campo de treinamento com luz dourada de entardecer, fundo desfocado com tons de laranja e azul, fotorealista, 4K",
+      "grok_movement": "Transição dinâmica revelando o próximo comando, a câmera acompanha o início do movimento de rolar em slow motion 120fps, antecipação construída com leve pan lateral seguindo o movimento"
+    },
+    {
+      "scene_number": 12,
+      "descricao": "Encerramento — Silhueta do treinador e cachorro ao pôr do sol",
+      "dalle_prompt": "Silhuetas do treinador e golden retriever lado a lado contemplando o pôr do sol, gradiente do céu indo do laranja quente ao azul profundo, cão sentado ao lado do humano em pose de conexão profunda, campo aberto com grama alta em silhueta, iluminação dramática de costas, composição cinematográfica ampla, fotorealista, 4K",
+      "grok_movement": "Fade in do pôr do sol com cores vibrantes, silhuetas surgem gradualmente em contra-luz, a câmera faz um dolly out lento revelando a paisagem completa, energia serena e contemplativa de encerramento"
+    }
+  ]
+}

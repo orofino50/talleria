@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 53: Pular por um Arco",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A hula hoop is on the floor. A dog is being lured with a treat to walk through the hoop while it's flat on the ground. 8k quality.",
+      "grok_movement": "Static shot, showing the dog getting comfortable with the hoop in a non-threatening way.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The hula hoop is now held just an inch off the ground. The dog is lured to step through it. The trainer rewards the dog for going through. 8k quality.",
+      "grok_movement": "A low-angle shot that emphasizes the tiny height of the hoop, showing how the difficulty is increased gradually.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The hoop is raised a few inches. The dog now has to do a small hop to get through. The trainer is very encouraging. 8k quality.",
+      "grok_movement": "The camera captures the small hop in slow-motion, celebrating the first jump.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The hoop is now at a more impressive height. The trainer says \"Pula!\" and the dog leaps gracefully through the center of the hoop. Jackpot reward. 8k quality.",
+      "grok_movement": "A cinematic, slow-motion shot from the side, capturing the dog in mid-air as it sails through the hoop. A \"Wow!\" graphic appears.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog jumping through a hoop made of the owner's arms, showing the ultimate trust and fun. Text overlay: \"Através do Arco da Confiança\". 8k quality.",
+      "grok_movement": "An emotional and impressive shot. The text appears in a font that suggests partnership and connection.",
+      "use_previous_frame": true
+    }
+  ]
+}

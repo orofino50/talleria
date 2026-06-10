@@ -1,0 +1,24 @@
+
+============================================================
+🎬 VIDEO GENERATOR - Servidor Backend
+============================================================
+
+📡 Servidor rodando em: http://localhost:5016
+🌐 Abra seu navegador e acesse: http://localhost:5016
+
+⚠️  Certifique-se de estar logado em:
+   • ChatGPT (chat.openai.com)
+   • Grok (x.ai/grok)
+
+📋 Endpoints disponíveis:
+   • GET  /api/status - Status do processamento
+   • POST /api/process - Iniciar processamento
+   • POST /api/cancel - Cancelar processamento
+   • POST /api/auto-confirm - Confirmar browsers auto
+   • GET  /api/health - Health check
+   • GET  /api/output - Listar arquivos gerados
+
+============================================================
+
+ * Serving Flask app 'server'
+ * Debug mode: off

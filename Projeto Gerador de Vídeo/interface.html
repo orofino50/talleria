@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Generator - Interface</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function VideoGeneratorApp() {
+            const [projeto, setProjeto] = useState({
+                nome: '',
+                descricao: '',
+                cenas: []
+            });
+            const [currentView, setCurrentView] = useState('editor'); // editor, preview, export
+            const [validationErrors, setValidationErrors] = useState([]);
+            const [activeScene, setActiveScene] = useState(null);
+            const [processing, setProcessing] = useState(false);
+            const [processLog, setProcessLog] = useState([]);
+            const [currentSceneProcessing, setCurrentSceneProcessing] = useState(null);
+            const [showBrowserModal, setShowBrowserModal] = useState(false);
+
+            // Verifica se já há processamento ativo ao carregar a página
+            useEffect(() => {
+                const checkExistingProcess = async () => {
+                    try {
+                        const response = await fetch('/api/status');
+                        const data = await response.json();
+                        
+                        if (data.active) {
+                            setProcessing(true);
+                            setCurrentView('processing');
+                            
+                            if (data.waiting_browser_confirm) {
+                                setShowBrowserModal(true);
+                            }
+                            
+                            // Inicia polling
+                            pollStatus();
+                        }
+                    } catch (error) {
+                        console.log('Nenhum processamento ativo');
+                    }
+                };
+                
+                checkExistingProcess();
+                
+                // Auto-save: carrega projeto salvo
+                const savedProject = localStorage.getItem('video_generator_project');
+                if (savedProject) {
+                    try {
+                        const parsed = JSON.parse(savedProject);
+                        setProjeto(parsed);
+                    } catch (e) {
+                        console.log('Erro ao carregar projeto salvo');
+                    }
+                }
+            }, []);
+            
+            // Auto-save: salva projeto sempre que mudar
+            useEffect(() => {
+                if (projeto.nome || projeto.cenas.length > 0) {
+                    localStorage.setItem('video_generator_project', JSON.stringify(projeto));
+                }
+            }, [projeto]);
+
+            // Adicionar nova cena
+            const addScene = () => {
+                const newScene = {
+                    id: Date.now(),
+                    numero: projeto.cenas.length + 1,
+                    descricao: '',
+                    use_previous_frame: projeto.cenas.length > 0,
+                    dalle_prompt: '',
+                    grok_movement: ''
+                };
+                setProjeto({
+                    ...projeto,
+                    cenas: [...projeto.cenas, newScene]
+                });
+                setActiveScene(newScene.id);
+            };
+
+            // Remover cena
+            const removeScene = (id) => {
+                const updatedCenas = projeto.cenas
+                    .filter(c => c.id !== id)
+                    .map((c, idx) => ({ ...c, numero: idx + 1 }));
+                setProjeto({ ...projeto, cenas: updatedCenas });
+                if (activeScene === id) {
+                    setActiveScene(null);
+                }
+            };
+
+            // Atualizar cena
+            const updateScene = (id, field, value) => {
+                setProjeto({
+                    ...projeto,
+                    cenas: projeto.cenas.map(c =>
+                        c.id === id ? { ...c, [field]: value } : c
+                    )
+                });
+            };
+
+            // Mover cena
+            const moveScene = (index, direction) => {
+                const newIndex = index + direction;
+                if (newIndex < 0 || newIndex >= projeto.cenas.length) return;
+
+                const newCenas = [...projeto.cenas];
+                [newCenas[index], newCenas[newIndex]] = [newCenas[newIndex], newCenas[index]];
+                newCenas.forEach((c, idx) => c.numero = idx + 1);
+                
+                setProjeto({ ...projeto, cenas: newCenas });
+            };
+
+            // Validar roteiro
+            const validateRoteiro = () => {
+                const errors = [];
+
+                if (!projeto.nome.trim()) {
+                    errors.push('Nome do projeto é obrigatório');
+                }
+
+                if (projeto.cenas.length === 0) {
+                    errors.push('Adicione pelo menos uma cena');
+                }
+
+                projeto.cenas.forEach((cena, idx) => {
+                    if (!cena.use_previous_frame && !cena.dalle_prompt.trim()) {
+                        errors.push(`Cena ${idx + 1}: DALL-E prompt obrigatório quando não usa frame anterior`);
+                    }
+                    if (!cena.grok_movement.trim()) {
+                        errors.push(`Cena ${idx + 1}: Descrição de movimento obrigatória`);
+                    }
+                    if (idx === 0 && cena.use_previous_frame) {
+                        errors.push(`Cena ${idx + 1}: Primeira cena não pode usar frame anterior`);
+                    }
+                });
+
+                setValidationErrors(errors);
+                return errors.length === 0;
+            };
+
+            // Exportar JSON
+            const exportJSON = () => {
+                if (!validateRoteiro()) {
+                    alert('Corrija os erros antes de exportar');
+                    return;
+                }
+
+                const roteiro = {
+                    projeto: projeto.nome,
+                    descricao: projeto.descricao,
+                    cenas: projeto.cenas.map(({ id, ...rest }) => rest)
+                };
+
+                const blob = new Blob([JSON.stringify(roteiro, null, 2)], {
+                    type: 'application/json'
+                });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${projeto.nome.replace(/\s+/g, '_')}_roteiro.json`;
+                a.click();
+            };
+
+            // Importar JSON
+            const importJSON = (event) => {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        setProjeto({
+                            nome: data.projeto || '',
+                            descricao: data.descricao || '',
+                            cenas: (data.cenas || []).map((c, idx) => ({
+                                ...c,
+                                id: Date.now() + idx,
+                                numero: idx + 1
+                            }))
+                        });
+                        setValidationErrors([]);
+                        alert('✅ JSON importado com sucesso! Revise as configurações e clique em "Criar Vídeo"');
+                    } catch (error) {
+                        alert('Erro ao importar: JSON inválido');
+                    }
+                };
+                reader.readAsText(file);
+            };
+
+            // Iniciar processamento
+            const startProcessing = async () => {
+                // Validação do título ANTES de tudo
+                if (!projeto.nome.trim()) {
+                    alert('❌ ERRO: Nome do projeto é obrigatório!\n\nPor favor, preencha o nome do projeto e tente novamente.');
+                    return;
+                }
+                
+                if (!validateRoteiro()) {
+                    alert('❌ Corrija os erros antes de processar');
+                    return;
+                }
+
+                const confirm = window.confirm(
+                    `🎬 Iniciar processamento de ${projeto.cenas.length} cenas?\n\n` +
+                    `⚠️ IMPORTANTE:\n` +
+                    `• Você deve estar logado no ChatGPT (chat.openai.com)\n` +
+                    `• Você deve estar logado no Grok (x.ai/grok)\n` +
+                    `• O processo pode levar vários minutos\n` +
+                    `• Não feche esta janela durante o processamento\n\n` +
+                    `Deseja continuar?`
+                );
+
+                if (!confirm) return;
+
+                setProcessing(true);
+                setProcessLog([]);
+                setCurrentView('processing');
+                
+                try {
+                    // Envia roteiro para o backend Flask
+                    const roteiro = {
+                        projeto: projeto.nome,
+                        descricao: projeto.descricao,
+                        upscale_videos: projeto.upscale_videos !== undefined ? projeto.upscale_videos : true,
+                        upscale_factor: projeto.upscale_factor || 2,
+                        cenas: projeto.cenas.map(({ id, ...rest }) => rest)
+                    };
+
+                    addLog(`📤 Enviando roteiro para o servidor...`, 'info');
+
+                    const response = await fetch('/api/process', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ roteiro })
+                    });
+
+                    if (!response.ok) {
+                        const error = await response.json();
+                        throw new Error(error.error || 'Erro ao iniciar processamento');
+                    }
+
+                    addLog(`✅ Servidor iniciou o processamento!`, 'success');
+                    addLog(`⏳ Aguardando conclusão (pode levar horas)...`, 'waiting');
+
+                    // Inicia polling do status
+                    pollStatus();
+
+                } catch (error) {
+                    addLog(`❌ Erro fatal: ${error.message}`, 'error');
+                    
+                    // Exibe alerta com botão de voltar
+                    const retry = window.confirm(
+                        `❌ ERRO: ${error.message}\n\n` +
+                        `Certifique-se de que:\n` +
+                        `1. O servidor está rodando (python server.py)\n` +
+                        `2. ChatGPT e Grok estão abertos e logados\n` +
+                        `3. O nome do projeto está preenchido\n\n` +
+                        `Clique OK para voltar e corrigir, ou Cancelar para ficar aqui.`
+                    );
+                    
+                    if (retry) {
+                        setCurrentView('editor');
+                    }
+                    
+                    setProcessing(false);
+                }
+            };
+
+            // Poll status do backend
+            const pollStatus = async () => {
+                const pollInterval = setInterval(async () => {
+                    try {
+                        const response = await fetch('/api/status');
+                        const data = await response.json();
+
+                        // Verifica se está aguardando confirmação do browser
+                        if (data.waiting_browser_confirm) {
+                            setShowBrowserModal(prev => {
+                                if (!prev) return true;
+                                return prev;
+                            });
+                        }
+
+                        // Atualiza logs com merge inteligente
+                        setProcessLog(prev => {
+                            const backendLogs = data.logs || [];
+                            // Merge: mantém logs locais que não estão no backend
+                            const mergedLogs = [...prev];
+                            backendLogs.forEach(bLog => {
+                                const exists = prev.some(pLog => 
+                                    pLog.timestamp === bLog.timestamp && pLog.message === bLog.message
+                                );
+                                if (!exists) {
+                                    mergedLogs.push(bLog);
+                                }
+                            });
+                            return mergedLogs;
+                        });
+                        setCurrentSceneProcessing(data.current_scene);
+
+                        // Para polling quando terminar
+                        if (!data.active) {
+                            clearInterval(pollInterval);
+                            setProcessing(false);
+                            
+                            if (data.error) {
+                                addLog(`❌ Erro: ${data.error}`, 'error');
+                            }
+                        }
+
+                    } catch (error) {
+                        console.error('Erro ao buscar status:', error);
+                        // Contador de erros consecutivos
+                        if (!window.errorCount) window.errorCount = 0;
+                        window.errorCount++;
+                        if (window.errorCount >= 3) {
+                            setProcessing(false);
+                            addLog(`❌ Servidor desconectado após ${window.errorCount} tentativas`, 'error');
+                        }
+                    }
+                }, 1000); // Poll a cada 1 segundo
+            };
+
+            // Confirmar ou cancelar browsers - FECHA MODAL IMEDIATAMENTE
+            const confirmBrowsers = async (confirmed) => {
+                addLog(confirmed ? '✅ Browsers confirmados - continuando...' : '❌ Processamento cancelado', 'success');
+                setShowBrowserModal(false);
+                if (!confirmed) setProcessing(false);
+                
+                if (!confirmed) return;
+                
+                // Usa GET com retry - muito mais confiavel que POST
+                async function sendConfirm() {
+                    for (let i = 0; i < 10; i++) {
+                        try {
+                            const resp = await fetch('/api/confirm-poll');
+                            const data = await resp.json();
+                            console.log('Confirm poll response:', data);
+                            if (data.status === 'confirmed') {
+                                addLog('✅ Servidor confirmou recebimento', 'success');
+                                return;
+                            }
+                        } catch (err) {
+                            console.error('Tentativa', i+1, 'falhou:', err);
+                        }
+                        await new Promise(r => setTimeout(r, 1000));
+                    }
+                    addLog('⚠️ Não conseguiu confirmar com o servidor', 'error');
+                }
+                sendConfirm();
+            };
+
+            // Adicionar log
+            const addLog = (message, type = 'info') => {
+                const timestamp = new Date().toLocaleTimeString('pt-BR');
+                setProcessLog(prev => [...prev, { timestamp, message, type }]);
+            };
+            
+            // Cancelar processamento
+            const cancelProcessing = async () => {
+                if (!window.confirm('Tem certeza que deseja cancelar o processamento?')) {
+                    return;
+                }
+                
+                try {
+                    const response = await fetch('/api/cancel', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        addLog('⚠️ Cancelamento solicitado...', 'warning');
+                        setProcessing(false);
+                        setCurrentView('editor');
+                    } else {
+                        const error = await response.json();
+                        addLog(`❌ Erro ao cancelar: ${error.error}`, 'error');
+                    }
+                } catch (error) {
+                    console.error('Erro ao cancelar:', error);
+                    addLog(`❌ Erro: ${error.message}`, 'error');
+                }
+            };
+
+            // Carregar exemplo
+            const loadExample = () => {
+                setProjeto({
+                    nome: 'Vídeo Exemplo',
+                    descricao: 'Exemplo de roteiro para geração automatizada de vídeos',
+                    cenas: [
+                        {
+                            id: Date.now() + 1,
+                            numero: 1,
+                            descricao: 'Abertura - Paisagem montanhosa ao amanhecer',
+                            use_previous_frame: false,
+                            dalle_prompt: 'A breathtaking mountain landscape at dawn, with golden sunlight breaking through misty peaks, photorealistic, cinematic lighting, 4K quality',
+                            grok_movement: 'Slow camera pan from left to right, revealing more mountain peaks as the sun rises'
+                        },
+                        {
+                            id: Date.now() + 2,
+                            numero: 2,
+                            descricao: 'Transição - Zoom na floresta',
+                            use_previous_frame: true,
+                            dalle_prompt: '',
+                            grok_movement: 'Smooth zoom into the forest below the mountains, camera descends through the mist'
+                        }
+                    ]
+                });
+            };
+
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+                    
+                    {/* Header */}
+                    <header className="bg-black bg-opacity-50 backdrop-blur-lg border-b border-purple-500">
+                        <div className="container mx-auto px-6 py-4">
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center space-x-3">
+                                    <i className="fas fa-film text-3xl text-purple-400"></i>
+                                    <h1 className="text-2xl font-bold text-white">Video Generator</h1>
+                                </div>
+                                <div className="flex space-x-2">
+                                    <button
+                                        onClick={() => setCurrentView('editor')}
+                                        disabled={processing}
+                                        className={`px-4 py-2 rounded-lg transition ${
+                                            currentView === 'editor'
+                                                ? 'bg-purple-600 text-white'
+                                                : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                                        } disabled:opacity-50 disabled:cursor-not-allowed`}
+                                    >
+                                        <i className="fas fa-edit mr-2"></i>Editor
+                                    </button>
+                                    <button
+                                        onClick={() => setCurrentView('preview')}
+                                        disabled={processing}
+                                        className={`px-4 py-2 rounded-lg transition ${
+                                            currentView === 'preview'
+                                                ? 'bg-purple-600 text-white'
+                                                : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                                        } disabled:opacity-50 disabled:cursor-not-allowed`}
+                                    >
+                                        <i className="fas fa-eye mr-2"></i>Preview
+                                    </button>
+                                    {processing && (
+                                        <button
+                                            onClick={() => setCurrentView('processing')}
+                                            className={`px-4 py-2 rounded-lg transition ${
+                                                currentView === 'processing'
+                                                    ? 'bg-purple-600 text-white'
+                                                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                                            }`}
+                                        >
+                                            <i className="fas fa-tasks mr-2 animate-pulse"></i>Processando
+                                        </button>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Main Content */}
+                    <main className="container mx-auto px-6 py-8">
+                        {currentView === 'editor' && (
+                            <EditorView
+                                projeto={projeto}
+                                setProjeto={setProjeto}
+                                activeScene={activeScene}
+                                setActiveScene={setActiveScene}
+                                addScene={addScene}
+                                removeScene={removeScene}
+                                updateScene={updateScene}
+                                moveScene={moveScene}
+                                loadExample={loadExample}
+                                importJSON={importJSON}
+                                exportJSON={exportJSON}
+                                validationErrors={validationErrors}
+                                validateRoteiro={validateRoteiro}
+                                processing={processing}
+                            />
+                        )}
+                        {currentView === 'preview' && (
+                            <PreviewView
+                                projeto={projeto}
+                                exportJSON={exportJSON}
+                                validateRoteiro={validateRoteiro}
+                                validationErrors={validationErrors}
+                                startProcessing={startProcessing}
+                                processing={processing}
+                            />
+                        )}
+                        {currentView === 'processing' && (
+                            <ProcessingView
+                                projeto={projeto}
+                                processLog={processLog}
+                                currentSceneProcessing={currentSceneProcessing}
+                                processing={processing}
+                                setCurrentView={setCurrentView}
+                                setProcessing={setProcessing}
+                                cancelProcessing={cancelProcessing}
+                            />
+                        )}
+                    </main>
+
+                    {/* Modal de Confirmação de Browsers - NO FINAL para garantir z-index */}
+                    {showBrowserModal && (
+                        <div 
+                            className="fixed inset-0 flex items-center justify-center p-4"
+                            style={{ zIndex: 9999, backgroundColor: 'rgba(0,0,0,0.85)' }}
+                            onClick={(e) => { e.stopPropagation(); }}
+                        >
+                            <div 
+                                className="bg-gray-800 rounded-2xl shadow-2xl max-w-2xl w-full p-8 border-2 border-purple-500"
+                                onClick={(e) => e.stopPropagation()}
+                                style={{ pointerEvents: 'auto' }}
+                            >
+                                <h2 className="text-3xl font-bold text-purple-400 mb-4 text-center">
+                                    Browsers Abertos!
+                                </h2>
+                                <p className="text-lg text-gray-300 mb-6 text-center">
+                                    O <strong className="text-purple-400">ChatGPT</strong> e o <strong className="text-purple-400">Grok Imagine</strong> foram abertos em uma nova janela do Chrome.
+                                </p>
+                                <div className="bg-gray-700 rounded-lg p-6 mb-6">
+                                    <p className="font-bold text-purple-300 mb-3">Verificacoes necessarias:</p>
+                                    <ul className="space-y-2 text-gray-300">
+                                        <li className="flex items-start">
+                                            <span className="text-green-400 font-bold mr-2">1.</span>
+                                            <span>Fez LOGIN no ChatGPT?</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="text-green-400 font-bold mr-2">2.</span>
+                                            <span>Fez LOGIN no Grok?</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="text-green-400 font-bold mr-2">3.</span>
+                                            <span>Fechou popups/tours?</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="text-green-400 font-bold mr-2">4.</span>
+                                            <span>Testou gerar uma imagem no ChatGPT?</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p className="text-center text-lg text-gray-300 mb-6 font-semibold">
+                                    Tudo pronto para comecar o processamento?
+                                </p>
+                                <div className="flex gap-4">
+                                    <button
+                                        id="btn-browser-confirm"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            console.log('BOTAO CLICADO - confirmando browsers');
+                                            confirmBrowsers(true);
+                                        }}
+                                        className="flex-1 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-6 py-4 rounded-xl font-bold text-lg transition shadow-lg cursor-pointer"
+                                        style={{ pointerEvents: 'auto', position: 'relative', zIndex: 10000 }}
+                                    >
+                                        Sim, estao prontos!
+                                    </button>
+                                    <button
+                                        id="btn-browser-cancel"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            console.log('BOTAO CLICADO - cancelando');
+                                            confirmBrowsers(false);
+                                        }}
+                                        className="flex-1 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-6 py-4 rounded-xl font-bold text-lg transition shadow-lg cursor-pointer"
+                                        style={{ pointerEvents: 'auto', position: 'relative', zIndex: 10000 }}
+                                    >
+                                        Nao, cancelar
+                                    </button>
+                                </div>
+                                <p className="text-center text-sm text-gray-400 mt-4">
+                                    Se clicar em "Nao", o processamento sera cancelado.
+                                </p>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        function EditorView({
+            projeto,
+            setProjeto,
+            activeScene,
+            setActiveScene,
+            addScene,
+            removeScene,
+            updateScene,
+            moveScene,
+            loadExample,
+            importJSON,
+            exportJSON,
+            validationErrors,
+            validateRoteiro,
+            processing
+        }) {
+            return (
+                <div className="grid grid-cols-12 gap-6">
+                    {/* Sidebar - Lista de Cenas */}
+                    <div className="col-span-3">
+                        <div className="bg-gray-800 bg-opacity-50 backdrop-blur-lg rounded-lg p-6 border border-gray-700">
+                            <h2 className="text-xl font-bold text-white mb-4">
+                                <i className="fas fa-list-ol mr-2"></i>Cenas
+                            </h2>
+
+                            {/* Actions */}
+                            <div className="space-y-2 mb-4">
+                                <button
+                                    onClick={addScene}
+                                    disabled={processing}
+                                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg transition disabled:bg-gray-600 disabled:cursor-not-allowed"
+                                >
+                                    <i className="fas fa-plus mr-2"></i>Nova Cena
+                                </button>
+                                <button
+                                    onClick={loadExample}
+                                    disabled={processing}
+                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition disabled:bg-gray-600 disabled:cursor-not-allowed"
+                                >
+                                    <i className="fas fa-file-import mr-2"></i>Carregar Exemplo
+                                </button>
+                                <label className={`w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition cursor-pointer block text-center ${processing ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                                    <i className="fas fa-upload mr-2"></i>Importar JSON
+                                    <input
+                                        type="file"
+                                        accept=".json"
+                                        onChange={importJSON}
+                                        disabled={processing}
+                                        className="hidden"
+                                    />
+                                </label>
+                            </div>
+
+                            {/* Scene List */}
+                            <div className="space-y-2 max-h-96 overflow-y-auto">
+                                {projeto.cenas.map((cena, idx) => (
+                                    <div
+                                        key={cena.id}
+                                        onClick={() => setActiveScene(cena.id)}
+                                        className={`p-3 rounded-lg cursor-pointer transition ${
+                                            activeScene === cena.id
+                                                ? 'bg-purple-600 text-white'
+                                                : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                                        }`}
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <div className="flex items-center space-x-2">
+                                                <span className="font-bold">#{cena.numero}</span>
+                                                {cena.use_previous_frame && (
+                                                    <i className="fas fa-link text-xs"></i>
+                                                )}
+                                            </div>
+                                            <div className="flex space-x-1">
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        moveScene(idx, -1);
+                                                    }}
+                                                    disabled={idx === 0}
+                                                    className="text-xs hover:text-white disabled:opacity-30"
+                                                >
+                                                    <i className="fas fa-arrow-up"></i>
+                                                </button>
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        moveScene(idx, 1);
+                                                    }}
+                                                    disabled={idx === projeto.cenas.length - 1}
+                                                    className="text-xs hover:text-white disabled:opacity-30"
+                                                >
+                                                    <i className="fas fa-arrow-down"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div className="text-xs mt-1 truncate">
+                                            {cena.descricao || 'Sem descrição'}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Main Editor */}
+                    <div className="col-span-9">
+                        <div className="bg-gray-800 bg-opacity-50 backdrop-blur-lg rounded-lg p-6 border border-gray-700">
+                            {/* Project Info */}
+                            <div className="mb-6 pb-6 border-b border-gray-700">
+                                <h2 className="text-xl font-bold text-white mb-4">
+                                    <i className="fas fa-info-circle mr-2"></i>Informações do Projeto
+                                </h2>
+                                <div className="space-y-4">
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-300 mb-2">
+                                            Nome do Projeto *
+                                        </label>
+                                        <input
+                                            type="text"
+                                            value={projeto.nome}
+                                            onChange={(e) => setProjeto({ ...projeto, nome: e.target.value })}
+                                            placeholder="Ex: Vídeo Promocional"
+                                            className="w-full bg-gray-700 text-white px-4 py-2 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-300 mb-2">
+                                            Descrição
+                                        </label>
+                                        <textarea
+                                            value={projeto.descricao}
+                                            onChange={(e) => setProjeto({ ...projeto, descricao: e.target.value })}
+                                            placeholder="Breve descrição do projeto..."
+                                            rows="2"
+                                            className="w-full bg-gray-700 text-white px-4 py-2 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none resize-none"
+                                        />
+                                    </div>
+                                    
+                                    {/* Configurações de Upscaling */}
+                                    <div className="border-t border-gray-700 pt-4">
+                                        <h3 className="text-sm font-semibold text-purple-400 mb-3">
+                                            <i className="fas fa-expand-arrows-alt mr-2"></i>
+                                            Configurações de Qualidade (HD)
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-center justify-between">
+                                                <div>
+                                                    <label className="text-sm font-medium text-gray-300">
+                                                        Habilitar Upscaling HD
+                                                    </label>
+                                                    <p className="text-xs text-gray-500">
+                                                        Melhora a qualidade dos vídeos (2x resolução)
+                                                    </p>
+                                                </div>
+                                                <label className="relative inline-flex items-center cursor-pointer">
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={projeto.upscale_videos !== false}
+                                                        onChange={(e) => setProjeto({ ...projeto, upscale_videos: e.target.checked })}
+                                                        className="sr-only peer"
+                                                    />
+                                                    <div className="w-11 h-6 bg-gray-700 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-purple-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+                                                </label>
+                                            </div>
+                                            
+                                            {projeto.upscale_videos !== false && (
+                                                <div>
+                                                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                                                        Fator de Upscaling
+                                                    </label>
+                                                    <select
+                                                        value={projeto.upscale_factor || 2}
+                                                        onChange={(e) => setProjeto({ ...projeto, upscale_factor: parseInt(e.target.value) })}
+                                                        className="w-full bg-gray-700 text-white px-4 py-2 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none"
+                                                    >
+                                                        <option value="2">2x (Recomendado - 1440p)</option>
+                                                        <option value="4">4x (Ultra HD - 2880p)</option>
+                                                    </select>
+                                                    <p className="text-xs text-gray-500 mt-1">
+                                                        {projeto.upscale_factor === 4 
+                                                            ? '⚠️ 4x pode demorar mais e gerar arquivos maiores' 
+                                                            : '✅ Melhor equilíbrio entre qualidade e tamanho'}
+                                                    </p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Scene Editor */}
+                            {activeScene ? (
+                                <SceneEditor
+                                    scene={projeto.cenas.find(c => c.id === activeScene)}
+                                    updateScene={updateScene}
+                                    removeScene={removeScene}
+                                    isFirst={projeto.cenas[0]?.id === activeScene}
+                                />
+                            ) : (
+                                <div className="text-center py-12">
+                                    <i className="fas fa-film text-6xl text-gray-600 mb-4"></i>
+                                    <p className="text-gray-400 text-lg">
+                                        Selecione uma cena ou adicione uma nova para começar
+                                    </p>
+                                </div>
+                            )}
+
+                            {/* Validation Errors */}
+                            {validationErrors.length > 0 && (
+                                <div className="mt-6 bg-red-900 bg-opacity-50 border border-red-500 rounded-lg p-4">
+                                    <h3 className="text-red-400 font-bold mb-2">
+                                        <i className="fas fa-exclamation-triangle mr-2"></i>
+                                        Erros de Validação
+                                    </h3>
+                                    <ul className="text-red-300 text-sm space-y-1">
+                                        {validationErrors.map((error, idx) => (
+                                            <li key={idx}>• {error}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                            {/* Export Button */}
+                            <div className="mt-6 flex justify-end">
+                                <button
+                                    onClick={() => {
+                                        if (validateRoteiro()) {
+                                            exportJSON();
+                                        }
+                                    }}
+                                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition"
+                                >
+                                    <i className="fas fa-download mr-2"></i>
+                                    Exportar Roteiro JSON
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        function SceneEditor({ scene, updateScene, removeScene, isFirst }) {
+            if (!scene) return null;
+
+            return (
+                <div className="space-y-6">
+                    <div className="flex items-center justify-between">
+                        <h2 className="text-xl font-bold text-white">
+                            <i className="fas fa-video mr-2"></i>
+                            Cena #{scene.numero}
+                        </h2>
+                        <button
+                            onClick={() => removeScene(scene.id)}
+                            className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition"
+                        >
+                            <i className="fas fa-trash mr-2"></i>Remover
+                        </button>
+                    </div>
+
+                    {/* Description */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-300 mb-2">
+                            Descrição da Cena
+                        </label>
+                        <input
+                            type="text"
+                            value={scene.descricao}
+                            onChange={(e) => updateScene(scene.id, 'descricao', e.target.value)}
+                            placeholder="Ex: Abertura - Paisagem montanhosa"
+                            className="w-full bg-gray-700 text-white px-4 py-2 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none"
+                        />
+                    </div>
+
+                    {/* Use Previous Frame */}
+                    {!isFirst && (
+                        <div className="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+                            <label className="flex items-center space-x-3 cursor-pointer">
+                                <input
+                                    type="checkbox"
+                                    checked={scene.use_previous_frame}
+                                    onChange={(e) => updateScene(scene.id, 'use_previous_frame', e.target.checked)}
+                                    className="w-5 h-5 text-purple-600 focus:ring-2 focus:ring-purple-500"
+                                />
+                                <div>
+                                    <span className="text-white font-medium">Usar frame anterior</span>
+                                    <p className="text-gray-400 text-sm">
+                                        Continua a partir do último frame da cena anterior
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+                    )}
+
+                    {/* DALL-E Prompt */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-300 mb-2">
+                            <i className="fas fa-palette mr-2"></i>
+                            DALL-E Prompt {!scene.use_previous_frame && <span className="text-red-400">*</span>}
+                        </label>
+                        <textarea
+                            value={scene.dalle_prompt}
+                            onChange={(e) => updateScene(scene.id, 'dalle_prompt', e.target.value)}
+                            disabled={scene.use_previous_frame}
+                            placeholder="Descreva a imagem que deseja gerar... Ex: A breathtaking mountain landscape at dawn, photorealistic, 4K quality"
+                            rows="4"
+                            className={`w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none resize-none ${
+                                scene.use_previous_frame
+                                    ? 'bg-gray-900 text-gray-500 cursor-not-allowed'
+                                    : 'bg-gray-700 text-white'
+                            }`}
+                        />
+                        <p className="text-gray-400 text-xs mt-1">
+                            <i className="fas fa-lightbulb mr-1"></i>
+                            Dica: Seja específico sobre estilo, iluminação e qualidade
+                        </p>
+                    </div>
+
+                    {/* Grok Movement */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-300 mb-2">
+                            <i className="fas fa-arrows-alt mr-2"></i>
+                            Grok Movement <span className="text-red-400">*</span>
+                        </label>
+                        <textarea
+                            value={scene.grok_movement}
+                            onChange={(e) => updateScene(scene.id, 'grok_movement', e.target.value)}
+                            placeholder="Descreva o movimento/animação... Ex: Slow camera pan from left to right, revealing mountain peaks"
+                            rows="3"
+                            className="w-full bg-gray-700 text-white px-4 py-3 rounded-lg focus:ring-2 focus:ring-purple-500 outline-none resize-none"
+                        />
+                        <p className="text-gray-400 text-xs mt-1">
+                            <i className="fas fa-lightbulb mr-1"></i>
+                            Dica: Especifique tipo, velocidade e direção do movimento
+                        </p>
+                    </div>
+                </div>
+            );
+        }
+
+        function PreviewView({ projeto, exportJSON, validateRoteiro, validationErrors, startProcessing, processing }) {
+            const [showJSON, setShowJSON] = useState(false);
+
+            const roteiroJSON = {
+                projeto: projeto.nome,
+                descricao: projeto.descricao,
+                cenas: projeto.cenas.map(({ id, ...rest }) => rest)
+            };
+
+            return (
+                <div className="max-w-4xl mx-auto">
+                    <div className="bg-gray-800 bg-opacity-50 backdrop-blur-lg rounded-lg p-8 border border-gray-700">
+                        <h2 className="text-2xl font-bold text-white mb-6">
+                            <i className="fas fa-eye mr-2"></i>Preview do Roteiro
+                        </h2>
+
+                        {/* Project Summary */}
+                        <div className="mb-8 p-6 bg-gradient-to-r from-purple-900 to-pink-900 rounded-lg">
+                            <h3 className="text-xl font-bold text-white mb-2">{projeto.nome || 'Sem título'}</h3>
+                            <p className="text-gray-300">{projeto.descricao || 'Sem descrição'}</p>
+                            <div className="mt-4 flex items-center space-x-4 text-sm text-gray-300">
+                                <span><i className="fas fa-film mr-2"></i>{projeto.cenas.length} cenas</span>
+                                <span><i className="fas fa-clock mr-2"></i>~{projeto.cenas.length * 7}s estimado</span>
+                            </div>
+                        </div>
+
+                        {/* Scenes Timeline */}
+                        <div className="space-y-4 mb-8">
+                            {projeto.cenas.map((cena, idx) => (
+                                <div key={cena.id} className="bg-gray-700 rounded-lg p-4">
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                            {cena.numero}
+                                        </div>
+                                        <div className="flex-1">
+                                            <div className="flex items-center justify-between mb-2">
+                                                <h4 className="text-white font-semibold">
+                                                    {cena.descricao || 'Cena sem descrição'}
+                                                </h4>
+                                                {cena.use_previous_frame && (
+                                                    <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded">
+                                                        <i className="fas fa-link mr-1"></i>Continua
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <div className="space-y-2 text-sm">
+                                                {!cena.use_previous_frame && (
+                                                    <div className="text-gray-300">
+                                                        <i className="fas fa-palette text-purple-400 mr-2"></i>
+                                                        <span className="font-medium">DALL-E:</span> {cena.dalle_prompt || 'Não definido'}
+                                                    </div>
+                                                )}
+                                                <div className="text-gray-300">
+                                                    <i className="fas fa-arrows-alt text-pink-400 mr-2"></i>
+                                                    <span className="font-medium">Movimento:</span> {cena.grok_movement || 'Não definido'}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {idx < projeto.cenas.length - 1 && (
+                                        <div className="ml-6 mt-2 border-l-2 border-gray-600 h-4"></div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Validation Status */}
+                        {validationErrors.length > 0 ? (
+                            <div className="mb-6 bg-red-900 bg-opacity-50 border border-red-500 rounded-lg p-4">
+                                <h3 className="text-red-400 font-bold mb-2">
+                                    <i className="fas fa-exclamation-triangle mr-2"></i>
+                                    Erros de Validação ({validationErrors.length})
+                                </h3>
+                                <ul className="text-red-300 text-sm space-y-1">
+                                    {validationErrors.map((error, idx) => (
+                                        <li key={idx}>• {error}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ) : projeto.cenas.length > 0 && (
+                            <div className="mb-6 bg-green-900 bg-opacity-50 border border-green-500 rounded-lg p-4">
+                                <p className="text-green-400 font-semibold">
+                                    <i className="fas fa-check-circle mr-2"></i>
+                                    Roteiro validado e pronto para processar!
+                                </p>
+                            </div>
+                        )}
+
+                        {/* JSON Preview */}
+                        <div className="mb-6">
+                            <button
+                                onClick={() => setShowJSON(!showJSON)}
+                                className="text-purple-400 hover:text-purple-300 font-medium mb-2"
+                            >
+                                <i className={`fas fa-chevron-${showJSON ? 'down' : 'right'} mr-2`}></i>
+                                {showJSON ? 'Ocultar' : 'Mostrar'} JSON
+                            </button>
+                            {showJSON && (
+                                <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-xs">
+                                    {JSON.stringify(roteiroJSON, null, 2)}
+                                </pre>
+                            )}
+                        </div>
+
+                        {/* Actions */}
+                        <div className="flex flex-col space-y-4">
+                            {/* Botão Principal - Criar Vídeo */}
+                            <button
+                                onClick={startProcessing}
+                                disabled={projeto.cenas.length === 0 || validationErrors.length > 0 || processing}
+                                className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 disabled:from-gray-600 disabled:to-gray-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg hover:shadow-xl disabled:cursor-not-allowed"
+                            >
+                                {processing ? (
+                                    <>
+                                        <i className="fas fa-spinner fa-spin mr-3"></i>
+                                        Processando...
+                                    </>
+                                ) : (
+                                    <>
+                                        <i className="fas fa-play-circle mr-3"></i>
+                                        Criar Vídeo
+                                    </>
+                                )}
+                            </button>
+
+                            {/* Botão Secundário - Exportar JSON */}
+                            <button
+                                onClick={() => {
+                                    validateRoteiro();
+                                    if (validationErrors.length === 0) {
+                                        exportJSON();
+                                    }
+                                }}
+                                disabled={projeto.cenas.length === 0 || processing}
+                                className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition disabled:cursor-not-allowed"
+                            >
+                                <i className="fas fa-download mr-2"></i>
+                                Apenas Exportar JSON
+                            </button>
+                        </div>
+
+                        {/* Instructions */}
+                        <div className="mt-8 bg-blue-900 bg-opacity-30 border border-blue-500 rounded-lg p-4">
+                            <h4 className="text-blue-400 font-bold mb-2">
+                                <i className="fas fa-info-circle mr-2"></i>Antes de Processar
+                            </h4>
+                            <ul className="text-blue-300 text-sm space-y-2 ml-4">
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mr-2 mt-1"></i>
+                                    <span>Certifique-se de estar <strong>logado no ChatGPT</strong> (chat.openai.com)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mr-2 mt-1"></i>
+                                    <span>Certifique-se de estar <strong>logado no Grok</strong> (x.ai/grok)</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mr-2 mt-1"></i>
+                                    <span>O processo pode levar <strong>vários minutos</strong> por cena</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <i className="fas fa-check-circle mr-2 mt-1"></i>
+                                    <span><strong>Não feche</strong> esta janela durante o processamento</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        function ProcessingView({ projeto, processLog, currentSceneProcessing, processing, setCurrentView, setProcessing, cancelProcessing }) {
+            const logEndRef = React.useRef(null);
+
+            // Auto scroll to bottom
+            React.useEffect(() => {
+                logEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+            }, [processLog]);
+
+            const getLogColor = (type) => {
+                switch (type) {
+                    case 'error': return 'text-red-400';
+                    case 'success': return 'text-green-400';
+                    case 'warning': return 'text-yellow-400';
+                    case 'scene': return 'text-purple-400 font-bold';
+                    case 'separator': return 'text-gray-600';
+                    case 'waiting': return 'text-blue-400';
+                    case 'detail': return 'text-gray-400 text-sm';
+                    default: return 'text-gray-300';
+                }
+            };
+
+            const progress = currentSceneProcessing 
+                ? Math.round((currentSceneProcessing / projeto.cenas.length) * 100)
+                : 0;
+
+            return (
+                <div className="max-w-5xl mx-auto">
+                    <div className="bg-gray-800 bg-opacity-50 backdrop-blur-lg rounded-lg p-8 border border-gray-700">
+                        {/* Header */}
+                        <div className="mb-6">
+                            <h2 className="text-2xl font-bold text-white mb-2">
+                                <i className="fas fa-cog fa-spin mr-2"></i>
+                                Processando Vídeos
+                            </h2>
+                            <p className="text-gray-400">
+                                {processing ? 'Aguarde enquanto geramos seus vídeos...' : 'Processamento concluído!'}
+                            </p>
+                        </div>
+
+                        {/* Progress Bar */}
+                        {processing && (
+                            <div className="mb-6">
+                                <div className="flex items-center justify-between mb-2">
+                                    <span className="text-white font-semibold">
+                                        Cena {currentSceneProcessing || 0} de {projeto.cenas.length}
+                                    </span>
+                                    <span className="text-purple-400 font-bold">{progress}%</span>
+                                </div>
+                                <div className="w-full bg-gray-700 rounded-full h-4 overflow-hidden">
+                                    <div 
+                                        className="h-full bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-500 ease-out"
+                                        style={{ width: `${progress}%` }}
+                                    >
+                                        <div className="h-full w-full bg-white opacity-20 animate-pulse"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Status Cards */}
+                        <div className="grid grid-cols-3 gap-4 mb-6">
+                            <div className="bg-gray-700 rounded-lg p-4">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-400 text-sm">Total de Cenas</p>
+                                        <p className="text-2xl font-bold text-white">{projeto.cenas.length}</p>
+                                    </div>
+                                    <i className="fas fa-film text-3xl text-purple-400"></i>
+                                </div>
+                            </div>
+                            <div className="bg-gray-700 rounded-lg p-4">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-400 text-sm">Processadas</p>
+                                        <p className="text-2xl font-bold text-green-400">
+                                            {currentSceneProcessing ? currentSceneProcessing - 1 : 0}
+                                        </p>
+                                    </div>
+                                    <i className="fas fa-check-circle text-3xl text-green-400"></i>
+                                </div>
+                            </div>
+                            <div className="bg-gray-700 rounded-lg p-4">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-gray-400 text-sm">Restantes</p>
+                                        <p className="text-2xl font-bold text-blue-400">
+                                            {currentSceneProcessing ? projeto.cenas.length - currentSceneProcessing + 1 : projeto.cenas.length}
+                                        </p>
+                                    </div>
+                                    <i className="fas fa-hourglass-half text-3xl text-blue-400"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Console Log */}
+                        <div className="bg-gray-900 rounded-lg p-4 border border-gray-700">
+                            <div className="flex items-center justify-between mb-3 pb-3 border-b border-gray-700">
+                                <h3 className="text-white font-semibold flex items-center">
+                                    <i className="fas fa-terminal mr-2"></i>
+                                    Console Log
+                                </h3>
+                                <span className="text-gray-400 text-sm">
+                                    {processLog.length} mensagens
+                                </span>
+                            </div>
+                            <div className="h-96 overflow-y-auto font-mono text-sm space-y-1">
+                                {processLog.length === 0 ? (
+                                    <div className="text-gray-500 text-center py-8">
+                                        <i className="fas fa-hourglass-start text-3xl mb-2"></i>
+                                        <p>Aguardando início do processamento...</p>
+                                    </div>
+                                ) : (
+                                    <>
+                                        {processLog.map((log, idx) => (
+                                            <div key={idx} className={`${getLogColor(log.type)} leading-relaxed`}>
+                                                {log.type !== 'separator' && (
+                                                    <span className="text-gray-600 mr-2">[{log.timestamp}]</span>
+                                                )}
+                                                {log.message}
+                                            </div>
+                                        ))}
+                                        <div ref={logEndRef} />
+                                    </>
+                                )}
+                            </div>
+                        </div>
+
+                        {/* Actions */}
+                        {!processing && processLog.length > 0 && (
+                            <div className="mt-6 space-y-4">
+                                {/* Verifica se há erro nos logs */}
+                                {processLog.some(log => log.type === 'error') ? (
+                                    <div className="bg-red-900 bg-opacity-50 border border-red-500 rounded-lg p-4">
+                                        <h3 className="text-red-400 font-bold mb-2">
+                                            <i className="fas fa-exclamation-triangle mr-2"></i>
+                                            Erro no Processamento
+                                        </h3>
+                                        <p className="text-red-300 text-sm mb-4">
+                                            Ocorreu um erro durante o processamento. Verifique os logs acima e corrija os problemas.
+                                        </p>
+                                        <button
+                                            onClick={() => window.location.reload()}
+                                            className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition"
+                                        >
+                                            <i className="fas fa-arrow-left mr-2"></i>
+                                            Voltar ao Editor
+                                        </button>
+                                    </div>
+                                ) : (
+                                    <div className="bg-green-900 bg-opacity-50 border border-green-500 rounded-lg p-4">
+                                        <h3 className="text-green-400 font-bold mb-2">
+                                            <i className="fas fa-check-circle mr-2"></i>
+                                            Processamento Concluído!
+                                        </h3>
+                                        <p className="text-green-300 text-sm">
+                                            Todos os vídeos foram gerados com sucesso. Verifique o diretório <code className="bg-gray-800 px-2 py-1 rounded">./output</code>
+                                        </p>
+                                    </div>
+                                )}
+                                <div className="flex space-x-4">
+                                    <button
+                                        onClick={() => {
+                                            setCurrentView('editor');
+                                            setProcessing(false);
+                                        }}
+                                        className="flex-1 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition"
+                                    >
+                                        <i className="fas fa-arrow-left mr-2"></i>
+                                        Voltar ao Editor
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Warning durante processamento */}
+                        {processing && (
+                            <div className="mt-6 space-y-4">
+                                <div className="bg-yellow-900 bg-opacity-30 border border-yellow-500 rounded-lg p-4">
+                                    <h4 className="text-yellow-400 font-bold mb-2">
+                                        <i className="fas fa-exclamation-triangle mr-2"></i>
+                                        Importante
+                                    </h4>
+                                    <ul className="text-yellow-300 text-sm space-y-1 ml-4">
+                                        <li>• Não feche esta janela</li>
+                                        <li>• Não navegue para outra aba</li>
+                                        <li>• O processo pode levar vários minutos</li>
+                                        <li>• Mantenha-se logado no ChatGPT e Grok</li>
+                                    </ul>
+                                </div>
+                                
+                                {/* Botão de Cancelar */}
+                                <button
+                                    onClick={cancelProcessing}
+                                    className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white px-6 py-4 rounded-lg font-bold text-lg transition shadow-lg hover:shadow-xl"
+                                >
+                                    <i className="fas fa-stop-circle mr-2"></i>
+                                    Cancelar Processamento
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<VideoGeneratorApp />, document.getElementById('root'));
+    </script>
+</body>
+</html>

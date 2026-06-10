@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 18: Introdução à Guia",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A brand new, appealing leash and collar are lying on the floor. A curious puppy is sniffing them cautiously. The items are presented as something interesting, not scary. 8k quality.",
+      "grok_movement": "Slow zoom in on the puppy sniffing the new equipment, capturing its curiosity.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A person is giving the puppy treats every time it sniffs or touches the collar and leash. Creating a positive association. The puppy is wagging its tail. 8k quality.",
+      "grok_movement": "Close-up shots of the puppy getting a treat right next to the leash, reinforcing the connection.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The person calmly and gently puts the collar on the puppy, while continuing to give treats and praise. The puppy seems comfortable and happy. 8k quality.",
+      "grok_movement": "A smooth, gentle shot showing the collar being fastened. The focus is on the calm and positive atmosphere.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The leash is clipped onto the collar. The person lets the puppy drag the light leash around the house for a few minutes, getting used to the feeling, while dropping treats on the floor. 8k quality.",
+      "grok_movement": "A wide shot showing the puppy moving freely with the leash attached, exploring and finding treats.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the puppy wearing the collar and leash, looking proud and ready for an adventure. Text overlay: 'A Guia: Sua Conexão com o Mundo'. 8k quality.",
+      "grok_movement": "A heroic low-angle shot of the puppy. The text fades in with a sense of adventure and possibility.",
+      "use_previous_frame": true
+    }
+  ]
+}

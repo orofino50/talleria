@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 60: Treino com Distrações (Nível Mestre)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is holding a perfect \"Fica\" while another person tries to offer it a regular, boring biscuit. The dog ignores the biscuit and maintains its stay. 8k quality.",
+      "grok_movement": "The camera is focused on the dog's unwavering gaze on its owner, completely ignoring the distraction.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The distraction is increased: another dog is playing with a squeaky toy nearby. The training dog looks at the toy for a second, but then re-focuses on its owner. The owner rewards the re-focus. 8k quality.",
+      "grok_movement": "A thought bubble appears over the dog's head showing the squeaky toy, then it pops, and the dog's focus returns to the owner. A sparkle highlights the reward for making the right choice.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The ultimate test: the dog is holding a \"Deixa\" command over a pile of sausages on the floor. It is difficult, but the dog succeeds. Jackpot reward. 8k quality.",
+      "grok_movement": "A dramatic, close-up shot of the dog drooling slightly but holding its position, showing immense self-control. A huge \"Jackpot!\" animation celebrates this master-level success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A diagram showing a \"Círculo de Confiança\". The dog and owner are in the center. Distractions (toys, food, other dogs) are outside the circle and cannot break the focus. 8k quality.",
+      "grok_movement": "The distractions animate, bouncing off an invisible barrier around the circle of trust, unable to penetrate it.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog walking in a perfect heel position through a busy city square, completely unfazed by the chaos, its eyes locked on its owner. Text overlay: \"Foco Inabalável, Conexão Inquebrável\". 8k quality.",
+      "grok_movement": "A cinematic shot where the surrounding city chaos is in motion blur, creating a tunnel of focus between the dog and owner. The text appears with a solid, powerful font.",
+      "use_previous_frame": true
+    }
+  ]
+}

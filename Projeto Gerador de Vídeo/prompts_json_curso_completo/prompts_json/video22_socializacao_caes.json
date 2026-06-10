@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 22: Socialização com Outros Cães",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Two calm, well-behaved adult dogs are present. A puppy is on a leash at a safe distance, just observing the other dogs. The owner is rewarding the puppy for calm behavior. Outdoor park setting. 8k quality.",
+      "grok_movement": "Static wide shot to establish the safe distance and calm atmosphere. The focus is on observation, not interaction.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A parallel walk: the owner and puppy are walking in the same direction as another person and their calm dog, but on the other side of the path, maintaining a safe distance. Both dogs are on leashes. 8k quality.",
+      "grok_movement": "A tracking shot from the side, showing both pairs walking in parallel, demonstrating coexistence without direct contact.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The three-second rule: the puppy is allowed a brief, three-second sniff of the other calm dog's rear end, then the owner cheerfully calls the puppy away. A timer graphic counts '1, 2, 3'. 8k quality.",
+      "grok_movement": "Close-up on the brief, polite sniffing interaction. The timer graphic appears and a gentle sound indicates when to call the puppy away.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A diagram showing dog body language. Green checkmarks next to: loose body, wagging tail, play bow. Red X's next to: stiff body, raised hackles, growling, fixed stare. 8k quality.",
+      "grok_movement": "The good and bad body language examples animate, with the checkmarks and X's appearing to clearly label them.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the puppy and the other dog lying down calmly near each other, but not interacting, both relaxed. Text overlay: 'Amizades Seguras Começam com Respeito'. 8k quality.",
+      "grok_movement": "A peaceful, static shot of the two dogs coexisting calmly. The text fades in with a gentle, respectful font.",
+      "use_previous_frame": true
+    }
+  ]
+}

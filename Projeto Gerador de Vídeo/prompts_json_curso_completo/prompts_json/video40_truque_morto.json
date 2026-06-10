@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 40: Truque Morto",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is in a side-lying position, relaxed on a carpet. This is the starting point, building on the first step of the 'Rola' trick. 8k quality.",
+      "grok_movement": "Static shot, establishing the calm, side-lying starting position.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer says 'Morto!' in a playful, dramatic tone, and the dog flops its head down and stays completely still. The trainer immediately rewards the stillness. 8k quality.",
+      "grok_movement": "A close-up on the dog's head as it flops down dramatically. The camera holds on the stillness for a moment before the reward.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer uses a finger gun hand signal, says 'Bang!', and the dog dramatically rolls onto its side and plays dead. 8k quality.",
+      "grok_movement": "A fun, action-movie style shot. The camera follows the 'bullet' from the finger gun to the dog, which then performs its dramatic fall.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog holds the 'dead' position for several seconds, completely still, until the trainer gives a release command like 'Ok!'. The dog then springs back to life. 8k quality.",
+      "grok_movement": "The camera is completely still, emphasizing the dog's lack of movement. Then, a sudden burst of action as the dog is released.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog taking a dramatic bow after 'coming back to life', as if it's an actor at the end of a play. Text overlay: 'Morto: O Grande Artista'. 8k quality.",
+      "grok_movement": "A theatrical shot with dramatic lighting. The text appears in a classic movie poster font.",
+      "use_previous_frame": true
+    }
+  ]
+}

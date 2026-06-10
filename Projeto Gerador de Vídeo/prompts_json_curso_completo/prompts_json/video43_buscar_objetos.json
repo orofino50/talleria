@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 43: Buscar Objetos",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is happily holding a favorite toy in its mouth. The trainer is showing excitement and praising the dog for simply holding the toy. 8k quality.",
+      "grok_movement": "Static shot, focusing on the positive association with holding an object.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer gently takes the toy, says 'Sim!', and gives a treat. Then immediately gives the toy back. Teaching that giving the toy to the owner is a good thing. 8k quality.",
+      "grok_movement": "A close-up on the gentle exchange, highlighting the positive reinforcement loop: give toy -> get treat -> get toy back.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer tosses the toy a very short distance (1-2 feet). The dog goes to it, picks it up, and brings it back to the trainer for a reward. 8k quality.",
+      "grok_movement": "The camera follows the short toss and the dog's successful retrieval, capturing the entire sequence.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer now tosses the toy further away. The dog enthusiastically runs, retrieves the toy, and brings it back. 8k quality.",
+      "grok_movement": "A dynamic tracking shot that follows the dog as it runs a longer distance, showing its speed and enthusiasm.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog bringing the newspaper or a pair of slippers to its owner. A practical and helpful application of the fetch command. Text overlay: 'Buscar: O Ajudante Perfeito'. 8k quality.",
+      "grok_movement": "A heartwarming shot of the dog being helpful. The text appears in a friendly, helpful font.",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 4: Introdução ao 'Vem'",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Trainer kneeling on the floor in a cozy living room, arms open wide, smiling warmly and invitingly, a happy puppy at a short distance looking curious, cinematic quality, 8k detail",
+      "grok_movement": "Slow zoom in on the trainer's welcoming face and open arms, creating a sense of invitation",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The puppy starts to walk then run towards the trainer, ears flopping, tail wagging excitedly, pure joy on its face, cinematic quality, 8k detail",
+      "grok_movement": "Tracking shot that follows the puppy as it runs towards the trainer, capturing the excitement",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The puppy arrives at the trainer, who gives it a big hug, lots of pets, and a delicious high-value treat, a moment of pure connection and reward, cinematic quality, 8k detail",
+      "grok_movement": "Close-up shot on the hug and the treat being given, with celebratory sparkles and a warm glow effect",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Infographic showing a heart icon connecting a person icon and a dog icon, with the word 'VEM' in the middle, symbolizing the command strengthens the bond, clean and modern design, 8k detail",
+      "grok_movement": "The heart icon pulses gently, and the connection lines animate outwards from the word 'VEM'",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the trainer and puppy cuddling on the floor, both looking happy and content, text overlay 'O Comando Mais Importante', heartwarming and professional, 8k quality",
+      "grok_movement": "Static shot, text fades in smoothly, creating an emotional and memorable end screen",
+      "use_previous_frame": true
+    }
+  ]
+}

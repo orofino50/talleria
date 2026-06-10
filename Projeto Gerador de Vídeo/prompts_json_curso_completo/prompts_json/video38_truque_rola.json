@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 38: Truque Rola",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is in a perfect 'Deita' position on a soft carpet. The trainer is kneeling next to it with a treat. 8k quality.",
+      "grok_movement": "Static shot, establishing the starting 'down' position, which is crucial for this trick.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer uses a treat to lure the dog's head towards its shoulder, causing it to shift its weight and lie on its side. The moment it's on its side, the trainer gives the treat. 8k quality.",
+      "grok_movement": "A close-up on the luring motion, showing how the treat guides the dog's head and causes the weight shift.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "From the side-lying position, the trainer continues the lure over the dog's back, encouraging it to roll over completely to the other side. 8k quality.",
+      "grok_movement": "The camera follows the treat in an arc over the dog's back, capturing the rolling motion.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog completes the full roll. The trainer gives a huge jackpot reward and lots of praise. A big success. 8k quality.",
+      "grok_movement": "A celebratory slow-motion shot of the final part of the roll, with a 'Jackpot!' animation and virtual confetti.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog happily rolling on a grassy hill, looking joyful and carefree. Text overlay: 'Rola: A Expressão Máxima de Felicidade'. 8k quality.",
+      "grok_movement": "A fun, dynamic shot of the dog rolling happily in the grass. The text appears in a playful, bouncy font.",
+      "use_previous_frame": true
+    }
+  ]
+}

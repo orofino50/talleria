@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 46: Abrir/Fechar a Porta",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A rope or towel is tied to a cabinet door handle. A dog is playing tug-of-war with the rope, causing the door to pull open. The trainer is encouraging the play. 8k quality.",
+      "grok_movement": "A dynamic shot capturing the playful tugging and the resulting door movement.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The moment the door opens, the trainer gives a huge reward. The trainer then points to the rope and says the command, e.g., \"Abre\". 8k quality.",
+      "grok_movement": "The camera focuses on the reward, then on the clear hand signal pointing to the rope.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Now, the trainer points to the rope and says \"Abre\". The dog grabs the rope and pulls the door open. Jackpot reward. 8k quality.",
+      "grok_movement": "A clear shot of the dog performing the action on command. A \"Jackpot!\" animation celebrates the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "For closing, a sticky note target is placed on the outside of the door. The dog is rewarded for pushing the target with its nose, causing the door to swing shut. 8k quality.",
+      "grok_movement": "A close-up on the dog pushing the target and the door closing, with a satisfying \"click\" sound effect.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a person with their hands full of groceries, saying \"Porta, por favor!\", and the dog helpfully pulling a door open for them. Text overlay: \"O Porteiro Mais Fofo do Mundo\". 8k quality.",
+      "grok_movement": "A practical, heartwarming shot of the dog being genuinely helpful. The text appears in a friendly, welcoming font.",
+      "use_previous_frame": true
+    }
+  ]
+}

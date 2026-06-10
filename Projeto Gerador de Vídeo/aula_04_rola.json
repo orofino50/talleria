@@ -1,0 +1,78 @@
+{
+  "projeto": "AdaptaCão - Aula 04: Comando ROLA",
+  "descricao": "Quarta aula do curso AdaptaCão ensinando o comando ROLA para cães — truque divertido que fortalece o vínculo. O instrutor demonstra as 4 fases do rolar e guia os 3 passos com o cachorro seguindo o petisco em arco.",
+  "cenas": [
+    {
+      "scene_number": 1,
+      "descricao": "Abertura visual do curso — Silhueta de cachorro rolando",
+      "dalle_prompt": "Silhueta estilizada de um cão em movimento de rolar, corpo curvado em diagonal, gradiente que vai do azul profundo (#4A90E2) ao laranja quente (#F5A623), fundo branco limpo com leve textura de luz, estilo minimalista premium, iluminação cinematográfica suave, composição centralizada, 4K",
+      "grok_movement": "Fade in do branco, a silhueta do cachorro rolando surge gradualmente com o gradiente fluindo por suas curvas, sutil efeito de partículas de luz flutuando, revelação elegante de 3 segundos com rotação sutil"
+    },
+    {
+      "scene_number": 2,
+      "descricao": "Introdução divertida — Cachorro rolando na grama",
+      "dalle_prompt": "Golden retriever alegre rolando na grama verde em parque ensolarado, expressão de pura felicidade com língua para fora, pelos voando com o movimento de rotação, grama fresca e vibrante, iluminação natural dourada de golden hour, fotorealista, 4K",
+      "grok_movement": "Câmera em slow motion 120fps captura o cachorro rolando, folhas e grama voam com a movimentação, pan right acompanhando o giro completo, energia alegre e contagiante"
+    },
+    {
+      "scene_number": 3,
+      "descricao": "Cachorro executando ROLA — Truque completo",
+      "dalle_prompt": "Golden retriever em posição deitada na grama, olhando atentamente para a mão do treinador que segura um petisco próximo ao focinho, início do movimento de rolar, ambiente de treino externo com grama macia, iluminação natural suave, fotorealista, 4K",
+      "grok_movement": "Plano detalhe com rack focus do focinho do cachorro para a mão do treinador, câmera acompanha o movimento do petisco em arco, steadicam mantendo enquadramento estável"
+    },
+    {
+      "scene_number": 4,
+      "descricao": "Demonstração das 4 fases do rolar",
+      "dalle_prompt": "Quatro momentos sequenciais do mesmo golden retriever mostrando o movimento completo de rolar: deitado de barriga para baixo, virando a cabeça para o lado, corpo girando com barriga para cima, e completando o giro de volta à posição inicial, grama verde, luz natural, fotorealista, 4K",
+      "grok_movement": "Dolly lateral lentamente revelando cada fase do movimento, slow motion 120fps em cada posição, transições suaves entre as fases com dissolve"
+    },
+    {
+      "scene_number": 5,
+      "descricao": "Pré-requisito — Cão precisa saber DEITA",
+      "dalle_prompt": "Golden retriever em posição deitada perfeita no chão, olhos atentos fitando o treinador que está ajoelhado ao lado, ambiente externo com grama natural, iluminação quente de tarde, composição focada na postura do animal, fotorealista, 4K",
+      "grok_movement": "Plano médio estático mostrando a posição deitada, slow zoom in sutil para o focinho atento do cachorro, estabelecendo a base necessária"
+    },
+    {
+      "scene_number": 6,
+      "descricao": "Passo 1 — Cão deitado, treat próximo ao focinho",
+      "dalle_prompt": "Close up do focinho de golden retriever em posição deitada, mão humana segurando petisco amarelo brilhante bem próximo ao nariz negro do cachorro, grama verde em segundo plano desfocada, iluminação natural lateral, profundidade de campo rasa, fotorealista, 4K",
+      "grok_movement": "Extreme close up com rack focus entre o petisco e o nariz do cachorro, câmera estável em tripé, momento de concentração e antecipação"
+    },
+    {
+      "scene_number": 7,
+      "descricao": "Passo 2 — Mover treat em arco por cima do ombro",
+      "dalle_prompt": "Mão humana movendo petisco em arco suave por cima do ombro de golden retriever deitado, cabeça do cachorro seguindo o petisco girando para o lado, momento capturado em meio ao movimento de rolar, grama verde, luz dourada, fotorealista de ação, 4K",
+      "grok_movement": "Tracking shot acompanhando a trajetória em arco do petisco, câmera em steadicam gira levemente junto com o movimento da cabeça do cachorro, slow motion 60fps para clareza"
+    },
+    {
+      "scene_number": 8,
+      "descricao": "Passo 3 — Cão completa o rolar e recebe recompensa",
+      "dalle_prompt": "Golden retriever terminando o movimento de rolar de volta à posição sentada, cauda abanando alegremente, treinador entregando petisco com expressão de orgulho e felicidade, parque externo com árvores ao fundo, luz solar suave, fotorealista de celebração, 4K",
+      "grok_movement": "Pan right seguindo o cachorro completando o giro, dolly back para revelar a celebração entre treinador e animal, slow motion na entrega do petisco"
+    },
+    {
+      "scene_number": 9,
+      "descricao": "Dica — Superfície macia e local tranquilo",
+      "dalle_prompt": "Golden retriever rolando felicmente em tapete espesso e macio dentro de sala tranquila com janela dando vista para jardim, iluminação natural suave entrando pela janela, cores quentes e acolhedoras, composição mostrando ambiente seguro e confortável, fotorealista, 4K",
+      "grok_movement": "Dolly in suave mostrando o ambiente ideal para treino, pan lateral revelando a sala tranquila e o tapete macio, iluminação natural destacando o conforto"
+    },
+    {
+      "scene_number": 10,
+      "descricao": "Prática — Múltiplas repetições do ROLA",
+      "dalle_prompt": "Sequência dinâmica de golden retriever realizando o truque de rolar várias vezes com entusiasmo crescente, cauda abanando cada vez mais, treinador celebrando cada repetição com petiscos, parque ensolarado com grama verde vibrante, fotorealista de energia alegre, 4K",
+      "grok_movement": "Montagem rápida com cortes dinâmicos entre cada repetição bem-sucedida, zoom in progressivo no rosto feliz do cachorro, pan right e left alternados acompanhando os giros"
+    },
+    {
+      "scene_number": 11,
+      "descricao": "Preview do próximo comando — Cachorro estendendo pata",
+      "dalle_prompt": "Golden retriever sentado estendendo a pata dianteira direita em direção à mão aberta do treinador, gesto gentil e educado, parque externo com fundo desfocado em tons de azul e laranja suaves, iluminação dourada de final de tarde, fotorealista, 4K",
+      "grok_movement": "Dolly in suave focando na pata se estendendo, rack focus do focinho do cachorro para o encontro das patas, transição visual para o próximo comando"
+    },
+    {
+      "scene_number": 12,
+      "descricao": "Encerramento — Silhueta do treinador e cachorro ao pôr do sol",
+      "dalle_prompt": "Silhuetas do treinador e golden retriever lado a lado contemplando o pôr do sol, gradiente do céu indo do laranja quente ao azul profundo, cão sentado ao lado do humano em pose de conexão, campo aberto com grama alta em silhueta, iluminação dramática de costas, fotorealista, 4K",
+      "grok_movement": "Fade in do pôr do sol com cores vibrantes, silhuetas surgem gradualmente em contra-luz, dolly out lento revelando a paisagem completa, energia serena de encerramento"
+    }
+  ]
+}

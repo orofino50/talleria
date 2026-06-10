@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 3: O Comando Senta",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Dog facing trainer who is holding a treat at dog's nose level, both indoors in a bright living room, training session beginning, dog looking attentively at the treat, trainer in casual clothes, warm natural lighting, 8k quality",
+      "grok_movement": "Static shot, camera focused on the interaction between the dog's nose and the treat, subtle tail wag",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "Training sequence showing trainer's hand with treat moving slowly backward over dog's head, dog's head tilting up following the treat, dog's rear end naturally lowering toward the ground, physics of sitting demonstration, side view angle, 8k quality",
+      "grok_movement": "Slow, smooth camera pan following the treat's movement, highlighting the cause-and-effect of the dog's body lowering",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Slow motion freeze frame of the exact moment dog's rear touches the floor while sitting, circular highlight effect around the dog's rear end touching ground, word 'SIM!' appearing in bold orange text, perfect timing capture, training success moment, 8k quality",
+      "grok_movement": "Freeze frame, the highlight circle and 'SIM!' text appear with a satisfying sound effect, holds for 2 seconds",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Trainer saying 'Senta' with speech bubble showing the word, then moving hand with treat backward, dog beginning to sit, sequence showing verbal cue before hand signal, indoor training environment, clear demonstration of adding verbal command, 8k quality",
+      "grok_movement": "Camera focuses on the trainer's mouth as they say 'Senta', then pans down to the hand and dog's reaction",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Split screen: left side shows trainer making only hand gesture (no treat visible) and dog sitting, right side shows trainer saying only 'Senta' (no hand gesture) and dog sitting, progression of learning, successful training outcome, 8k quality",
+      "grok_movement": "Both sides of the split screen play simultaneously, showing the dog's reliable response to both cues, a checkmark icon appears on both sides at the end",
+      "use_previous_frame": true
+    }
+  ]
+}

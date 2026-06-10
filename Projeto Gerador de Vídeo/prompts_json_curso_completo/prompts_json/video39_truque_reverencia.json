@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 39: Truque Reverência (Bow)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is standing in front of its trainer. The trainer is holding a treat. 8k quality.",
+      "grok_movement": "Static shot establishing the starting standing position.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer slowly lowers the treat from the dog's nose straight down between its front paws. The dog follows the treat, lowering its front end while keeping its rear end up. 8k quality.",
+      "grok_movement": "A side-on shot that clearly shows the luring motion and the dog's body bending into the bow position.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The moment the dog's elbows touch the ground in the bow position, the trainer says 'Sim!' and gives the treat. 8k quality.",
+      "grok_movement": "A close-up on the dog's front legs, with a graphic highlighting the elbows touching the ground, followed by the reward.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer now uses an empty hand with a downward motion as a hand signal, saying 'Reverência'. The dog performs the bow without the lure. Jackpot reward. 8k quality.",
+      "grok_movement": "The camera focuses on the hand signal, then on the dog performing the bow flawlessly. A 'Jackpot!' animation celebrates the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog performing a majestic bow on a stage with a red curtain in the background, as if after a great performance. Text overlay: 'Reverência: O Aplauso é Todo Seu'. 8k quality.",
+      "grok_movement": "A theatrical, cinematic shot. The text appears in an elegant, classic theater-style font.",
+      "use_previous_frame": true
+    }
+  ]
+}

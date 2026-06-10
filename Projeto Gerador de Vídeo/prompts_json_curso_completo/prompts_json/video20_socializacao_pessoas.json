@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 20: Socialização com Pessoas",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A calm, friendly-looking person is sitting on the floor, not looking at or talking to a puppy that is cautiously approaching them. The person is ignoring the puppy. 8k quality.",
+      "grok_movement": "Static shot, allowing the viewer to observe the natural, cautious approach of the puppy without any pressure.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The puppy sniffs the person's hand. The person slowly offers a treat from their open palm, still not making direct eye contact. 8k quality.",
+      "grok_movement": "A close-up on the interaction: the sniff, followed by the slow, gentle offering of the treat.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The puppy takes the treat and wags its tail. The person then gives a gentle, brief scratch under the chin, still avoiding overwhelming interaction. 8k quality.",
+      "grok_movement": "The camera focuses on the positive reinforcement – the treat and the gentle scratch – and the puppy's happy reaction.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A diagram showing a puppy and a person icon. A green checkmark is next to 'Calm approach', 'Sniffing', 'Gentle treats'. A red X is next to 'Loud noises', 'Sudden movements', 'Forced petting'. 8k quality.",
+      "grok_movement": "The green checkmarks and red X's animate in with corresponding positive and negative sound effects, clearly outlining the do's and don'ts.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the puppy happily sitting next to the new person, both looking relaxed and comfortable. Text overlay: 'Boas-Vindas Positivas, Amigos para a Vida'. 8k quality.",
+      "grok_movement": "A warm, peaceful shot of the newly formed friendship. The text fades in with a gentle, friendly font.",
+      "use_previous_frame": true
+    }
+  ]
+}

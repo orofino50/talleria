@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 27: Celebração do Nível 1",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is wearing a small, cute graduation cap. A banner behind it says 'Nível 1 Concluído!'. The dog looks proud. Confetti is in the air. 8k quality.",
+      "grok_movement": "A celebratory, slow-motion shot with confetti falling gently around the proud dog. The camera slowly zooms in on its happy face.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A montage of the dog's best moments from the past 4 weeks: learning to sit, the first successful 'vem', ignoring a distraction, playing with its owner. 8k quality.",
+      "grok_movement": "An emotional, fast-paced montage with inspiring music, showing the journey and the progress made.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The owner gives the dog a special new toy or a delicious, elaborate treat as a graduation present. A moment of pure joy and reward. 8k quality.",
+      "grok_movement": "A close-up on the special reward and the dog's ecstatic reaction. Sparkles and celebration graphics appear.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A graphic of a trophy with 'Nível 1' on it. The trophy shines and sparkles. 8k quality.",
+      "grok_movement": "The trophy animates, rotating and gleaming to signify a major accomplishment.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen showing the dog looking towards a path labeled 'Nível 2: Intermediário'. Text overlay: 'A Jornada Continua... Você está pronto?'. 8k quality.",
+      "grok_movement": "The dog looks ahead with determination. The path to Nível 2 lights up, building excitement for the next stage of the course. The text fades in with a bold, adventurous font.",
+      "use_previous_frame": true
+    }
+  ]
+}

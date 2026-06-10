@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 12: Comando Deita",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is in a perfect sit position. The trainer is kneeling in front of it, holding a treat near the dog's nose. Both are ready for the next step. Indoor, bright setting. 8k quality.",
+      "grok_movement": "Static shot establishing the starting position, focusing on the treat and the dog's attention.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer slowly lowers the treat from the dog's nose straight down to the floor between its paws. The dog's head follows the treat downwards. An animated arrow shows the downward path of the treat. 8k quality.",
+      "grok_movement": "The camera tilts down, following the treat's movement from the dog's nose to the floor.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "As the dog's head reaches the floor, its body naturally folds into a down position. The exact moment its elbows and belly touch the floor is highlighted. The trainer says 'Sim!'. 8k quality.",
+      "grok_movement": "Slow-motion as the dog lies down. A glowing outline appears around the dog's body as it touches the floor, and a 'Sim!' text bubble pops up.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer says the word 'Deita' just before luring the dog down with the treat, associating the word with the action. A speech bubble with 'Deita' appears. 8k quality.",
+      "grok_movement": "Focus on the trainer's mouth, the speech bubble appears, and then the camera follows the luring action again.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a happy dog relaxing in a 'down' position on a comfy rug, looking calm and content. Text overlay: 'Deita: O Comando do Relaxamento'. 8k quality.",
+      "grok_movement": "A peaceful, slow zoom out from the dog's happy face to show the entire relaxed posture. The text fades in smoothly.",
+      "use_previous_frame": true
+    }
+  ]
+}

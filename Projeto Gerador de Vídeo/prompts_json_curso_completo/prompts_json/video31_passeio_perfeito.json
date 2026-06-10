@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 31: O Passeio Perfeito",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Split screen: left side shows a dog pulling frantically on the leash, owner struggling, chaotic and stressful walk. Right side shows a dog walking calmly by the owner's side on a loose leash, relaxed and enjoyable walk, high contrast between the two scenarios, 8k quality",
+      "grok_movement": "Static shot, the contrast between the two sides is the main focus",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "Trainer demonstrating the 'U-turn' method: as soon as the dog starts to pull, the trainer calmly turns and walks in the opposite direction, dog is surprised and has to catch up, 8k quality",
+      "grok_movement": "Camera follows the trainer's sudden U-turn, capturing the dog's reaction and the immediate release of tension on the leash",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Trainer rewarding the dog with a treat the exact moment the leash is loose and the dog is walking by their side, reinforcing the desired behavior, 8k quality",
+      "grok_movement": "Close-up on the treat delivery, highlighting the positive reinforcement for the correct position",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Dog and owner walking happily on a loose leash in a beautiful park, both relaxed and enjoying the walk, the ideal outcome, golden hour lighting, 8k quality",
+      "grok_movement": "Slow-motion tracking shot from the side, capturing the peaceful and synchronized movement of the dog and owner",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog sitting calmly by the owner's side at a crosswalk, waiting patiently, demonstrating control and safety, text overlay 'Passeios Relaxantes e Seguros', 8k quality",
+      "grok_movement": "Static shot, text fades in, emphasizing the safety and control achieved through the training",
+      "use_previous_frame": true
+    }
+  ]
+}

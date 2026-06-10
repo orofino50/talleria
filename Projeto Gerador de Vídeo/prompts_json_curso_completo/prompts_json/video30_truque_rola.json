@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 30: O Truque Rola",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Dog in a perfect 'down' position on a soft carpet, looking attentively at the trainer, ready for the next command, indoor setting, 8k quality",
+      "grok_movement": "Static shot, establishing the starting position for the trick",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "Trainer using a treat to lure the dog's head to the side, causing the dog to shift its weight and lie on its side, step-by-step motion, 8k quality",
+      "grok_movement": "Slow camera pan following the treat, highlighting how the dog's body follows its head",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Trainer continuing the lure over the dog's back, encouraging the dog to roll over completely to the other side to get the treat, the 'roll' motion in action, 8k quality",
+      "grok_movement": "Dynamic arc shot that follows the treat and the dog's rolling motion, capturing the full 360-degree movement",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Dog successfully completing the roll and getting a big reward and lots of praise, looking proud and happy, celebratory moment, 8k quality",
+      "grok_movement": "Freeze frame on the completed roll, with celebratory graphics and text like 'BOA GAROTA!', then slow-motion of the reward",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog performing the 'roll' command with only a verbal cue, no lure needed, showing the mastered trick, text overlay 'Show de Fofura!', 8k quality",
+      "grok_movement": "Static shot, dog performs the roll smoothly, text appears with a flourish",
+      "use_previous_frame": true
+    }
+  ]
+}

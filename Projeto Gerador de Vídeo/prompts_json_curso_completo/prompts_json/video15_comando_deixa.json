@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 15: Comando Deixa",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A trainer's hand is open on the floor with a low-value treat (kibble) on it. A dog is looking at it but not touching. The trainer's other hand is ready to cover the treat. Indoor, calm setting. 8k quality.",
+      "grok_movement": "Static shot, creating tension. The focus is on the dog's hesitation and the trainer's readiness.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The dog moves its nose towards the treat. Instantly, the trainer's other hand gently covers the treat. The dog is blocked. The word 'Opa!' appears in a soft bubble. 8k quality.",
+      "grok_movement": "Quick, smooth animation of the hand covering the treat the moment the dog moves. The text bubble pops up.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog pulls its head back, breaking eye contact with the covered treat. The trainer immediately uncovers the treat. The dog sees the treat is available again. 8k quality.",
+      "grok_movement": "The hand lifts, revealing the treat. The camera focuses on the dog's moment of realization.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog looks at the treat but chooses not to touch it, looking up at the trainer instead. The trainer says 'Deixa... Sim!' and gives the dog a much better, high-value treat from their other hand. 8k quality.",
+      "grok_movement": "Slow-motion as the dog makes the choice to look away from the floor treat. A glowing jackpot effect as the better treat is revealed and given.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog walking past a piece of food dropped on the sidewalk, looking up at its owner proudly. Text overlay: 'Deixa: O Superpoder do Autocontrole'. 8k quality.",
+      "grok_movement": "The camera follows the dog as it successfully ignores the temptation on the ground. The text fades in with a heroic, empowering font.",
+      "use_previous_frame": true
+    }
+  ]
+}

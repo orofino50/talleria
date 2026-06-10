@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 58: Treino à Distância",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is in a perfect 'Fica' command. The owner is standing just one step away, rewarding the dog for staying. 8k quality.",
+      "grok_movement": "Static shot, establishing the baseline distance.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The owner takes two steps back, gives the 'Fica' command, and rewards the dog for holding the position from a slightly further distance. 8k quality.",
+      "grok_movement": "The camera is positioned behind the owner, showing the increasing distance from the dog's perspective.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The owner is now across the room, about 10 feet away. The dog is holding a solid 'Fica'. A graphic shows a measuring tape stretching between them. 8k quality.",
+      "grok_movement": "A wide shot that emphasizes the large distance between the owner and the dog, showcasing the impressive control.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "From across the room, the owner gives a hand signal for 'Deita'. The dog transitions from a 'Fica' (sentado) to a 'Deita' position, all from a distance. Jackpot reward. 8k quality.",
+      "grok_movement": "The camera zooms in on the owner's clear hand signal, then quickly cuts to the dog responding perfectly from far away. A 'Wow!' graphic appears.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog on one side of a beautiful park, and the owner on the other. The owner gives a series of distance commands, which the dog executes flawlessly. Text overlay: 'Controle Total, a Qualquer Distância'. 8k quality.",
+      "grok_movement": "A grand, sweeping drone shot that captures the vast distance and the perfect communication between dog and owner. The text appears with a confident, powerful font.",
+      "use_previous_frame": true
+    }
+  ]
+}

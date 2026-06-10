@@ -1,0 +1,32 @@
+{
+  "titulo": "Truque: Gira",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Trainer holding a treat and luring a dog in a circle, dog following the treat with its nose, starting the spinning motion, indoor setting, 8k quality",
+      "grok_movement": "Top-down camera angle showing the circular motion of the dog following the treat",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "Dog completing a full 360-degree spin, trainer giving the treat and praise, successful completion of the lured spin, 8k quality",
+      "grok_movement": "Slow-motion as the dog completes the spin, with a trail effect to emphasize the circular motion",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Trainer making a circular hand gesture (without a treat) and saying 'Gira', dog performing the spin, showing the transition to the hand signal, 8k quality",
+      "grok_movement": "Static shot, focusing on the hand signal and the dog's immediate response",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Dog performing the 'Gira' trick in both directions, clockwise and counter-clockwise, demonstrating advanced control, 8k quality",
+      "grok_movement": "Split screen showing the dog spinning in both directions simultaneously",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog in the middle of a graceful spin, with motion blur and a celebratory background, text overlay 'Giro Perfeito!', 8k quality",
+      "grok_movement": "Freeze frame in the middle of the spin, with the text and celebratory graphics appearing",
+      "use_previous_frame": true
+    }
+  ]
+}

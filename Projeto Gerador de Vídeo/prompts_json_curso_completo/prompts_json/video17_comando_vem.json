@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 17: O Comando Vem",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Happy dog running joyfully towards the camera in a sunny park, ears flopping, big smile, person in the background with open arms, welcoming and exciting atmosphere, 8k quality, slow motion",
+      "grok_movement": "Camera remains static as the dog runs towards it, creating a dynamic and engaging opening shot",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "Trainer kneeling down with open arms, saying 'Vem!' with a happy and encouraging tone, dog at a short distance looking interested, positive and inviting body language, 8k quality",
+      "grok_movement": "Slow zoom in on the trainer's welcoming face and open arms",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Dog running to the trainer and receiving lots of praise, pets, and a high-value treat (like a piece of chicken), a 'jackpot' reward moment, genuine happiness on both faces, 8k quality",
+      "grok_movement": "Dynamic camera movement capturing the dog's arrival and the joyful celebration, confetti and sparkle effects can be added",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Trainer practicing the 'Vem' command in different environments: a quiet backyard, a slightly busier park, and near a calm street, showing the importance of generalization, 8k quality",
+      "grok_movement": "Quick cuts between the different environments, showing the dog successfully responding in each one",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog and trainer walking together, with the dog looking up at the trainer with trust and a strong bond, text overlay 'A Conexão Mais Forte', heartwarming and emotional tone, 8k quality",
+      "grok_movement": "Slow pan up from the dog to the trainer's face, capturing the strong bond between them",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "projeto": "AdaptaCão - Aula 05: Comando DÁ A PATA",
+  "descricao": "Quinta aula do curso AdaptaCão ensinando o comando DÁ A PATA para cães — cumprimento que fortalece o vínculo e socialização. O instrutor demonstra como ensinar o cão a oferecer a pata com gentileza.",
+  "cenas": [
+    {
+      "scene_number": 1,
+      "descricao": "Abertura visual — Silhueta de cachorro estendendo a pata",
+      "dalle_prompt": "Silhueta estilizada de um cão sentado estendendo uma pata dianteira para frente, gradiente que vai do azul profundo (#4A90E2) ao laranja quente (#F5A623), fundo branco limpo com leve textura de luz, estilo minimalista premium, iluminação cinematográfica suave, composição centralizada, 4K",
+      "grok_movement": "Fade in do branco, a silhueta do cachorro oferecendo a pata surge gradualmente com o gradiente fluindo por suas curvas, sutil efeito de partículas de luz, revelação elegante de 3 segundos com extensão da pata"
+    },
+    {
+      "scene_number": 2,
+      "descricao": "Por que ensinar DÁ A PATA — Vínculo e socialização",
+      "dalle_prompt": "Golden retriever oferecendo a pata em um gesto de cumprimento para uma pessoa, momento de conexão emocional entre humano e animal, iluminação dourada de golden hour, parque externo com árvores ao fundo desfocado, fotorealista de vínculo, 4K",
+      "grok_movement": "Zoom in lento e gentil focando no encontro das patas, slow motion 120fps destacando o momento de conexão emocional, pan suave revelando a expressão do animal"
+    },
+    {
+      "scene_number": 3,
+      "descricao": "Cachorro oferecendo a pata — Gesto perfeito",
+      "dalle_prompt": "Golden retriever sentado de forma educada, estendendo delicadamente a pata direita dianteira em direção à mão aberta do treinador, momento capturado em slow motion, parque externo com grama verde, iluminação natural suave lateral, fotorealista focada no gesto, 4K",
+      "grok_movement": "Close up com slow motion capturando o momento exato em que a pata se estende, rack focus entre a pata e o rosto focado do cachorro, steadicam acompanhando o movimento"
+    },
+    {
+      "scene_number": 4,
+      "descricao": "Demonstração — Cumprimento perfeito",
+      "dalle_prompt": "Golden retriever em posição sentada, pata dianteira tocando gentilmente a mão aberta do treinador em cumprimento perfeito, expressão calma e focada no animal, treinador com sorriso gentil, campo de treino externo com grama, luz natural abundante, fotorealista, 4K",
+      "grok_movement": "Plano detalhe estático do momento do cumprimento, dolly in leve para enquadramento mais próximo, slow motion suave para destacar a elegância do gesto"
+    },
+    {
+      "scene_number": 5,
+      "descricao": "Pré-requisito — Cão sabe SENTA",
+      "dalle_prompt": "Golden retriever em posição sentada perfeita no chão, postura ereta e atenta, olhos fitando o treinador que está sentado na frente, ambiente externo com grama natural, iluminação quente de tarde, composição focada na posição correta do animal, fotorealista, 4K",
+      "grok_movement": "Plano médio estático mostrando a posição de sentar, slow zoom in sutil para o focinho atento, estabelecendo a base necessária"
+    },
+    {
+      "scene_number": 6,
+      "descricao": "Passo 1 — Cão sentado, treat na mão fechada",
+      "dalle_prompt": "Golden retriever sentado e atento, mão humana fechada segurando petisco na altura do peito do cachorro, animal curioso investigando a mão fechada com o nariz, campo de treino externo com grama verde, iluminação natural suave, fotorealista, 4K",
+      "grok_movement": "Plano detalhe com rack focus entre a mão fechada e o focinho curioso do cachorro, câmera estável em tripé, momento de investigação e concentração"
+    },
+    {
+      "scene_number": 7,
+      "descricao": "Passo 2 — Cão usa pata para tocar a mão",
+      "dalle_prompt": "Golden retriever levantando a pata dianteira direita para tocar a mão fechada do treinador, momento exato em que as patas se encontram, expressão de descoberta no rosto do animal, grama verde, luz natural, fotorealista de ação, 4K",
+      "grok_movement": "Slow motion 120fps capturando o movimento da pata subindo, tracking shot acompanhando a trajetória, close up no momento do toque"
+    },
+    {
+      "scene_number": 8,
+      "descricao": "Passo 3 — Abrir mão, dar treat e elogiar",
+      "dalle_prompt": "Mão humana abrindo para revelar petisco dourado, golden retriever comendo a recompensa com expressão feliz, treinador acariciando o focinho do cachorro com carinho, momento de celebração e vínculo, parque externo com luz solar suave, fotorealista, 4K",
+      "grok_movement": "Close up da mão abrindo e revelando o petisco, dolly back para mostrar a celebração completa, pan suave acompanhando a interação positiva"
+    },
+    {
+      "scene_number": 9,
+      "descricao": "Dica — Ensinar as duas patas separadamente",
+      "dalle_prompt": "Golden retriever oferecendo primeiro a pata direita e depois a pata esquerda, cada pata destacada em momentos separados mas adjacentes, fundo de grama verde suave, iluminação natural consistente, fotorealista didática, 4K",
+      "grok_movement": "Pan lateral suave passando da pata direita para a pata esquerda, slow motion em cada oferecimento, transição clara entre os dois lados"
+    },
+    {
+      "scene_number": 10,
+      "descricao": "Prática — Sequência com ambas as patas",
+      "dalle_prompt": "Golden retriever e treinador em ritmo alegre de cumprimento alternando patas: pata direita, pata esquerda, cada cumprimento com petisco e sorriso, parque ensolarado com grama vibrante, fotorealista de energia positiva, 4K",
+      "grok_movement": "Montagem rítmica com cortes dinâmicos entre cada cumprimento, zoom in progressivo no rosto feliz do cachorro, pan left e right alternados acompanhando as patas"
+    },
+    {
+      "scene_number": 11,
+      "descricao": "Preview do próximo comando — Cachorro vindo ao chamado",
+      "dalle_prompt": "Golden retriever correndo alegremente em direção à câmera com orelhas voando ao vento, expressão de pura alegria, parque externo com fundo desfocado em tons de azul e laranja suaves, iluminação dourada de final de tarde, fotorealista de ação, 4K",
+      "grok_movement": "Dolly in rápido acompanhando o cachorro correndo, slow motion 120fps capturando os pelos e orelhas ao vento, transição dinâmica para o próximo comando"
+    },
+    {
+      "scene_number": 12,
+      "descricao": "Encerramento — Silhueta do treinador e cachorro ao pôr do sol",
+      "dalle_prompt": "Silhuetas do treinador e golden retriever lado a lado contemplando o pôr do sol, gradiente do céu indo do laranja quente ao azul profundo, cão com pata estendida ao lado do humano, campo aberto com grama alta em silhueta, iluminação dramática de costas, fotorealista, 4K",
+      "grok_movement": "Fade in do pôr do sol com cores vibrantes, silhuetas surgem gradualmente em contra-luz, dolly out lento revelando a paisagem completa, energia serena de encerramento"
+    }
+  ]
+}

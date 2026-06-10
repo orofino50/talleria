@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 21: Revisão da Semana 3",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "High-energy montage of a dog successfully performing this week's commands: ignoring a dropped treat ('Deixa'), dropping a toy ('Larga'), and walking with a loose leash, cinematic quality, 8k detail",
+      "grok_movement": "Fast cuts, upbeat music, and dynamic camera angles to create an exciting summary of the week's achievements.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A checklist infographic for Week 3: 'Comando Deixa', 'Comando Larga', 'Introdução à Guia', 'Passeio sem Puxar', 'Socialização com Pessoas'. Each item gets a satisfying green checkmark, 8k detail",
+      "grok_movement": "Each checkmark animates in with a distinct, positive sound, reinforcing the sense of accomplishment for each new skill.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A real-world scenario: a dog and owner are walking. The dog sees a piece of bread on the ground, the owner says 'Deixa', the dog ignores it and continues walking with a loose leash. A perfect combination of the week's skills. 8k quality.",
+      "grok_movement": "A smooth tracking shot that follows the pair, capturing the entire successful sequence in one continuous, impressive take.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Close-up on a calendar showing Week 3 being circled with a platinum star sticker, indicating a higher level of achievement. 8k detail",
+      "grok_movement": "The circle and platinum star animate onto the calendar with a shimmering effect, signifying significant progress.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen with text 'Semana 3 Completa! O Respeito Mútuo Começou!', with a preview of next week's topic 'Próxima Semana: Consolidação e Socialização Avançada', building excitement. 8k quality.",
+      "grok_movement": "A graphic of a handshake between a human hand and a paw appears next to the text. The preview for the next week slides in with a confident transition.",
+      "use_previous_frame": true
+    }
+  ]
+}

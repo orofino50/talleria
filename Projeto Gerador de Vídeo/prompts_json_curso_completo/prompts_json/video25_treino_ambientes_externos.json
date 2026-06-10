@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 25: Treino em Ambientes Externos",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog and owner are in a completely new and quiet park. The dog is on a long leash, just sniffing and exploring the new environment. The owner is relaxed and not giving any commands. 8k quality.",
+      "grok_movement": "A slow, wide panning shot that shows the new environment and the dog's freedom to explore and get comfortable.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "After a few minutes of exploration, the owner calls the dog's name cheerfully. The dog looks back, and the owner gives a high-value treat. Re-establishing focus in the new place. 8k quality.",
+      "grok_movement": "The camera is focused on the dog. When its name is called, it quickly turns its head, and the camera follows the movement to the owner for the reward.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The owner asks for a very simple, well-known command, like 'Senta'. The dog performs it successfully in the new park environment. The reward is extra enthusiastic. 8k quality.",
+      "grok_movement": "A celebratory shot with a slight slow-motion and a 'Success!' text graphic appearing as the dog sits.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A montage of the dog performing simple commands in various new outdoor locations: a quiet town square, a different park, a pet-friendly store. 8k quality.",
+      "grok_movement": "Quick cuts between the different locations, each with a text label (e.g., 'Praça', 'Loja Pet-Friendly'), showing the dog's adaptability.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog sitting on a scenic viewpoint, looking out at the world with its owner. Text overlay: 'O Mundo é a Sua Sala de Aula'. 8k quality.",
+      "grok_movement": "A beautiful, cinematic wide shot of the landscape. The text fades in with an inspiring and adventurous font.",
+      "use_previous_frame": true
+    }
+  ]
+}

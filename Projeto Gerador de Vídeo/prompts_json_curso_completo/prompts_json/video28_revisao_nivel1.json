@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 28: Revisão Completa Nível 1",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A rapid-fire montage of all the key commands from Level 1: Name, Eye Contact, Sim!, Vem, Senta, Fica, Deita, Deixa, Larga, Loose Leash Walking. Each command is shown being executed perfectly. 8k quality.",
+      "grok_movement": "Very fast cuts, with the name of the command appearing as a bold text overlay for each clip. High-energy, impressive summary.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "An infographic showing the 'Foundation' of a house being built. The bricks are labeled with the commands from Level 1, creating a solid base. 8k quality.",
+      "grok_movement": "The bricks animate, flying into place one by one to build the strong foundation, symbolizing the skills learned.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A split screen showing the dog at the beginning of Week 1 (confused, unfocused) and the dog now at the end of Week 4 (confident, focused, obedient). A clear before-and-after transformation. 8k quality.",
+      "grok_movement": "The split screen appears, with the labels 'Antes' and 'Depois' to highlight the dramatic improvement.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A person and their dog are sitting together on a hill, watching the sunset. A moment of deep connection and partnership, earned through the training. 8k quality.",
+      "grok_movement": "A beautiful, cinematic, and emotional shot. The camera slowly pans across the scene, capturing the peaceful and loving bond.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen with a large, golden number '1' trophy. Text overlay: 'Nível 1: Fundamentos - Concluído! Prepare-se para o Nível 2!'. 8k quality.",
+      "grok_movement": "The trophy graphic shines brightly. Confetti falls in the background. The text appears with a sense of finality and excitement for what's next.",
+      "use_previous_frame": true
+    }
+  ]
+}

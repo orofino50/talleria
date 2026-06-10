@@ -1,0 +1,517 @@
+
+============================================================
+🎬 VIDEO GENERATOR - Servidor Backend
+============================================================
+
+📡 Servidor rodando em: http://localhost:5015
+🌐 Abra seu navegador e acesse: http://localhost:5015
+
+⚠️  Certifique-se de estar logado em:
+   • ChatGPT (chat.openai.com)
+   • Grok (x.ai/grok)
+
+📋 Endpoints disponíveis:
+   • GET  /api/status - Status do processamento
+   • POST /api/process - Iniciar processamento
+   • POST /api/cancel - Cancelar processamento
+   • POST /api/auto-confirm - Confirmar browsers auto
+   • GET  /api/health - Health check
+   • GET  /api/output - Listar arquivos gerados
+
+============================================================
+
+ * Serving Flask app 'server'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5015
+Press CTRL+C to quit
+127.0.0.1 - - [07/Jun/2026 23:31:18] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:31:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:31:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:31:43] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [07/Jun/2026 23:31:52] "POST /api/process HTTP/1.1" 200 -
+⏱️  Configurado para aguardar 3 minutos entre cenas
+✓ Navegador configurado (anti-detecção ativa)
+ℹ️  Este é um Chrome separado - você pode usar seu Chrome normal normalmente!
+
+============================================================
+⚠️  CONFIGURAÇÃO INICIAL
+============================================================
+
+🔗 Abrindo ChatGPT...
+127.0.0.1 - - [07/Jun/2026 23:31:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:31:55] "GET /api/status HTTP/1.1" 200 -
+
+📋 INSTRUÇÕES:
+   1. Faça LOGIN no ChatGPT (se necessário)
+   2. Feche quaisquer popups/tours
+   3. Certifique-se que vê o campo de texto
+   4. Teste gerando uma imagem manualmente:
+      Digite: 'Generate an image: a cat'
+   5. Se funcionou, volte aqui!
+
+🔗 Abrindo Grok...
+127.0.0.1 - - [07/Jun/2026 23:31:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:31:57] "GET /api/status HTTP/1.1" 200 -
+   6. Troque para aba do Grok e faça LOGIN
+   7. Volte para a aba do ChatGPT
+
+✅ Aguardando confirmação na INTERFACE WEB...
+   (Clique no botão 'Sim, estão prontos' na interface)
+
+⏳ Aguardando confirmação na interface...
+127.0.0.1 - - [07/Jun/2026 23:31:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:31:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:31:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:07] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:07] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:17] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:17] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:19] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:19] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:21] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:21] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:23] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:23] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:31] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:31] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:47] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:47] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:32:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:07] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:07] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:11] "POST /api/browser-confirm HTTP/1.1" 200 -
+
+✅ Confirmação recebida! Continuando processamento!
+============================================================
+
+
+🎨 Gerando imagem para cena 1...
+Prompt: AdaptaCão brand logo reveal, stylized jumping dog silhouette in blue to orange gradient (from #4A90E...
+🔄 Trocando para aba do ChatGPT...
+127.0.0.1 - - [07/Jun/2026 23:33:11] "GET /api/status HTTP/1.1" 200 -
+📂 Abrindo nova conversa no ChatGPT...
+127.0.0.1 - - [07/Jun/2026 23:33:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:14] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:16] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:17] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot salvo: output\debug_inicio_cena_1.png
+127.0.0.1 - - [07/Jun/2026 23:33:18] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:19] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após fechar popups: output\debug_depois_popup_cena_1.png
+🔍 Procurando campo de texto...
+   Tentando método 0: Procurando 'Pergunte alguma coisa'...
+   ✓ Encontrado via JS (Pergunte alguma coisa)!
+✓ Campo de texto encontrado! Continuando...
+🖱️ Ativando campo de texto...
+127.0.0.1 - - [07/Jun/2026 23:33:20] "GET /api/status HTTP/1.1" 200 -
+   ✓ Clique direto funcionou
+   ✓ JavaScript click funcionou
+127.0.0.1 - - [07/Jun/2026 23:33:21] "GET /api/status HTTP/1.1" 200 -
+   ✓ Scroll + focus funcionou
+127.0.0.1 - - [07/Jun/2026 23:33:22] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:23] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:24] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:25] "GET /api/status HTTP/1.1" 200 -
+   ✓ ActionChains click funcionou
+📸 Screenshot após ativar campo: output\debug_campo_ativado_cena_1.png
+⌨️ Digitando comando...
+127.0.0.1 - - [07/Jun/2026 23:33:26] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:30] "GET /api/status HTTP/1.1" 200 -
+   ✓ Texto digitado via send_keys!
+127.0.0.1 - - [07/Jun/2026 23:33:31] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após digitar: output\debug_depois_digitar_cena_1.png
+127.0.0.1 - - [07/Jun/2026 23:33:32] "GET /api/status HTTP/1.1" 200 -
+🔍 Procurando botão de enviar...
+✓ Enviado com método 1!
+⏳ Aguardando DALL-E gerar imagem (pode levar 30-60 segundos)...
+127.0.0.1 - - [07/Jun/2026 23:33:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:34] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:36] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:38] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:42] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:44] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 1/24...
+127.0.0.1 - - [07/Jun/2026 23:33:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:46] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:47] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:48] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:50] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 2/24...
+127.0.0.1 - - [07/Jun/2026 23:33:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:52] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:54] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 3/24...
+127.0.0.1 - - [07/Jun/2026 23:33:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:33:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:00] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 4/24...
+127.0.0.1 - - [07/Jun/2026 23:34:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:02] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:04] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 5/24...
+127.0.0.1 - - [07/Jun/2026 23:34:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:06] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:07] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:08] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:10] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 6/24...
+127.0.0.1 - - [07/Jun/2026 23:34:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:12] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 23:34:13] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 7/24...
+✓ Imagem encontrada! URL: https://chatgpt.com/backend-api/estuary/content?id=file_0000000099ec720e8c4e3bec...
+   ℹ️  2 imagens VISÍVEIS na página, usando a MAIS RECENTE (Y=130px)
+   ⏳ Aguardando imagem DALL-E carregar completamente...
+   (DALL-E pode levar até 2 minutos para renderizar)
+   ⏱️  Aguardando... 10s decorridos
+127.0.0.1 - - [07/Jun/2026 23:34:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 20s decorridos
+   ⚠️ Timeout após 30s, tentando capturar mesmo assim...
+   ⏳ Aguardando renderização final...
+   Tentando baixar imagem em ALTA QUALIDADE...
+   ✓ Imagem baixada em ALTA QUALIDADE via URL
+✓ Imagem validada: 1536x1024px
+✓ Imagem salva: output\images\scene_001.png
+
+🎬 Gerando vídeo para cena 1...
+Movimento: Logo fades in from white, gradient flows smoothly across dog silhouette, subtle light particles floa...
+🔄 Trocando para aba do Grok...
+🌐 Navegando para Grok Imagine...
+📍 URL: https://grok.com/imagine
+📸 Screenshot inicial: output\debug_grok_inicial_1.png
+
+📤 ETAPA 1: Clicando no '+' e fazendo upload...
+   Arquivo: output\images\scene_001.png
+   ℹ️  Botão '+' não encontrado, mas input[type='file'] existe
+   Buscando input[type='file'] diretamente...
+   Fazendo upload da imagem...
+   ✅ Imagem enviada! (tentativa 1)
+📸 Screenshot após upload: output\debug_grok_apos_upload_1.png
+
+🎬 ETAPA 2: Selecionando modo 'Video'...
+   ✅ Modo 'Video' selecionado via JS!
+
+⏱️ ETAPA 3: Selecionando duração '10s'...
+   ✅ Duração '10s' selecionada via JS!
+📸 Screenshot após config: output\debug_grok_config_1.png
+
+⌨️ ETAPA 4: Digitando prompt de movimento...
+   Tentando método 1: Procurando por placeholder...
+   ✅ Campo de prompt encontrado via JS!
+   ✅ Prompt enviado: Logo fades in from white, gradient flows smoothly ...
+📸 Screenshot após prompt: output\debug_grok_apos_prompt_1.png
+
+🖱️ ETAPA 5: Clicando botão enviar...
+   ✅ Botão enviar clicado! (X=1844.800048828125, Y=2037.4000244140625, 40x40)
+127.0.0.1 - - [07/Jun/2026 23:35:31] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após enviar: output\debug_grok_apos_enviar_1.png
+
+⏳ ETAPA 6: Aguardando geração do vídeo...
+   (Grok pode levar 2-5 minutos para gerar)
+   ℹ️  12 vídeos antigos, 0 blob URLs - aguardando NOVO...
+   ⏱️  Aguardando... 05:00 restantes   ⏱️  Aguardando... 04:55 restantes   ⏱️  Aguardando... 04:50 restantes   ⏱️  Aguardando... 04:45 restantes   ⏱️  Aguardando... 04:40 restantes   ⏱️  Aguardando... 04:35 restantes   ⏱️  Aguardando... 04:30 restantes   ⏱️  Aguardando... 04:25 restantes   ⏱️  Aguardando... 04:20 restantes   ⏱️  Aguardando... 04:15 restantes   ⏱️  Aguardando... 04:10 restantes   ⏱️  Aguardando... 04:05 restantes127.0.0.1 - - [07/Jun/2026 23:36:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 04:00 restantes   ⏱️  Aguardando... 03:55 restantes   ⏱️  Aguardando... 03:50 restantes   ⏱️  Aguardando... 03:45 restantes   ⏱️  Aguardando... 03:40 restantes   ⏱️  Aguardando... 03:35 restantes   ⏱️  Aguardando... 03:30 restantes   ⏱️  Aguardando... 03:25 restantes   ⏱️  Aguardando... 03:20 restantes   ⏱️  Aguardando... 03:15 restantes   ⏱️  Aguardando... 03:10 restantes127.0.0.1 - - [07/Jun/2026 23:37:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:05 restantes   ⏱️  Aguardando... 03:00 restantes   ⏱️  Aguardando... 02:55 restantes   ⏱️  Aguardando... 02:50 restantes   ⏱️  Aguardando... 02:45 restantes   ⏱️  Aguardando... 02:40 restantes   ⏱️  Aguardando... 02:35 restantes   ⏱️  Aguardando... 02:30 restantes   ⏱️  Aguardando... 02:25 restantes   ⏱️  Aguardando... 02:20 restantes   ⏱️  Aguardando... 02:15 restantes   ⏱️  Aguardando... 02:10 restantes127.0.0.1 - - [07/Jun/2026 23:38:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:05 restantes   ⏱️  Aguardando... 02:00 restantes   ⏱️  Aguardando... 01:55 restantes   ⏱️  Aguardando... 01:50 restantes   ⏱️  Aguardando... 01:45 restantes   ⏱️  Aguardando... 01:40 restantes   ⏱️  Aguardando... 01:35 restantes   ⏱️  Aguardando... 01:30 restantes   ⏱️  Aguardando... 01:25 restantes   ⏱️  Aguardando... 01:20 restantes   ⏱️  Aguardando... 01:15 restantes   ⏱️  Aguardando... 01:10 restantes127.0.0.1 - - [07/Jun/2026 23:39:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:05 restantes   ⏱️  Aguardando... 01:00 restantes   ⏱️  Aguardando... 00:55 restantes   ⏱️  Aguardando... 00:50 restantes   ⏱️  Aguardando... 00:45 restantes   ⏱️  Aguardando... 00:40 restantes   ⏱️  Aguardando... 00:35 restantes   ⏱️  Aguardando... 00:30 restantes   ⏱️  Aguardando... 00:25 restantes   ⏱️  Aguardando... 00:20 restantes   ⏱️  Aguardando... 00:15 restantes   ⏱️  Aguardando... 00:10 restantes127.0.0.1 - - [07/Jun/2026 23:40:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:05 restantes
+📸 Screenshot timeout: output\debug_grok_timeout_1.png
+   Debug: verificando elementos na página...
+   - 26 elementos <video>
+     src: https://imagine-public.x.ai/imagine-public/share-videos/534a498a-6131-473c-928a-
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: https://imagine-public.x.ai/imagine-public/share-videos/f52b561a-55bb-46aa-a4af-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/142272ba-5e52-4a69-97ea-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/4a8312f6-035b-4bb8-98d5-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/e66e8d2c-be50-44e7-ae44-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/4dea5073-0227-4d23-be89-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/0136bf9d-a9ec-49c8-896d-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/eecbb75b-4032-4afa-a783-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/a190cbaa-1e3f-4be5-8582-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/d9abba25-4bda-4e86-a153-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/7c51a38c-1ccf-49ea-9182-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/7a373788-8343-4351-83f7-
+   - 0 possíveis players de vídeo
+✗ Erro ao gerar vídeo: Vídeo não foi gerado em 300 segundos
+
+🎨 Gerando imagem para cena 2...
+Prompt: Friendly professional dog trainer in casual modern attire, kneeling beside a happy golden retriever ...
+🔄 Trocando para aba do ChatGPT...
+♻️  Reusando conversa existente (cena 2)...
+📸 Screenshot salvo: output\debug_inicio_cena_2.png
+📸 Screenshot após fechar popups: output\debug_depois_popup_cena_2.png
+🔍 Procurando campo de texto...
+   Tentando método 0: Procurando 'Pergunte alguma coisa'...
+   ✓ Encontrado via JS (Pergunte alguma coisa)!
+✓ Campo de texto encontrado! Continuando...
+🖱️ Ativando campo de texto...
+   ✓ Clique direto funcionou
+   ✓ JavaScript click funcionou
+   ✓ Scroll + focus funcionou
+   ✓ ActionChains click funcionou
+📸 Screenshot após ativar campo: output\debug_campo_ativado_cena_2.png
+⌨️ Digitando comando...
+   ✓ Texto digitado via send_keys!
+📸 Screenshot após digitar: output\debug_depois_digitar_cena_2.png
+🔍 Procurando botão de enviar...
+✓ Enviado com método 1!
+⏳ Aguardando DALL-E gerar imagem (pode levar 30-60 segundos)...
+   Tentativa 1/24...
+   Tentativa 2/24...
+   Tentativa 3/24...
+   Tentativa 4/24...
+   Tentativa 5/24...
+✓ Imagem encontrada! URL: https://chatgpt.com/backend-api/estuary/content?id=file_000000007e74720eb50b6996...
+   ℹ️  3 imagens VISÍVEIS na página, usando a MAIS RECENTE (Y=395px)
+   ⏳ Aguardando imagem DALL-E carregar completamente...
+   (DALL-E pode levar até 2 minutos para renderizar)
+127.0.0.1 - - [07/Jun/2026 23:41:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 10s decorridos
+   ⏱️  Aguardando... 20s decorridos
+   ⚠️ Timeout após 30s, tentando capturar mesmo assim...
+   ⏳ Aguardando renderização final...
+   Tentando baixar imagem em ALTA QUALIDADE...
+   ✓ Imagem baixada em ALTA QUALIDADE via URL
+✓ Imagem validada: 1536x1024px
+✓ Imagem salva: output\images\scene_002.png
+
+🎬 Gerando vídeo para cena 2...
+Movimento: Gentle pan from left to right, trainer turns to face camera with warm smile, dog wags tail naturally...
+🔄 Trocando para aba do Grok...
+🌐 Navegando para Grok Imagine...
+📍 URL: https://grok.com/imagine
+📸 Screenshot inicial: output\debug_grok_inicial_2.png
+
+📤 ETAPA 1: Clicando no '+' e fazendo upload...
+   Arquivo: output\images\scene_002.png
+   ℹ️  Botão '+' não encontrado, mas input[type='file'] existe
+   Buscando input[type='file'] diretamente...
+   Fazendo upload da imagem...
+   ✅ Imagem enviada! (tentativa 1)
+📸 Screenshot após upload: output\debug_grok_apos_upload_2.png
+
+🎬 ETAPA 2: Selecionando modo 'Video'...
+   ✅ Modo 'Video' selecionado via JS!
+
+⏱️ ETAPA 3: Selecionando duração '10s'...
+   ✅ Duração '10s' selecionada via JS!
+📸 Screenshot após config: output\debug_grok_config_2.png
+
+⌨️ ETAPA 4: Digitando prompt de movimento...
+127.0.0.1 - - [07/Jun/2026 23:42:31] "GET /api/status HTTP/1.1" 200 -
+   Tentando método 1: Procurando por placeholder...
+   ✅ Campo de prompt encontrado via JS!
+   ✅ Prompt enviado: Gentle pan from left to right, trainer turns to fa...
+📸 Screenshot após prompt: output\debug_grok_apos_prompt_2.png
+
+🖱️ ETAPA 5: Clicando botão enviar...
+   ✅ Botão enviar clicado! (X=1298.800048828125, Y=1623.4000244140625, 40x40)
+📸 Screenshot após enviar: output\debug_grok_apos_enviar_2.png
+
+⏳ ETAPA 6: Aguardando geração do vídeo...
+   (Grok pode levar 2-5 minutos para gerar)
+   ℹ️  13 vídeos antigos, 0 blob URLs - aguardando NOVO...
+   ⏱️  Aguardando... 05:00 restantes   ⏱️  Aguardando... 04:55 restantes   ⏱️  Aguardando... 04:50 restantes   ⏱️  Aguardando... 04:45 restantes   ⏱️  Aguardando... 04:40 restantes   ⏱️  Aguardando... 04:35 restantes   ⏱️  Aguardando... 04:30 restantes   ⏱️  Aguardando... 04:25 restantes   ⏱️  Aguardando... 04:20 restantes   ⏱️  Aguardando... 04:15 restantes127.0.0.1 - - [07/Jun/2026 23:43:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 04:10 restantes   ⏱️  Aguardando... 04:05 restantes   ⏱️  Aguardando... 04:00 restantes   ⏱️  Aguardando... 03:55 restantes   ⏱️  Aguardando... 03:50 restantes   ⏱️  Aguardando... 03:45 restantes   ⏱️  Aguardando... 03:40 restantes   ⏱️  Aguardando... 03:35 restantes   ⏱️  Aguardando... 03:30 restantes   ⏱️  Aguardando... 03:25 restantes   ⏱️  Aguardando... 03:20 restantes127.0.0.1 - - [07/Jun/2026 23:44:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:15 restantes   ⏱️  Aguardando... 03:10 restantes   ⏱️  Aguardando... 03:05 restantes   ⏱️  Aguardando... 03:00 restantes   ⏱️  Aguardando... 02:55 restantes   ⏱️  Aguardando... 02:50 restantes   ⏱️  Aguardando... 02:45 restantes   ⏱️  Aguardando... 02:40 restantes   ⏱️  Aguardando... 02:35 restantes   ⏱️  Aguardando... 02:30 restantes   ⏱️  Aguardando... 02:25 restantes   ⏱️  Aguardando... 02:20 restantes127.0.0.1 - - [07/Jun/2026 23:45:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:15 restantes   ⏱️  Aguardando... 02:10 restantes   ⏱️  Aguardando... 02:05 restantes   ⏱️  Aguardando... 02:00 restantes   ⏱️  Aguardando... 01:55 restantes   ⏱️  Aguardando... 01:50 restantes   ⏱️  Aguardando... 01:45 restantes   ⏱️  Aguardando... 01:40 restantes   ⏱️  Aguardando... 01:35 restantes   ⏱️  Aguardando... 01:30 restantes   ⏱️  Aguardando... 01:25 restantes   ⏱️  Aguardando... 01:20 restantes127.0.0.1 - - [07/Jun/2026 23:46:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:15 restantes   ⏱️  Aguardando... 01:10 restantes   ⏱️  Aguardando... 01:05 restantes   ⏱️  Aguardando... 01:00 restantes   ⏱️  Aguardando... 00:55 restantes   ⏱️  Aguardando... 00:50 restantes   ⏱️  Aguardando... 00:45 restantes   ⏱️  Aguardando... 00:40 restantes   ⏱️  Aguardando... 00:35 restantes   ⏱️  Aguardando... 00:30 restantes   ⏱️  Aguardando... 00:25 restantes127.0.0.1 - - [07/Jun/2026 23:47:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:20 restantes   ⏱️  Aguardando... 00:15 restantes   ⏱️  Aguardando... 00:10 restantes   ⏱️  Aguardando... 00:05 restantes
+📸 Screenshot timeout: output\debug_grok_timeout_2.png
+   Debug: verificando elementos na página...
+   - 27 elementos <video>
+     src: https://imagine-public.x.ai/imagine-public/share-videos/534a498a-6131-473c-928a-
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: None
+     src: https://imagine-public.x.ai/imagine-public/share-videos/05312cf6-9c3e-4deb-be2c-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/c3866266-e154-4e5d-ba1b-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/a41a7669-041a-4949-9688-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/8f78a9bd-c2aa-4b08-ab99-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/066f65d4-9b3d-4d9a-afb8-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/9642b73a-10a0-457a-8afe-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/5cd7a3d8-151f-44bb-b723-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/d9ab4ae1-ce8a-4326-a426-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/e34109c5-3c56-4f5e-be90-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/d9abba25-4bda-4e86-a153-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/203a2c37-9ee3-43c1-96fa-
+     src: https://imagine-public.x.ai/imagine-public/share-videos/1b138564-702e-4457-97fc-
+   - 0 possíveis players de vídeo
+✗ Erro ao gerar vídeo: Vídeo não foi gerado em 300 segundos
+
+🎨 Gerando imagem para cena 3...
+Prompt: Modern educational typography displaying the word SENTA in bold rounded sans-serif font, paw print i...
+🔄 Trocando para aba do ChatGPT...
+♻️  Reusando conversa existente (cena 3)...
+📸 Screenshot salvo: output\debug_inicio_cena_3.png
+📸 Screenshot após fechar popups: output\debug_depois_popup_cena_3.png
+🔍 Procurando campo de texto...
+   Tentando método 0: Procurando 'Pergunte alguma coisa'...
+   ✓ Encontrado via JS (Pergunte alguma coisa)!
+✓ Campo de texto encontrado! Continuando...
+🖱️ Ativando campo de texto...
+   ✓ Clique direto funcionou
+   ✓ JavaScript click funcionou
+   ✓ Scroll + focus funcionou
+   ✓ ActionChains click funcionou
+📸 Screenshot após ativar campo: output\debug_campo_ativado_cena_3.png
+⌨️ Digitando comando...
+   ✓ Texto digitado via send_keys!
+📸 Screenshot após digitar: output\debug_depois_digitar_cena_3.png
+🔍 Procurando botão de enviar...
+✓ Enviado com método 1!
+⏳ Aguardando DALL-E gerar imagem (pode levar 30-60 segundos)...
+   Tentativa 1/24...
+   Tentativa 2/24...
+   Tentativa 3/24...
+127.0.0.1 - - [07/Jun/2026 23:48:31] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 4/24...
+   Tentativa 5/24...
+   Tentativa 6/24...
+✓ Imagem encontrada! URL: https://chatgpt.com/backend-api/estuary/content?id=file_000000003d14720e9f89046c...
+   ℹ️  3 imagens VISÍVEIS na página, usando a MAIS RECENTE (Y=394px)
+   ⏳ Aguardando imagem DALL-E carregar completamente...
+   (DALL-E pode levar até 2 minutos para renderizar)
+   ⏱️  Aguardando... 10s decorridos
+   ⏱️  Aguardando... 20s decorridos
+   ⚠️ Timeout após 30s, tentando capturar mesmo assim...
+   ⏳ Aguardando renderização final...
+   Tentando baixar imagem em ALTA QUALIDADE...
+   ✓ Imagem baixada em ALTA QUALIDADE via URL
+✓ Imagem validada: 1536x1024px
+✓ Imagem salva: output\images\scene_003.png
+
+🎬 Gerando vídeo para cena 3...
+Movimento: Text animates in from left with slight bounce, paw print scales up with pop effect, subtle gradient ...
+🔄 Trocando para aba do Grok...
+🌐 Navegando para Grok Imagine...
+📍 URL: https://grok.com/imagine
+📸 Screenshot inicial: output\debug_grok_inicial_3.png
+
+📤 ETAPA 1: Clicando no '+' e fazendo upload...
+   Arquivo: output\images\scene_003.png
+   ℹ️  Botão '+' não encontrado, mas input[type='file'] existe
+127.0.0.1 - - [07/Jun/2026 23:49:31] "GET /api/status HTTP/1.1" 200 -
+   Buscando input[type='file'] diretamente...
+   Fazendo upload da imagem...
+   ✅ Imagem enviada! (tentativa 1)
+📸 Screenshot após upload: output\debug_grok_apos_upload_3.png
+
+🎬 ETAPA 2: Selecionando modo 'Video'...
+   ✅ Modo 'Video' selecionado via JS!
+
+⏱️ ETAPA 3: Selecionando duração '10s'...
+   ✅ Duração '10s' selecionada via JS!
+📸 Screenshot após config: output\debug_grok_config_3.png
+
+⌨️ ETAPA 4: Digitando prompt de movimento...
+   Tentando método 1: Procurando por placeholder...
+   ✅ Campo de prompt encontrado via JS!
+   ✅ Prompt enviado: Text animates in from left with slight bounce, paw...
+📸 Screenshot após prompt: output\debug_grok_apos_prompt_3.png
+
+🖱️ ETAPA 5: Clicando botão enviar...
+   ✅ Botão enviar clicado! (X=1844.800048828125, Y=967.4000244140625, 40x40)
+📸 Screenshot após enviar: output\debug_grok_apos_enviar_3.png
+
+⏳ ETAPA 6: Aguardando geração do vídeo...
+   (Grok pode levar 2-5 minutos para gerar)
+   ℹ️  13 vídeos antigos, 0 blob URLs - aguardando NOVO...
+   ⏱️  Aguardando... 05:00 restantes   ⏱️  Aguardando... 04:55 restantes   ⏱️  Aguardando... 04:50 restantes   ⏱️  Aguardando... 04:45 restantes   ⏱️  Aguardando... 04:40 restantes   ⏱️  Aguardando... 04:35 restantes127.0.0.1 - - [07/Jun/2026 23:50:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 04:30 restantes   ⏱️  Aguardando... 04:25 restantes   ⏱️  Aguardando... 04:20 restantes   ⏱️  Aguardando... 04:15 restantes   ⏱️  Aguardando... 04:10 restantes   ⏱️  Aguardando... 04:05 restantes   ⏱️  Aguardando... 04:00 restantes   ⏱️  Aguardando... 03:55 restantes

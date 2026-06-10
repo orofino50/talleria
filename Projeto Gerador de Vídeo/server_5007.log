@@ -1,0 +1,758 @@
+
+============================================================
+🎬 VIDEO GENERATOR - Servidor Backend
+============================================================
+
+📡 Servidor rodando em: http://localhost:5007
+🌐 Abra seu navegador e acesse: http://localhost:5007
+
+⚠️  Certifique-se de estar logado em:
+   • ChatGPT (chat.openai.com)
+   • Grok (x.ai/grok)
+
+📋 Endpoints disponíveis:
+   • GET  /api/status - Status do processamento
+   • POST /api/process - Iniciar processamento
+   • POST /api/cancel - Cancelar processamento
+   • POST /api/auto-confirm - Confirmar browsers auto
+   • GET  /api/health - Health check
+   • GET  /api/output - Listar arquivos gerados
+
+============================================================
+
+ * Serving Flask app 'server'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5007
+Press CTRL+C to quit
+127.0.0.1 - - [07/Jun/2026 18:12:00] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:15] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [07/Jun/2026 18:12:44] "POST /api/process HTTP/1.1" 200 -
+⏱️  Configurado para aguardar 3 minutos entre cenas
+✓ Navegador configurado (anti-detecção ativa)
+ℹ️  Este é um Chrome separado - você pode usar seu Chrome normal normalmente!
+
+============================================================
+⚠️  CONFIGURAÇÃO INICIAL
+============================================================
+
+🔗 Abrindo ChatGPT...
+127.0.0.1 - - [07/Jun/2026 18:12:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:46] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:47] "GET /api/status HTTP/1.1" 200 -
+
+📋 INSTRUÇÕES:
+   1. Faça LOGIN no ChatGPT (se necessário)
+   2. Feche quaisquer popups/tours
+   3. Certifique-se que vê o campo de texto
+   4. Teste gerando uma imagem manualmente:
+      Digite: 'Generate an image: a cat'
+   5. Se funcionou, volte aqui!
+
+🔗 Abrindo Grok...
+127.0.0.1 - - [07/Jun/2026 18:12:48] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:49] "GET /api/status HTTP/1.1" 200 -
+   6. Troque para aba do Grok e faça LOGIN
+   7. Volte para a aba do ChatGPT
+
+✅ Aguardando confirmação na INTERFACE WEB...
+   (Clique no botão 'Sim, estão prontos' na interface)
+
+⏳ Aguardando confirmação na interface...
+127.0.0.1 - - [07/Jun/2026 18:12:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:52] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:54] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:12:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:00] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:02] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:04] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:06] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:07] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:08] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:10] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:12] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:14] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:16] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:17] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:18] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:19] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:20] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:21] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:22] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:23] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:24] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:26] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:30] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:31] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:32] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:34] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:36] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:38] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:42] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:44] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:46] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:47] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:48] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:52] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:54] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:13:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:00] "POST /api/browser-confirm HTTP/1.1" 200 -
+
+✅ Confirmação recebida! Continuando processamento!127.0.0.1 - - [07/Jun/2026 18:14:00] "GET /api/status HTTP/1.1" 200 -
+
+============================================================
+
+
+🎨 Gerando imagem para cena 1...
+Prompt: AdaptaCão brand logo reveal, stylized jumping dog silhouette in blue to orange gradient (from #4A90E...
+🔄 Trocando para aba do ChatGPT...
+127.0.0.1 - - [07/Jun/2026 18:14:01] "GET /api/status HTTP/1.1" 200 -
+📂 Abrindo nova conversa no ChatGPT...
+127.0.0.1 - - [07/Jun/2026 18:14:02] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:06] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:07] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot salvo: output\debug_inicio_cena_1.png
+127.0.0.1 - - [07/Jun/2026 18:14:08] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:09] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após fechar popups: output\debug_depois_popup_cena_1.png
+🔍 Procurando campo de texto...
+   Tentando método direto: div contenteditable
+   ✓ Encontrado com contenteditable!
+✓ Campo de texto encontrado! Continuando...
+🖱️ Ativando campo de texto...
+   ✓ Clique direto funcionou
+127.0.0.1 - - [07/Jun/2026 18:14:10] "GET /api/status HTTP/1.1" 200 -
+   ✓ JavaScript click funcionou
+   ✓ Scroll + focus funcionou
+127.0.0.1 - - [07/Jun/2026 18:14:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:12] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:14] "GET /api/status HTTP/1.1" 200 -
+   ✓ ActionChains click funcionou
+127.0.0.1 - - [07/Jun/2026 18:14:15] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após ativar campo: output\debug_campo_ativado_cena_1.png
+⌨️ Digitando comando (Método 1 - send_keys)...
+127.0.0.1 - - [07/Jun/2026 18:14:16] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:17] "GET /api/status HTTP/1.1" 200 -
+   ✓ send_keys funcionou
+127.0.0.1 - - [07/Jun/2026 18:14:18] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após digitar: output\debug_depois_digitar_cena_1.png
+127.0.0.1 - - [07/Jun/2026 18:14:19] "GET /api/status HTTP/1.1" 200 -
+🔍 Procurando botão de enviar...
+✓ Enviado com método 1!
+⏳ Aguardando DALL-E gerar imagem (pode levar 30-60 segundos)...
+127.0.0.1 - - [07/Jun/2026 18:14:20] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:21] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:22] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:23] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:24] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:26] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:30] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:31] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 1/24...
+127.0.0.1 - - [07/Jun/2026 18:14:32] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:34] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:36] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 2/24...
+127.0.0.1 - - [07/Jun/2026 18:14:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:38] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:41] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 3/24...
+127.0.0.1 - - [07/Jun/2026 18:14:42] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:44] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:46] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 4/24...
+127.0.0.1 - - [07/Jun/2026 18:14:47] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:48] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:52] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 5/24...
+✓ Imagem encontrada! URL: https://chatgpt.com/backend-api/estuary/content?id=file_0000000011f8720e88ec6cc2...
+   ℹ️  2 imagens VISÍVEIS na página, usando a MAIS RECENTE (Y=130px)
+   ⏳ Aguardando imagem DALL-E carregar completamente...
+   (DALL-E pode levar até 2 minutos para renderizar)
+127.0.0.1 - - [07/Jun/2026 18:14:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:54] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:14:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:15:00] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:15:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:15:02] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 10s decorridos
+127.0.0.1 - - [07/Jun/2026 18:15:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:15:04] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 20s decorridos
+   ⚠️ Timeout após 30s, tentando capturar mesmo assim...
+   ⏳ Aguardando renderização final...
+   Tentando baixar imagem em ALTA QUALIDADE...
+   ✓ Imagem baixada em ALTA QUALIDADE via URL
+✓ Imagem validada: 1536x1024px
+✓ Imagem salva: output\images\scene_001.png
+
+🎬 Gerando vídeo para cena 1...
+Movimento: Logo fades in from white, gradient flows smoothly across dog silhouette, subtle light particles floa...
+🔄 Trocando para aba do Grok...
+🌐 Navegando para Grok...
+127.0.0.1 - - [07/Jun/2026 18:15:31] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot antes de clicar Imagine: output\debug_grok_antes_imagine_1.png
+🖱️ Procurando botão 'Imagine' na sidebar...
+   ✗ Não encontrou botão Imagine clicável
+   Tentando URL direta...
+📍 URL atual: https://grok.com/imagine
+📸 Screenshot na página Imagine: output\debug_grok_inicial_1.png
+📤 Fazendo upload da imagem...
+   Arquivo: output\images\scene_001.png
+   Tentando método 1: input[type='file']...
+   ✓ Imagem enviada via input[type='file']
+🔍 Verificando se imagem foi carregada...
+📸 Screenshot após upload: output\debug_grok_apos_upload_1.png
+⌨️ Enviando prompt de movimento...
+   Tentando encontrar textarea...
+   ✗ textarea não encontrado
+   Tentando encontrar div[contenteditable]...
+   ✓ Encontrou div[contenteditable]
+✓ Prompt enviado: Logo fades in from white, gradient flows smoothly ...
+📸 Screenshot após prompt: output\debug_grok_apos_prompt_1.png
+🔍 Procurando botão com ícone (seta para cima)...
+📸 Screenshot antes: output\debug_grok_before_click_1.png
+   Procurando botão redondo preto com seta...
+   Encontrados 91 elementos clicáveis
+      Elem com SVG: X=208, cor=rgba(0, 0, 0, 0), raio=12px, tamanho=40x40
+   ✓ ENCONTRADO! X=208, escuro=True, redondo=False, circular=True
+   ✅ Botão com ícone CLICADO!
+✓ Clique no botão de ícone bem-sucedido!
+   🔍 Listando todos os botões visíveis:
+      Botão 1: 'Alternar barra lateral' @ X=208px
+      Botão 2: 'Buscar' @ X=10px
+      Botão 3: 'Projetos' @ X=14px
+      Botão 4: 'Novo Projeto' @ X=10px
+      Botão 6: 'Lucas Pietro
+orofino50@gmail.com' @ X=8px
+      Botão 7: 'Chibi' @ X=94px
+      Botão 8: 'Professional Headshot' @ X=283px
+      Botão 9: 'Logo Editor' @ X=471px
+      Botão 10: '70s Street Style' @ X=670px
+      Botão 11: 'Quality Enhancer' @ X=869px
+      Botão 12: 'Comic Book' @ X=1069px
+      Botão 13: 'Object Remover' @ X=1270px
+      Botão 14: 'Product Showcase' @ X=1471px
+      Botão 15: 'Glossy Product Shot' @ X=1673px
+      Botão 16: '80s Anime' @ X=1875px
+      Botão 17: 'Watercolor Portrait' @ X=2077px
+      Botão 18: 'Video Game' @ X=2279px
+      Botão 19: '3D Animation' @ X=2481px
+      Botão 20: 'Spaghetti Western' @ X=2683px
+      Botão 21: 'Haze Portrait' @ X=2885px
+      Botão 22: 'Funky Dance' @ X=3087px
+      Botão 23: 'Future Past' @ X=3289px
+      Botão 24: 'Roman Empire' @ X=3491px
+      Botão 25: 'Ad Astra' @ X=3693px
+      Botão 26: 'Add Girlfriend' @ X=3895px
+      Botão 27: 'Future Family' @ X=4097px
+      Botão 28: 'Laser Fight' @ X=4299px
+      Botão 29: 'Sunny Morning' @ X=4501px
+      Botão 67: '[sem texto]' @ X=566px
+      Botão 69: '[sem texto]' @ X=638px
+      Botão 70: '[sem texto]' @ X=1350px
+      Botão 71: 'Agent (Beta)' @ X=638px
+      Botão 72: 'Imagem' @ X=763px
+      Botão 73: 'Vídeo' @ X=856px
+      Botão 74: 'Original' @ X=939px
+127.0.0.1 - - [07/Jun/2026 18:16:31] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após clicar: output\debug_grok_after_click_1.png
+⏳ Aguardando geração do vídeo...
+   (Grok pode levar 2-5 minutos para gerar)
+   ℹ️  11 vídeos antigos na página, aguardando NOVO...
+   ⏱️  Aguardando... 05:00 restantes   ⏱️  Aguardando... 04:55 restantes   ⏱️  Aguardando... 04:50 restantes   ⏱️  Aguardando... 04:45 restantes   ⏱️  Aguardando... 04:40 restantes   ⏱️  Aguardando... 04:35 restantes   ⏱️  Aguardando... 04:30 restantes127.0.0.1 - - [07/Jun/2026 18:17:04] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:06] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 04:25 restantes127.0.0.1 - - [07/Jun/2026 18:17:08] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:10] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:12] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 04:20 restantes127.0.0.1 - - [07/Jun/2026 18:17:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:14] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:16] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:17] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 04:15 restantes127.0.0.1 - - [07/Jun/2026 18:17:18] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:19] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:20] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:21] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:22] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:22] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 04:10 restantes127.0.0.1 - - [07/Jun/2026 18:17:23] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:24] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:26] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:27] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 04:05 restantes127.0.0.1 - - [07/Jun/2026 18:17:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:30] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:31] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:32] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 04:00 restantes127.0.0.1 - - [07/Jun/2026 18:17:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:36] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:38] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:55 restantes127.0.0.1 - - [07/Jun/2026 18:17:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:42] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:50 restantes127.0.0.1 - - [07/Jun/2026 18:17:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:44] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:46] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:47] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:48] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:45 restantes127.0.0.1 - - [07/Jun/2026 18:17:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:52] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:40 restantes127.0.0.1 - - [07/Jun/2026 18:17:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:54] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:57] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:35 restantes127.0.0.1 - - [07/Jun/2026 18:17:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:17:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:00] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:02] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:03] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:30 restantes127.0.0.1 - - [07/Jun/2026 18:18:04] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:06] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:07] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:08] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:25 restantes127.0.0.1 - - [07/Jun/2026 18:18:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:10] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:12] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:13] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:20 restantes127.0.0.1 - - [07/Jun/2026 18:18:14] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:16] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:17] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:18] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:15 restantes127.0.0.1 - - [07/Jun/2026 18:18:19] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:20] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:21] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:22] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:23] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:10 restantes127.0.0.1 - - [07/Jun/2026 18:18:24] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:26] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:29] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:05 restantes127.0.0.1 - - [07/Jun/2026 18:18:30] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:31] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:32] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:34] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:35] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 03:00 restantes127.0.0.1 - - [07/Jun/2026 18:18:36] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:38] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:40] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:55 restantes127.0.0.1 - - [07/Jun/2026 18:18:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:42] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:44] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:45] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:50 restantes127.0.0.1 - - [07/Jun/2026 18:18:46] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:47] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:51] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:45 restantes127.0.0.1 - - [07/Jun/2026 18:18:52] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:54] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:56] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:40 restantes127.0.0.1 - - [07/Jun/2026 18:18:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:18:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:00] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:01] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:35 restantes127.0.0.1 - - [07/Jun/2026 18:19:02] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:04] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:06] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:30 restantes127.0.0.1 - - [07/Jun/2026 18:19:07] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:08] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:10] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:11] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:25 restantes127.0.0.1 - - [07/Jun/2026 18:19:12] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:14] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:16] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:20 restantes127.0.0.1 - - [07/Jun/2026 18:19:17] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:18] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:19] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:20] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:21] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:22] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:15 restantes127.0.0.1 - - [07/Jun/2026 18:19:22] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:23] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:26] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:10 restantes127.0.0.1 - - [07/Jun/2026 18:19:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:30] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:31] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:32] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:05 restantes127.0.0.1 - - [07/Jun/2026 18:19:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:34] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:36] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:37] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 02:00 restantes127.0.0.1 - - [07/Jun/2026 18:19:38] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:42] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:55 restantes127.0.0.1 - - [07/Jun/2026 18:19:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:44] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:46] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:47] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:50 restantes127.0.0.1 - - [07/Jun/2026 18:19:48] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:52] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:45 restantes127.0.0.1 - - [07/Jun/2026 18:19:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:54] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:57] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:40 restantes127.0.0.1 - - [07/Jun/2026 18:19:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:19:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:00] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:02] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:35 restantes127.0.0.1 - - [07/Jun/2026 18:20:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:04] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:06] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:07] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:30 restantes127.0.0.1 - - [07/Jun/2026 18:20:08] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:10] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:12] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:13] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:25 restantes127.0.0.1 - - [07/Jun/2026 18:20:14] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:16] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:17] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:18] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:20 restantes127.0.0.1 - - [07/Jun/2026 18:20:19] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:20] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:21] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:22] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:23] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:15 restantes127.0.0.1 - - [07/Jun/2026 18:20:24] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:26] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:29] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:10 restantes127.0.0.1 - - [07/Jun/2026 18:20:30] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:31] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:32] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:33] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:05 restantes127.0.0.1 - - [07/Jun/2026 18:20:34] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:36] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:38] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:39] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 01:00 restantes127.0.0.1 - - [07/Jun/2026 18:20:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:42] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:44] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:55 restantes127.0.0.1 - - [07/Jun/2026 18:20:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:46] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:47] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:48] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:49] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:50 restantes127.0.0.1 - - [07/Jun/2026 18:20:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:52] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:54] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:55] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:45 restantes127.0.0.1 - - [07/Jun/2026 18:20:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:20:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:00] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:40 restantes127.0.0.1 - - [07/Jun/2026 18:21:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:02] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:04] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:05] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:35 restantes127.0.0.1 - - [07/Jun/2026 18:21:06] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:08] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:10] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:10] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:30 restantes127.0.0.1 - - [07/Jun/2026 18:21:12] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:14] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:16] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:25 restantes127.0.0.1 - - [07/Jun/2026 18:21:17] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:18] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:19] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:20] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:21] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:20 restantes127.0.0.1 - - [07/Jun/2026 18:21:22] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:23] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:24] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:26] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:15 restantes127.0.0.1 - - [07/Jun/2026 18:21:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:30] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:31] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:32] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:10 restantes127.0.0.1 - - [07/Jun/2026 18:21:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:34] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:36] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 00:05 restantes127.0.0.1 - - [07/Jun/2026 18:21:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:38] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:42] "GET /api/status HTTP/1.1" 200 -
+
+📸 Screenshot timeout: output\debug_grok_timeout_1.png
+✗ Erro ao gerar vídeo: Vídeo não foi gerado em 300 segundos
+
+🎨 Gerando imagem para cena 2...
+Prompt: Friendly professional dog trainer in casual modern attire, kneeling beside a happy golden retriever ...
+🔄 Trocando para aba do ChatGPT...
+127.0.0.1 - - [07/Jun/2026 18:21:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:44] "GET /api/status HTTP/1.1" 200 -
+♻️  Reusando conversa existente (cena 2)...
+📸 Screenshot salvo: output\debug_inicio_cena_2.png
+127.0.0.1 - - [07/Jun/2026 18:21:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:46] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:47] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após fechar popups: output\debug_depois_popup_cena_2.png
+🔍 Procurando campo de texto...
+   Tentando método direto: div contenteditable
+   ✓ Encontrado com contenteditable!
+✓ Campo de texto encontrado! Continuando...
+🖱️ Ativando campo de texto...
+   ✓ Clique direto funcionou
+127.0.0.1 - - [07/Jun/2026 18:21:48] "GET /api/status HTTP/1.1" 200 -
+   ✓ JavaScript click funcionou
+   ✓ Scroll + focus funcionou
+127.0.0.1 - - [07/Jun/2026 18:21:49] "GET /api/status HTTP/1.1" 200 -
+   ✓ ActionChains click funcionou
+127.0.0.1 - - [07/Jun/2026 18:21:50] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após ativar campo: output\debug_campo_ativado_cena_2.png
+⌨️ Digitando comando (Método 1 - send_keys)...
+127.0.0.1 - - [07/Jun/2026 18:21:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:52] "GET /api/status HTTP/1.1" 200 -
+   ✓ send_keys funcionou
+127.0.0.1 - - [07/Jun/2026 18:21:53] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após digitar: output\debug_depois_digitar_cena_2.png
+127.0.0.1 - - [07/Jun/2026 18:21:54] "GET /api/status HTTP/1.1" 200 -
+🔍 Procurando botão de enviar...
+✓ Enviado com método 1!
+⏳ Aguardando DALL-E gerar imagem (pode levar 30-60 segundos)...
+127.0.0.1 - - [07/Jun/2026 18:21:55] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:56] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:21:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:00] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:02] "POST /api/cancel HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:02] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:04] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:06] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 1/24...
+127.0.0.1 - - [07/Jun/2026 18:22:07] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:08] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:10] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:11] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 2/24...
+127.0.0.1 - - [07/Jun/2026 18:22:12] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:14] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:16] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 3/24...
+127.0.0.1 - - [07/Jun/2026 18:22:17] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:18] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:19] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:20] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:21] "GET /api/status HTTP/1.1" 200 -
+   Tentativa 4/24...
+✓ Imagem encontrada! URL: https://chatgpt.com/backend-api/estuary/content?id=file_00000000e02c720e80fd50be...
+   ℹ️  2 imagens VISÍVEIS na página, usando a MAIS RECENTE (Y=301px)
+   ⏳ Aguardando imagem DALL-E carregar completamente...
+   (DALL-E pode levar até 2 minutos para renderizar)
+127.0.0.1 - - [07/Jun/2026 18:22:22] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:23] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:24] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:26] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:27] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:28] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:29] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:30] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:31] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 10s decorridos
+127.0.0.1 - - [07/Jun/2026 18:22:33] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:34] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:35] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:36] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:37] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:38] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:39] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:40] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:41] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:42] "GET /api/status HTTP/1.1" 200 -
+   ⏱️  Aguardando... 20s decorridos
+127.0.0.1 - - [07/Jun/2026 18:22:43] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:44] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:45] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:46] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:47] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:48] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:49] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:50] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:51] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:52] "GET /api/status HTTP/1.1" 200 -
+   ⚠️ Timeout após 30s, tentando capturar mesmo assim...
+   ⏳ Aguardando renderização final...
+127.0.0.1 - - [07/Jun/2026 18:22:53] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:54] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:55] "GET /api/status HTTP/1.1" 200 -
+   Tentando baixar imagem em ALTA QUALIDADE...
+127.0.0.1 - - [07/Jun/2026 18:22:56] "GET /api/status HTTP/1.1" 200 -
+   ✓ Imagem baixada em ALTA QUALIDADE via URL
+✓ Imagem validada: 1536x1024px
+✓ Imagem salva: output\images\scene_002.png
+
+🎬 Gerando vídeo para cena 2...
+Movimento: Gentle pan from left to right, trainer turns to face camera with warm smile, dog wags tail naturally...
+🔄 Trocando para aba do Grok...
+♻️  Reusando sessão do Grok (cena 2)
+📍 URL atual: https://grok.com/imagine
+📤 Fazendo upload da imagem...
+   Arquivo: output\images\scene_002.png
+127.0.0.1 - - [07/Jun/2026 18:22:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:58] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:22:59] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:00] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:02] "GET /api/status HTTP/1.1" 200 -
+   Tentando método 1: input[type='file']...
+   ✓ Imagem enviada via input[type='file']
+127.0.0.1 - - [07/Jun/2026 18:23:03] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:04] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:05] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:06] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:06] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:08] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:09] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:10] "GET /api/status HTTP/1.1" 200 -
+🔍 Verificando se imagem foi carregada...
+127.0.0.1 - - [07/Jun/2026 18:23:11] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:12] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:13] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:14] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:15] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:16] "GET /api/status HTTP/1.1" 200 -
+📸 Screenshot após upload: output\debug_grok_apos_upload_2.png
+⌨️ Enviando prompt de movimento...
+   Tentando encontrar textarea...
+127.0.0.1 - - [07/Jun/2026 18:23:17] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [07/Jun/2026 18:23:18] "GET /api/status HTTP/1.1" 200 -
+   ✗ textarea não encontrado
+   Tentando encontrar div[contenteditable]...
+   ✗ div[contenteditable] não encontrado
+   Tentando encontrar input[type='text']...
+   ✗ input[type='text'] não encontrado
+   Tentando encontrar qualquer elemento editável...
+   ✗ Nenhum elemento editável encontrado
+✗ Erro ao enviar prompt: Nenhum campo de prompt encontrado
+✗ Erro ao gerar vídeo: Nenhum campo de prompt encontrado

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 62: Preparação para o Futuro (Manutenção e Novos Desafios)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A calendar showing a training schedule: 10-15 minutes of practice sessions scheduled 3-4 times a week. A happy dog icon is on each practice day. 8k quality.",
+      "grok_movement": "The camera pans across the month, showing the consistent but manageable practice schedule.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A diagram showing a \"Jackpot de Surpresa\". The dog performs a simple, well-known command like \"Senta\" and unexpectedly receives a super high-value treat. Keeping the basics exciting. 8k quality.",
+      "grok_movement": "A huge \"JACKPOT!\" animation explodes on screen when the surprise reward is given, emphasizing the concept of variable reinforcement.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A person is browsing online for new dog sports like Agility, Flyball, or Canicross. A world of new possibilities. 8k quality.",
+      "grok_movement": "The camera scrolls through exciting images and videos of these different dog sports, sparking ideas for future activities.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A dog is learning a brand new, complex trick not covered in the course, like skateboarding. The owner is using the same principles taught in AdaptaCão (luring, shaping, positive reinforcement). 8k quality.",
+      "grok_movement": "A split screen shows the principles from the course on one side, and the owner applying them to the new trick on the other, showing the universal applicability of the method.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog and owner on a grand adventure, perhaps on a mountaintop or a beautiful beach, looking towards the horizon. A symbol of their journey together. Text overlay: \"A Jornada Só Está Começando\". 8k quality.",
+      "grok_movement": "A beautiful, inspiring, cinematic shot. The text appears with a hopeful and adventurous font.",
+      "use_previous_frame": true
+    }
+  ]
+}

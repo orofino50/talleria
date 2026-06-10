@@ -1,0 +1,78 @@
+{
+  "projeto": "AdaptaCão - Aula 01: Comando SENTA",
+  "descricao": "Primeira aula do curso AdaptaCão ensinando o comando SENTA para cães. O instrutor apresenta o conceito, demonstra a posição correta e guia o tutor através dos 3 passos essenciais para o cão aprender a sentar com recompensa.",
+  "cenas": [
+    {
+      "scene_number": 1,
+      "descricao": "Abertura visual do curso — Silhueta de cachorro sentado sobre fundo gradiente azul-laranja",
+      "dalle_prompt": "Silhueta estilizada de um cão sentado em perfil, com gradiente que vai do azul profundo (#4A90E2) ao laranja quente (#F5A623), fundo branco limpo com leve textura de luz, estilo minimalista premium, iluminação cinematográfica suave, composição centralizada, 4K",
+      "grok_movement": "Fade in do branco, a silhueta do cachorro surge gradualmente com o gradiente fluindo suavemente por suas curvas, sutil efeito de partículas de luz flutuando ao redor, revelação elegante de 3 segundos com leve expansão lateral"
+    },
+    {
+      "scene_number": 2,
+      "descricao": "Instrutor com cachorro no parque — Apresentação calorosa do treinador",
+      "dalle_prompt": "Treinador de cães profissional vestindo camiseta casual em tons neutros, ajoelhado ao lado de um golden retriever feliz em parque verdejante com árvores ao fundo, luz natural dourada do golden hour, sorriso acolhedor, profundidade de campo cinematográfica com fundo desfocado, fotorealista, 4K",
+      "grok_movement": "Pan suave da esquerda para a direita, o treinador vira levemente para a câmera com sorriso acolhedor, o cachorro abana o rabo naturalmente, rack focus sutil do fundo verde para o treinador"
+    },
+    {
+      "scene_number": 3,
+      "descricao": "Cachorro executando comando SENTA — Posição sentada perfeita",
+      "dalle_prompt": "Golden retriever em posição de sentado perfeito visto de perfil, costas retas, patas traseiras firmes no chão, patas dianteiras juntas, orelhas atentas, expressão feliz com língua para fora, campo de treinamento com grama fofa, luz natural difusa, fotorealista, 4K",
+      "grok_movement": "Câmera faz um movimento orbital lento de 90 graus ao redor do cachorro mostrando a postura ereta perfeita, slow motion sutil em 120fps destacando a estabilidade da posição"
+    },
+    {
+      "scene_number": 4,
+      "descricao": "Demonstração da posição correta do SENTA — Ângulo lateral detalhado",
+      "dalle_prompt": "Lado direito de um golden retriever sentado com postura impecável, costas completamente retas, patas dianteiras alinhadas verticalmente, cauda relaxada no chão, treinador ajoelhado ao lado segurando treat pequeno entre os dedos, campo de treino externo com grama natural, iluminação lateral dourada, fotorealista, 4K",
+      "grok_movement": "Dolly in lento focando na postura do cão, a câmera se aproxima mostrando o alinhamento das patas, transição suave para detalhe das costas retas"
+    },
+    {
+      "scene_number": 5,
+      "descricao": "Passo 1 — Segurar recompensa próximo ao focinho do cão",
+      "dalle_prompt": "Plano detalhe close-up de mão do treinador segurando petisco pequeno entre polegar e indicador, posicionado a 5 centímetros acima do focinho do cachorro, o focinho do golden retriever aparece na parte inferior do enquadramento, fundo desfocado de parque verde, luz dourada suave, profundidade de campo rasa, fotorealista, 4K",
+      "grok_movement": "Zoom in lento e preciso focando na posição exata da mão com o petisco, rack focus do fundo desfocado para o petisco em detalhe, a câmera estabiliza no ponto ideal de enquadramento"
+    },
+    {
+      "scene_number": 6,
+      "descricao": "Passo 2 — Mover mão para trás e para cima sobre a cabeça do cão",
+      "dalle_prompt": "Mão do treinador movendo o petisco em arco suave desde a altura do focinho para trás e para cima sobre a cabeça do golden retriever, cabeça do cachorro acompanhando o petisco naturalmente com olhos curiosos, campo de treinamento externo, iluminação dourada de contorno no sujeito, fotorealista, 4K",
+      "grok_movement": "Tracking shot suave seguindo o arco do movimento da mão, a câmera acompanha a trajetória ascendente, o cachorro começa naturalmente a sentar conforme a cabeça se inclina para cima, antecipação construída com movimento contínuo"
+    },
+    {
+      "scene_number": 7,
+      "descricao": "Passo 3 — Cão sentando naturalmente e recebendo recompensa",
+      "dalle_prompt": "Golden retriever completando o movimento de sentar, traseira tocando suavemente o chão, rabo abanando alegremente, treinador entregando petisco com gesto de aprovação e sorriso, expressão de contentamento no cachorro, fundo de parque com luz solar suave fotografando o momento, fotorealista, 4K",
+      "grok_movement": "Câmera captura o momento exato do sentar em slow motion 120fps, treinador entrega o petisco com sorriso, o cachorro abana o rabo animadamente, energia de celebração com leve zoom out para mostrar a interação completa"
+    },
+    {
+      "scene_number": 8,
+      "descricao": "Comparação visual — Posição correta vs incorreta (sem texto)",
+      "dalle_prompt": "Dois golden retrievers lado a lado em campo de treinamento: o da ESQUERDA sentado com postura perfeita, costas retas e expressão relaxada com luz verde suave ao redor; o da DIREITA em posição incorreta com traseira levantada e expressão confusa com leve luz avermelhada, fundo de grama natural, fotorealista, 4K",
+      "grok_movement": "Split screen com o lado esquerdo (correto) aparecendo primeiro com luz verde suave, depois o lado direito (incorreto) surge com luz avermelhada, linha divisória animada entre eles"
+    },
+    {
+      "scene_number": 9,
+      "descricao": "Prática — Repetição do exercício SENTA várias vezes",
+      "dalle_prompt": "Sequência de momentos do treinador praticando o comando SENTA com golden retriever feliz em campo de treino ensolarado, múltiplos instantes de sentar-recompensar-elogiar, energia positiva e encorajadora entre humano e cão, iluminação cinematográfica quente, fotorealista, 4K",
+      "grok_movement": "Montagem suave com cortes rápidos entre repetições de prática, o cachorro melhora e fica mais rápido a cada vez, a energia alegre aumenta progressivamente, transições com whip pan entre repetições"
+    },
+    {
+      "scene_number": 10,
+      "descricao": "Resumo visual dos 3 passos — Demonstração sequencial das etapas",
+      "dalle_prompt": "Três momentos sequenciais do mesmo golden retriever mostrando os 3 passos: primeiro segurando petisco perto do focinho, segundo movendo mão para cima, terceiro cachorro sentado recebendo recompensa, cada cena em miniatura com moldura azul clara, fundo neutro cinza claro, estilo educacional limpo, fotorealista, 4K",
+      "grok_movement": "Cada etapa aparece sequencialmente com slide-in suave da esquerda, a câmera faz zoom out gradual revelando as três etapas lado a lado, composição final equilibrada com as três imagens"
+    },
+    {
+      "scene_number": 11,
+      "descricao": "Preview visual do próximo comando — Cachorro se deitando",
+      "dalle_prompt": "Golden retriever em transição suave da posição sentada para deitada, corpo se alongando graciosamente para o chão, expression curiosa e atenta, campo de treinamento com luz dourada de entardecer, fundo desfocado com tons de laranja e azul, fotorealista, 4K",
+      "grok_movement": "Transição dinâmica revelando o próximo comando, a câmera acompanha o movimento descendente do cachorro em slow motion 120fps, antecipação construída com leve zoom in no momento do deitar"
+    },
+    {
+      "scene_number": 12,
+      "descricao": "Encerramento visual do curso — Silhueta do treinador e cachorro ao pôr do sol",
+      "dalle_prompt": "Silhuetas do treinador e golden retriever lado a lado contemplando o pôr do sol, gradiente do céu indo do laranja quente ao azul profundo, cães e humanos em pose de conexão, campo aberto com grama alta em silhueta, iluminação dramática de costas, composição cinematográfica ampla, fotorealista, 4K",
+      "grok_movement": "Fade in do pôr do sol com cores vibrantes, silhuetas surgem gradualmente em contra-luz, a câmera faz um dolly out lento revelando a paisagem completa, energia serena e contemplativa de encerramento"
+    }
+  ]
+}

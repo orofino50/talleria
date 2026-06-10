@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 5: Prática do 'Vem'",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A person stands in a doorway of a different room, calling a puppy with a happy and inviting tone, the puppy in the foreground looks up, ears perked, cinematic quality, 8k detail",
+      "grok_movement": "Rack focus from the puppy in the foreground to the person in the background, emphasizing the distance",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The puppy runs excitedly through the house, navigating around furniture, to get to the person, a fun and dynamic shot, cinematic quality, 8k detail",
+      "grok_movement": "Low-angle tracking shot from the puppy's perspective, making the run feel fast and exciting",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Split screen showing two people taking turns calling the dog back and forth in a hallway, like a game, the dog running happily between them, cinematic quality, 8k detail",
+      "grok_movement": "The camera stays in the middle of the hallway, panning left and right to follow the dog as it runs between the two people",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A map of a house is shown with animated arrows illustrating different paths the dog can be called from (e.g., from the kitchen to the living room, from the bedroom to the office), educational infographic, 8k detail",
+      "grok_movement": "The animated arrows draw themselves on the map, illustrating the different practice scenarios",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the puppy sleeping soundly at the person's feet, tired but happy after a fun training session, text overlay 'Prática Divertida, Resultados Reais', heartwarming and professional, 8k quality",
+      "grok_movement": "Slow zoom out from the sleeping puppy to show the peaceful scene, text fades in gently",
+      "use_previous_frame": true
+    }
+  ]
+}

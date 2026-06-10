@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 45: Acender/Apagar a Luz",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A sticky note with a bit of peanut butter is placed on a light switch. A dog is sniffing or licking the sticky note, causing the switch to flip. The light turns on. 8k quality.",
+      "grok_movement": "A close-up on the light switch, capturing the moment the dog's nose or tongue makes contact and the light changes.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The moment the light turns on, the trainer gives a huge reward. The sticky note is removed, and the trainer points to the switch, saying 'Luz'. 8k quality.",
+      "grok_movement": "The camera focuses on the reward, then on the trainer's clear hand signal pointing to the switch.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer points to the switch and says 'Luz'. The dog, remembering the game, goes and pushes the switch with its nose. Jackpot reward. 8k quality.",
+      "grok_movement": "A clear shot of the dog performing the action without the lure. A 'Jackpot!' animation celebrates the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The same process is repeated for turning the light off. The dog learns to push the switch in the other direction. 8k quality.",
+      "grok_movement": "A split screen showing the 'On' action and the 'Off' action side-by-side.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a person in bed, saying 'Luz, por favor', and the dog trotting over to turn the light off for them. A super helpful and impressive trick. Text overlay: 'O Ajudante Mais Brilhante da Casa'. 8k quality.",
+      "grok_movement": "A heartwarming, cinematic shot of this incredibly useful trick in action. The text appears with a glowing font.",
+      "use_previous_frame": true
+    }
+  ]
+}

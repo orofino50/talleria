@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 35: Revisão da Semana 5",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dynamic montage of a dog performing this week's advanced commands: a long-distance stay, a fast recall in a park, and a precise heel walk with turns, cinematic quality, 8k detail",
+      "grok_movement": "Fast-paced cuts with energetic music, showcasing the impressive new level of control and partnership.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A checklist infographic for Week 5: 'Fica (Duração e Distância)', 'Vem (Ambientes Abertos)', 'Comando Junto', 'Truque Toca Aqui'. Each item gets a satisfying gold checkmark, 8k detail",
+      "grok_movement": "Each gold checkmark animates in with a distinct, premium sound, signifying a higher level of achievement.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A real-world scenario: a person is in their front yard, the dog is in a stay on the porch. The person calls 'Vem', the dog runs, transitions into a 'Junto' as it arrives, and finishes with a 'Toca Aqui'. A perfect chain of commands. 8k quality.",
+      "grok_movement": "A single, continuous shot that follows the dog through the entire impressive sequence, demonstrating mastery of the week's skills.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Close-up on a calendar showing Week 5 being circled with a diamond sticker, symbolizing elite performance. 8k detail",
+      "grok_movement": "The circle and diamond sticker animate onto the calendar with a bright, sparkling effect.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen with text 'Semana 5 Concluída! A Precisão é a Nova Meta!', with a preview of next week's topic 'Próxima Semana: Truques e Habilidades Divertidas', building excitement. 8k quality.",
+      "grok_movement": "A graphic of a target with an arrow in the bullseye appears. The preview for the next week slides in with a fun, playful transition.",
+      "use_previous_frame": true
+    }
+  ]
+}

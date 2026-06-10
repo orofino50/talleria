@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 36: Truque Pata",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is sitting in front of a person. The person is holding a treat in their closed fist, near the dog's chest. The dog is sniffing the hand. 8k quality.",
+      "grok_movement": "Static shot, focusing on the starting position and the dog's interest in the hidden treat.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The person gently tickles the back of the dog's paw. The dog instinctively lifts its paw slightly in reaction. The person immediately says 'Sim!' and gives the treat. 8k quality.",
+      "grok_movement": "A close-up on the paw, showing the gentle tickle and the resulting lift. A sparkle effect highlights the reward moment.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The person now presents their open palm and says 'Pata'. The dog, anticipating the sequence, lifts its paw and places it in the person's hand. Jackpot reward. 8k quality.",
+      "grok_movement": "The camera focuses on the open palm as the dog's paw comes into frame and rests on it. A 'Jackpot!' animation celebrates the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A split screen showing the difference: 'Toca Aqui' (High Five - vertical tap) and 'Pata' (Shake - paw rests in hand). Clear visual distinction. 8k quality.",
+      "grok_movement": "The two actions are shown side-by-side, with text labels clearly identifying each trick.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a person formally shaking their dog's paw, as if closing a business deal. Both look very serious and professional, but in a funny way. Text overlay: 'Pata: Um Acordo de Cavalheiros'. 8k quality.",
+      "grok_movement": "A humorous, slow-motion shot of the formal handshake. The text appears in a classic, elegant serif font.",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 32: Comando Junto (Heel)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is standing or sitting perfectly aligned with the trainer's left leg, with its shoulder parallel to the trainer's knee. A graphic overlay shows a straight line aligning them. The leash is loose. 8k quality.",
+      "grok_movement": "Static shot, focusing on the perfect positioning. The alignment graphic animates in to highlight the correct posture.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer is holding a treat in their left hand, luring the dog to stay close to their leg as they take a single step forward. The dog moves with the trainer, staying in position. 8k quality.",
+      "grok_movement": "A close-up shot from a low angle, showing the treat being used to guide the dog and keep it in the correct heel position.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer takes several steps forward, making a slow turn. The dog adjusts its pace and position to stay perfectly aligned with the trainer's leg throughout the turn. 8k quality.",
+      "grok_movement": "A top-down shot that clearly shows the dog maintaining its position relative to the trainer, even during a change of direction.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer stops walking, and the dog automatically sits in the heel position without being told. A perfect, automatic sit. 8k quality.",
+      "grok_movement": "Slow-motion as the trainer stops and the dog performs the automatic sit. A sparkle effect and a checkmark appear to confirm the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a person and their dog walking in perfect sync through a crowd, the dog in a perfect heel position, looking confident and connected. Text overlay: 'Junto: A Parceria em Movimento'. 8k quality.",
+      "grok_movement": "A cinematic, low-angle tracking shot from the front, showing the pair moving together as one unit. The text fades in with an elegant, strong font.",
+      "use_previous_frame": true
+    }
+  ]
+}

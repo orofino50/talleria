@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 24: Aumentando Distrações",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is holding a sit-stay in a living room. In the background, another person calmly walks across the room. The dog remains focused on its trainer, ignoring the person. 8k quality.",
+      "grok_movement": "The camera is static, focused on the dog. The person in the background is slightly out of focus to emphasize that they are a distraction.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer is practicing commands in a backyard. A ball is gently rolled a few feet away from the dog. The dog looks at the ball, but then looks back at the trainer, choosing to ignore the toy. 8k quality.",
+      "grok_movement": "Slow-motion as the ball rolls. The camera captures the dog's head turning to the ball, then making the conscious decision to turn back to the trainer.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A diagram showing a 'Distraction Dial' graphic, starting at 'Level 1: Pessoa Calma' and turning up to 'Level 3: Bola Rolando' and 'Level 5: Outro Cão à Distância'. 8k quality.",
+      "grok_movement": "The dial animates, turning up from level to level with a clicking sound, visually representing the gradual increase in difficulty.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog is practicing 'Junto' on a quiet sidewalk. Another dog is visible far down the street. The trainer uses high-value treats to keep the dog's focus on the walk. 8k quality.",
+      "grok_movement": "A long shot showing the vast distance to the other dog. The camera then zooms in to the trainer rewarding their dog for maintaining focus.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog wearing cool sunglasses, looking unfazed, while a chaotic (but safe and controlled) scene happens in the background. Text overlay: 'Foco de Aço: Imperturbável'. 8k quality.",
+      "grok_movement": "The background is in fast-motion (people walking, balls rolling) while the dog in the foreground is in slow-motion, looking cool and collected. The text appears with a strong, metallic font.",
+      "use_previous_frame": true
+    }
+  ]
+}

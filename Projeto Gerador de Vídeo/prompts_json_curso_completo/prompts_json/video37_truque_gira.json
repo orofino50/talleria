@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 37: Truque Gira",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A person is holding a high-value treat near the dog's nose. The dog is standing and focused on the treat. 8k quality.",
+      "grok_movement": "Static shot, establishing the starting position and the dog's intense focus on the lure.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The person slowly moves the treat in a horizontal circle around the dog's head, luring it to follow. The dog starts to turn its body to keep its nose on the treat. 8k quality.",
+      "grok_movement": "The camera follows the treat's circular path, showing how it guides the dog's movement.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog completes a full 360-degree spin, following the treat. The moment it completes the circle, the person says 'Sim!' and gives the treat. 8k quality.",
+      "grok_movement": "A top-down shot that captures the full spin, with a celebratory graphic appearing as the dog completes the circle.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The person now makes the same circular motion with an empty hand, saying 'Gira'. The dog performs the full spin without the treat lure. Jackpot reward. 8k quality.",
+      "grok_movement": "The camera focuses on the hand signal, then on the dog performing the spin flawlessly. A 'Jackpot!' animation celebrates the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog performing a spin in slow-motion, looking like a graceful dancer. Text overlay: 'Gira: O Giro da Alegria'. 8k quality.",
+      "grok_movement": "A beautiful, cinematic slow-motion shot of the spin, with motion blur and artistic lighting. The text appears in a flowing, elegant script font.",
+      "use_previous_frame": true
+    }
+  ]
+}

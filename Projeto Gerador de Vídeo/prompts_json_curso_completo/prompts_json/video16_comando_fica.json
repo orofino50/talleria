@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 16: O Comando Fica",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Dog in a perfect sit-stay position, looking attentively at the trainer, indoor living room, trainer giving a clear hand signal for 'stay' (open palm), calm and focused atmosphere, 8k quality",
+      "grok_movement": "Static shot, camera holds on the dog's focused expression and the clear hand signal",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "Trainer taking one step back from the sitting dog, maintaining eye contact, dog remains in the sit-stay position, infographic overlay showing a '1 step' distance marker, 8k quality",
+      "grok_movement": "Slow dolly back with the trainer, keeping the dog in the center of the frame, distance marker animates in",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Trainer returning to the dog and giving a treat and praise, dog looking happy and rewarded, positive reinforcement moment, 8k quality",
+      "grok_movement": "Camera follows the trainer back to the dog, focuses on the treat delivery and the dog's happy reaction",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Split screen showing three scenarios: trainer walking around the dog, trainer turning their back, trainer adding distractions (like a toy), dog remains in a solid sit-stay in all three, demonstrating proofing the command, 8k quality",
+      "grok_movement": "Each panel of the split screen plays out, showing the dog's unwavering focus despite the increasing difficulty",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog in a perfect 'stay' from a distance, with the trainer giving a thumbs-up, text overlay 'Fica Dominado!', celebratory and successful tone, 8k quality",
+      "grok_movement": "Static shot, text and thumbs-up appear with a positive sound effect",
+      "use_previous_frame": true
+    }
+  ]
+}

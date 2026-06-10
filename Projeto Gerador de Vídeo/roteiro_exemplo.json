@@ -1,0 +1,46 @@
+{
+  "projeto": "Vídeo Exemplo",
+  "descricao": "Exemplo de roteiro para geração automatizada de vídeos",
+  "cenas": [
+    {
+      "numero": 1,
+      "descricao": "Abertura - Paisagem montanhosa ao amanhecer",
+      "use_previous_frame": false,
+      "dalle_prompt": "A breathtaking mountain landscape at dawn, with golden sunlight breaking through misty peaks, photorealistic, cinematic lighting, 4K quality",
+      "grok_movement": "Slow camera pan from left to right, revealing more mountain peaks as the sun rises, with morning mist gently flowing through valleys"
+    },
+    {
+      "numero": 2,
+      "descricao": "Transição - Zoom na floresta",
+      "use_previous_frame": true,
+      "dalle_prompt": "",
+      "grok_movement": "Smooth zoom into the forest below the mountains, camera descends through the mist towards the tree canopy"
+    },
+    {
+      "numero": 3,
+      "descricao": "Floresta - Interior denso e misterioso",
+      "use_previous_frame": false,
+      "dalle_prompt": "Dense mystical forest interior, rays of sunlight filtering through tall trees, moss-covered rocks, magical atmosphere, fantasy style, high detail",
+      "grok_movement": "Camera moves forward through the forest, weaving between trees, with dynamic lighting as sunbeams shift"
+    },
+    {
+      "numero": 4,
+      "descricao": "Descoberta - Lago escondido",
+      "use_previous_frame": true,
+      "dalle_prompt": "",
+      "grok_movement": "Camera emerges from forest to reveal a hidden crystalline lake, circular pan around the water's edge"
+    },
+    {
+      "numero": 5,
+      "descricao": "Final - Reflexo do céu no lago",
+      "use_previous_frame": false,
+      "dalle_prompt": "Crystal clear lake reflecting a vibrant sunset sky, mountains in the background, perfect mirror reflection, serene and peaceful, cinematic composition",
+      "grok_movement": "Slow aerial rise above the lake, revealing the full landscape as the camera tilts down showing the reflection, fade to sunset"
+    }
+  ],
+  "configuracoes": {
+    "resolucao": "1920x1080",
+    "fps": 30,
+    "duracao_por_cena": "5-10 segundos"
+  }
+}

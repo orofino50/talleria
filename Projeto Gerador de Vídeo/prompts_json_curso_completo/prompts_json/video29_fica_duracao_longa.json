@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 29: Fica com Duração Longa",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is holding a perfect sit-stay. A large digital timer on the screen is prominently displaying '30 Segundos'. The dog is focused and patient. The trainer is standing calmly a few steps away. Indoor setting. 8k quality.",
+      "grok_movement": "The camera slowly orbits around the dog, showing its unwavering stillness from all angles as the timer holds steady.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer walks out of the room, disappearing behind a doorway, while the dog remains in its stay position. The dog looks towards the door but does not move. 8k quality.",
+      "grok_movement": "The camera stays on the dog, capturing its moment of decision and its choice to remain in the stay, even with the owner out of sight.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer walks back into the room, smiling proudly. The dog is still in the exact same spot. The trainer gives a massive jackpot of treats and praise. 8k quality.",
+      "grok_movement": "A celebratory shot with slow-motion and a shower of virtual confetti as the jackpot reward is given, emphasizing the huge success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "An infographic showing a progress bar labeled 'Paciência'. The bar animates from empty to full as the timer goes from 5s to 1min. 8k quality.",
+      "grok_movement": "The progress bar fills up with a satisfying animation, and a star appears at the end when it reaches '1min'.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog staying calmly on its mat while the owner answers the front door to a visitor. A real-world application of a solid stay. Text overlay: 'Fica: A Base da Confiança e Liberdade'. 8k quality.",
+      "grok_movement": "A wide shot showing the entire scene, demonstrating the dog's reliability in a practical situation. The text fades in with a strong, trustworthy font.",
+      "use_previous_frame": true
+    }
+  ]
+}

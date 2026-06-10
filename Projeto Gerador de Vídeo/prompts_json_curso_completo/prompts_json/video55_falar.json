@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 55: Falar",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A trainer is holding a very exciting toy or treat, but not giving it to the dog. The dog is getting audibly frustrated, letting out a small whine or bark. 8k quality.",
+      "grok_movement": "The camera is focused on the dog's face, capturing its building excitement and the moment it makes a sound.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The instant the dog barks, the trainer says \"Sim!\" and gives the toy/treat. The command \"Fala!\" is introduced. 8k quality.",
+      "grok_movement": "A sound wave graphic appears from the dog's mouth as it barks, followed by the immediate reward, creating a clear link.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Now, the trainer says \"Fala!\" and the dog barks on command. Jackpot reward. 8k quality.",
+      "grok_movement": "A clear shot of the dog barking on the verbal cue. A \"Jackpot!\" animation celebrates the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer teaches the \"Silêncio\" command by rewarding the dog for being quiet after a bark. A split screen shows the \"Fala!\" and \"Silêncio\" commands in action. 8k quality.",
+      "grok_movement": "The split screen clearly demonstrates the on/off nature of the two commands, showing control.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog \"singing\" along with its owner who is playing a guitar. A fun, communicative moment. Text overlay: \"Fale! Sua Voz é Música\". 8k quality.",
+      "grok_movement": "A heartwarming and humorous shot of the dog and owner duet. The text appears in a fun, musical font.",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 56: Revisão da Semana 8 e Final do Módulo 2",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A grand montage showcasing all the advanced tricks from the past weeks: a dog walking backwards, \"dancing\" on two legs, jumping through a hoop, and barking on command. Epic, celebratory music. 8k quality.",
+      "grok_movement": "Fast-paced, exciting cuts that feel like a trailer for a dog talent competition, showing the high level of skill achieved.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A checklist infographic for Week 8: \"Andar para Trás\", \"Andar em Duas Patas\", \"Pular no Colo\", \"Pular por um Arco\", \"Ficar em Pé\", \"Falar\". Each item gets a platinum star. 8k detail.",
+      "grok_movement": "Each platinum star animates in with a premium, shining effect, signifying the completion of the advanced module.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A shot of a certificate of completion for \"AdaptaCão - Nível Intermediário\". The dog has its paw print on the signature line. 8k quality.",
+      "grok_movement": "The camera slowly pans across the certificate, focusing on the details and the cute paw print signature.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Close-up on a calendar showing all of Módulo 2 (Weeks 5-8) being stamped with a \"NÍVEL INTERMEDIÁRIO CONCLUÍDO\" graphic. 8k detail.",
+      "grok_movement": "The stamp animates onto the calendar with a satisfying, official-looking thud.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen with text \"MÓDULO 2 COMPLETO! Você é um Treinador de Elite!\", with a preview of the final module \"Próximo Nível: Maestria e Polimento Final\", building excitement for the grand finale. 8k quality.",
+      "grok_movement": "A graphic of a trophy or a gold medal appears. The preview for the final module slides in with a dramatic, epic transition.",
+      "use_previous_frame": true
+    }
+  ]
+}

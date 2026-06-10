@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 34: Truque Toca Aqui (High Five)",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A person is holding a treat in a closed fist, low to the ground. A curious dog is sniffing the hand. 8k quality.",
+      "grok_movement": "Static shot, focusing on the dog's curiosity and the position of the hand.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The dog paws at the hand to try and get the treat. The moment the paw touches the hand, the person says 'Sim!' and opens the hand to give the treat. 8k quality.",
+      "grok_movement": "Slow-motion as the dog's paw makes contact with the hand. A sparkle effect appears as the hand opens.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The person now presents an open, empty palm and says 'Toca Aqui'. The dog, remembering the previous step, touches the open palm with its paw. Jackpot reward from the other hand. 8k quality.",
+      "grok_movement": "The camera focuses on the open palm. The dog's paw comes into frame and makes a clear, deliberate touch. A 'Jackpot!' animation celebrates the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The person raises their open palm higher, in a classic high-five position. The dog successfully lifts its paw to touch the hand. 8k quality.",
+      "grok_movement": "A low-angle shot looking up at the high-five, making it look heroic and impressive.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the owner and dog giving each other a perfect high-five, both looking happy and proud. Text overlay: 'Toca Aqui: O Cumprimento Secreto de Vocês'. 8k quality.",
+      "grok_movement": "A fun, celebratory freeze-frame on the high-five, with confetti and celebration graphics. The text appears in a cool, friendly font.",
+      "use_previous_frame": true
+    }
+  ]
+}

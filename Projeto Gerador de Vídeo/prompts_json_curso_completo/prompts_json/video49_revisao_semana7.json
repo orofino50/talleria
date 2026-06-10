@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 49: Revisão da Semana 7",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A montage of a dog being incredibly helpful around the house: bringing slippers, putting away a toy, ringing a bell to go outside, and opening a cabinet. Upbeat, productive music. 8k quality.",
+      "grok_movement": "Fast-paced cuts showing the dog as a super-efficient helper, making life easier for its owner.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A checklist infographic for Week 7: 'Buscar Objetos', 'Guardar Brinquedos', 'Acender/Apagar Luz', 'Abrir/Fechar Porta', 'Tocar Sinetinha', 'Pegar Cerveja'. Each item gets a 'Helpful' badge icon. 8k detail.",
+      "grok_movement": "Each badge animates in with a satisfying sound, highlighting the utility of each new skill.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A short story: The owner's hands are full. The dog opens the door, turns on the light, and brings them their slippers. A perfect demonstration of a helpful partner. 8k quality.",
+      "grok_movement": "A continuous shot that follows the dog as it performs the helpful sequence, showcasing its intelligence and training.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Close-up on a calendar showing Week 7 being circled with a 'Top Dog' ribbon sticker. 8k detail.",
+      "grok_movement": "The circle and ribbon sticker animate onto the calendar with a celebratory effect.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen with text 'Semana 7 Concluída! Seu Ajudante Pessoal Chegou!', with a preview of next week's topic 'Próxima Semana: Polimento e Desafios Finais', building anticipation. 8k quality.",
+      "grok_movement": "A graphic of a dog wearing a superhero cape appears. The preview for the next week slides in with a challenging, exciting transition.",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 16: Prática do Deixa",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A piece of boring kibble is on the floor. The dog looks at it, then looks up at the owner, ignoring the kibble. The owner is ready to reward. Indoor setting. 8k quality.",
+      "grok_movement": "Static shot, focusing on the dog's decision-making process: looking at the kibble, then choosing to look at the owner.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The owner drops a slightly more interesting treat (like a piece of carrot) on the floor and says 'Deixa'. The dog hesitates but successfully ignores it, looking at the owner. 8k quality.",
+      "grok_movement": "Slow-motion as the carrot falls. The camera captures the dog's moment of conflict and successful choice.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "During a walk in a park, the dog approaches a piece of trash on the ground. The owner says 'Deixa' firmly. The dog stops and moves away from the trash. 8k quality.",
+      "grok_movement": "The camera is low, at the dog's eye level. It shows the tempting trash and the dog's successful decision to leave it.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A diagram showing a 'Temptation Scale': Kibble (Easy), Vegetable (Medium), Hot Dog (Hard), with a checkmark next to Easy and Medium. 8k quality.",
+      "grok_movement": "The scale animates in, and the checkmarks appear with a satisfying sound, showing the progression of difficulty.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog and owner walking confidently through a city park, with the dog ignoring all sorts of distractions on the ground. Text overlay: 'Um Mundo Mais Seguro com o Deixa'. 8k quality.",
+      "grok_movement": "A proud, cinematic tracking shot following the pair as they walk. The text fades in with a sense of safety and accomplishment.",
+      "use_previous_frame": true
+    }
+  ]
+}

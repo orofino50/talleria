@@ -1,0 +1,104 @@
+{
+  "semana_10": [
+    {
+      "titulo": "Vídeo 64: Introdução ao Clicker Training",
+      "upscale_videos": true,
+      "upscale_factor": 2,
+      "cenas": [
+        {
+          "dalle_prompt": "A close-up shot of a hand holding a small plastic clicker. A finger is pressing the button, and a sound wave graphic emanates from it. 8k quality.",
+          "grok_movement": "The button press and sound wave are animated, with a distinct 'click-clack' sound effect.",
+          "use_previous_frame": false
+        },
+        {
+          "dalle_prompt": "A diagram showing the brain connection: Click -> Treat. A bridge is formed between a clicker icon and a treat icon. 8k quality.",
+          "grok_movement": "The bridge animates, solidifying the connection in the dog's brain.",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "A trainer clicks the clicker and immediately gives a treat to a dog, without asking for any behavior. This is 'charging the clicker'. This is repeated several times. 8k quality.",
+          "grok_movement": "A rapid montage of click-treat, click-treat, click-treat, showing the conditioning process.",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "A dog touches its nose to a target stick. The instant it touches, the trainer clicks and then gives a treat. The click marks the exact moment of success. 8k quality.",
+          "grok_movement": "A slow-motion shot of the nose touching the target, with the 'click' sound and a flash of light happening at the precise moment of contact.",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "Final shot of a dog looking eagerly and intelligently at the trainer, understanding that the clicker is the key to rewards. Text overlay: 'Clicker: A Linguagem da Precisão'. 8k quality.",
+          "grok_movement": "A close-up on the dog's bright, focused eyes. The text appears with a sharp, precise font.",
+          "use_previous_frame": true
+        }
+      ]
+    }
+  ],
+  "semana_11": [
+    {
+      "titulo": "Vídeo 71: Treino de Olfato (Scent Work)",
+      "upscale_videos": true,
+      "upscale_factor": 2,
+      "cenas": [
+        {
+          "dalle_prompt": "A close-up on a dog's nose, with scent particles animated as glowing lines flowing into its nostrils. A diagram of the dog's powerful olfactory system. 8k quality.",
+          "grok_movement": "The glowing scent particles animate, showing the power of a dog's sense of smell.",
+          "use_previous_frame": false
+        },
+        {
+          "dalle_prompt": "A shell game: three cups are on the floor. A treat is hidden under one. The dog sniffs each cup and indicates the correct one by pawing at it. 8k quality.",
+          "grok_movement": "The camera follows the dog's nose as it investigates the cups, then captures the correct indication.",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "A 'scent box' is created with several holes. A treat with a specific scent (e.g., cinnamon) is hidden inside. The dog must find the correct hole. 8k quality.",
+          "grok_movement": "A cutaway view of the box shows the treat inside, and the camera follows the dog's nose to the correct hole.",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "The dog is now in a living room, searching for the hidden cinnamon-scented object. It methodically sniffs the furniture and finds it under a cushion. Jackpot reward. 8k quality.",
+          "grok_movement": "A time-lapse of the dog searching the room, then a real-time shot of the final discovery and reward.",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "Final shot of a dog looking like Sherlock Holmes, with a deerstalker hat and a magnifying glass, sniffing for clues. Text overlay: 'Scent Work: O Detetive Canino'. 8k quality.",
+          "grok_movement": "A fun, humorous shot. The text appears in a classic detective novel font.",
+          "use_previous_frame": true
+        }
+      ]
+    }
+  ],
+  "semana_12": [
+    {
+      "titulo": "Vídeo 78: Freestyle (Dança com Cães)",
+      "upscale_videos": true,
+      "upscale_factor": 2,
+      "cenas": [
+        {
+          "dalle_prompt": "A person and a dog are playfully dancing together in a living room, with upbeat music. The dog is weaving through the person's legs. 8k quality.",
+          "grok_movement": "A fun, energetic shot that captures the joy and connection of freestyle.",
+          "use_previous_frame": false
+        },
+        {
+          "dalle_prompt": "A diagram showing how to chain simple moves together: Gira -> Andar para Trás -> Pulo. 8k quality.",
+          "grok_movement": "The icons for each trick animate in sequence, forming a simple dance routine.",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "The dog is learning to walk backwards as the owner walks forwards, facing each other. A key move in canine freestyle. 8k quality.",
+          "grok_movement": "A side-on tracking shot that captures the synchronized movement of the pair.",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "The dog performs a beautiful spin on its hind legs, a more advanced freestyle move. 8k quality.",
+          "grok_movement": "A cinematic slow-motion shot of the spin, highlighting the dog's grace and balance.",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "Final shot of a dog and owner in a final, dramatic pose at the end of a dance routine, with spotlights on them. Text overlay: 'Freestyle: A Expressão Máxima da Parceria'. 8k quality.",
+          "grok_movement": "A grand, theatrical shot. The text appears in a beautiful, flowing script font.",
+          "use_previous_frame": true
+        }
+      ]
+    }
+  ]
+}

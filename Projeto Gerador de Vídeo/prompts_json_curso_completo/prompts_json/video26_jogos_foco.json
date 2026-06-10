@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 26: Jogos de Foco",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A person is holding a treat in each closed fist, held out to the sides. The dog is in the middle, looking back and forth, trying to guess which hand has the treat. A fun guessing game. 8k quality.",
+      "grok_movement": "The camera is at the dog's eye level, capturing its head movements as it tries to decide. The shot creates a sense of playful anticipation.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The dog gently touches one of the person's fists with its nose. The person opens that hand to reveal it's empty, then opens the other hand and gives the dog the treat. 8k quality.",
+      "grok_movement": "Slow-motion as the dog makes its choice. A sad trombone sound for the wrong hand, then a celebratory sound for the correct one.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The 'Look at Me' game. The trainer holds a treat to the side of their face. The dog ignores the treat and makes eye contact with the trainer. The trainer then gives the treat. 8k quality.",
+      "grok_movement": "A split screen: one side shows the dog's POV (seeing the treat and the face), the other side shows the dog making the correct choice to look at the eyes.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A simple hide-and-seek game. The person hides behind a tree in the backyard and calls the dog. The dog excitedly runs around, searching, and finds the person. 8k quality.",
+      "grok_movement": "A fun, dynamic tracking shot that follows the dog as it searches, capturing its excitement and determination.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog and owner playing and laughing together, clearly having fun with the training games. Text overlay: 'Treinar é Brincar, Brincar é Aprender'. 8k quality.",
+      "grok_movement": "A warm, happy shot with genuine smiles and playful energy. The text fades in with a fun, handwritten-style font.",
+      "use_previous_frame": true
+    }
+  ]
+}

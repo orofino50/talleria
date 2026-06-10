@@ -1,0 +1,78 @@
+{
+  "projeto": "AdaptaCão - Aula 06: Comando VEM",
+  "descricao": "Sexta aula do curso AdaptaCão ensinando o comando VEM para cães — comando de segurança essencial que pode salvar vidas. O instrutor demonstra como treinar o recall com progressão de dificuldade.",
+  "cenas": [
+    {
+      "scene_number": 1,
+      "descricao": "Abertura visual — Silhueta de cachorro correndo em direção ao centro",
+      "dalle_prompt": "Silhueta estilizada de um cão em plena corrida, patas esticadas em movimento, gradiente que vai do azul profundo (#4A90E2) ao laranja quente (#F5A623), linhas de energia saindo da silhueta, fundo branco limpo, estilo minimalista premium, iluminação cinematográfica suave, composição dinâmica, 4K",
+      "grok_movement": "Fade in do branco com a silhueta correndo em direção ao centro, o gradiente flui pelas linhas de energia, partículas de luz se movem na direção do centro, transição dinâmica de abertura"
+    },
+    {
+      "scene_number": 2,
+      "descricao": "Importância — VEM pode salvar vidas",
+      "dalle_prompt": "Cenário dramático de segurança: golden retriever correndo de volta para o dono em calçada urbana com carros ao fundo desfocados, momento de urgência mas sucesso no recall, iluminação dramática lateral, tons de azul e laranja contrastando, fotorealista cinematográfica, 4K",
+      "grok_movement": "Slow motion 120fps dramático capturando o cachorro correndo de volta à segurança, pan rápido acompanhando o movimento, dolly in no momento do reencontro"
+    },
+    {
+      "scene_number": 3,
+      "descricao": "Cachorro vindo correndo ao chamado",
+      "dalle_prompt": "Golden retriever correndo a toda velocidade em direção à câmera com expressão de pura alegria, orelhas e pelos voando ao vento, parque externo verde com fundo desfocado, blur de movimento no fundo indicando velocidade, fotorealista de ação, 4K",
+      "grok_movement": "Dolly in rápido sincronizado com a corrida do cachorro, slow motion 120fps capturando orelhas e pelos ao vento, pan suave acompanhando a trajetória"
+    },
+    {
+      "scene_number": 4,
+      "descricao": "Demonstração — Recall perfeito",
+      "dalle_prompt": "Cena completa de recall: treinador chamando com braços abertos à esquerda, golden retriever correndo de volta de longe à direita, parque amplo com grama verde, os dois se encontrando no centro com celebração, luz natural abundante, fotorealista de sucesso, 4K",
+      "grok_movement": "Pan left revelando o treinador chamando, depois pan right seguindo o cachorro correndo de volta, dolly back no momento do encontro celebratório"
+    },
+    {
+      "scene_number": 5,
+      "descricao": "Por que VEM é difícil — Distrações",
+      "dalle_prompt": "Cenário realista de parque com distrações: cachorro farejando grama interessante, esquilo subindo em árvore ao fundo, outras pessoas caminhando, todos elementos visuais de distração natural, iluminação externa realista, fotorealista de cenário complexo, 4K",
+      "grok_movement": "Pan lateral revelando progressivamente cada distração do ambiente, rack focus passando entre o cachorro e os elementos de distração, câmera estável mostrando o desafio"
+    },
+    {
+      "scene_number": 6,
+      "descricao": "Passo 1 — Ambiente fechado sem distrações",
+      "dalle_prompt": "Ambiente interno controlado e seguro: golden retriever a alguns metros do treinador em sala de estar tranquila, tapete confortável no chão, janela com cortinas sem vista para rua, iluminação suave artificial, sem elementos de distração visíveis, fotorealista de treino inicial, 4K",
+      "grok_movement": "Plano médio estático estabelecendo o ambiente seguro e controlado, slow zoom in sutil no cachorro olhando para o treinador, momento de concentração"
+    },
+    {
+      "scene_number": 7,
+      "descricao": "Passo 2 — Dizer VEM com voz animada, braços abertos",
+      "dalle_prompt": "Treinador ajoelhado com braços abertos em gesto de acolhimento, expressão facial animada e sorridente, petisco visível na mão, linguagem corporal convidativa e calorosa, ambiente interno acolhedor com iluminação quente, fotorealista de convite, 4K",
+      "grok_movement": "Dolly in suave em direção ao treinador com braços abertos, slow motion capturando o gesto acolhedor, rack focus do petisco para a expressão facial animada"
+    },
+    {
+      "scene_number": 8,
+      "descricao": "Passo 3 — Cão vem, recebe muita recompensa",
+      "dalle_prompt": "Momento triunfante de golden retriever chegando ao treinador, celebração grande com petiscos, treinador com as duas mãos levantadas em comemoração, cauda do cachorro abanando em movimento máximo de alegria, iluminação quente interna, fotorealista de celebração, 4K",
+      "grok_movement": "Tracking shot seguindo o cachorro chegando ao treinador, slow motion na cauda abanando, pan up para mostrar a celebração completa, energia de festa"
+    },
+    {
+      "scene_number": 9,
+      "descricao": "Dica — Nunca punir o cão quando vier",
+      "dalle_prompt": "Dois momentos lado a lado: à esquerda treinador acariciando gentilmente o cachorro que veio até ele com expressão feliz; à direita treinador frustrado mas o cachorro ainda sendo recebido com paciência, ambos com iluminação quente, fotorealista de condicionamento positivo, 4K",
+      "grok_movement": "Pan lateral suave passando entre os dois cenários, slow motion em cada interação, transição clara mostrando a abordagem correta de recompensa sempre"
+    },
+    {
+      "scene_number": 10,
+      "descricao": "Progressão — Distância e distrações crescentes",
+      "dalle_prompt": "Três cenas de progressão: primeiro treinador e cachorro em sala fechada, depois em quintal fechado com cerca, finalmente em parque aberto com outros cachorros ao fundo, cada cenário mostrando sucesso no recall, iluminação natural consistente, fotorealista de progressão, 4K",
+      "grok_movement": "Montagem com transições suaves entre os três ambientes, dolly in em cada cenário de sucesso, zoom out progressivo mostrando o aumento do desafio"
+    },
+    {
+      "scene_number": 11,
+      "descricao": "Preview do próximo comando — Cachorro buscando bola",
+      "dalle_prompt": "Golden retriever em salto dinâmico capturando uma bola de borracha vermelha no ar, expressão de foco e alegria combinados, parque externo com fundo desfocado em tons de azul e laranja suaves, iluminação dourada de final de tarde, fotorealista de ação, 4K",
+      "grok_movement": "Slow motion 120fps capturando o salto e a captura da bola, pan right seguindo a trajetória, dolly in no momento da captura bem-sucedida"
+    },
+    {
+      "scene_number": 12,
+      "descricao": "Encerramento — Silhueta do cachorro correndo ao dono ao pôr do sol",
+      "dalle_prompt": "Silhuetas do treinador com braços abertos e golden retriever correndo em sua direção contra céu de pôr do sol em tons de azul profundo e laranja dourado, campo aberto com grama alta em silhueta, iluminação dramática de costas, composição cinematográfica ampla, fotorealista, 4K",
+      "grok_movement": "Fade in do pôr do sol com cores vibrantes, silhuetas se encontrando em contra-luz, dolly out lento revelando a paisagem completa, energia de reencontro e encerramento"
+    }
+  ]
+}

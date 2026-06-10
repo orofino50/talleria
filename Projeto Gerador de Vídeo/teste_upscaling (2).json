@@ -1,0 +1,12 @@
+{
+  "titulo": "Teste Upscaling HD",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Modern coffee shop interior, warm lighting, wooden furniture, barista preparing espresso, customers reading, cozy atmosphere, professional interior photography, cinematic quality, 8k detail",
+      "grok_movement": "Slow dolly forward into the cafe, smooth cinematic movement, revealing details",
+      "use_previous_frame": false
+    }
+  ]
+}

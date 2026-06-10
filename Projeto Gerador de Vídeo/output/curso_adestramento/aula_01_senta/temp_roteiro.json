@@ -1,0 +1,92 @@
+{
+  "projeto": "Curso Adestramento Canino - Aula 1: Comando SENTA",
+  "descricao": "Primeira aula do curso ensinando o comando básico SENTA para cães",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "numero": 1,
+      "descricao": "Abertura - Logo do curso com cachorro sentado",
+      "use_previous_frame": false,
+      "dalle_prompt": "Professional dog training course logo, golden retriever sitting perfectly in obedience position, clean white background, modern minimalist design, cinematic lighting, 4K quality, studio photography style",
+      "grok_movement": "Slow zoom into the logo, subtle light particles floating, elegant reveal animation"
+    },
+    {
+      "numero": 2,
+      "descricao": "Apresentação do instrutor - Pessoa com cachorro",
+      "use_previous_frame": false,
+      "dalle_prompt": "Friendly dog trainer in professional attire, kneeling beside a happy golden retriever in a sunny park, warm natural lighting, welcoming atmosphere, photorealistic, cinematic composition, 4K quality",
+      "grok_movement": "Gentle pan from left to right, trainer turns to face camera, dog wags tail naturally"
+    },
+    {
+      "numero": 3,
+      "descricao": "Explicação do comando SENTA - Texto animado",
+      "use_previous_frame": false,
+      "dalle_prompt": "Modern infographic showing the word SENTA in bold typography, dog paw print icon, clean gradient background purple to blue, professional educational design, 4K quality",
+      "grok_movement": "Text animates in from left, paw print appears with bounce effect, subtle background movement"
+    },
+    {
+      "numero": 4,
+      "descricao": "Demonstração - Posição correta do senta",
+      "use_previous_frame": false,
+      "dalle_prompt": "Side view of golden retriever in perfect sit position, trainer holding treat above dog's head, outdoor training field, natural lighting, clear body posture demonstration, photorealistic, 4K",
+      "grok_movement": "Camera slowly orbits around the dog, showing perfect posture from multiple angles"
+    },
+    {
+      "numero": 5,
+      "descricao": "Passo 1 - Segurar a recompensa",
+      "use_previous_frame": false,
+      "dalle_prompt": "Close-up of trainer's hand holding a small dog treat, positioned above a dog's nose, soft focus background, warm lighting, instructional photography style, 4K quality",
+      "grok_movement": "Slow zoom into the hand position, focus pulls from background to treat"
+    },
+    {
+      "numero": 6,
+      "descricao": "Passo 2 - Mover a mão para trás",
+      "use_previous_frame": false,
+      "dalle_prompt": "Trainer moving treat from dog's nose upwards and backwards, dog's head following the treat, natural sitting motion, outdoor setting, golden hour lighting, photorealistic, 4K",
+      "grok_movement": "Smooth tracking shot following the hand movement, dog naturally sits down"
+    },
+    {
+      "numero": 7,
+      "descricao": "Passo 3 - Dog sentando naturalmente",
+      "use_previous_frame": false,
+      "dalle_prompt": "Golden retriever completing the sit motion, rear touching ground, trainer rewarding with treat, happy expression, park background, warm natural lighting, photorealistic, 4K quality",
+      "grok_movement": "Camera captures the moment of sitting, trainer gives treat, dog wags tail"
+    },
+    {
+      "numero": 8,
+      "descricao": "Dica importante - Evitar erros comuns",
+      "use_previous_frame": false,
+      "dalle_prompt": "Split screen showing correct vs incorrect training technique, green checkmark and red X icons, professional educational design, modern infographic style, 4K quality",
+      "grok_movement": "Left side shows correct technique with green glow, right side fades with red indicator"
+    },
+    {
+      "numero": 9,
+      "descricao": "Prática - Repetição do exercício",
+      "use_previous_frame": false,
+      "dalle_prompt": "Trainer practicing sit command with dog multiple times, showing repetition and consistency, sunny training field, positive energy, photorealistic, cinematic lighting, 4K quality",
+      "grok_movement": "Montage style smooth transitions between practice repetitions, dog improves each time"
+    },
+    {
+      "numero": 10,
+      "descricao": "Recapitulação - Resumo dos passos",
+      "use_previous_frame": false,
+      "dalle_prompt": "Clean summary infographic with 3 steps numbered, dog sitting illustration, modern flat design, purple and blue color scheme, professional educational layout, 4K quality",
+      "grok_movement": "Each step appears sequentially with smooth animation, final summary builds up"
+    },
+    {
+      "numero": 11,
+      "descricao": "Próxima aula - Preview do comando DEITA",
+      "use_previous_frame": false,
+      "dalle_prompt": "Teaser for next lesson, golden retriever in down position, text DEITA floating, exciting preview design, gradient background, professional course branding, 4K quality",
+      "grok_movement": "Smooth transition revealing the next command, dog moves from sit to down position"
+    },
+    {
+      "numero": 12,
+      "descricao": "Encerramento - Logo e chamada para ação",
+      "use_previous_frame": false,
+      "dalle_prompt": "Course ending screen with logo, subscribe button, social media icons, happy dog and trainer silhouette, warm sunset colors, professional outro design, 4K quality",
+      "grok_movement": "Fade to warm colors, logo reveals, call to action appears with gentle animation"
+    }
+  ]
+}

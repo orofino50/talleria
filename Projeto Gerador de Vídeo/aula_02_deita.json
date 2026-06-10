@@ -1,0 +1,78 @@
+{
+  "projeto": "AdaptaCão - Aula 02: Comando DEITA",
+  "descricao": "Segunda aula do curso AdaptaCão ensinando o comando DEITA para cães. O instrutor revisita o SENTA como base, demonstra a transição natural para o deitado e guia os 3 passos para o cão aprender a deitar com recompensa sem forçar fisicamente.",
+  "cenas": [
+    {
+      "scene_number": 1,
+      "descricao": "Abertura visual do curso — Silhueta de cachorro deitado sobre fundo gradiente",
+      "dalle_prompt": "Silhueta estilizada de um cão deitado em perfil, corpo alongado no chão com patas esticadas, gradiente que vai do azul profundo (#4A90E2) ao laranja quente (#F5A623), fundo branco limpo com leve textura de luz, estilo minimalista premium, iluminação cinematográfica suave, composição centralizada, 4K",
+      "grok_movement": "Fade in do branco, a silhueta do cachorro deitado surge gradualmente com o gradiente fluindo por suas curvas, sutil efeito de partículas de luz flutuando, revelação elegante de 3 segundos com expansão horizontal"
+    },
+    {
+      "scene_number": 2,
+      "descricao": "Revisão visual — SENTA como base do DEITA",
+      "dalle_prompt": "Dois momentos do mesmo golden retriever lado a lado em campo de treinamento: na ESQUERDA o cachorro na posição sentada perfeita, na DIREITA o mesmo cachorro iniciando a transição para deitado, ambos com postura relaxada e feliz, grama natural verde, luz dourada suave, fotorealista, 4K",
+      "grok_movement": "O lado esquerdo (SENTA) aparece primeiro com foco nítido, depois o lado direito (transição DEITA) surge com slide-in lateral, mostrando a progressão natural entre os comandos"
+    },
+    {
+      "scene_number": 3,
+      "descricao": "Cachorro executando comando DEITA — Posição deitada completa",
+      "dalle_prompt": "Golden retriever em posição deitada perfeita visto de lado, corpo completamente apoiado no chão, patas dianteiras esticadas para frente, cabeça levantada atenta, expressão calma e contentada, campo de treinamento com grama fofa, luz natural difusa, fotorealista, 4K",
+      "grok_movement": "Câmera em nível baixo faz um movimento lateral suave mostrando a posição completa do cachorro, slow motion 120fps destacando a estabilidade e conforto da posição deitada"
+    },
+    {
+      "scene_number": 4,
+      "descricao": "Demonstração da posição correta do DEITA — Detalhe postural",
+      "dalle_prompt": "Vista lateral detalhada de golden retriever na posição deitada correta: barriga tocando o chão, patas dianteiras paralelas estendidas, patas traseiras dobradas naturalmente ao lado, cabeça erguida olhando para frente, treinador ajoelhado ao lado com petisco, campo externo com grama natural, iluminação lateral dourada, fotorealista, 4K",
+      "grok_movement": "Dolly in lento focando na postura do cão deitado, a câmera se aproxima mostrando o alinhamento do corpo com o chão, transição suave para detalhe das patas esticadas"
+    },
+    {
+      "scene_number": 5,
+      "descricao": "Passo 1 — Cão no SENTA com treat na mão do treinador",
+      "dalle_prompt": "Golden retriever em posição sentada perfeita, treinador ajoelhado na frente segurando petisco pequeno perto do focinho do cachorro, prontos para iniciar o exercício de deitar, campo de treinamento com grama suave, iluminação natural quente, plano de setup instrucional, fotorealista, 4K",
+      "grok_movement": "Plano estático e estável estabelecendo a posição inicial, o cachorro olha atentamente para o petisco, antecipação do movimento com foco na relação entre treinador e animal"
+    },
+    {
+      "scene_number": 6,
+      "descricao": "Passo 2 — Mover treat do focinho para o chão entre as patas",
+      "dalle_prompt": "Plano detalhe da mão do treinador movendo o petisco em descida suave desde a altura do focinho do golden retriever até o chão entre as patas dianteiras, cabeça do cachorro acompanhando o petisco para baixo com expressão concentrada, campo externo com iluminação dourada de contorno, captura em movimento, fotorealista, 4K",
+      "grok_movement": "Tracking shot suave seguindo a trajetória descendente do petisco, a câmera acompanha o arco para baixo, o cachorro começa a abaixar o corpo naturalmente, clara visualização do movimento"
+    },
+    {
+      "scene_number": 7,
+      "descricao": "Passo 3 — Cão deitando completamente e recebendo recompensa",
+      "dalle_prompt": "Golden retriever completamente na posição deitada, corpo relaxado no chão, treinador entregando petisco com gesto gentil de aprovação, expressão calma de contentamento no cachorro, fundo de parque com luz solar suave, momento de celebração da recompensa, fotorealista, 4K",
+      "grok_movement": "Câmera captura a conclusão do deitar em slow motion 120fps, treinador entrega o petisco com sorriso, o cachorro mastiga o petisco calmamente, momento pacífico de sucesso com leve zoom out"
+    },
+    {
+      "scene_number": 8,
+      "descricao": "Comparação visual — Não forçar fisicamente o cão",
+      "dalle_prompt": "Dois cenas lado a lado em campo de treinamento: na ESQUERDA treinador usando petisco para guiar o golden retriever a deitar naturalmente com expressão feliz e luz verde suave; na DIREITA pessoa empurrando as costas do cachorro para baixo com expressão desconfortada e luz avermelhada, fotorealista, 4K",
+      "grok_movement": "Lado esquerdo (método correto) aparece com luz verde suave e zoom in gentil, lado direito (método incorreto) surge com luz avermelhada e sutil vibração na câmera, linha divisória animada entre eles"
+    },
+    {
+      "scene_number": 9,
+      "descricao": "Prática — Sequência de repetições do DEITA",
+      "dalle_prompt": "Sequência do treinador e golden retriever praticando o comando deitar múltiplas vezes em campo de treino ensolarado, cachorro respondendo mais rápido a cada repetição, melhoria visível e energia de conexão entre eles, iluminação cinematográfica quente, fotorealista, 4K",
+      "grok_movement": "Montagem rápida de repetições bem-sucedidas de deitar, o cachorro fica mais rápido e confiante, energia alegre de treino aumenta, transições com whip pan entre repetições"
+    },
+    {
+      "scene_number": 10,
+      "descricao": "Resumo visual dos passos — Demonstração sequencial das etapas",
+      "dalle_prompt": "Três momentos sequenciais do mesmo golden retriever mostrando os 3 passos do DEITA: primeiro sentado com petisco, segundo abaixando com petisco no chão, terceiro deitado recebendo recompensa, cada cena em miniatura com moldura azul clara, fundo neutro cinza claro, estilo educacional limpo, fotorealista, 4K",
+      "grok_movement": "Cada etapa aparece sequencialmente com slide-in suave da direita, a câmera faz zoom out gradual revelando as três etapas lado a lado, composição final equilibrada"
+    },
+    {
+      "scene_number": 11,
+      "descricao": "Preview do próximo comando — Cachorro ficando parado em FICA",
+      "dalle_prompt": "Golden retriever em posição de permanência perfeita, corpo imóvel e atento, expressão concentrada olhando para frente, campo de treinamento com luz dourada de entardecer, fundo desfocado com tons de laranja e azul, fotorealista, 4K",
+      "grok_movement": "Transição dinâmica revelando o próximo comando, a câmera foca no cachorro imóvel em slow motion 120fps, antecipação construída com leve zoom in na expressão atenta do animal"
+    },
+    {
+      "scene_number": 12,
+      "descricao": "Encerramento — Silhueta do treinador e cachorro ao pôr do sol",
+      "dalle_prompt": "Silhuetas do treinador e golden retriever lado a lado contemplando o pôr do sol, gradiente do céu indo do laranja quente ao azul profundo, cão sentado ao lado do humano em pose de conexão, campo aberto com grama alta em silhueta, iluminação dramática de costas, composição cinematográfica ampla, fotorealista, 4K",
+      "grok_movement": "Fade in do pôr do sol com cores vibrantes, silhuetas surgem gradualmente em contra-luz, a câmera faz um dolly out lento revelando a paisagem completa, energia serena e contemplativa de encerramento"
+    }
+  ]
+}

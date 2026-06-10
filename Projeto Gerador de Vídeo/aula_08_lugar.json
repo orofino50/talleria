@@ -1,0 +1,78 @@
+{
+  "projeto": "AdaptaCão - Aula 08: Comando LUGAR",
+  "descricao": "Oitava aula do curso AdaptaCão ensinando o comando LUGAR para cães — o cão vai ao seu cantinho designado. O instrutor demonstra como criar uma associação positiva com o local.",
+  "cenas": [
+    {
+      "scene_number": 1,
+      "descricao": "Abertura visual — Silhueta de cachorro indo ao seu tapete",
+      "dalle_prompt": "Silhueta estilizada de um cão caminhando calmamente em direção a um retângulo que representa um tapete, gradiente que vai do azul profundo (#4A90E2) ao laranja quente (#F5A623), fundo branco limpo com leve textura de luz, estilo minimalista premium, iluminação cinematográfica suave, composição centralizada, 4K",
+      "grok_movement": "Fade in do branco, a silhueta do cachorro caminhando surge gradualmente com o gradiente fluindo por suas curvas, sutil efeito de partículas de luz, revelação elegante de 3 segundos com movimento lateral"
+    },
+    {
+      "scene_number": 2,
+      "descricao": "Por que LUGAR — Tranquilidade para visitas e refeições",
+      "dalle_prompt": "Cenário doméstico harmonioso: golden retriever descansando calmamente em seu tapete/colchonete designado na sala de estar enquanto visitas conversam ao fundo desfocado, vida doméstica harmoniosa, iluminação natural suave de janela, fotorealista de cenário real, 4K",
+      "grok_movement": "Plano estático com o cachorro relaxado no tapete em foco, visitas desfocadas ao fundo movendo-se suavemente, harmonia entre o cão e a vida lar"
+    },
+    {
+      "scene_number": 3,
+      "descricao": "Cachorro indo ao seu LUGAR — Demonstraçao perfeita",
+      "dalle_prompt": "Golden retriever caminhando calmamente em direção ao tapete designado na sala de estar, deitando-se nele com expressão de contentamento, dono visível ao fundo aprovando com sorriso, cena doméstica pacífica, fotorealista, 4K",
+      "grok_movement": "A câmera acompanha o cachorro caminhando até o tapete em steady cam suave, o animal se deita com satisfação, o dono acena aprovação ao fundo"
+    },
+    {
+      "scene_number": 4,
+      "descricao": "Demonstração — Posição correta do LUGAR",
+      "dalle_prompt": "Golden retriever deitado em tapete macio de dormir, corpo completamente apoiado, cabeça erguida atenta, expressão calma e contentada, ambiente doméstico acolhedor com iluminação quente, fotorealista, 4K",
+      "grok_movement": "Dolly in lento focando na postura relaxada do cão no tapete, slow motion 120fps destacando o conforto e a tranquilidade da posição"
+    },
+    {
+      "scene_number": 5,
+      "descricao": "Escolher o local — Tapete, cama ou cobertor",
+      "dalle_prompt": "Três opções de locais para cães dispostos lado a lado: colchonete macio, cama elevada, cobertor dobrado, todos em tons neutros e acolhedores, fotografia de produto com fundo de madeira clara, iluminação natural suave, fotorealista, 4K",
+      "grok_movement": "Cada opção aparece com slide-in sequencial da esquerda, a câmera faz zoom out gradual revelando as três escolhas lado a lado"
+    },
+    {
+      "scene_number": 6,
+      "descricao": "Passo 1 — Colocar treat no tapete, deixar o cão ir até lá",
+      "dalle_prompt": "Treinador colocando um petisco pequeno no tapete designado, golden retriever se aproximando do tapete com curiosidade, farejando o petisco, ambiente interno tranquilo com iluminação natural suave, momento de primeira associação positiva, fotorealista, 4K",
+      "grok_movement": "Plano detalhe do petisco sendo colocado no tapete, a câmera acompanha o cachorro se aproximando com curiosidade, rack focus do petisco para o focinho do animal"
+    },
+    {
+      "scene_number": 7,
+      "descricao": "Passo 2 — Quando o cão estiver no tapete, dizer LUGAR e recompensar",
+      "dalle_prompt": "Golden retriever parado no tapete, treinador apontando para o tapete com gesto claro, cachorro associando o local com a recompensa, petisco sendo entregue, ambiente interno de treino, iluminação natural, fotorealista, 4K",
+      "grok_movement": "Plano médio mostrando a interação completa, a câmera foca no gesto do treinador apontando, depois no cachorro no tapete, transição suave entre os dois"
+    },
+    {
+      "scene_number": 8,
+      "descricao": "Passo 3 — Aumentar distância — Enviar o cão para o LUGAR de longe",
+      "dalle_prompt": "Golden retriever caminhando de volta ao seu tapete de longe após comando, percorrendo a sala de estar até o local designado com determinação, sala ampla com mobiliário ao redor, iluminação natural de janela, fotorealista, 4K",
+      "grok_movement": "Tracking shot acompanhando o cachorro percorrendo a sala até o tapete, dolly back revelando a distância percorrida, slow motion na chegada ao destino"
+    },
+    {
+      "scene_number": 9,
+      "descricao": "Dica — Manter o LUGAR como local positivo, nunca punir lá",
+      "dalle_prompt": "Golden retriever relaxado e feliz no seu tapete, expressão de contentamento, ao redor do animal leves corações flutuando simbolizando associação positiva, ambiente doméstico acolhedor com iluminação quente, fotorealista, 4K",
+      "grok_movement": "Plano estático focado no cachorro feliz no tapete, sutil efeito de brilho suave ao redor do animal reforçando a positividade do local"
+    },
+    {
+      "scene_number": 10,
+      "descricao": "Usos práticos — Visitas, refeições, descanso",
+      "dalle_prompt": "Três cenas do mesmo golden retriever no tapete: durante uma refeição do dono na mesa, durante uma visita recebendo carinho, durante o descanso vespertino, todas pacíficas e calmas, cada cena com moldura azul clara, fotorealista, 4K",
+      "grok_movement": "As três cenas aparecem sequencialmente com slide-in, mostrando os usos práticos do LUGAR na vida cotidiana"
+    },
+    {
+      "scene_number": 11,
+      "descricao": "Preview do próximo comando — Cachorro respondendo ao NÃO",
+      "dalle_prompt": "Golden retriever em posição atenta olhando para o treinador com expressão concentrada e receptiva, campo de treinamento com luz dourada de entardecer, fundo desfocado em tons de azul e laranja suaves, fotorealista, 4K",
+      "grok_movement": "Transição dinâmica revelando o próximo comando, a câmera foca na expressão atenta do cachorro em slow motion 120fps, antecipação construída com leve zoom in"
+    },
+    {
+      "scene_number": 12,
+      "descricao": "Encerramento — Silhueta do treinador e cachorro ao pôr do sol",
+      "dalle_prompt": "Silhuetas do treinador e golden retriever lado a lado contemplando o pôr do sol, gradiente do céu indo do laranja quente ao azul profundo, cão deitado ao lado do humano em pose de conexão, campo aberto com grama alta em silhueta, iluminação dramática de costas, fotorealista, 4K",
+      "grok_movement": "Fade in do pôr do sol com cores vibrantes, silhuetas surgem gradualmente em contra-luz, dolly out lento revelando a paisagem completa, energia serena de encerramento"
+    }
+  ]
+}

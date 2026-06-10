@@ -1,0 +1,19 @@
+# Video Generator - Dependências
+
+# Automação Web
+selenium>=4.15.2
+webdriver-manager>=4.0.1
+
+# Processamento de Imagem (versões compatíveis com Python 3.14)
+Pillow>=10.3.0
+opencv-python>=4.9.0
+
+# Requisições HTTP
+requests>=2.31.0
+
+# Utilitários
+python-dotenv>=1.0.0
+
+# Opcional - para melhor logging
+colorama>=0.4.6
+tqdm>=4.66.1

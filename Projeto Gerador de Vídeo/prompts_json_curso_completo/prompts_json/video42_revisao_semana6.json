@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 42: Revisão da Semana 6",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A fun, fast-paced montage of a dog performing all of this week's tricks: Pata, Gira, Rola, Reverência, Morto, and Vergonha. Upbeat, playful music. 8k quality.",
+      "grok_movement": "Quick cuts, with the name of each trick appearing as a fun, animated text overlay. The whole sequence feels like a talent show.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A checklist infographic for Week 6, showing all six tricks with a star next to each one. 8k detail.",
+      "grok_movement": "Each star animates in with a magical sparkle sound, confirming the completion of each fun trick.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A short performance routine: the owner gives a sequence of cues, and the dog performs Gira -> Reverência -> Morto -> Vergonha. A perfect showcase of the week's learning. 8k quality.",
+      "grok_movement": "A continuous shot that captures the entire performance, showing the dog's intelligence and the strong bond with its owner.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Close-up on a calendar showing Week 6 being circled with a jester hat sticker, symbolizing the fun and playful nature of the week. 8k detail.",
+      "grok_movement": "The circle and jester hat sticker animate onto the calendar with a fun, bouncy effect.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen with text 'Semana 6 Concluída! O Show de Talentos Começou!', with a preview of next week's topic 'Próxima Semana: Habilidades de Utilidade', building anticipation. 8k quality.",
+      "grok_movement": "A graphic of a stage with spotlights appears. The preview for the next week slides in with a practical, tool-like transition.",
+      "use_previous_frame": true
+    }
+  ]
+}

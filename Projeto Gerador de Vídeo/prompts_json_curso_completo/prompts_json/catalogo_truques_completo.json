@@ -1,0 +1,171 @@
+{
+  "titulo": "Catálogo de Truques AdaptaCão (50+ Truques)",
+  "nota": "Este arquivo contém exemplos de prompts JSON para os truques mais populares do catálogo. Use estes como templates para criar os demais 50+ truques seguindo a mesma estrutura.",
+  "truques_basicos": [
+    {
+      "titulo": "Truque: Senta",
+      "upscale_videos": true,
+      "upscale_factor": 2,
+      "cenas": [
+        {
+          "dalle_prompt": "A dog facing a trainer who is holding a treat at the dog's nose level, 8k quality",
+          "grok_movement": "Static shot establishing the starting position",
+          "use_previous_frame": false
+        },
+        {
+          "dalle_prompt": "The trainer moves the treat from the dog's nose up and back over its head, causing the dog's rear end to lower to the ground, 8k quality",
+          "grok_movement": "Smooth luring motion showing the treat path and the dog's body following",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "The dog's bottom touches the ground in a perfect sit position, the trainer says 'Sim!' and gives the treat, 8k quality",
+          "grok_movement": "Slow-motion of the successful sit with a sparkle effect on the reward",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "The trainer now uses just a hand signal (empty hand moving up) and says 'Senta', the dog sits without the lure, 8k quality",
+          "grok_movement": "Clear shot of the hand signal and the dog's immediate response",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "Final shot of the dog sitting perfectly with text overlay: 'Senta: O Comando Fundamental', 8k quality",
+          "grok_movement": "Professional final frame with text animation",
+          "use_previous_frame": true
+        }
+      ]
+    },
+    {
+      "titulo": "Truque: Deita",
+      "upscale_videos": true,
+      "upscale_factor": 2,
+      "cenas": [
+        {
+          "dalle_prompt": "A dog in a sit position, trainer holding a treat near its nose, 8k quality",
+          "grok_movement": "Static shot establishing the starting position",
+          "use_previous_frame": false
+        },
+        {
+          "dalle_prompt": "The trainer slowly lowers the treat straight down to the ground between the dog's front paws, 8k quality",
+          "grok_movement": "Smooth downward luring motion",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "The dog follows the treat down, lowering its chest and elbows to the ground in a perfect down position, 8k quality",
+          "grok_movement": "Slow-motion capture of the dog lowering into position",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "The trainer says 'Sim!' and gives the treat, then introduces the word 'Deita', 8k quality",
+          "grok_movement": "Reward moment with sparkle effect",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "Final shot of the dog in a relaxed down position with text overlay: 'Deita: A Base da Calma', 8k quality",
+          "grok_movement": "Professional final frame with text animation",
+          "use_previous_frame": true
+        }
+      ]
+    }
+  ],
+  "truques_divertidos": [
+    {
+      "titulo": "Truque: Dança (Gira)",
+      "upscale_videos": true,
+      "upscale_factor": 2,
+      "cenas": [
+        {
+          "dalle_prompt": "A dog standing, trainer holding a treat near its nose, 8k quality",
+          "grok_movement": "Static shot establishing position",
+          "use_previous_frame": false
+        },
+        {
+          "dalle_prompt": "The trainer moves the treat in a horizontal circle around the dog's head, luring it to spin 360 degrees, 8k quality",
+          "grok_movement": "Circular camera movement following the treat path",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "The dog completes the full spin, trainer says 'Sim!' and rewards, 8k quality",
+          "grok_movement": "Top-down shot capturing the complete spin with celebration graphics",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "The trainer uses an empty hand with a circular motion and says 'Gira', dog spins without lure, 8k quality",
+          "grok_movement": "Clear shot of hand signal and dog's response",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "Final shot of dog spinning gracefully in slow-motion with text: 'Gira: O Giro da Alegria', 8k quality",
+          "grok_movement": "Cinematic slow-motion with artistic lighting",
+          "use_previous_frame": true
+        }
+      ]
+    }
+  ],
+  "truques_uteis": [
+    {
+      "titulo": "Truque: Buscar",
+      "upscale_videos": true,
+      "upscale_factor": 2,
+      "cenas": [
+        {
+          "dalle_prompt": "A dog holding a favorite toy in its mouth, trainer praising enthusiastically, 8k quality",
+          "grok_movement": "Static shot focusing on positive association",
+          "use_previous_frame": false
+        },
+        {
+          "dalle_prompt": "Trainer gently takes the toy, says 'Sim!', gives treat, then immediately returns the toy, 8k quality",
+          "grok_movement": "Close-up on the exchange showing the positive reinforcement loop",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "Trainer tosses the toy 2 feet away, dog retrieves and brings it back, 8k quality",
+          "grok_movement": "Camera follows the short retrieval sequence",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "Trainer tosses the toy further, dog enthusiastically runs, retrieves, and returns, 8k quality",
+          "grok_movement": "Dynamic tracking shot following the dog's run",
+          "use_previous_frame": true
+        },
+        {
+          "dalle_prompt": "Final shot of dog bringing newspaper to owner with text: 'Buscar: O Ajudante Perfeito', 8k quality",
+          "grok_movement": "Heartwarming practical application shot",
+          "use_previous_frame": true
+        }
+      ]
+    }
+  ],
+  "template_para_demais_truques": {
+    "nota": "Use esta estrutura para criar os JSONs dos 50+ truques restantes",
+    "titulo": "Truque: [NOME DO TRUQUE]",
+    "upscale_videos": true,
+    "upscale_factor": 2,
+    "cenas": [
+      {
+        "dalle_prompt": "[Descrição da posição inicial ou setup]",
+        "grok_movement": "[Descrição do movimento da câmera]",
+        "use_previous_frame": false
+      },
+      {
+        "dalle_prompt": "[Descrição do primeiro passo do truque]",
+        "grok_movement": "[Descrição do movimento]",
+        "use_previous_frame": true
+      },
+      {
+        "dalle_prompt": "[Descrição do segundo passo]",
+        "grok_movement": "[Descrição do movimento]",
+        "use_previous_frame": true
+      },
+      {
+        "dalle_prompt": "[Descrição do truque completo sem lure]",
+        "grok_movement": "[Descrição do movimento]",
+        "use_previous_frame": true
+      },
+      {
+        "dalle_prompt": "[Shot final com texto overlay]",
+        "grok_movement": "[Descrição do movimento final]",
+        "use_previous_frame": true
+      }
+    ]
+  }
+}

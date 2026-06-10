@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 11: Aumentando o Fica",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is in a solid sit-stay. A timer on screen is counting up: 1... 2... 3... 4... 5 segundos. The dog remains perfectly still, looking at the trainer. 8k quality.",
+      "grok_movement": "The camera slowly zooms in on the dog's focused face as the timer counts up, building a little tension and highlighting the dog's patience.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer takes one single, slow step backward from the dog, maintaining eye contact and keeping the 'stay' hand signal up. The dog doesn't move. An arrow graphic on the floor shows '1 Passo'. 8k quality.",
+      "grok_movement": "The camera dollies backward with the trainer, keeping the distance between them and the dog clear. The arrow graphic animates onto the floor.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer calmly steps forward again, returning to the dog's side, and gives a jackpot reward of several treats. The dog is very happy. 8k quality.",
+      "grok_movement": "The camera follows the trainer forward, and a celebratory 'Jackpot!' text with a coin shower animation appears as the treats are given.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Split screen. Left side: 'Duração' with a clock icon. Right side: 'Distância' with a ruler icon. Both show increasing numbers (e.g., 5s -> 10s, 1 passo -> 3 passos). 8k quality.",
+      "grok_movement": "The numbers on both sides of the screen animate, counting up to show the progression of the training.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of a dog staying patiently on its bed in the corner of a room while the family moves around, demonstrating a practical use case. Text overlay: 'Construindo Confiança, um Segundo de Cada Vez'. 8k quality.",
+      "grok_movement": "A peaceful, wide shot of the room. The family's movement is slightly sped up (timelapse) while the dog remains calm and still. Text fades in.",
+      "use_previous_frame": true
+    }
+  ]
+}

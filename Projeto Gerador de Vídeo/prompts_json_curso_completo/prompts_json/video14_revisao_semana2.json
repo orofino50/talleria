@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 14: Revisão da Semana 2",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Dynamic montage of a dog performing the week's commands: a perfect sit, a solid stay, and a quick down, all in quick succession with upbeat music, cinematic quality, 8k detail",
+      "grok_movement": "Fast-paced cuts with energetic transitions, maybe a swipe or a quick zoom, to showcase the new skills learned",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A checklist infographic for Week 2: 'Comando Senta', 'Comando Fica', 'Comando Deita'. Each item gets a satisfying green checkmark, 8k detail",
+      "grok_movement": "Each checkmark animates in with a distinct, satisfying sound, confirming the completion of each core command",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A person is preparing the dog's meal. The dog performs a sequence: sits, waits patiently (fica), and only goes to the bowl after a release command. A perfect demonstration of the week's skills combined, 8k quality",
+      "grok_movement": "A continuous shot that follows the sequence of commands, showing the dog's impulse control and understanding",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Close-up on a calendar showing Week 2 being circled with a gold star sticker placed on it, symbolizing a job well done, 8k detail",
+      "grok_movement": "The circle and gold star animate onto the calendar with a little sparkle effect, reinforcing the sense of accomplishment",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final screen with text 'Semana 2 Concluída! Você está no controle!', with a preview of next week's topic 'Próxima Semana: Controle Básico (Deixa, Larga, Guia)', building anticipation, 8k quality",
+      "grok_movement": "Celebratory graphics like a small trophy icon appear next to the text. The preview for the next week slides in from the side",
+      "use_previous_frame": true
+    }
+  ]
+}

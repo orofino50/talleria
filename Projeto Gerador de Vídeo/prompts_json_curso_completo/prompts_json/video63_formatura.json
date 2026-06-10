@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 63: Formatura AdaptaCão",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A grand, celebratory montage of all the best moments from the course: the first sit, the first successful recall, the funniest trick, the most helpful task. Epic, emotional music. 8k quality.",
+      "grok_movement": "A fast-paced, heartwarming recap of the entire journey, from a clumsy puppy to a master-level companion.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A beautiful, animated certificate of completion for \"AdaptaCão - Nível Mestre\". A gold medal with a paw print swings into view. 8k quality.",
+      "grok_movement": "The certificate and medal animate with regal, celebratory effects. The user's name could be notionally written on it.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A dog is wearing a small, cute graduation cap. The owner is giving it a big hug. 8k quality.",
+      "grok_movement": "An emotional, close-up shot capturing the bond and pride between the dog and owner.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A wall of fame, showing photos of many different dogs of all breeds and sizes, all looking happy and well-trained. The community of AdaptaCão graduates. 8k quality.",
+      "grok_movement": "The camera pans across the diverse wall of graduates, creating a sense of community and shared success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final, epic shot of the AdaptaCão logo with the text \"PARABÉNS! Você e seu cão são uma dupla de MESTRES!\". Confetti falls in the background. 8k quality.",
+      "grok_movement": "A grand, final, celebratory screen. The confetti animation is slow and majestic. The text is bold and powerful.",
+      "use_previous_frame": true
+    }
+  ]
+}

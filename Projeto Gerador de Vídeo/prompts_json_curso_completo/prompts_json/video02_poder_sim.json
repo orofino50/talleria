@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 2: O Poder do SIM!",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "Extreme close-up of a smiling person's mouth saying 'SIM!' with enthusiasm, bright white teeth, warm expression, sound wave visualization emanating from the mouth in orange and blue colors, dynamic energy, professional training video style, 8k detail",
+      "grok_movement": "Sound waves pulse and expand, camera slowly zooms out to reveal the person's happy face",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "Dog sniffing and touching a person's hand with its nose, person immediately saying 'Sim!' shown with text bubble, then offering a treat, indoor training session, natural lighting, focus on the exact moment of contact, positive reinforcement training, 8k quality",
+      "grok_movement": "Freeze frame on the nose touch, 'Sim!' bubble appears, then slow-motion as the treat is offered and taken",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Clean infographic showing a horizontal timeline with three points: first point labeled 'Comportamento' (dog icon), second point 'SIM!' (sound wave icon in orange), third point 'Recompensa' (treat icon), arrows connecting them, modern educational graphic, blue and orange colors, 8k detail",
+      "grok_movement": "Camera pans from left to right along the timeline, each icon animates as the camera passes over it",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Person throwing a treat on the floor, dog eating it, then the dog looking up making direct eye contact with the person, the exact moment of eye contact highlighted with a subtle glow effect, person's hand ready with another treat, training exercise moment, 8k quality",
+      "grok_movement": "Slow-motion as the dog looks up, the glow effect appears and intensifies, camera holds on the eye contact",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Illustration of a happy dog's face with a bright lightbulb glowing above its head representing understanding and learning, cartoon style mixed with photo-realistic dog, text overlay 'Seu cão está entendendo!', cheerful and motivational design, 8k detail",
+      "grok_movement": "Lightbulb flickers and then glows brightly, sparkles animate around the dog's head, text fades in smoothly",
+      "use_previous_frame": true
+    }
+  ]
+}

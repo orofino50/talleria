@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 44: Guardar os Brinquedos",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is holding a toy, standing over an open toy box. The trainer is luring the dog's head over the box with a treat. 8k quality.",
+      "grok_movement": "Static shot, clearly showing the setup: dog, toy, and the target toy box.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The trainer says 'Guarda' and uses the treat to lure the dog to drop the toy inside the box. The moment the toy falls in, the trainer gives a jackpot reward. 8k quality.",
+      "grok_movement": "Slow-motion as the toy is dropped into the box. A 'Jackpot!' animation and sound effect celebrate the success.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Several toys are scattered on the floor. The trainer points to one toy and says 'Guarda'. The dog picks it up and drops it in the box. 8k quality.",
+      "grok_movement": "The camera follows the dog as it completes the task for a single toy, from picking it up to dropping it in the box.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A time-lapse sequence showing the dog picking up all the scattered toys one by one and putting them in the toy box until the floor is clean. 8k quality.",
+      "grok_movement": "A fast-motion time-lapse that shows the entire cleanup process, making the dog look like a super-efficient helper.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog sitting proudly next to the full toy box in a clean, tidy room. Text overlay: 'Guardar: O Parceiro da Organização'. 8k quality.",
+      "grok_movement": "A satisfying, clean shot of the tidy room and the proud dog. The text appears in a neat, organized font.",
+      "use_previous_frame": true
+    }
+  ]
+}

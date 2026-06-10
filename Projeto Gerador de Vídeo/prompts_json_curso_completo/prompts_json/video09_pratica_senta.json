@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 9: Prática do Senta",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A person holding a dog's food bowl, the dog is sitting patiently and looking up, waiting for the bowl to be placed on the floor, demonstrating practical use of the 'sit' command, kitchen environment, 8k quality",
+      "grok_movement": "Static shot, focusing on the dog's patient posture and the anticipation of the meal",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "A person at the front door with a leash in hand, the dog is sitting calmly by the door, waiting to go for a walk, another practical application of 'sit', 8k quality",
+      "grok_movement": "The camera pans from the leash in the person's hand down to the patiently sitting dog",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "A montage of the dog sitting in various locations: on the grass in a park, on a sidewalk during a walk, in the living room when guests arrive, showing generalization of the command, 8k quality",
+      "grok_movement": "Quick, dynamic cuts between the different locations, each showing a successful 'sit'",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Infographic showing a brain icon with multiple arrows pointing to different location icons (house, park, street, car), with the word 'SENTA' in the middle, symbolizing the command works everywhere, 8k quality",
+      "grok_movement": "The location icons light up one by one as the arrows connect to them, showing the spread of the learned behavior",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog sitting perfectly while the owner gives it an affectionate head scratch, a moment of connection and pride, text overlay 'Senta: O Comando para Todas as Horas', 8k quality",
+      "grok_movement": "Slow zoom in on the happy expressions of both the dog and the owner, text fades in smoothly",
+      "use_previous_frame": true
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+RESUMO DA GERAÇÃO DE VÍDEOS
+==================================================
+
+IMAGENS GERADAS:
+  - scene_001.png
+  - scene_002.png
+  - scene_003.png
+  - scene_004.png
+  - scene_005.png
+  - scene_006.png
+  - scene_007.png
+  - scene_008.png
+  - scene_009.png
+  - scene_010.png
+  - scene_011.png
+  - scene_012.png
+
+VÍDEOS GERADOS:
+  - grok-video-7c331f2f-069d-433d-a14a-5691f400fd8d.mp4
+  - scene_001.mp4
+  - scene_002.mp4
+  - scene_003.mp4
+  - scene_004.mp4
+  - scene_005.mp4
+  - scene_006.mp4
+  - scene_007.mp4
+  - scene_008.mp4
+  - scene_009.mp4
+  - scene_010.mp4
+  - scene_011.mp4
+  - scene_012.mp4
+
+FRAMES EXTRAÍDOS:
+  - scene_001_last_frame.png
+  - scene_002_last_frame.png
+  - scene_003_last_frame.png
+  - scene_004_last_frame.png
+  - scene_005_last_frame.png
+  - scene_006_last_frame.png
+  - scene_007_last_frame.png
+  - scene_008_last_frame.png
+  - scene_009_last_frame.png
+  - scene_010_last_frame.png
+  - scene_011_last_frame.png
+  - scene_012_last_frame.png

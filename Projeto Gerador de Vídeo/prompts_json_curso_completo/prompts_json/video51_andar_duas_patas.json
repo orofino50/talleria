@@ -1,0 +1,32 @@
+{
+  "titulo": "Vídeo 51: Andar em Duas Patas",
+  "upscale_videos": true,
+  "upscale_factor": 2,
+  "cenas": [
+    {
+      "dalle_prompt": "A dog is in a sit position. The trainer is holding a treat high above its head, encouraging it to lift its front paws off the ground to reach it. 8k quality.",
+      "grok_movement": "Static shot, focusing on the lure and the dog's initial effort to stand up.",
+      "use_previous_frame": false
+    },
+    {
+      "dalle_prompt": "The dog lifts its paws for a second. The trainer immediately says 'Sim!' and gives the treat. Rewarding the very beginning of the behavior. 8k quality.",
+      "grok_movement": "A close-up, slow-motion shot of the paws lifting off the ground, followed by the instant reward.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The trainer now lures the dog to take one small step forward on its hind legs to get the treat. The dog manages a clumsy but successful step. Jackpot reward. 8k quality.",
+      "grok_movement": "The camera is at a low angle to capture the single step. A 'Jackpot!' animation celebrates the milestone.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "The dog now takes several steps on its hind legs, following the lure, looking like it's dancing. 8k quality.",
+      "grok_movement": "A fun, dynamic shot that follows the dog as it 'dances' forward for a few steps.",
+      "use_previous_frame": true
+    },
+    {
+      "dalle_prompt": "Final shot of the dog walking on two legs towards the camera in slow motion, looking like a movie star. Text overlay: 'A Estrela do Show'. 8k quality.",
+      "grok_movement": "A cinematic, slow-motion shot with dramatic lighting. The text appears in a glamorous, Hollywood-style font.",
+      "use_previous_frame": true
+    }
+  ]
+}
