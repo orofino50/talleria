@@ -458,6 +458,111 @@ ul { list-style: none; }
   filter: brightness(1.1) contrast(1.05) saturate(1.08);
 }
 
+/* ==========================================
+   HERO PRODUCT — Centered Apple Style
+   ========================================== */
+
+.hero--apple--product {
+  background: var(--bg-black);
+}
+
+.hero--apple--product::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(197,165,90,0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero--apple--product__content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+  color: var(--text-inverse);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 48px;
+}
+
+.hero--apple--product__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero--apple--product__visual img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero--apple--product__text {
+  max-width: 560px;
+}
+
+.hero--apple--product__headline {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  color: var(--text-inverse);
+  margin-bottom: 16px;
+}
+
+.hero--apple--product__subheadline {
+  font-size: clamp(1.0625rem, 1.2vw, 1.25rem);
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero--apple--product__price {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 32px;
+}
+
+.hero--apple--product__price strong {
+  color: var(--text-inverse);
+  font-size: 1.25rem;
+}
+
+.hero--apple--product__price s { display: none; }
+
+.hero--apple--product__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .hero--apple--product__content {
+    padding: 100px 24px 60px;
+    gap: 32px;
+  }
+  .hero--apple--product__visual img { max-width: 280px; }
+  .hero--apple--product__headline { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero--apple--product__actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+  }
+  .hero--apple--product__actions .btn { width: 100%; }
+  .hero--apple--product__actions .btn--outline-light { display: none; }
+}
+
 @media (max-width: 767px) {
   .hero--apple { min-height: auto; }
   .hero--apple::after { display: none; }
@@ -514,8 +619,11 @@ ul { list-style: none; }
   height: 280px;
   border-radius: 16px;
   overflow: hidden;
-  background: var(--bg-white);
+  background: var(--bg-light);
   border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -526,10 +634,9 @@ ul { list-style: none; }
 }
 
 .carousel__slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(1.05) contrast(1.02) saturate(1.05);
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
   transition: transform 400ms ease;
 }
 
@@ -597,7 +704,7 @@ ul { list-style: none; }
 .apple-design__image img {
   width: 100%;
   height: auto;
-  filter: brightness(1.05) contrast(1.02) saturate(1.05);
+  object-fit: contain;
   transition: transform 600ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -646,8 +753,8 @@ ul { list-style: none; }
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: brightness(1.05) contrast(1.02) saturate(1.05);
+  object-fit: contain;
+  padding: 24px;
   transition: transform 600ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -708,9 +815,9 @@ ul { list-style: none; }
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: brightness(0.85) contrast(1.1) saturate(1.1);
-  mix-blend-mode: luminosity;
+  object-fit: contain;
+  opacity: 0.3;
+  mix-blend-mode: screen;
 }
 
 .apple-lifestyle__overlay {
@@ -1221,11 +1328,11 @@ ul { list-style: none; }
 .apple-box__image {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 16px;
   margin-bottom: 16px;
   background: var(--bg-dark-alt);
-  filter: brightness(1.1) contrast(1.05) saturate(1.1);
+  padding: 16px;
   transition: transform 300ms ease;
 }
 
