@@ -205,12 +205,26 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.25rem;
   color: var(--text-primary);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02em;
   transition: color 300ms ease;
   flex-shrink: 0;
+}
+.nav-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+}
+.nav-wordmark__name {
+  font-weight: 700;
+}
+.nav-wordmark__pro {
+  font-weight: 600;
+  font-size: 0.6em;
+  color: var(--accent);
+  margin-left: 0.15em;
+  letter-spacing: 0.02em;
 }
 
 /* Inverse nav (para hero dark: index, producto) */
@@ -2397,25 +2411,27 @@ details[open] .faq-icon { transform: rotate(45deg); }
   margin: 0 auto;
   z-index: 1;
 }
-.brand-hero__mark {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 32px;
-  color: var(--text-inverse);
-  opacity: 0.85;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.brand-hero__mark svg { width: 100%; height: 100%; }
 .brand-hero__wordmark {
-  font-size: clamp(4.5rem, 14vw, 9rem);
-  font-weight: 900;
-  line-height: 0.95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 0 24px;
-  letter-spacing: -4px;
   color: var(--text-inverse);
 }
-.brand-hero__wordmark-light { font-weight: 300; color: rgba(255, 255, 255, 0.7); }
-.brand-hero__wordmark-pro { font-weight: 600; font-size: 0.55em; color: rgba(255, 255, 255, 0.55); letter-spacing: 0; margin-left: 8px; }
+.brand-hero__wordmark-name {
+  font-size: clamp(4.5rem, 14vw, 9rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.brand-hero__wordmark-pro {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 8px;
+}
 .brand-hero__tagline {
   font-size: clamp(1.125rem, 2.2vw, 1.5rem);
   font-weight: 600;
@@ -2702,7 +2718,12 @@ details[open] .faq-icon { transform: rotate(45deg); }
 .product-card__image-wrap--placeholder {
   color: #c7c7cc;
 }
-.product-card__image-wrap--placeholder svg { width: 80px; height: 80px; }
+.product-card__placeholder-icon {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #c7c7cc;
+  opacity: 0.5;
+}
 .product-card__body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
 .product-card__category {
   font-size: 0.75rem;
@@ -2840,12 +2861,29 @@ details[open] .faq-icon { transform: rotate(45deg); }
 }
 .brand-cta > * { position: relative; z-index: 1; }
 .brand-cta__mark {
-  width: 56px;
-  height: 56px;
   margin: 0 auto 32px;
-  color: var(--accent);
+  text-align: center;
 }
-.brand-cta__mark svg { width: 100%; height: 100%; }
+.brand-cta__wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.brand-cta__wordmark-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-inverse);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.brand-cta__wordmark-pro {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 4px;
+}
 .brand-cta__title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
@@ -2917,11 +2955,24 @@ details[open] .faq-icon { transform: rotate(45deg); }
   color: var(--text-primary);
   text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: -0.5px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin-bottom: 16px;
 }
-.footer__logo svg { width: 28px; height: 28px; }
+.footer-wordmark {
+  display: inline-flex;
+  align-items: baseline;
+}
+.footer-wordmark__name {
+  font-weight: 700;
+}
+.footer-wordmark__pro {
+  font-weight: 600;
+  font-size: 0.55em;
+  color: var(--accent);
+  margin-left: 0.12em;
+  letter-spacing: 0.02em;
+}
 .footer__tagline {
   font-size: 0.875rem;
   font-weight: 700;

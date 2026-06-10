@@ -1,3 +1,4 @@
-<svg viewBox="0 0 420 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <text x="0" y="58" font-family="Inter, -apple-system, system-ui, sans-serif" font-weight="900" font-size="56" fill="currentColor" letter-spacing="-2">Taller<tspan font-weight="300">ia</tspan> <tspan font-weight="600" font-size="42" opacity="0.7">Pro</tspan></text>
+<svg viewBox="0 0 260 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <text x="130" y="38" text-anchor="middle" font-family="Inter, -apple-system, system-ui, sans-serif" font-weight="700" font-size="40" letter-spacing="-1" fill="currentColor">Talleria</text>
+  <text x="130" y="62" text-anchor="middle" font-family="Inter, -apple-system, system-ui, sans-serif" font-weight="600" font-size="12" letter-spacing="3" fill="#C5A55A">PRO</text>
 </svg>
