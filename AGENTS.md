@@ -3,11 +3,11 @@
 ## Design System
 
 - **North Star:** Luz de Estúdio
-- **Register:** Brand (landing page de produto físico — Talleria multi-tool)
+- **Register:** Brand (landing page de produto físico — Talleria Pro multi-tool)
 - **Personalidade:** Profissional, premium, confiável
 - **Fonte:** Inter (monofamília, pesos 400/600/700/900)
 - **Paleta v2:** Light-first (#f5f5f7 bg, #ffffff cards, #1d1d1f text) — Apple-inspired
-- **Accent:** Coral Elétrico (#e94560) — uso ≤10% da tela
+- **Accent:** Gold (#C5A55A) — uso ≤10% da tela
 - **Trust:** Verde Garantia (#2ecc71) — CTAs finais e badges
 - **Elevação:** Sem sombras (profundidade tonal + thin borders #e8e8ed + hover lift)
 - **Bordas:** #e8e8ed, radius 16px

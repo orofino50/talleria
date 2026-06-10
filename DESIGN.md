@@ -1,5 +1,5 @@
 ---
-name: Talleria
+name: Talleria Pro
 description: Sitio web premium de herramientas eléctricas portátiles
 colors:
   primary: "#e94560"
