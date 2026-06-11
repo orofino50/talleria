@@ -5,7 +5,7 @@
 - **Site:** https://orofino50.github.io/talleria/
 - **Repo:** https://github.com/orofino50/talleria
 - **Published:** 5 pages (index, producto, sobre, faq, contacto)
-- **CSS:** `css/styles.css` (4521 lines) — see `MAP.md` for line ranges
+- **CSS:** `css/styles.css` (3639 lines) — see `MAP.md` for line ranges
 - **JS:** `js/scripts.js` (~470 lines)
 - **Images:** `images/` (SVGs, WebP, MP4/WebM videos)
 
@@ -14,6 +14,7 @@
 | Token           | Value     | Usage                    |
 |-----------------|-----------|--------------------------|
 | `--bg-black`    | #000000   | Hero, dark sections      |
+| `--bg-dark`     | #1a1a2e   | Dark section backgrounds |
 | `--bg-light`    | #f5f5f7   | Light section backgrounds|
 | `--bg-white`    | #ffffff   | Card backgrounds         |
 | `--accent`      | #C5A55A   | Gold — CTAs, highlights  |
@@ -30,7 +31,6 @@
 - **No `background-clip: text`** — banned
 - **No decorative animations** — only scroll reveal + parallax
 - **No glassmorphism** — no backdrop-filter (except nav frosted glass)
-- **Hero bg:** `--bg-black` only — no `--bg-dark` (#1a1a2e)
 - **Language:** Español (España)
 - **Accent usage:** ≤10% of screen
 
@@ -56,17 +56,25 @@ Read file offset=N limit=30                   # Read ONLY that section
 
 **Never read full CSS/HTML/JS files.** Use grep + MAP.md + narrow Read.
 
-## Pages Structure
+## Product Page Layout (16 sections)
 
-### Producto (product page)
-11 sections: Hero → Carousel → Highlights → Social Proof → Video → Compare → CTA Mid → Specs+Box → Testimonials → Trust → CTA Final
+1. Hero (hero--apple)
+2. Carousel (8 spin images, auto-scroll)
+3. Design section
+4. Bento Grid (3 feature cards, dark)
+5. Lifestyle (stats overlay, dark)
+6. Video 1 — GISAM (real painting)
+7. Video 2 — CultivoX (metal surface)
+8. Specs (5 values grid)
+9. Box contents (4 items, dark)
+10. Video 3 — DIY ALAM (assembly)
+11. Video 4 — Temu (versatility)
+12. Why Buy (6 trust cards)
+13. Testimonials (3 reviews)
+14. Compare table (PaintPro vs brochas)
+15. Specs FAQ (3 accordion items)
+16. CTA Final + countdown
 
-### Homepage
-Sections: Brand Hero → Stats → Manifesto → History → Values → Video → Products → Compromiso → Testimonials → Brand CTA → Footer
+## Homepage Layout
 
-## Comandos Disponibles
-
-- `/impeccable audit <target>` — a11y, perf, responsive check
-- `/impeccable critique <target>` — UX review with scoring
-- `/impeccable polish <target>` — final quality pass
-- `/impeccable distill <target>` — simplify and remove complexity
+Brand Hero → Stats → Manifesto → History → Values → Video → Products → Compromiso → Testimonials → Brand CTA → Footer

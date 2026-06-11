@@ -5,77 +5,63 @@
 
 ---
 
-## CSS (`css/styles.css` — 4521 lines)
+## CSS (`css/styles.css` — 3639 lines)
 
-| Lines   | Section                          | Classes                                         |
-|---------|----------------------------------|--------------------------------------------------|
+| Lines   | Section                          | Key Classes                                         |
+|---------|----------------------------------|------------------------------------------------------|
 | 1-94    | **Variables + Reset**            | `:root`, `*`, `html`, `body`, `.skip-link`, `.container` |
 | 95-162  | **Buttons**                      | `.btn`, `.btn--accent`, `.btn--trust`, `.btn--outline-light` |
-| 163-334 | **Product Nav**                  | `.product-nav`, `.nav-wordmark`, hamburger, mobile menu |
-| 335-460 | **Hero Apple (homepage)**        | `.hero--apple`, `.hero--apple__visual`, headline/sub/badge |
-| 461-589 | **Hero Product (old?)**          | `.hero--apple--product`, product hero variant     |
-| 590-646 | **Carousel**                     | `.carousel`, `.carousel__track`, auto-scroll       |
-| 647-655 | **Full-Bleed utility**           | `.full-bleed`                                     |
-| 656-712 | **Apple Design section**         | `.apple-design`, label/headline/text/visual       |
-| 713-798 | **Bento Grid**                   | `.bento-grid`, dark background                    |
-| 799-877 | **Lifestyle**                    | `.lifestyle`, dark background                     |
-| 878-1064| **Specs (old?)**                 | `.specs`, spec cards, grid                        |
-| 1065-1282| **Video Feature**               | `.video-feature`, player, text, list              |
-| 1283-1346| **Box Grid**                    | `.box-grid`, dark background                      |
-| 1347-1422| **Why Buy**                     | `.why-buy`, cards, icons                          |
-| 1423-1511| **Testimonials**                | `.testimonials`, stars, quotes, avatars           |
-| 1512-1586| **Compare Table**               | `.compare-table`, highlights                      |
-| 1587-1648| **Specs FAQ**                   | `.specs-faq`, accordion, details                  |
-| 1649-1742| **CTA Final**                   | `.brand-cta`, headline/sub/price/btn/trust        |
-| 1743-1817| **CTA Sticky Mobile**           | `.cta-sticky`, fixed bottom bar                   |
-| 1818-1891| **Footer**                      | `.footer`, columns, wordmark                      |
-| 1892-2139| **Animations**                  | `@keyframes`, `.animate-in`, parallax effects     |
-| 2140-2475| **Homepage extras**             | Homepage-specific overrides                       |
-| 2476-3114| **Homepage v3**                 | Brand hero, manifesto, values, products grid      |
-| 3115-3762| **Secondary Pages**             | `sobre.html`, `faq.html`, `contacto.html` styles  |
-| 3763-3800| **Utilities**                   | `.scroll-progress`, misc                          |
-| **3801-4521** | **Product Page (ap-*)**    | **← MOST USED** See below                        |
-
-### Product Page CSS (`ap-*` classes, lines 3801-4521)
-
-| Lines   | Component                       | Key Classes                                      |
-|---------|----------------------------------|--------------------------------------------------|
-| 3801-3818| **Section headline + eyebrow** | `.ap-section-headline`, `.ap-eyebrow`             |
-| 3820-3905| **Hero**                       | `.ap-hero`, `__inner`, `__visual`, `__headline`, `__sub`, `__price`, `__actions`, `__hint` |
-| 3907-3940| **Carousel**                   | `.ap-carousel`, `__track`, `__slide`              |
-| 3942-3994| **Highlights**                 | `.ap-highlights`, `__grid`, `.ap-highlight`       |
-| 3996-4032| **Social Proof Bar**           | `.ap-social-bar`, `__inner`, `__stat`, `__value`, `__label`, `__divider` |
-| 4034-4128| **Video**                      | `.ap-video`, `__inner`, `__text`, `__headline`, `__list`, `__player`, `__video`, `__play` |
-| 4130-4175| **Compare**                    | `.ap-compare`, `__table`, `__highlight`, `__row-label` |
-| 4177-4228| **CTA Mid-page**               | `.ap-cta-mid`, `__inner`, `__price`, `__current`, `__original`, `__badge` |
-| 4230-4296| **Specs + Box**                | `.ap-specs`, `__inner`, `__item`, `__question`, `__answer`, `.ap-box__grid/item/image/label` |
-| 4298-4370| **Testimonials**               | `.ap-testimonials`, `__grid`, `.ap-testimonial`, `__stars`, `__quote`, `__author` |
-| 4372-4425| **Trust**                      | `.ap-trust`, `__grid`, `__item`, `__icon`, `__title`, `__text` |
-| 4427-4521| **CTA Final**                  | `.ap-cta`, `__headline`, `__sub`, `__price`, `__countdown`, `__btn`, `__trust` |
+| 163-320 | **Product Nav**                  | `.product-nav`, `.nav-wordmark`, hamburger, mobile menu |
+| 321-470 | **Hero Apple**                   | `.hero--apple`, headline/sub/badge/price/visual      |
+| 471-525 | **Carousel**                     | `.carousel`, `.carousel__track`, auto-scroll          |
+| 526-534 | **Full-Bleed utility**           | `.full-bleed`                                        |
+| 535-591 | **Apple Design section**         | `.apple-design`, label/headline/image                |
+| 592-677 | **Bento Grid**                   | `.bento-grid`, `.bento-card`, dark background        |
+| 678-756 | **Lifestyle**                    | `.apple-lifestyle`, stats, dark background           |
+| 757-943 | **Specs**                        | `.apple-specs`, grid values                          |
+| 944-1161| **Video Feature**                | `.video-feature`, player, text, list                 |
+| 1162-1225| **Box Grid**                    | `.apple-box`, dark background                        |
+| 1226-1301| **Why Buy**                     | `.whybuy`, cards, icons                              |
+| 1302-1390| **Testimonials**                | `.testimonials`, `.testimonial-card`, stars/quotes   |
+| 1391-1465| **Compare Table**               | `.apple-compare`, `.compare-table`                   |
+| 1466-1527| **Specs FAQ**                   | `.specs-faq`, `.faq-item`, accordion                 |
+| 1528-1621| **CTA Final**                   | `.apple-cta`, headline/price/btn/trust               |
+| 1622-1696| **CTA Sticky Mobile**           | `.cta-sticky`, fixed bottom bar                      |
+| 1697-1770| **Footer**                      | `.footer`, columns, `.footer-wordmark`               |
+| 1771-2018| **Animations**                  | `@keyframes`, `.animate-in`, parallax effects        |
+| 2019-2354| **Homepage extras**             | Homepage-specific overrides                          |
+| 2355-2952| **Homepage v3**                 | Brand hero, manifesto, values, products grid         |
+| 2953-3600| **Secondary Pages**             | `sobre.html`, `faq.html`, `contacto.html` styles     |
+| 3601-3639| **Utilities**                   | `.scroll-progress`, misc                             |
 
 ---
 
 ## HTML Pages
 
-### `producto.html` (580 lines) — Product page
+### `producto.html` (773 lines) — Product page (old layout restored)
 | Lines   | Section                         |
 |---------|---------------------------------|
-| 1-43    | Head, meta, schema.org          |
-| 44-77   | Nav                             |
-| 79-99   | 1. Hero (price + discount)      |
-| 101-127 | 2. Carousel (11 SVGs)           |
-| 129-157 | 3. Highlights (3 features)      |
-| 159-177 | 4. Social Proof Bar             |
-| 179-208 | 5. Video (GISAM only)           |
-| 210-253 | 6. Compare table                |
-| 255-266 | 7. CTA Mid-page                 |
-| 268-322 | 8. Specs + Box contents         |
-| 324-364 | 9. Testimonials (3 reviews)     |
-| 366-393 | 10. Trust (4 items)             |
-| 395-422 | 11. CTA Final + countdown       |
-| 424-435 | CTA Sticky mobile               |
-| 437-478 | Footer                          |
-| 480-577 | Inline JS (observer, countdown) |
+| 1-46    | Head, meta, schema.org          |
+| 47-83   | Nav (Two Line Stack wordmark)   |
+| 85-106  | Hero (hero--apple)              |
+| 107-129 | Carousel (8 spin images)        |
+| 130-139 | Design section                  |
+| 140-170 | Bento Grid (3 cards)            |
+| 171-194 | Lifestyle (stats overlay)       |
+| 195-229 | Video 1 — GISAM                 |
+| 230-263 | Video 2 — CultivoX              |
+| 264-293 | Specs (5 values)                |
+| 294-319 | Box contents (4 items)          |
+| 320-353 | Video 3 — DIY ALAM              |
+| 354-387 | Video 4 — Temu                  |
+| 388-425 | Why Buy (6 cards)               |
+| 426-468 | Testimonials (3 reviews)        |
+| 469-514 | Compare table                   |
+| 515-553 | Specs FAQ (3 items)             |
+| 554-585 | CTA Final + countdown           |
+| 586-597 | CTA Sticky mobile               |
+| 598-650 | Footer                          |
+| 651-773 | Inline JS (observer, parallax)  |
 
 ### `index.html` — Homepage
 | Lines   | Section                         |
@@ -91,11 +77,6 @@
 | 316-357 | Testimonials                    |
 | 359-384 | Brand CTA                       |
 | 387+    | Sticky CTA + Footer             |
-
-### Other pages
-- `sobre.html` — Brand story, team, values
-- `faq.html` — Accordion FAQ
-- `contacto.html` — Contact cards + form
 
 ---
 
@@ -124,14 +105,14 @@
 3. `Read(filePath, offset, limit)` with narrow range
 4. Edit only what you need
 
-**Example — "change the hero price color in product page":**
+**Example — "change the hero price color":**
 ```
-grep "ap-hero__price" talleria/css/styles.css
-→ Found at line 3876
-Read talleria/css/styles.css offset=3876 limit=30
+grep "hero--apple__price" talleria/css/styles.css
+→ Found at line 439
+Read talleria/css/styles.css offset=439 limit=10
 → See the price CSS, edit color
 ```
 
 **Token cost comparison:**
-- ❌ Old: Read full CSS = ~25,000 tokens
-- ✅ New: grep + Read 30 lines = ~2,000 tokens (92% savings)
+- ❌ Old: Read full CSS = ~20,000 tokens
+- ✅ New: grep + Read 10 lines = ~1,000 tokens (95% savings)
