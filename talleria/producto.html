@@ -78,9 +78,7 @@
 
   <main id="main">
 
-    <!-- ═══════════════════════════════════════════
-         HERO — Apple Mac Mini style: product-dominant
-         ═══════════════════════════════════════════ -->
+    <!-- 1. HERO — Product dominant + price + discount -->
     <section class="ap-hero" id="hero">
       <div class="ap-hero__inner">
         <div class="ap-hero__visual animate-in">
@@ -88,16 +86,19 @@
         </div>
         <h1 class="ap-hero__headline animate-in">PaintPro.</h1>
         <p class="ap-hero__sub animate-in">Acabado profesional.<br>Una capa. Un resultado.</p>
-        <div class="ap-hero__actions animate-in">
-          <a href="#cta-final" class="btn btn--accent">Comprar — €69,90</a>
+        <div class="ap-hero__price animate-in">
+          <span class="ap-hero__price-current">€69,90</span>
+          <span class="ap-hero__price-original">€102,90</span>
+          <span class="ap-hero__price-badge">-32%</span>
         </div>
-        <p class="ap-hero__hint animate-in">Envío gratis · Garantía 30 días</p>
+        <div class="ap-hero__actions animate-in">
+          <a href="#cta-final" class="btn btn--accent">Comprar ahora</a>
+        </div>
+        <p class="ap-hero__hint animate-in">Envío gratis · Garantía 30 días · Pago contra entrega</p>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         CAROUSEL — Auto-scrolling product angles
-         ═══════════════════════════════════════════ -->
+    <!-- 2. CAROUSEL — Auto-scrolling product angles -->
     <section class="ap-carousel" aria-label="Galería de productos PaintPro">
       <div class="ap-carousel__track">
         <div class="ap-carousel__slide"><img src="images/1.svg" alt="PaintPro — frontal" loading="lazy" decoding="async"></div>
@@ -110,8 +111,7 @@
         <div class="ap-carousel__slide"><img src="images/8.svg" alt="PaintPro — batería extra" loading="lazy" decoding="async"></div>
         <div class="ap-carousel__slide"><img src="images/9.svg" alt="PaintPro — agarre" loading="lazy" decoding="async"></div>
         <div class="ap-carousel__slide"><img src="images/10.svg" alt="PaintPro — detalle" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/11.svg" alt="PaintPro — versión completa" loading="lazy" decoding="async"></div>
-        <!-- Duplicate for seamless loop -->
+        <div class="ap-carousel__slide"><img src="images/11.svg" alt="PaintPro — completa" loading="lazy" decoding="async"></div>
         <div class="ap-carousel__slide"><img src="images/1.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
         <div class="ap-carousel__slide"><img src="images/2.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
         <div class="ap-carousel__slide"><img src="images/3.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
@@ -126,9 +126,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         HIGHLIGHTS — 3 feature cards
-         ═══════════════════════════════════════════ -->
+    <!-- 3. HIGHLIGHTS — 3 key features -->
     <section class="ap-highlights">
       <div class="ap-highlights__inner">
         <h2 class="ap-section-headline animate-in">Conoce lo esencial.</h2>
@@ -158,94 +156,31 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         STATS — Big numbers
-         ═══════════════════════════════════════════ -->
-    <section class="ap-stats">
-      <div class="ap-stats__inner">
-        <div class="ap-stats__grid animate-in">
-          <div class="ap-stat">
-            <span class="ap-stat__value">400W</span>
-            <span class="ap-stat__label">Potencia</span>
-          </div>
-          <div class="ap-stat">
-            <span class="ap-stat__value">60<small>min</small></span>
-            <span class="ap-stat__label">Autonomía</span>
-          </div>
-          <div class="ap-stat">
-            <span class="ap-stat__value">1.2<small>kg</small></span>
-            <span class="ap-stat__label">Peso ligero</span>
-          </div>
-          <div class="ap-stat">
-            <span class="ap-stat__value">800<small>ml</small></span>
-            <span class="ap-stat__label">Depósito</span>
-          </div>
-          <div class="ap-stat">
-            <span class="ap-stat__value">USB-C</span>
-            <span class="ap-stat__label">Carga rápida</span>
-          </div>
+    <!-- 4. SOCIAL PROOF BAR -->
+    <section class="ap-social-bar">
+      <div class="ap-social-bar__inner animate-in">
+        <div class="ap-social-bar__stat">
+          <span class="ap-social-bar__value">+2.000</span>
+          <span class="ap-social-bar__label">Clientes satisfechos</span>
+        </div>
+        <div class="ap-social-bar__divider"></div>
+        <div class="ap-social-bar__stat">
+          <span class="ap-social-bar__value">4.8 ★</span>
+          <span class="ap-social-bar__label">Valoración media</span>
+        </div>
+        <div class="ap-social-bar__divider"></div>
+        <div class="ap-social-bar__stat">
+          <span class="ap-social-bar__value">98%</span>
+          <span class="ap-social-bar__label">Lo recomiendan</span>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         GALLERY — Uniform grid, all angles
-         ═══════════════════════════════════════════ -->
-    <section class="ap-gallery" id="diseno">
-      <div class="ap-gallery__inner">
-        <h2 class="ap-section-headline animate-in">Parece compacta.<br>Es una potencia.</h2>
-        <div class="ap-gallery__grid">
-          <div class="ap-gallery__item animate-in">
-            <img src="images/1.svg" alt="PaintPro — Vista frontal" loading="lazy" decoding="async">
-          </div>
-          <div class="ap-gallery__item animate-in">
-            <img src="images/2.svg" alt="PaintPro — Vista lateral" loading="lazy" decoding="async">
-          </div>
-          <div class="ap-gallery__item animate-in">
-            <img src="images/3.svg" alt="PaintPro — Detalle de control" loading="lazy" decoding="async">
-          </div>
-          <div class="ap-gallery__item animate-in">
-            <img src="images/4.svg" alt="PaintPro — Potencia 400W" loading="lazy" decoding="async">
-          </div>
-          <div class="ap-gallery__item animate-in">
-            <img src="images/5.svg" alt="PaintPro — Batería 88Vf" loading="lazy" decoding="async">
-          </div>
-          <div class="ap-gallery__item animate-in">
-            <img src="images/6.svg" alt="PaintPro — Boquilla ajustable" loading="lazy" decoding="async">
-          </div>
-          <div class="ap-gallery__item animate-in">
-            <img src="images/7.svg" alt="PaintPro — Accesorios incluidos" loading="lazy" decoding="async">
-          </div>
-          <div class="ap-gallery__item animate-in">
-            <img src="images/8.svg" alt="PaintPro — Batería extra" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         DESIGN — Deep dive
-         ═══════════════════════════════════════════ -->
-    <section class="ap-design">
-      <div class="ap-design__inner">
-        <div class="ap-design__content animate-in">
-          <p class="ap-design__label">Diseño</p>
-          <h2 class="ap-design__headline">Pensada para el trabajo real.</h2>
-          <p class="ap-design__text">PaintPro fue diseñada desde cero para ofrecer el máximo rendimiento en el mínimo espacio. Su formato ergonómico se adapta a cualquier mano y cualquier proyecto.</p>
-        </div>
-        <div class="ap-design__visual animate-in">
-          <img src="images/1.svg" alt="PaintPro — Diseño ergonómico" loading="lazy" decoding="async">
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         VIDEO 1 — GISAM
-         ═══════════════════════════════════════════ -->
+    <!-- 5. VIDEO — Single best video -->
     <section class="ap-video">
       <div class="ap-video__inner">
         <div class="ap-video__text animate-in">
-          <p class="ap-video__label">Producto real</p>
+          <p class="ap-eyebrow">Producto real</p>
           <h2 class="ap-video__headline">La pistola real, en acción real.</h2>
           <p class="ap-video__text-body">Sin retoques. Sin filtros. Una PaintPro™ de verdad, recién sacada de la caja, pintando madera maciza a plena luz del día.</p>
           <ul class="ap-video__list">
@@ -272,105 +207,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         VIDEO 2 — Cultivo
-         ═══════════════════════════════════════════ -->
-    <section class="ap-video ap-video--alt">
-      <div class="ap-video__inner">
-        <div class="ap-video__text animate-in">
-          <p class="ap-video__label">En acción</p>
-          <h2 class="ap-video__headline">Una capa. Una pasada. Listo.</h2>
-          <p class="ap-video__text-body">Metal desnudo a metal protegido en menos de 8 segundos por metro. Sin goteos. Sin marcas. Sin vuelta atrás.</p>
-          <ul class="ap-video__list">
-            <li>Cobertura uniforme al instante</li>
-            <li>Cero marcas de brocha o rodillo</li>
-            <li>Funciona en vertical sin chorretones</li>
-          </ul>
-        </div>
-        <div class="ap-video__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro en superficie metálica">
-          <video
-            class="ap-video__video"
-            poster="images/cultivo-paintpro-poster.jpg"
-            autoplay muted loop playsinline preload="metadata"
-            aria-label="Pintura en directo sobre superficie metálica">
-            <source src="images/cultivo-paintpro.webm" type="video/webm">
-            <source src="images/cultivo-paintpro.mp4" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-          </video>
-          <button class="ap-video__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         VIDEO 3 — DIY
-         ═══════════════════════════════════════════ -->
-    <section class="ap-video">
-      <div class="ap-video__inner">
-        <div class="ap-video__text animate-in">
-          <p class="ap-video__label">Fácil de usar</p>
-          <h2 class="ap-video__headline">Móntala. Llénala. A pintar.</h2>
-          <p class="ap-video__text-body">En menos de un minuto tienes PaintPro lista para usar. Sin herramientas. Sin curva de aprendizaje.</p>
-          <ul class="ap-video__list">
-            <li>Depósito de 800 ml fácil de llenar</li>
-            <li>Boquilla ajustable sin herramientas</li>
-            <li>Limpieza completa en 3 pasos</li>
-          </ul>
-        </div>
-        <div class="ap-video__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro montaje DIY">
-          <video
-            class="ap-video__video"
-            poster="images/diy-paintpro-poster.jpg"
-            autoplay muted loop playsinline preload="metadata"
-            aria-label="Montaje y resultado de PaintPro en una cerca">
-            <source src="images/diy-paintpro.webm" type="video/webm">
-            <source src="images/diy-paintpro.mp4" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-          </video>
-          <button class="ap-video__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         VIDEO 4 — Temu
-         ═══════════════════════════════════════════ -->
-    <section class="ap-video ap-video--alt">
-      <div class="ap-video__inner">
-        <div class="ap-video__text animate-in">
-          <p class="ap-video__label">Versatilidad</p>
-          <h2 class="ap-video__headline">Del óxido al acabado perfecto.</h2>
-          <p class="ap-video__text-body">Metal, madera, plástico, cerámica. PaintPro se adapta a la superficie que tengas delante.</p>
-          <ul class="ap-video__list">
-            <li>Compatible con pinturas al agua y al disolvente</li>
-            <li>Viscosidad ajustable por boquilla</li>
-            <li>Resultado consistente en cada pasada</li>
-          </ul>
-        </div>
-        <div class="ap-video__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro sobre metal">
-          <video
-            class="ap-video__video"
-            poster="images/temu-paintpro-poster.jpg"
-            autoplay muted loop playsinline preload="metadata"
-            aria-label="PaintPro cubriendo metal oxidado con pintura nueva">
-            <source src="images/temu-paintpro.webm" type="video/webm">
-            <source src="images/temu-paintpro.mp4" type="video/mp4">
-            Tu navegador no soporta video HTML5.
-          </video>
-          <button class="ap-video__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════
-         COMPARE — Table
-         ═══════════════════════════════════════════ -->
+    <!-- 6. COMPARE — vs traditional -->
     <section class="ap-compare">
       <div class="ap-compare__inner">
         <h2 class="ap-section-headline animate-in">PaintPro vs el resto.</h2>
@@ -415,54 +252,23 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         SPECS FAQ
-         ═══════════════════════════════════════════ -->
-    <section class="ap-specs">
-      <div class="ap-specs__inner">
-        <h2 class="ap-section-headline animate-in">Especificaciones.</h2>
-        <details class="ap-specs__item animate-in">
-          <summary class="ap-specs__question">Potencia y rendimiento <span class="ap-specs__icon">+</span></summary>
-          <div class="ap-specs__answer">
-            <p>Motor de alto rendimiento con control de flujo continuo.</p>
-            <ul>
-              <li>Potencia: 400W</li>
-              <li>Caudal ajustable: 0-800 ml/min</li>
-              <li>Viscosidad máxima: 150 KU</li>
-            </ul>
-          </div>
-        </details>
-        <details class="ap-specs__item animate-in">
-          <summary class="ap-specs__question">Batería y autonomía <span class="ap-specs__icon">+</span></summary>
-          <div class="ap-specs__answer">
-            <p>Batería de iones de litio recargable.</p>
-            <ul>
-              <li>Capacidad: 4000mAh</li>
-              <li>Autonomía: 45-60 min continuos</li>
-              <li>Carga: 2h vía USB-C</li>
-            </ul>
-          </div>
-        </details>
-        <details class="ap-specs__item animate-in">
-          <summary class="ap-specs__question">Dimensiones y diseño <span class="ap-specs__icon">+</span></summary>
-          <div class="ap-specs__answer">
-            <p>Diseño ergonómico para uso prolongado.</p>
-            <ul>
-              <li>Peso: 1.2 kg</li>
-              <li>Dimensiones: 28 x 12 x 25 cm</li>
-              <li>Depósito: 800 ml</li>
-            </ul>
-          </div>
-        </details>
+    <!-- 7. CTA MID-PAGE -->
+    <section class="ap-cta-mid" id="cta-mid">
+      <div class="ap-cta-mid__inner animate-in">
+        <p class="ap-cta-mid__text">¿Listo para pintar sin complicaciones?</p>
+        <div class="ap-cta-mid__price">
+          <span class="ap-cta-mid__current">€69,90</span>
+          <span class="ap-cta-mid__original">€102,90</span>
+          <span class="ap-cta-mid__badge">Ahorra 32%</span>
+        </div>
+        <a href="#cta-final" class="btn btn--accent">Comprar PaintPro — Envío gratis</a>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         BOX — What's included
-         ═══════════════════════════════════════════ -->
-    <section class="ap-box">
-      <div class="ap-box__inner">
-        <h2 class="ap-section-headline ap-section-headline--light animate-in">Qué incluye la caja.</h2>
+    <!-- 8. SPECS + BOX -->
+    <section class="ap-specs">
+      <div class="ap-specs__inner">
+        <h2 class="ap-section-headline animate-in">Qué incluye la caja.</h2>
         <div class="ap-box__grid animate-in">
           <div class="ap-box__item">
             <img src="images/1.svg" alt="PaintPro" class="ap-box__image" loading="lazy" decoding="async">
@@ -481,12 +287,41 @@
             <p class="ap-box__label">Batería 88Vf</p>
           </div>
         </div>
+        <h3 class="ap-specs__subheadline animate-in">Especificaciones.</h3>
+        <details class="ap-specs__item animate-in">
+          <summary class="ap-specs__question">Potencia y rendimiento <span class="ap-specs__icon">+</span></summary>
+          <div class="ap-specs__answer">
+            <ul>
+              <li>Potencia: 400W</li>
+              <li>Caudal ajustable: 0-800 ml/min</li>
+              <li>Viscosidad máxima: 150 KU</li>
+            </ul>
+          </div>
+        </details>
+        <details class="ap-specs__item animate-in">
+          <summary class="ap-specs__question">Batería y autonomía <span class="ap-specs__icon">+</span></summary>
+          <div class="ap-specs__answer">
+            <ul>
+              <li>Capacidad: 4000mAh</li>
+              <li>Autonomía: 45-60 min continuos</li>
+              <li>Carga: 2h vía USB-C</li>
+            </ul>
+          </div>
+        </details>
+        <details class="ap-specs__item animate-in">
+          <summary class="ap-specs__question">Dimensiones y diseño <span class="ap-specs__icon">+</span></summary>
+          <div class="ap-specs__answer">
+            <ul>
+              <li>Peso: 1.2 kg</li>
+              <li>Dimensiones: 28 x 12 x 25 cm</li>
+              <li>Depósito: 800 ml</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         TESTIMONIALS
-         ═══════════════════════════════════════════ -->
+    <!-- 9. TESTIMONIALS -->
     <section class="ap-testimonials">
       <div class="ap-testimonials__inner">
         <h2 class="ap-section-headline animate-in">Lo que dicen nuestros clientes.</h2>
@@ -528,9 +363,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         TRUST — Why buy
-         ═══════════════════════════════════════════ -->
+    <!-- 10. TRUST -->
     <section class="ap-trust">
       <div class="ap-trust__inner">
         <h2 class="ap-section-headline animate-in">Compra con total confianza.</h2>
@@ -555,23 +388,11 @@
             <h3 class="ap-trust__title">Pago seguro</h3>
             <p class="ap-trust__text">Conexión cifrada SSL. Tus datos protegidos.</p>
           </div>
-          <div class="ap-trust__item animate-in">
-            <svg class="ap-trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <h3 class="ap-trust__title">Soporte directo</h3>
-            <p class="ap-trust__text">WhatsApp + Email. Respondemos en horas.</p>
-          </div>
-          <div class="ap-trust__item animate-in">
-            <svg class="ap-trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <h3 class="ap-trust__title">+2.000 clientes</h3>
-            <p class="ap-trust__text">Compra verificada por miles de hogares.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════
-         CTA FINAL
-         ═══════════════════════════════════════════ -->
+    <!-- 11. CTA FINAL -->
     <section class="ap-cta" id="cta-final">
       <div class="ap-cta__inner">
         <h2 class="ap-cta__headline animate-in">Tu proyecto merece<br>PaintPro™.</h2>
