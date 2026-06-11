@@ -694,12 +694,6 @@ ul { list-style: none; }
   line-height: 1.5;
 }
 
-.control-detail__stack {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
 .control-detail__img {
   width: 100%;
   height: auto;
@@ -708,10 +702,14 @@ ul { list-style: none; }
   background: #000;
 }
 
+.control-detail__img--feature {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 @media (max-width: 767px) {
   .control-detail { padding: 64px 16px; }
   .control-detail__sub { margin-bottom: 2rem; }
-  .control-detail__stack { gap: 16px; }
   .control-detail__img { border-radius: 12px; }
 }
 
