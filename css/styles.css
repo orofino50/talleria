@@ -444,6 +444,32 @@ ul { list-style: none; }
   filter: brightness(1.1) contrast(1.05) saturate(1.08);
 }
 
+.hero--apple__video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(1.05) contrast(1.05) saturate(1.08);
+  display: block;
+}
+
+.hero-scroll-pin {
+  position: relative;
+  height: 600vh;
+}
+
+.hero--apple.hero--pinned {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .hero-scroll-pin { height: 500vh; }
+  .hero--apple__video { max-width: 280px; }
+}
+
 @media (max-width: 767px) {
   .hero--apple { min-height: auto; }
   .hero--apple::after { display: none; }
