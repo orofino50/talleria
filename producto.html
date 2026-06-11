@@ -184,15 +184,14 @@
       </article>
     </section>
 
-    <!-- CONTROL TOTAL — Dark, 3 detail images -->
+    <!-- CONTROL TOTAL — Dark, 2 stacked images -->
     <section class="control-detail">
       <div class="control-detail__inner">
         <h2 class="control-detail__headline animate-in">Potencia. Estabilidad. Control.</h2>
         <p class="control-detail__sub animate-in">Cada detalle pensado para que pintes mejor, más rápido y sin esfuerzo.</p>
         <div class="control-detail__stack animate-in">
-          <img src="images/potencia-estabilidad-control.png" alt="PaintPro: 3 modos de pulverización — redondo, horizontal, vertical" class="control-detail__img" loading="lazy" decoding="async">
-          <img src="images/potencia-estabilidad-control-1.png" alt="PaintPro: enfriamiento, indicador de batería, mango antideslizante, perilla de flujo" class="control-detail__img" loading="lazy" decoding="async">
-          <img src="images/potencia-estabilidad-control-2.png" alt="PaintPro: diagrama de partes — botón de desbloqueo, boquilla, control de flujo, botella, entrada de aire, indicador, gatillo, mango" class="control-detail__img" loading="lazy" decoding="async">
+          <img src="images/potencia-estabilidad-control2.png" alt="PaintPro: control de flujo PRO, 3 modos de pulverización — redondo, horizontal, vertical" class="control-detail__img" loading="lazy" decoding="async">
+          <img src="images/potencia-estabilidad-control.png" alt="PaintPro: enfriamiento, indicador de batería, mango antideslizante, perilla de flujo" class="control-detail__img" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -673,26 +672,38 @@
         window.addEventListener('resize', measureScrollPin, { passive: true });
 
         var lastTime = -1;
+        var scrollTicking = false;
         function onScroll() {
-          if (!videoReady || prefersReducedMotion) return;
-          var rect = scrollPin.getBoundingClientRect();
-          // Progress: 0 when hero top hits viewport top, 1 when hero bottom hits viewport bottom
-          var scrolled = -rect.top;
-          var progress = scrolled / scrollPinHeight;
-          progress = Math.max(0, Math.min(1, progress));
-          var duration = heroVideo.duration;
-          if (!isFinite(duration) || duration <= 0) return;
-          var targetTime = progress * duration;
-          // Only update if change is meaningful to avoid jitter
-          if (Math.abs(targetTime - lastTime) > 0.01) {
-            heroVideo.currentTime = targetTime;
-            lastTime = targetTime;
-          }
-          // Mark when video has finished so sticky releases
-          if (progress >= 1) {
-            heroSection.classList.add('hero--video-ended');
-            heroPinned = false;
-          } else {
+          if (!videoReady || prefersReducedMotion || scrollTicking) return;
+          scrollTicking = true;
+          requestAnimationFrame(function() {
+            scrollTicking = false;
+            if (!videoReady) return;
+            var rect = scrollPin.getBoundingClientRect();
+            // Progress: 0 when hero top hits viewport top, 1 when hero bottom hits viewport bottom
+            var scrolled = -rect.top;
+            var progress = scrolled / scrollPinHeight;
+            progress = Math.max(0, Math.min(1, progress));
+            var duration = heroVideo.duration;
+            if (!isFinite(duration) || duration <= 0) return;
+            var targetTime = progress * duration;
+            // Always update for fluid scroll-driven playback
+            if (Math.abs(targetTime - lastTime) > 0.005) {
+              heroVideo.currentTime = targetTime;
+              lastTime = targetTime;
+            }
+            // Mark when video has finished so sticky releases
+            if (progress >= 1) {
+              heroSection.classList.add('hero--video-ended');
+              heroPinned = false;
+            } else {
+              heroSection.classList.remove('hero--video-ended');
+            }
+          });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
             heroSection.classList.remove('hero--video-ended');
           }
         }
