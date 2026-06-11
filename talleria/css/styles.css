@@ -508,7 +508,23 @@ ul { list-style: none; }
   z-index: 1;
 }
 
+/* ==========================================
+   DISENO SCROLL-CONTROLLED VIDEO
+   ========================================== */
+
+.diseno-scroll-pin {
+  position: relative;
+  height: 250vh;
+}
+
+.apple-design.apple-design--pinned {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 @media (max-width: 767px) {
+  .diseno-scroll-pin { height: 200vh; }
   .hero-scroll-pin { height: 200vh; }
   .hero--apple__video { max-width: 280px; }
   .hero--apple--centered .hero--apple__video { max-width: 100%; border-radius: 12px; }

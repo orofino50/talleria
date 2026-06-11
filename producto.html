@@ -132,24 +132,25 @@
 
     <!-- DESIGN — Light -->
     <section class="apple-design" id="diseno">
+      <div class="diseno-scroll-pin">
       <p class="apple-design__label animate-in">Diseño</p>
       <h2 class="apple-design__headline animate-in">Parece compacta.<br>Es una potencia.</h2>
       <p class="apple-design__sub animate-in">PaintPro fue diseñada desde cero para ofrecer el máximo rendimiento en el mínimo espacio. Su formato ergonómico se adapta a cualquier mano.</p>
       <div class="apple-design__image animate-in">
         <video
+          id="diseno-video"
           class="apple-design__video"
           src="images/diseno-paintpro.mp4"
           poster="images/diseno-paintpro-poster.jpg"
-          autoplay
           muted
-          loop
           playsinline
-          preload="metadata"
+          preload="auto"
           aria-label="PaintPro en acción, mostrando su diseño compacto y ergonómico">
           <source src="images/diseno-paintpro.webm" type="video/webm">
           <source src="images/diseno-paintpro.mp4" type="video/mp4">
           Tu navegador no soporta video HTML5.
         </video>
+      </div>
       </div>
     </section>
 
@@ -710,6 +711,53 @@
         }
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
+      }
+
+      // ==========================================
+      // SCROLL-CONTROLLED DISENO VIDEO
+      // ==========================================
+      var disenoVideo = document.getElementById('diseno-video');
+      var disenoSection = document.getElementById('diseno');
+      var disenoScrollPin = disenoSection ? disenoSection.querySelector('.diseno-scroll-pin') : null;
+      if (disenoVideo && disenoSection && disenoScrollPin) {
+        var disenoReady = false;
+        var disenoLastTime = -1;
+        var disenoTicking = false;
+
+        disenoVideo.addEventListener('loadedmetadata', function() {
+          disenoReady = true;
+        });
+
+        disenoSection.classList.add('apple-design--pinned');
+
+        var disenoPinHeight = 0;
+        function measureDisenoPin() {
+          disenoPinHeight = disenoScrollPin.offsetHeight - window.innerHeight;
+        }
+        measureDisenoPin();
+        window.addEventListener('resize', measureDisenoPin, { passive: true });
+
+        function onDisenoScroll() {
+          if (!disenoReady || prefersReducedMotion || disenoTicking) return;
+          disenoTicking = true;
+          requestAnimationFrame(function() {
+            disenoTicking = false;
+            if (!disenoReady) return;
+            var rect = disenoScrollPin.getBoundingClientRect();
+            var scrolled = -rect.top;
+            var progress = scrolled / disenoPinHeight;
+            progress = Math.max(0, Math.min(1, progress));
+            var duration = disenoVideo.duration;
+            if (!isFinite(duration) || duration <= 0) return;
+            var targetTime = progress * duration;
+            if (Math.abs(targetTime - disenoLastTime) > 0.005) {
+              disenoVideo.currentTime = targetTime;
+              disenoLastTime = targetTime;
+            }
+          });
+        }
+        window.addEventListener('scroll', onDisenoScroll, { passive: true });
+        onDisenoScroll();
       }
 
       // ==========================================
