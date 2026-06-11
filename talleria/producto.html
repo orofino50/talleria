@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="PaintPro — Acabado profesional | Talleria Pro">
+  <meta property="og:title" content="PaintPro ÔÇö Acabado profesional | Talleria">
   <meta property="og:description" content="Pinta madera, paredes, metal y vidrio con un solo dispositivo. Sin compresor, sin cables, sin complicaciones.">
   <meta property="og:image" content="https://orofino50.github.io/talleria/images/foto-hero.webp">
   <meta property="og:url" content="https://orofino50.github.io/talleria/producto.html">
@@ -15,19 +15,19 @@
   <link rel="icon" href="images/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="images/favicon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="images/favicon-192.png" sizes="192x192">
-  <meta name="description" content="PaintPro — Pistola de pintar inalámbrica con acabado profesional.">
-  <title>PaintPro — Acabado profesional | Talleria Pro</title>
+  <meta name="description" content="PaintPro ÔÇö Pistola de pintar inal├ímbrica con acabado profesional.">
+  <title>PaintPro ÔÇö Acabado profesional | Talleria</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "PaintPro Pistola de Pintar",
     "brand": { "@type": "Brand", "name": "Talleria Pro" },
-    "description": "Pistola de pintar inalámbrica con acabado profesional. Pinta madera, paredes, metal y vidrio.",
+    "description": "Pistola de pintar inal├ímbrica con acabado profesional. Pinta madera, paredes, metal y vidrio.",
     "offers": {
       "@type": "Offer",
       "price": "69.90",
@@ -47,18 +47,23 @@
   <!-- NAV -->
   <nav class="product-nav product-nav--inverse" aria-label="Producto">
     <div class="product-nav__inner">
-      <a href="index.html" class="product-nav__name" aria-label="Talleria Pro — Inicio">
-        <span class="nav-wordmark"><span class="nav-wordmark__name">Talleria</span><span class="nav-wordmark__pro">Pro</span></span>
+      <a href="index.html" class="product-nav__name" aria-label="Talleria ÔÇö Inicio">
+        <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g fill="#C5A55A">
+            <rect x="15" y="12" width="70" height="14" rx="4"/>
+            <rect x="43" y="12" width="14" height="76" rx="4"/>
+          </g>
+        </svg>
+        <span>Taller<span class="brand-light">ia</span></span>
       </a>
       <ul class="product-nav__links">
         <li><a href="index.html" class="product-nav__link">Inicio</a></li>
-        <li><a href="producto.html" class="product-nav__link">Productos</a></li>
-        <li><a href="sobre.html" class="product-nav__link">Nosotros</a></li>
+        <li><a href="sobre.html" class="product-nav__link">Sobre</a></li>
         <li><a href="faq.html" class="product-nav__link">FAQ</a></li>
         <li><a href="contacto.html" class="product-nav__link">Contacto</a></li>
       </ul>
       <a href="#cta-final" class="btn--accent-header">Comprar</a>
-      <button class="product-nav__hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
+      <button class="product-nav__hamburger" aria-label="Abrir men├║ de navegaci├│n" aria-expanded="false">
         <span class="product-nav__hamburger-line"></span>
         <span class="product-nav__hamburger-line"></span>
         <span class="product-nav__hamburger-line"></span>
@@ -67,8 +72,7 @@
     <div class="product-nav__mobile">
       <ul class="product-nav__mobile-list">
         <li><a href="index.html" class="product-nav__mobile-link">Inicio</a></li>
-        <li><a href="producto.html" class="product-nav__mobile-link">Productos</a></li>
-        <li><a href="sobre.html" class="product-nav__mobile-link">Nosotros</a></li>
+        <li><a href="sobre.html" class="product-nav__mobile-link">Sobre</a></li>
         <li><a href="faq.html" class="product-nav__mobile-link">FAQ</a></li>
         <li><a href="contacto.html" class="product-nav__mobile-link">Contacto</a></li>
         <li><a href="#cta-final" class="product-nav__mobile-link product-nav__mobile-link--cta">Comprar</a></li>
@@ -78,173 +82,429 @@
 
   <main id="main">
 
-    <!-- 1. HERO — Product dominant + price + discount -->
-    <section class="ap-hero" id="hero">
-      <div class="ap-hero__inner">
-        <div class="ap-hero__visual animate-in">
-          <img src="images/1.svg" alt="PaintPro — pistola pulverizadora inalámbrica profesional" width="800" height="800" fetchpriority="high" decoding="async">
+    <!-- HERO -->
+    <section class="hero--apple" id="hero">
+      <div class="hero--apple__content">
+        <div class="hero--apple__text">
+          <div class="hero--apple__badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83l-.06.06a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            Nuevo
+          </div>
+          <h1 class="hero--apple__headline">PaintPro.<br>Acabado profesional.</h1>
+          <p class="hero--apple__subheadline">Pinta madera, paredes, metal y vidrio con un solo dispositivo. Resultados de taller desde casa.</p>
+          <div class="hero--apple__actions">
+            <a href="#cta-final" class="btn btn--accent">Comprar ahora ÔåÆ</a>
+            <a href="#diseno" class="btn btn--outline-light">Ver en detalle</a>
+          </div>
+          <p class="hero--apple__price"><strong>Ôé¼69,90</strong> <s>Ôé¼102,90</s></p>
         </div>
-        <h1 class="ap-hero__headline animate-in">PaintPro.</h1>
-        <p class="ap-hero__sub animate-in">Acabado profesional.<br>Una capa. Un resultado.</p>
-        <div class="ap-hero__price animate-in">
-          <span class="ap-hero__price-current">€69,90</span>
-          <span class="ap-hero__price-original">€102,90</span>
-          <span class="ap-hero__price-badge">-32%</span>
-        </div>
-        <div class="ap-hero__actions animate-in">
-          <a href="#cta-final" class="btn btn--accent">Comprar ahora</a>
-        </div>
-        <p class="ap-hero__hint animate-in">Envío gratis · Garantía 30 días · Pago contra entrega</p>
-      </div>
-    </section>
-
-    <!-- 2. CAROUSEL — Auto-scrolling product angles -->
-    <section class="ap-carousel" aria-label="Galería de productos PaintPro">
-      <div class="ap-carousel__track">
-        <div class="ap-carousel__slide"><img src="images/1.svg" alt="PaintPro — frontal" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/2.svg" alt="PaintPro — lateral" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/3.svg" alt="PaintPro — control" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/4.svg" alt="PaintPro — 400W" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/5.svg" alt="PaintPro — batería" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/6.svg" alt="PaintPro — boquilla" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/7.svg" alt="PaintPro — accesorios" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/8.svg" alt="PaintPro — batería extra" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/9.svg" alt="PaintPro — agarre" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/10.svg" alt="PaintPro — detalle" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/11.svg" alt="PaintPro — completa" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/1.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/2.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/3.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/4.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/5.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/6.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/7.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/8.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/9.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/10.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-        <div class="ap-carousel__slide"><img src="images/11.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
-      </div>
-    </section>
-
-    <!-- 3. HIGHLIGHTS — 3 key features -->
-    <section class="ap-highlights">
-      <div class="ap-highlights__inner">
-        <h2 class="ap-section-headline animate-in">Conoce lo esencial.</h2>
-        <div class="ap-highlights__grid">
-          <article class="ap-highlight animate-in">
-            <div class="ap-highlight__visual">
-              <img src="images/3.svg" alt="PaintPro — Control de flujo" decoding="async">
-            </div>
-            <h3 class="ap-highlight__title">Control de flujo preciso.</h3>
-            <p class="ap-highlight__text">El sistema THC-3 regula el caudal con precisión milimétrica. Desde un velado suave hasta cobertura completa.</p>
-          </article>
-          <article class="ap-highlight animate-in">
-            <div class="ap-highlight__visual">
-              <img src="images/4.svg" alt="PaintPro — Potencia 400W" decoding="async">
-            </div>
-            <h3 class="ap-highlight__title">400W de rendimiento puro.</h3>
-            <p class="ap-highlight__text">Motor de alto rendimiento con control de flujo continuo. Sin compresor, sin cables.</p>
-          </article>
-          <article class="ap-highlight animate-in">
-            <div class="ap-highlight__visual">
-              <img src="images/5.svg" alt="PaintPro — Batería 88Vf" decoding="async">
-            </div>
-            <h3 class="ap-highlight__title">60 minutos de autonomía.</h3>
-            <p class="ap-highlight__text">Batería de iones de litio recargable. Carga completa en 2h vía USB-C.</p>
-          </article>
+        <div class="hero--apple__visual">
+          <img src="images/foto-hero.webp" alt="PaintPro ÔÇö pistola pulverizadora inal├ímbrica profesional" width="1500" height="1500" fetchpriority="high" decoding="async">
         </div>
       </div>
     </section>
 
-    <!-- 4. SOCIAL PROOF BAR -->
-    <section class="ap-social-bar">
-      <div class="ap-social-bar__inner animate-in">
-        <div class="ap-social-bar__stat">
-          <span class="ap-social-bar__value">+2.000</span>
-          <span class="ap-social-bar__label">Clientes satisfechos</span>
+    <!-- CAROUSEL AUTOM├üTICO -->
+    <section class="carousel" aria-label="Galer├¡a de producto">
+      <div class="carousel__track">
+        <div class="carousel__slide"><img src="images/spin-01.webp" alt="PaintPro vista 1" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-02.webp" alt="PaintPro vista 2" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-03.webp" alt="PaintPro vista 3" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-04.webp" alt="PaintPro vista 4" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-05.webp" alt="PaintPro vista 5" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-06.webp" alt="PaintPro vista 6" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-07.webp" alt="PaintPro vista 7" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-08.webp" alt="PaintPro vista 8" decoding="async"></div>
+        <!-- Duplicados para loop cont├¡nuo -->
+        <div class="carousel__slide"><img src="images/spin-01.webp" alt="" aria-hidden="true" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-02.webp" alt="" aria-hidden="true" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-03.webp" alt="" aria-hidden="true" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-04.webp" alt="" aria-hidden="true" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-05.webp" alt="" aria-hidden="true" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-06.webp" alt="" aria-hidden="true" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-07.webp" alt="" aria-hidden="true" decoding="async"></div>
+        <div class="carousel__slide"><img src="images/spin-08.webp" alt="" aria-hidden="true" decoding="async"></div>
+      </div>
+    </section>
+
+    <!-- DESIGN ÔÇö Light -->
+    <section class="apple-design" id="diseno">
+      <p class="apple-design__label animate-in">Dise├▒o</p>
+      <h2 class="apple-design__headline animate-in">Parece compacta.<br>Es una potencia.</h2>
+      <p class="apple-design__sub animate-in">PaintPro fue dise├▒ada desde cero para ofrecer el m├íximo rendimiento en el m├¡nimo espacio. Su formato ergon├│mico se adapta a cualquier mano.</p>
+      <div class="apple-design__image animate-in">
+        <img src="images/spin-02.webp" alt="PaintPro ÔÇö Dise├▒o compacto y ergon├│mico" width="900" height="600" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <!-- BENTO GRID ÔÇö Dark -->
+    <section class="bento-grid">
+      <article class="bento-card bento-card--large animate-in">
+        <img src="images/spin-03.webp" alt="PaintPro ÔÇö Control de flujo preciso" class="bento-card__image" loading="lazy" decoding="async">
+        <div class="bento-card__overlay"></div>
+        <div class="bento-card__content">
+          <p class="bento-card__label">Tecnolog├¡a</p>
+          <h3 class="bento-card__title">Control de flujo preciso. Resultado perfecto.</h3>
+          <p class="bento-card__text">El sistema THC-3 regula el caudal con precisi├│n milim├®trica. Desde un velado suave hasta cobertura completa.</p>
         </div>
-        <div class="ap-social-bar__divider"></div>
-        <div class="ap-social-bar__stat">
-          <span class="ap-social-bar__value">4.8 ★</span>
-          <span class="ap-social-bar__label">Valoración media</span>
+      </article>
+      <article class="bento-card animate-in">
+        <img src="images/spin-04.webp" alt="PaintPro ÔÇö Potencia 400W" class="bento-card__image" loading="lazy" decoding="async">
+        <div class="bento-card__overlay"></div>
+        <div class="bento-card__content">
+          <p class="bento-card__label">Potencia</p>
+          <h3 class="bento-card__title">400W de rendimiento puro.</h3>
+          <p class="bento-card__text">Motor de alto rendimiento con control de flujo continuo.</p>
         </div>
-        <div class="ap-social-bar__divider"></div>
-        <div class="ap-social-bar__stat">
-          <span class="ap-social-bar__value">98%</span>
-          <span class="ap-social-bar__label">Lo recomiendan</span>
+      </article>
+      <article class="bento-card animate-in">
+        <img src="images/spin-05.webp" alt="PaintPro ÔÇö Bater├¡a 88Vf" class="bento-card__image" loading="lazy" decoding="async">
+        <div class="bento-card__overlay"></div>
+        <div class="bento-card__content">
+          <p class="bento-card__label">Autonom├¡a</p>
+          <h3 class="bento-card__title">60 minutos de autonom├¡a.</h3>
+          <p class="bento-card__text">Bater├¡a de iones de litio recargable. Carga completa en 2h v├¡a USB-C.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- LIFESTYLE ÔÇö Dark -->
+    <section class="apple-lifestyle">
+      <img src="images/foto-9.webp" alt="PaintPro en acci├│n" class="apple-lifestyle__image" loading="lazy" decoding="async">
+      <div class="apple-lifestyle__overlay"></div>
+      <div class="apple-lifestyle__content">
+        <h2 class="apple-lifestyle__headline animate-in">En tus manos.<br>Tu mejor proyecto.</h2>
+        <p class="apple-lifestyle__text animate-in">Ligera, potente, precisa. PaintPro cabe en cualquier mano y transforma cualquier superficie en minutos. Sin compresor, sin cables, sin complicaciones.</p>
+        <div class="apple-lifestyle__stats animate-in">
+          <div class="apple-lifestyle__stat">
+            <span class="apple-lifestyle__stat-value">400W</span>
+            <span class="apple-lifestyle__stat-label">Potencia</span>
+          </div>
+          <div class="apple-lifestyle__stat">
+            <span class="apple-lifestyle__stat-value">60min</span>
+            <span class="apple-lifestyle__stat-label">Autonom├¡a</span>
+          </div>
+          <div class="apple-lifestyle__stat">
+            <span class="apple-lifestyle__stat-value">1.2kg</span>
+            <span class="apple-lifestyle__stat-label">Peso</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. VIDEO — Single best video -->
-    <section class="ap-video">
-      <div class="ap-video__inner">
-        <div class="ap-video__text animate-in">
-          <p class="ap-eyebrow">Producto real</p>
-          <h2 class="ap-video__headline">La pistola real, en acción real.</h2>
-          <p class="ap-video__text-body">Sin retoques. Sin filtros. Una PaintPro™ de verdad, recién sacada de la caja, pintando madera maciza a plena luz del día.</p>
-          <ul class="ap-video__list">
+    <!-- VIDEO 1 ÔÇö GISAM real, pintando cerca de madera -->
+    <section class="video-feature video-feature--reverse">
+      <div class="video-feature__inner">
+        <div class="video-feature__content animate-in">
+          <p class="video-feature__label">Producto real</p>
+          <h2 class="video-feature__headline">La pistola real, en acci├│n real.</h2>
+          <p class="video-feature__text">Sin retoques. Sin filtros. Una PaintProÔäó de verdad, reci├®n sacada de la caja, pintando madera maciza a plena luz del d├¡a.</p>
+          <ul class="video-feature__list">
             <li>88Vf de potencia continua</li>
-            <li>800 ml de autonomía por carga</li>
+            <li>800 ml de autonom├¡a por carga</li>
             <li>Acabado profesional en una sola capa</li>
           </ul>
         </div>
-        <div class="ap-video__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro pintando madera">
+        <div class="video-feature__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro pintando madera">
           <video
-            class="ap-video__video"
+            class="video-feature__video"
             poster="images/gisam-paintpro-poster.jpg"
-            autoplay muted loop playsinline preload="metadata"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
             aria-label="PaintPro pintando una cerca de madera">
             <source src="images/gisam-paintpro.webm" type="video/webm">
             <source src="images/gisam-paintpro.mp4" type="video/mp4">
-            <track kind="captions" srclang="es" src="images/gisam-paintpro.vtt" label="Español" default>
+            <track kind="captions" srclang="es" src="images/gisam-paintpro.vtt" label="Espa├▒ol" default>
             Tu navegador no soporta video HTML5.
           </video>
-          <button class="ap-video__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
           </button>
         </div>
       </div>
     </section>
 
-    <!-- 6. COMPARE — vs traditional -->
-    <section class="ap-compare">
-      <div class="ap-compare__inner">
-        <h2 class="ap-section-headline animate-in">PaintPro vs el resto.</h2>
-        <div class="ap-compare__wrap animate-in">
-          <table class="ap-compare__table">
+    <!-- VIDEO 2 ÔÇö CultivoX, pistola pintando poste met├ílico -->
+    <section class="video-feature">
+      <div class="video-feature__inner">
+        <div class="video-feature__content animate-in">
+          <p class="video-feature__label">En acci├│n</p>
+          <h2 class="video-feature__headline">Una capa. Una pasada. Listo.</h2>
+          <p class="video-feature__text">Metal desnudo a metal protegido en menos de 8 segundos por metro. Sin goteos. Sin marcas. Sin vuelta atr├ís.</p>
+          <ul class="video-feature__list">
+            <li>Cobertura uniforme al instante</li>
+            <li>Cero marcas de brocha o rodillo</li>
+            <li>Funciona en vertical sin chorretones</li>
+          </ul>
+        </div>
+        <div class="video-feature__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro en superficie met├ílica">
+          <video
+            class="video-feature__video"
+            poster="images/cultivo-paintpro-poster.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Pintura en directo sobre superficie met├ílica">
+            <source src="images/cultivo-paintpro.webm" type="video/webm">
+            <source src="images/cultivo-paintpro.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECS ÔÇö Light -->
+    <section class="apple-specs">
+      <div class="apple-specs__inner">
+        <p class="apple-specs__label animate-in">Especificaciones</p>
+        <h2 class="apple-specs__headline animate-in">Peque├▒a en tama├▒o.<br>Grande en prestaciones.</h2>
+        <div class="apple-specs__grid animate-in">
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">400W</span>
+            <span class="apple-specs__label-text">Potencia</span>
+          </div>
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">1.2 kg</span>
+            <span class="apple-specs__label-text">Peso ligero</span>
+          </div>
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">60 min</span>
+            <span class="apple-specs__label-text">Autonom├¡a</span>
+          </div>
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">800 ml</span>
+            <span class="apple-specs__label-text">Dep├│sito</span>
+          </div>
+          <div class="apple-specs__item">
+            <span class="apple-specs__value">USB-C</span>
+            <span class="apple-specs__label-text">Carga r├ípida</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOX ÔÇö Dark -->
+    <section class="apple-box">
+      <div class="apple-box__inner">
+        <p class="apple-box__label animate-in">Contenido</p>
+        <h2 class="apple-box__headline animate-in">Qu├® incluye la caja.</h2>
+        <div class="apple-box__grid animate-in">
+          <div class="apple-box__item">
+            <img src="images/spin-01.webp" alt="PaintPro" class="apple-box__image" loading="lazy" decoding="async">
+            <p class="apple-box__label-text">PaintProÔäó</p>
+          </div>
+          <div class="apple-box__item">
+            <img src="images/spin-06.webp" alt="Boquilla" class="apple-box__image" loading="lazy" decoding="async">
+            <p class="apple-box__label-text">Boquilla ajustable</p>
+          </div>
+          <div class="apple-box__item">
+            <img src="images/spin-07.webp" alt="Accesorios" class="apple-box__image" loading="lazy" decoding="async">
+            <p class="apple-box__label-text">Cargador + Viscos├¡metro</p>
+          </div>
+          <div class="apple-box__item">
+            <img src="images/spin-08.webp" alt="Bater├¡a" class="apple-box__image" loading="lazy" decoding="async">
+            <p class="apple-box__label-text">Bater├¡a 88Vf</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO 3 ÔÇö DIY ALAM, montaje y resultado final -->
+    <section class="video-feature video-feature--reverse">
+      <div class="video-feature__inner">
+        <div class="video-feature__content animate-in">
+          <p class="video-feature__label">F├ícil de usar</p>
+          <h2 class="video-feature__headline">M├│ntala. Ll├®nala. A pintar.</h2>
+          <p class="video-feature__text">En menos de un minuto tienes PaintPro lista para usar. Sin herramientas. Sin curva de aprendizaje. Sin manuales de 40 p├íginas.</p>
+          <ul class="video-feature__list">
+            <li>Dep├│sito de 800 ml f├ícil de llenar</li>
+            <li>Boquilla ajustable sin herramientas</li>
+            <li>Limpieza completa en 3 pasos</li>
+          </ul>
+        </div>
+        <div class="video-feature__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro montaje DIY">
+          <video
+            class="video-feature__video"
+            poster="images/diy-paintpro-poster.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Montaje y resultado de PaintPro en una cerca">
+            <source src="images/diy-paintpro.webm" type="video/webm">
+            <source src="images/diy-paintpro.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO 4 ÔÇö Temu, pintura sobre metal oxidado -->
+    <section class="video-feature">
+      <div class="video-feature__inner">
+        <div class="video-feature__content animate-in">
+          <p class="video-feature__label">Versatilidad</p>
+          <h2 class="video-feature__headline">Del ├│xido al acabado perfecto.</h2>
+          <p class="video-feature__text">Metal, madera, pl├ístico, cer├ímica. PaintPro se adapta a la superficie que tengas delante. Y a la pintura que quieras usar.</p>
+          <ul class="video-feature__list">
+            <li>Compatible con pinturas al agua y al disolvente</li>
+            <li>Viscosidad ajustable por boquilla</li>
+            <li>Resultado consistente en cada pasada</li>
+          </ul>
+        </div>
+        <div class="video-feature__player animate-in" data-video-player tabindex="0" role="region" aria-label="Reproductor PaintPro sobre metal">
+          <video
+            class="video-feature__video"
+            poster="images/temu-paintpro-poster.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="PaintPro cubriendo metal oxidado con pintura nueva">
+            <source src="images/temu-paintpro.webm" type="video/webm">
+            <source src="images/temu-paintpro.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+          <button class="video-feature__play" type="button" aria-label="Reproducir video" aria-pressed="false" data-video-play>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY BUY ÔÇö Light -->
+    <section class="whybuy">
+      <h2 class="whybuy__title animate-in">Por qu├® comprar PaintPro.</h2>
+      <p class="whybuy__sub animate-in">Compra con total confianza.</p>
+      <ul class="whybuy__grid">
+        <li class="whybuy__card animate-in">
+          <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3 class="whybuy__card-title">Garant├¡a 30 d├¡as</h3>
+          <p class="whybuy__card-text">Devuelve si no te encanta, sin preguntas.</p>
+        </li>
+        <li class="whybuy__card animate-in">
+          <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <h3 class="whybuy__card-title">Env├¡o r├ípido</h3>
+          <p class="whybuy__card-text">24-48h en toda Espa├▒a peninsular.</p>
+        </li>
+        <li class="whybuy__card animate-in">
+          <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l4-4m0 0l4 4m-4-4v12"/></svg>
+          <h3 class="whybuy__card-title">Pago contra entrega</h3>
+          <p class="whybuy__card-text">Pagas solo cuando recibes el producto.</p>
+        </li>
+        <li class="whybuy__card animate-in">
+          <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <h3 class="whybuy__card-title">Pago seguro</h3>
+          <p class="whybuy__card-text">Conexi├│n cifrada SSL. Tus datos protegidos.</p>
+        </li>
+        <li class="whybuy__card animate-in">
+          <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <h3 class="whybuy__card-title">Soporte directo</h3>
+          <p class="whybuy__card-text">WhatsApp + Email. Respondemos en horas.</p>
+        </li>
+        <li class="whybuy__card animate-in">
+          <svg class="whybuy__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <h3 class="whybuy__card-title">+2.000 clientes</h3>
+          <p class="whybuy__card-text">Compra verificada por miles de hogares.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- TESTIMONIALS ÔÇö Light -->
+    <section class="testimonials">
+      <div class="testimonials__inner">
+        <p class="testimonials__label animate-in">Opiniones</p>
+        <h2 class="testimonials__headline animate-in">Lo que dicen nuestros clientes.</h2>
+        <div class="testimonials__grid">
+          <article class="testimonial-card animate-in">
+            <p class="testimonial-card__stars">ÔÿàÔÿàÔÿàÔÿàÔÿà</p>
+            <p class="testimonial-card__quote">"Pint├® todo el sal├│n en una tarde. El acabado qued├│ perfecto, sin una sola marca de brocha. La recomiendo al 100%."</p>
+            <div class="testimonial-card__author">
+              <img src="images/testimonial-augusto.webp" alt="" class="testimonial-card__avatar" loading="lazy" decoding="async" width="44" height="44">
+              <div>
+                <p class="testimonial-card__name">Augusto</p>
+                <p class="testimonial-card__location">Madrid</p>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card animate-in">
+            <p class="testimonial-card__stars">ÔÿàÔÿàÔÿàÔÿàÔÿà</p>
+            <p class="testimonial-card__quote">"Renov├® todos los muebles de la cocina. Parecen nuevos. Mi mujer no se lo cre├¡a. Mejor inversi├│n que he hecho."</p>
+            <div class="testimonial-card__author">
+              <img src="images/testimonial-luis.webp" alt="" class="testimonial-card__avatar" loading="lazy" decoding="async" width="44" height="44">
+              <div>
+                <p class="testimonial-card__name">Luis</p>
+                <p class="testimonial-card__location">Barcelona</p>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card animate-in">
+            <p class="testimonial-card__stars">ÔÿàÔÿàÔÿàÔÿàÔÿà</p>
+            <p class="testimonial-card__quote">"La us├® para pintar la valla del jard├¡n. En 2 horas ten├¡a todo hecho. Antes me llevaba un fin de semana entero con brocha."</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar-placeholder" aria-hidden="true">MC</div>
+              <div>
+                <p class="testimonial-card__name">Mar├¡a C.</p>
+                <p class="testimonial-card__location">Valencia</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE ÔÇö Dark -->
+    <section class="apple-compare">
+      <div class="apple-compare__inner">
+        <p class="apple-compare__label animate-in">Comparativa</p>
+        <h2 class="apple-compare__headline animate-in">PaintPro vs el resto.</h2>
+        <div class="compare-table__wrap animate-in">
+          <table class="apple-compare__table">
             <thead>
               <tr>
                 <th></th>
-                <th>Brochas / Rodillos</th>
-                <th class="ap-compare__highlight">PaintPro™</th>
+                <th>Brochas/Rodillos</th>
+                <th class="compare-table__col-highlight">PaintProÔäó</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="ap-compare__row-label">Tiempo</td>
+                <td class="compare-table__row-label">Tiempo</td>
                 <td>Horas por capa</td>
-                <td class="ap-compare__highlight">Minutos</td>
+                <td class="highlight">Minutos</td>
               </tr>
               <tr>
-                <td class="ap-compare__row-label">Acabado</td>
+                <td class="compare-table__row-label">Acabado</td>
                 <td>Irregular, marcas</td>
-                <td class="ap-compare__highlight">Uniforme, profesional</td>
+                <td class="highlight">Uniforme, profesional</td>
               </tr>
               <tr>
-                <td class="ap-compare__row-label">Superficies</td>
+                <td class="compare-table__row-label">Superficies</td>
                 <td>Limited</td>
-                <td class="ap-compare__highlight">Madera, metal, paredes, vidrio</td>
+                <td class="highlight">Madera, metal, paredes, vidrio</td>
               </tr>
               <tr>
-                <td class="ap-compare__row-label">Portabilidad</td>
+                <td class="compare-table__row-label">Portabilidad</td>
                 <td>Requiere cubeta</td>
-                <td class="ap-compare__highlight">Inalámbrica, 1.2 kg</td>
+                <td class="highlight">Inal├ímbrica, 1.2 kg</td>
               </tr>
               <tr>
-                <td class="ap-compare__row-label">Limpieza</td>
+                <td class="compare-table__row-label">Limpieza</td>
                 <td>30+ min</td>
-                <td class="ap-compare__highlight">5 min bajo el grifo</td>
+                <td class="highlight">5 min bajo el grifo</td>
               </tr>
             </tbody>
           </table>
@@ -252,203 +512,96 @@
       </div>
     </section>
 
-    <!-- 7. CTA MID-PAGE -->
-    <section class="ap-cta-mid" id="cta-mid">
-      <div class="ap-cta-mid__inner animate-in">
-        <p class="ap-cta-mid__text">¿Listo para pintar sin complicaciones?</p>
-        <div class="ap-cta-mid__price">
-          <span class="ap-cta-mid__current">€69,90</span>
-          <span class="ap-cta-mid__original">€102,90</span>
-          <span class="ap-cta-mid__badge">Ahorra 32%</span>
-        </div>
-        <a href="#cta-final" class="btn btn--accent">Comprar PaintPro — Envío gratis</a>
-      </div>
-    </section>
-
-    <!-- 8. SPECS + BOX -->
-    <section class="ap-specs">
-      <div class="ap-specs__inner">
-        <h2 class="ap-section-headline animate-in">Qué incluye la caja.</h2>
-        <div class="ap-box__grid animate-in">
-          <div class="ap-box__item">
-            <img src="images/1.svg" alt="PaintPro" class="ap-box__image" loading="lazy" decoding="async">
-            <p class="ap-box__label">PaintPro™</p>
-          </div>
-          <div class="ap-box__item">
-            <img src="images/6.svg" alt="Boquilla" class="ap-box__image" loading="lazy" decoding="async">
-            <p class="ap-box__label">Boquilla ajustable</p>
-          </div>
-          <div class="ap-box__item">
-            <img src="images/7.svg" alt="Accesorios" class="ap-box__image" loading="lazy" decoding="async">
-            <p class="ap-box__label">Cargador + Viscosímetro</p>
-          </div>
-          <div class="ap-box__item">
-            <img src="images/8.svg" alt="Batería" class="ap-box__image" loading="lazy" decoding="async">
-            <p class="ap-box__label">Batería 88Vf</p>
-          </div>
-        </div>
-        <h3 class="ap-specs__subheadline animate-in">Especificaciones.</h3>
-        <details class="ap-specs__item animate-in">
-          <summary class="ap-specs__question">Potencia y rendimiento <span class="ap-specs__icon">+</span></summary>
-          <div class="ap-specs__answer">
-            <ul>
+    <!-- SPECS FAQ ÔÇö Light -->
+    <section class="specs-faq">
+      <div class="specs-faq__inner">
+        <details class="faq-item">
+          <summary class="faq-question">Potencia y rendimiento <span class="faq-icon">+</span></summary>
+          <div class="faq-answer">
+            <p>Motor de alto rendimiento con control de flujo continuo.</p>
+            <ul class="specs-answer-list">
               <li>Potencia: 400W</li>
               <li>Caudal ajustable: 0-800 ml/min</li>
-              <li>Viscosidad máxima: 150 KU</li>
+              <li>Viscosidad m├íxima: 150 KU</li>
             </ul>
           </div>
         </details>
-        <details class="ap-specs__item animate-in">
-          <summary class="ap-specs__question">Batería y autonomía <span class="ap-specs__icon">+</span></summary>
-          <div class="ap-specs__answer">
-            <ul>
+        <details class="faq-item">
+          <summary class="faq-question">Bater├¡a y autonom├¡a <span class="faq-icon">+</span></summary>
+          <div class="faq-answer">
+            <p>Bater├¡a de iones de litio recargable.</p>
+            <ul class="specs-answer-list">
               <li>Capacidad: 4000mAh</li>
-              <li>Autonomía: 45-60 min continuos</li>
-              <li>Carga: 2h vía USB-C</li>
+              <li>Autonom├¡a: 45-60 min continuos</li>
+              <li>Carga: 2h v├¡a USB-C</li>
             </ul>
           </div>
         </details>
-        <details class="ap-specs__item animate-in">
-          <summary class="ap-specs__question">Dimensiones y diseño <span class="ap-specs__icon">+</span></summary>
-          <div class="ap-specs__answer">
-            <ul>
+        <details class="faq-item">
+          <summary class="faq-question">Dimensiones y dise├▒o <span class="faq-icon">+</span></summary>
+          <div class="faq-answer">
+            <p>Dise├▒o ergon├│mico para uso prolongado.</p>
+            <ul class="specs-answer-list">
               <li>Peso: 1.2 kg</li>
               <li>Dimensiones: 28 x 12 x 25 cm</li>
-              <li>Depósito: 800 ml</li>
+              <li>Dep├│sito: 800 ml</li>
             </ul>
           </div>
         </details>
       </div>
     </section>
 
-    <!-- 9. TESTIMONIALS -->
-    <section class="ap-testimonials">
-      <div class="ap-testimonials__inner">
-        <h2 class="ap-section-headline animate-in">Lo que dicen nuestros clientes.</h2>
-        <div class="ap-testimonials__grid">
-          <article class="ap-testimonial animate-in">
-            <p class="ap-testimonial__stars">★★★★★</p>
-            <p class="ap-testimonial__quote">"Pinté todo el salón en una tarde. El acabado quedó perfecto, sin una sola marca de brocha. La recomiendo al 100%."</p>
-            <div class="ap-testimonial__author">
-              <img src="images/testimonial-augusto.webp" alt="" class="ap-testimonial__avatar" loading="lazy" decoding="async" width="44" height="44">
-              <div>
-                <p class="ap-testimonial__name">Augusto</p>
-                <p class="ap-testimonial__location">Madrid</p>
-              </div>
-            </div>
-          </article>
-          <article class="ap-testimonial animate-in">
-            <p class="ap-testimonial__stars">★★★★★</p>
-            <p class="ap-testimonial__quote">"Renové todos los muebles de la cocina. Parecen nuevos. Mi mujer no se lo creía. Mejor inversión que he hecho."</p>
-            <div class="ap-testimonial__author">
-              <img src="images/testimonial-luis.webp" alt="" class="ap-testimonial__avatar" loading="lazy" decoding="async" width="44" height="44">
-              <div>
-                <p class="ap-testimonial__name">Luis</p>
-                <p class="ap-testimonial__location">Barcelona</p>
-              </div>
-            </div>
-          </article>
-          <article class="ap-testimonial animate-in">
-            <p class="ap-testimonial__stars">★★★★★</p>
-            <p class="ap-testimonial__quote">"La usé para pintar la valla del jardín. En 2 horas tenía todo hecho. Antes me llevaba un fin de semana entero con brocha."</p>
-            <div class="ap-testimonial__author">
-              <div class="ap-testimonial__avatar-placeholder" aria-hidden="true">MC</div>
-              <div>
-                <p class="ap-testimonial__name">María C.</p>
-                <p class="ap-testimonial__location">Valencia</p>
-              </div>
-            </div>
-          </article>
+    <!-- CTA FINAL ÔÇö Dark -->
+    <section class="apple-cta" id="cta-final">
+      <div class="apple-cta__badge">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83l-.06.06a2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Oferta limitada
+      </div>
+      <h2 class="apple-cta__title animate-in">Tu proyecto merece<br>PaintProÔäó.</h2>
+      <p class="apple-cta__subtitle animate-in">├Ünete a miles de personas que ya transforman sus proyectos con PaintPro.</p>
+      <div class="apple-cta__price animate-in">
+        <span class="apple-cta__price-current">Ôé¼69,90</span>
+        <span class="apple-cta__price-original">Ôé¼102,90</span>
+        <span class="apple-cta__price-savings">Ahorra Ôé¼33 (32%)</span>
+      </div>
+      <div id="countdown" class="cta-countdown animate-in">Oferta termina en: <strong id="countdown-time"></strong></div>
+      <a href="https://lapurasalud.com/products/pistola-paintpro" class="btn btn--trust">Comprar PaintPro ÔÇö Env├¡o gratis</a>
+      <div class="apple-cta__trust">
+        <div class="apple-cta__trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Garant├¡a 30 d├¡as
+        </div>
+        <div class="apple-cta__trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l4-4m0 0l4 4m-4-4v12"/></svg>
+          Pago contra entrega
+        </div>
+        <div class="apple-cta__trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Devoluci├│n gratis
         </div>
       </div>
     </section>
-
-    <!-- 10. TRUST -->
-    <section class="ap-trust">
-      <div class="ap-trust__inner">
-        <h2 class="ap-section-headline animate-in">Compra con total confianza.</h2>
-        <div class="ap-trust__grid">
-          <div class="ap-trust__item animate-in">
-            <svg class="ap-trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <h3 class="ap-trust__title">Garantía 30 días</h3>
-            <p class="ap-trust__text">Devuelve si no te encanta, sin preguntas.</p>
-          </div>
-          <div class="ap-trust__item animate-in">
-            <svg class="ap-trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            <h3 class="ap-trust__title">Envío rápido</h3>
-            <p class="ap-trust__text">24-48h en toda España peninsular.</p>
-          </div>
-          <div class="ap-trust__item animate-in">
-            <svg class="ap-trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l4-4m0 0l4 4m-4-4v12"/></svg>
-            <h3 class="ap-trust__title">Pago contra entrega</h3>
-            <p class="ap-trust__text">Pagas solo cuando recibes el producto.</p>
-          </div>
-          <div class="ap-trust__item animate-in">
-            <svg class="ap-trust__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <h3 class="ap-trust__title">Pago seguro</h3>
-            <p class="ap-trust__text">Conexión cifrada SSL. Tus datos protegidos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 11. CTA FINAL -->
-    <section class="ap-cta" id="cta-final">
-      <div class="ap-cta__inner">
-        <h2 class="ap-cta__headline animate-in">Tu proyecto merece<br>PaintPro™.</h2>
-        <p class="ap-cta__sub animate-in">Únete a miles de personas que ya transforman sus proyectos con PaintPro.</p>
-        <div class="ap-cta__price animate-in">
-          <span class="ap-cta__price-current">€69,90</span>
-          <span class="ap-cta__price-original">€102,90</span>
-          <span class="ap-cta__price-savings">Ahorra €33 (32%)</span>
-        </div>
-        <div id="countdown" class="ap-cta__countdown animate-in">Oferta termina en: <strong id="countdown-time"></strong></div>
-        <a href="#" class="btn btn--trust ap-cta__btn animate-in">Comprar PaintPro — Envío gratis</a>
-        <div class="ap-cta__trust animate-in">
-          <span class="ap-cta__trust-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Garantía 30 días
-          </span>
-          <span class="ap-cta__trust-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l4-4m0 0l4 4m-4-4v12"/></svg>
-            Pago contra entrega
-          </span>
-          <span class="ap-cta__trust-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            Devolución gratis
-          </span>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- CTA STICKY MOBILE -->
   <div class="cta-sticky" id="cta-sticky">
     <div class="cta-sticky__inner">
       <div class="cta-sticky__info">
-        <span class="cta-sticky__price">€69,90</span>
-        <span class="cta-sticky__original">€102,90</span>
+        <span class="cta-sticky__price">Ôé¼69,90</span>
+        <span class="cta-sticky__original">Ôé¼102,90</span>
       </div>
-      <a href="#" class="cta-sticky__btn">Comprar</a>
+      <a href="https://lapurasalud.com/products/pistola-paintpro" class="cta-sticky__btn">Comprar</a>
     </div>
   </div>
 
   <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="footer__inner">
-      <div class="footer__column footer__column--brand">
-        <a href="index.html" class="footer__logo" aria-label="Talleria Pro">
-          <span class="footer-wordmark"><span class="footer-wordmark__name">Talleria</span><span class="footer-wordmark__pro">Pro</span></span>
-        </a>
-        <p class="footer__tagline">Potencia. Control. Resultado.</p>
-        <p class="footer__about">Herramientas eléctricas portátiles con estándar profesional.</p>
-      </div>
       <div class="footer__column">
         <h3 class="footer__column-title">Producto</h3>
         <ul class="footer__column-list">
-          <li><a href="producto.html" class="footer__column-link">PaintPro™</a></li>
-          <li><a href="#diseno" class="footer__column-link">Diseño</a></li>
+          <li><a href="producto.html" class="footer__column-link">PaintPro</a></li>
+          <li><a href="#diseno" class="footer__column-link">Dise├▒o</a></li>
         </ul>
       </div>
       <div class="footer__column">
@@ -468,29 +621,37 @@
         <h3 class="footer__column-title">Legal</h3>
         <ul class="footer__column-list">
           <li><span class="footer__column-link footer__column-link--disabled">Privacidad</span></li>
-          <li><span class="footer__column-link footer__column-link--disabled">Términos</span></li>
+          <li><span class="footer__column-link footer__column-link--disabled">T├®rminos</span></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
-      <p>&copy; 2026 Talleria Pro — Potencia. Control. Resultado.</p>
+      <p>&copy; 2026 Talleria ÔÇö Potencia. Control. Resultado.</p>
     </div>
   </footer>
 
+  <script defer src="js/scripts.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+
       var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      // Scroll progress bar
+      // ==========================================
+      // SCROLL PROGRESS BAR
+      // ==========================================
       var progressBar = document.createElement('div');
       progressBar.className = 'scroll-progress';
       document.body.appendChild(progressBar);
+
       window.addEventListener('scroll', function() {
         var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        progressBar.style.width = (window.scrollY / docHeight) * 100 + '%';
+        var progress = (window.scrollY / docHeight) * 100;
+        progressBar.style.width = progress + '%';
       }, { passive: true });
 
-      // Intersection Observer
+      // ==========================================
+      // UNIFIED INTERSECTION OBSERVER
+      // ==========================================
       var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
@@ -499,11 +660,34 @@
           }
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-      document.querySelectorAll('.animate-in').forEach(function(el) { observer.observe(el); });
 
-      // Parallax hero image
+      document.querySelectorAll('.animate-in, .animate-fade, .animate-scale, .animate-slide-left, .animate-slide-right, .text-mask').forEach(function(el) {
+        observer.observe(el);
+      });
+
+      // ==========================================
+      // IMAGE REVEAL MASK
+      // ==========================================
+      var imageRevealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            setTimeout(function() {
+              entry.target.classList.add('is-revealed');
+            }, 200);
+            imageRevealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      document.querySelectorAll('.apple-design__image').forEach(function(el) {
+        imageRevealObserver.observe(el);
+      });
+
+      // ==========================================
+      // PARALLAX ON HERO IMAGE
+      // ==========================================
       if (!prefersReducedMotion) {
-        var heroImg = document.querySelector('.ap-hero__visual img');
+        var heroImg = document.querySelector('.hero--apple__visual img');
         if (heroImg) {
           window.addEventListener('scroll', function() {
             var scrolled = window.scrollY;
@@ -512,15 +696,40 @@
             }
           }, { passive: true });
         }
+
+        // Bento card subtle parallax
+        var bentoCards = document.querySelectorAll('.bento-card__image');
+        bentoCards.forEach(function(img) {
+          var card = img.closest('.bento-card');
+          if (card) {
+            card.addEventListener('mousemove', function(e) {
+              var rect = card.getBoundingClientRect();
+              var x = (e.clientX - rect.left) / rect.width - 0.5;
+              var y = (e.clientY - rect.top) / rect.height - 0.5;
+              img.style.transform = 'scale(1.05) translate(' + (x * 8) + 'px, ' + (y * 8) + 'px)';
+            });
+            card.addEventListener('mouseleave', function() {
+              img.style.transform = '';
+            });
+          }
+        });
       }
 
-      // Nav scroll
+      // ==========================================
+      // PRODUCT NAV SCROLL
+      // ==========================================
       var nav = document.querySelector('.product-nav');
       window.addEventListener('scroll', function() {
-        nav.classList.toggle('product-nav--scrolled', window.scrollY > 50);
+        if (window.scrollY > 50) {
+          nav.classList.add('product-nav--scrolled');
+        } else {
+          nav.classList.remove('product-nav--scrolled');
+        }
       }, { passive: true });
 
-      // Hamburger
+      // ==========================================
+      // HAMBURGER MENU
+      // ==========================================
       var hamburger = document.querySelector('.product-nav__hamburger');
       var mobileMenu = document.querySelector('.product-nav__mobile');
       if (hamburger && mobileMenu) {
@@ -537,44 +746,68 @@
         });
       }
 
-      // CTA sticky mobile
+      // ==========================================
+      // CTA STICKY MOBILE
+      // ==========================================
       var ctaSticky = document.getElementById('cta-sticky');
-      var hero = document.getElementById('hero');
-      if (ctaSticky && hero) {
-        var heroObs = new IntersectionObserver(function(entries) {
+      var heroSection = document.getElementById('hero');
+      if (ctaSticky && heroSection) {
+        var heroObserver = new IntersectionObserver(function(entries) {
           entries.forEach(function(entry) {
-            ctaSticky.classList.toggle('is-visible', !entry.isIntersecting);
+            if (!entry.isIntersecting) {
+              ctaSticky.classList.add('is-visible');
+            } else {
+              ctaSticky.classList.remove('is-visible');
+            }
           });
         }, { threshold: 0 });
-        heroObs.observe(hero);
+        heroObserver.observe(heroSection);
       }
 
-      // Countdown
+      // ==========================================
+      // COUNTDOWN TIMER
+      // ==========================================
       var countdownEl = document.getElementById('countdown-time');
       if (countdownEl) {
         var endTime = new Date();
         endTime.setHours(23, 59, 59, 999);
         function updateCountdown() {
-          var diff = endTime - new Date();
-          if (diff <= 0) { countdownEl.textContent = '00:00:00'; return; }
+          var now = new Date();
+          var diff = endTime - now;
+          if (diff <= 0) {
+            countdownEl.textContent = '00:00:00';
+            return;
+          }
           var h = Math.floor(diff / 3600000);
           var m = Math.floor((diff % 3600000) / 60000);
           var s = Math.floor((diff % 60000) / 1000);
-          countdownEl.textContent = String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+          countdownEl.textContent =
+            String(h).padStart(2, '0') + ':' +
+            String(m).padStart(2, '0') + ':' +
+            String(s).padStart(2, '0');
           requestAnimationFrame(updateCountdown);
         }
         updateCountdown();
       }
 
-      // Smooth scroll
+      // ==========================================
+      // SMOOTH SCROLL FOR ANCHOR LINKS
+      // ==========================================
       document.querySelectorAll('a[href^="#"]').forEach(function(link) {
         link.addEventListener('click', function(e) {
           var target = document.querySelector(link.getAttribute('href'));
-          if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         });
       });
+
     });
   </script>
 
 </body>
 </html>
+
+
+
