@@ -453,6 +453,49 @@ ul { list-style: none; }
   display: block;
 }
 
+.hero--apple--centered {
+  text-align: center;
+}
+
+.hero--apple--centered .hero--apple__content {
+  grid-template-columns: 1fr !important;
+  justify-items: center;
+  text-align: center;
+}
+
+.hero--apple--centered .hero--apple__text {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero--apple--centered .hero--apple__subheadline {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero--apple--centered .hero--apple__actions {
+  justify-content: center;
+}
+
+.hero--apple--centered .hero--apple__visual {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.hero--apple--centered .hero--apple__video {
+  max-width: min(1200px, 95vw);
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+}
+
+.hero--apple--centered::after {
+  background: radial-gradient(ellipse at center, transparent 0%, var(--bg-dark) 80%);
+}
+
 .hero-scroll-pin {
   position: relative;
   height: 600vh;
@@ -468,6 +511,7 @@ ul { list-style: none; }
 @media (max-width: 767px) {
   .hero-scroll-pin { height: 500vh; }
   .hero--apple__video { max-width: 280px; }
+  .hero--apple--centered .hero--apple__video { max-width: 100%; border-radius: 12px; }
 }
 
 @media (max-width: 767px) {
