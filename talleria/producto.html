@@ -79,20 +79,50 @@
   <main id="main">
 
     <!-- ═══════════════════════════════════════════
-         HERO — Apple-style centered product
+         HERO — Apple Mac Mini style: product-dominant
          ═══════════════════════════════════════════ -->
     <section class="ap-hero" id="hero">
       <div class="ap-hero__inner">
-        <h1 class="ap-hero__headline animate-in">PaintPro.</h1>
-        <p class="ap-hero__sub animate-in">Acabado profesional.</p>
         <div class="ap-hero__visual animate-in">
           <img src="images/1.svg" alt="PaintPro — pistola pulverizadora inalámbrica profesional" width="800" height="800" fetchpriority="high" decoding="async">
         </div>
-        <p class="ap-hero__price animate-in"><strong>€69,90</strong> <s>€102,90</s></p>
+        <h1 class="ap-hero__headline animate-in">PaintPro.</h1>
+        <p class="ap-hero__sub animate-in">Acabado profesional.<br>Una capa. Un resultado.</p>
         <div class="ap-hero__actions animate-in">
-          <a href="#cta-final" class="btn btn--accent">Comprar ahora</a>
-          <a href="#diseno" class="btn btn--outline-light">Ver en detalle</a>
+          <a href="#cta-final" class="btn btn--accent">Comprar — €69,90</a>
         </div>
+        <p class="ap-hero__hint animate-in">Envío gratis · Garantía 30 días</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CAROUSEL — Auto-scrolling product angles
+         ═══════════════════════════════════════════ -->
+    <section class="ap-carousel" aria-label="Galería de productos PaintPro">
+      <div class="ap-carousel__track">
+        <div class="ap-carousel__slide"><img src="images/1.svg" alt="PaintPro — frontal" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/2.svg" alt="PaintPro — lateral" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/3.svg" alt="PaintPro — control" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/4.svg" alt="PaintPro — 400W" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/5.svg" alt="PaintPro — batería" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/6.svg" alt="PaintPro — boquilla" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/7.svg" alt="PaintPro — accesorios" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/8.svg" alt="PaintPro — batería extra" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/9.svg" alt="PaintPro — agarre" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/10.svg" alt="PaintPro — detalle" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/11.svg" alt="PaintPro — versión completa" loading="lazy" decoding="async"></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="ap-carousel__slide"><img src="images/1.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/2.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/3.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/4.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/5.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/6.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/7.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/8.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/9.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/10.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
+        <div class="ap-carousel__slide"><img src="images/11.svg" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
       </div>
     </section>
 
@@ -159,14 +189,26 @@
     </section>
 
     <!-- ═══════════════════════════════════════════
-         GALLERY — Bento grid product photos
+         GALLERY — Uniform grid, all angles
          ═══════════════════════════════════════════ -->
     <section class="ap-gallery" id="diseno">
       <div class="ap-gallery__inner">
         <h2 class="ap-section-headline animate-in">Parece compacta.<br>Es una potencia.</h2>
-        <div class="ap-gallery__bento">
-          <div class="ap-gallery__item ap-gallery__item--wide animate-in">
-            <img src="images/2.svg" alt="PaintPro — Diseño compacto y ergonómico" loading="lazy" decoding="async">
+        <div class="ap-gallery__grid">
+          <div class="ap-gallery__item animate-in">
+            <img src="images/1.svg" alt="PaintPro — Vista frontal" loading="lazy" decoding="async">
+          </div>
+          <div class="ap-gallery__item animate-in">
+            <img src="images/2.svg" alt="PaintPro — Vista lateral" loading="lazy" decoding="async">
+          </div>
+          <div class="ap-gallery__item animate-in">
+            <img src="images/3.svg" alt="PaintPro — Detalle de control" loading="lazy" decoding="async">
+          </div>
+          <div class="ap-gallery__item animate-in">
+            <img src="images/4.svg" alt="PaintPro — Potencia 400W" loading="lazy" decoding="async">
+          </div>
+          <div class="ap-gallery__item animate-in">
+            <img src="images/5.svg" alt="PaintPro — Batería 88Vf" loading="lazy" decoding="async">
           </div>
           <div class="ap-gallery__item animate-in">
             <img src="images/6.svg" alt="PaintPro — Boquilla ajustable" loading="lazy" decoding="async">
@@ -175,10 +217,7 @@
             <img src="images/7.svg" alt="PaintPro — Accesorios incluidos" loading="lazy" decoding="async">
           </div>
           <div class="ap-gallery__item animate-in">
-            <img src="images/8.svg" alt="PaintPro — Batería 88Vf" loading="lazy" decoding="async">
-          </div>
-          <div class="ap-gallery__item animate-in">
-            <img src="images/9.svg" alt="PaintPro — Detalle de agarre" loading="lazy" decoding="async">
+            <img src="images/8.svg" alt="PaintPro — Batería extra" loading="lazy" decoding="async">
           </div>
         </div>
       </div>

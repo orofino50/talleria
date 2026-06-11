@@ -2950,7 +2950,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
 
 /* --- BRAND CTA (CTA da marca, não do produto) --- */
 .brand-cta {
-  background: var(--bg-dark);
+  background: var(--bg-black);
   color: var(--text-inverse);
   padding: clamp(100px, 12vw, 160px) 24px;
   text-align: center;
@@ -2963,7 +2963,7 @@ details[open] .faq-icon { transform: rotate(45deg); }
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(233, 69, 96, 0.15) 0%, transparent 60%);
+  background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(197,165,90,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 .brand-cta > * { position: relative; z-index: 1; }
@@ -3820,11 +3820,12 @@ textarea.contact-form__input { min-height: 140px; resize: vertical; }
 .ap-hero {
   background: var(--bg-black);
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 120px 24px 80px;
+  padding: 100px 24px 60px;
   position: relative;
   overflow: hidden;
 }
@@ -3832,14 +3833,29 @@ textarea.contact-form__input { min-height: 140px; resize: vertical; }
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 40%, rgba(197,165,90,0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse 70% 60% at 50% 35%, rgba(197,165,90,0.07) 0%, transparent 70%);
   pointer-events: none;
 }
 .ap-hero__inner {
   position: relative;
   z-index: 1;
-  max-width: 680px;
+  max-width: 800px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ap-hero__visual {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.ap-hero__visual img {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 60px rgba(197,165,90,0.15));
 }
 .ap-hero__headline {
   font-size: clamp(3rem, 8vw, 6rem);
@@ -3847,51 +3863,81 @@ textarea.contact-form__input { min-height: 140px; resize: vertical; }
   letter-spacing: -0.04em;
   line-height: 1;
   color: var(--text-inverse);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 .ap-hero__sub {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  color: rgba(255,255,255,0.7);
-  font-weight: 400;
-  margin-bottom: 48px;
-}
-.ap-hero__visual {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-.ap-hero__visual img {
-  max-width: 380px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-.ap-hero__price {
-  font-size: 1.125rem;
+  font-size: clamp(1.125rem, 1.8vw, 1.5rem);
   color: rgba(255,255,255,0.6);
-  margin-bottom: 32px;
-}
-.ap-hero__price strong {
-  color: var(--text-inverse);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.ap-hero__price s {
-  color: rgba(255,255,255,0.35);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  max-width: 400px;
 }
 .ap-hero__actions {
   display: flex;
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.ap-hero__hint {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 767px) {
-  .ap-hero { min-height: auto; padding: 100px 20px 60px; }
-  .ap-hero__visual img { max-width: 260px; }
+  .ap-hero { min-height: auto; min-height: 100dvh; padding: 100px 20px 40px; }
+  .ap-hero__visual img { max-width: 300px; }
+  .ap-hero__headline { font-size: clamp(2.5rem, 10vw, 4rem); }
   .ap-hero__actions { flex-direction: column; align-items: center; }
-  .ap-hero__actions .btn { width: 100%; max-width: 300px; }
-  .ap-hero__actions .btn--outline-light { display: none; }
+  .ap-hero__actions .btn { width: 100%; max-width: 320px; }
+}
+
+/* --- CAROUSEL (Auto-scroll) --- */
+.ap-carousel {
+  overflow: hidden;
+  background: var(--bg-black);
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.ap-carousel__track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: apCarouselScroll 40s linear infinite;
+}
+.ap-carousel:hover .ap-carousel__track {
+  animation-play-state: paused;
+}
+@keyframes apCarouselScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ap-carousel__slide {
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.ap-carousel__slide img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+@media (min-width: 768px) {
+  .ap-carousel__slide { width: 220px; height: 220px; }
+}
+@media (max-width: 480px) {
+  .ap-carousel__slide { width: 140px; height: 140px; }
 }
 
 /* --- HIGHLIGHTS --- */
@@ -3987,7 +4033,7 @@ textarea.contact-form__input { min-height: 140px; resize: vertical; }
   letter-spacing: 0.08em;
 }
 
-/* --- GALLERY (Bento) --- */
+/* --- GALLERY (Uniform Grid) --- */
 .ap-gallery {
   background: var(--bg-light);
   padding: clamp(80px, 10vw, 140px) 24px;
@@ -3996,9 +4042,9 @@ textarea.contact-form__input { min-height: 140px; resize: vertical; }
   max-width: var(--max-width);
   margin: 0 auto;
 }
-.ap-gallery__bento {
+.ap-gallery__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 .ap-gallery__item {
@@ -4008,23 +4054,28 @@ textarea.contact-form__input { min-height: 140px; resize: vertical; }
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 4/3;
-  padding: 24px;
+  aspect-ratio: 1;
+  padding: 20px;
   border: 1px solid var(--border-light);
+  transition: transform 300ms ease;
 }
-.ap-gallery__item--wide {
-  grid-column: span 2;
-  aspect-ratio: 21/9;
+.ap-gallery__item:hover {
+  transform: translateY(-4px);
 }
 .ap-gallery__item img {
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 75%;
   object-fit: contain;
 }
 
+@media (max-width: 1024px) {
+  .ap-gallery__grid { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 767px) {
-  .ap-gallery__bento { grid-template-columns: 1fr; }
-  .ap-gallery__item--wide { grid-column: span 1; aspect-ratio: 16/9; }
+  .ap-gallery__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+@media (max-width: 400px) {
+  .ap-gallery__grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
 }
 
 /* --- DESIGN --- */
