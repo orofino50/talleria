@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orofino50.github.io/talleria/sitemap.xml
