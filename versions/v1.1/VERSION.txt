@@ -1,0 +1,5 @@
+﻿Version: v1.1
+Date: 2026-06-11 17:24:22
+Message: Mac Mini audit applied: removed redundant eyebrows, collapsed why-buy, deleted specs-faq, big-number specs layout
+
+Files snapshotted: talleria/index.html, talleria/producto.html, talleria/sobre.html, talleria/faq.html, talleria/contacto.html, talleria/css/styles.css, talleria/js/scripts.js

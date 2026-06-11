@@ -1,0 +1,5 @@
+﻿Version: v1.2
+Date: 2026-06-11 17:33:26
+Message: Removed hero price; smoother diseno video (400vh pin + lerp interpolation)
+
+Files snapshotted: talleria/index.html, talleria/producto.html, talleria/sobre.html, talleria/faq.html, talleria/contacto.html, talleria/css/styles.css, talleria/js/scripts.js

@@ -1,0 +1,5 @@
+﻿Version: v1.5
+Date: 2026-06-11 20:22:36
+Message: 
+
+Files snapshotted: talleria/index.html, talleria/producto.html, talleria/sobre.html, talleria/faq.html, talleria/contacto.html, talleria/css/styles.css, talleria/js/scripts.js

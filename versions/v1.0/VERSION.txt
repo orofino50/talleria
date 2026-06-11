@@ -1,0 +1,5 @@
+﻿Version: v1.0
+Date: 2026-06-11 17:17:00
+Message: Baseline: 16-section product page + 5-page brand site, all features working
+
+Files snapshotted: talleria/index.html, talleria/producto.html, talleria/sobre.html, talleria/faq.html, talleria/contacto.html, talleria/css/styles.css, talleria/js/scripts.js
