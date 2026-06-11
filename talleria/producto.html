@@ -701,12 +701,6 @@
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
       }
-            heroSection.classList.remove('hero--video-ended');
-          }
-        }
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-      }
 
       // ==========================================
       // SCROLL PROGRESS BAR
@@ -822,9 +816,9 @@
       // CTA STICKY MOBILE
       // ==========================================
       var ctaSticky = document.getElementById('cta-sticky');
-      var heroSection = document.getElementById('hero');
-      if (ctaSticky && heroSection) {
-        var heroObserver = new IntersectionObserver(function(entries) {
+      var ctaStickyHero = document.getElementById('hero');
+      if (ctaSticky && ctaStickyHero) {
+        var ctaStickyObserver = new IntersectionObserver(function(entries) {
           entries.forEach(function(entry) {
             if (!entry.isIntersecting) {
               ctaSticky.classList.add('is-visible');
@@ -833,7 +827,7 @@
             }
           });
         }, { threshold: 0 });
-        heroObserver.observe(heroSection);
+        ctaStickyObserver.observe(ctaStickyHero);
       }
 
       // ==========================================
