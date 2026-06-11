@@ -1316,6 +1316,120 @@ ul { list-style: none; }
   color: var(--text-secondary);
 }
 
+/* Big-number specs layout (Mac Mini style) */
+.apple-specs__hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .apple-specs__hero {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
+  }
+}
+
+.apple-specs__hero-feature,
+.apple-specs__hero-secondary {
+  background: var(--bg-light);
+  border-radius: 24px;
+  border: 1px solid var(--border-light);
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .apple-specs__hero-feature,
+  .apple-specs__hero-secondary {
+    padding: 64px 48px;
+  }
+}
+
+.apple-specs__hero-feature { text-align: left; }
+
+.apple-specs__hero-value {
+  display: block;
+  font-size: clamp(5rem, 14vw, 9rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.apple-specs__hero-value small {
+  font-size: 0.4em;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-left: 0.05em;
+  color: var(--text-secondary);
+}
+
+.apple-specs__hero-label {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  letter-spacing: -0.2px;
+}
+
+.apple-specs__hero-secondary {
+  gap: 32px;
+}
+
+.apple-specs__hero-item {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border-light);
+}
+
+.apple-specs__hero-item:first-child { border-top: none; padding-top: 0; }
+
+.apple-specs__hero-value-sm {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+  min-width: 120px;
+}
+
+.apple-specs__hero-value-sm small {
+  font-size: 0.5em;
+  font-weight: 700;
+  margin-left: 0.05em;
+  color: var(--text-secondary);
+}
+
+.apple-specs__hero-label-sm {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.apple-specs__inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 40px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-light);
+  list-style: none;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.apple-specs__inline strong {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-right: 4px;
+}
+
 /* ==========================================
    BOX GRID ÔÇö Dark
    ========================================== */
