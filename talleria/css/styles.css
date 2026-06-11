@@ -1816,6 +1816,15 @@ details[open] .faq-icon { transform: rotate(45deg); }
   .apple-cta { padding: clamp(100px, 10vw, 160px) 80px; }
 }
 
+.apple-cta__product {
+  display: block;
+  width: clamp(180px, 28vw, 320px);
+  height: auto;
+  margin: 0 auto 32px;
+  filter: drop-shadow(0 20px 60px rgba(197, 165, 90, 0.25))
+          drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+}
+
 .apple-cta__badge {
   display: inline-flex;
   align-items: center;
