@@ -132,7 +132,6 @@
 
     <!-- DESIGN — Light -->
     <section class="apple-design" id="diseno">
-      <div class="diseno-scroll-pin">
       <p class="apple-design__label animate-in">Diseño</p>
       <h2 class="apple-design__headline animate-in">Parece compacta.<br>Es una potencia.</h2>
       <p class="apple-design__sub animate-in">PaintPro fue diseñada desde cero para ofrecer el máximo rendimiento en el mínimo espacio. Su formato ergonómico se adapta a cualquier mano.</p>
@@ -150,7 +149,6 @@
           <source src="images/diseno-paintpro.mp4" type="video/mp4">
           Tu navegador no soporta video HTML5.
         </video>
-      </div>
       </div>
     </section>
 
@@ -718,8 +716,7 @@
       // ==========================================
       var disenoVideo = document.getElementById('diseno-video');
       var disenoSection = document.getElementById('diseno');
-      var disenoScrollPin = disenoSection ? disenoSection.querySelector('.diseno-scroll-pin') : null;
-      if (disenoVideo && disenoSection && disenoScrollPin) {
+      if (disenoVideo && disenoSection && disenoSection.parentNode) {
         var disenoReady = false;
         var disenoLastTime = -1;
         var disenoTicking = false;
@@ -728,6 +725,12 @@
           disenoReady = true;
         });
 
+        // Wrap section in a scroll-pin container (250vh = 10s video × 250px/s)
+        // so the sticky section stays pinned while scroll progresses.
+        var disenoScrollPin = document.createElement('div');
+        disenoScrollPin.className = 'diseno-scroll-pin';
+        disenoSection.parentNode.insertBefore(disenoScrollPin, disenoSection);
+        disenoScrollPin.appendChild(disenoSection);
         disenoSection.classList.add('apple-design--pinned');
 
         var disenoPinHeight = 0;
