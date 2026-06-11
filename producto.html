@@ -90,7 +90,6 @@
             <a href="#cta-final" class="btn btn--accent">Comprar</a>
             <a href="#diseno" class="btn btn--outline-light">Ver en detalle</a>
           </div>
-          <p class="hero--apple__price"><strong>€69,90</strong> <s>€102,90</s></p>
         </div>
         <div class="hero--apple__visual" id="hero-video-wrap">
           <video
@@ -636,7 +635,7 @@
           disenoReady = true;
         });
 
-        // Wrap section in a scroll-pin container (250vh = 10s video × 250px/s)
+        // Wrap section in a scroll-pin container (400vh = 10s video × ~400px/s)
         // so the sticky section stays pinned while scroll progresses.
         var disenoScrollPin = document.createElement('div');
         disenoScrollPin.className = 'diseno-scroll-pin';
@@ -651,6 +650,11 @@
         measureDisenoPin();
         window.addEventListener('resize', measureDisenoPin, { passive: true });
 
+        // Smooth interpolation: lerp currentTime toward targetTime to avoid
+        // jumps from fast scroll-wheel deltas. Lower the lerp factor for slower,
+        // smoother playback (0.12 = video catches up over ~8 frames).
+        var disenoRenderedTime = 0;
+        var disenoTicking = false;
         function onDisenoScroll() {
           if (!disenoReady || prefersReducedMotion || disenoTicking) return;
           disenoTicking = true;
@@ -664,9 +668,12 @@
             var duration = disenoVideo.duration;
             if (!isFinite(duration) || duration <= 0) return;
             var targetTime = progress * duration;
-            if (Math.abs(targetTime - disenoLastTime) > 0.005) {
-              disenoVideo.currentTime = targetTime;
-              disenoLastTime = targetTime;
+            // Eased lerp toward target so each frame moves ~12% of the gap —
+            // smooth even on fast scroll wheels, and matches the slower
+            // 400vh pin height for an unhurried scrub feel.
+            disenoRenderedTime += (targetTime - disenoRenderedTime) * 0.12;
+            if (Math.abs(targetTime - disenoRenderedTime) > 0.002) {
+              try { disenoVideo.currentTime = disenoRenderedTime; } catch(e) {}
             }
           });
         }

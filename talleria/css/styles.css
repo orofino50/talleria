@@ -514,7 +514,7 @@ ul { list-style: none; }
 
 .diseno-scroll-pin {
   position: relative;
-  height: 250vh;
+  height: 400vh;
 }
 
 .apple-design.apple-design--pinned {
@@ -524,7 +524,7 @@ ul { list-style: none; }
 }
 
 @media (max-width: 767px) {
-  .diseno-scroll-pin { height: 200vh; }
+  .diseno-scroll-pin { height: 300vh; }
   .hero-scroll-pin { height: 200vh; }
   .hero--apple__video { max-width: 280px; }
   .hero--apple--centered .hero--apple__video { max-width: 100%; border-radius: 12px; }
