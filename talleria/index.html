@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta property="og:title" content="Talleria Pro: Potencia. Control. Resultado.">
   <meta property="og:description" content="Talleria Pro: Herramientas eléctricas portátiles que respetan tu trabajo. Conoce nuestra historia y la nueva generación de productos profesionales.">
   <meta property="og:image" content="https://orofino50.github.io/talleria/images/foto-hero.webp">
@@ -510,6 +510,11 @@
           });
         }, { threshold: 0 });
         heroObserver.observe(brandHero);
+        // Also hide when CTA Final or footer is in view (avoid covering them)
+        var ctaFinal = document.getElementById('cta-final');
+        var footerEl = document.querySelector('footer');
+        if (ctaFinal) heroObserver.observe(ctaFinal);
+        if (footerEl) heroObserver.observe(footerEl);
       }
 
       // Smooth scroll
