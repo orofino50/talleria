@@ -1814,102 +1814,199 @@ details[open] .faq-icon { transform: rotate(45deg); }
    ========================================== */
 
 .apple-cta {
+  position: relative;
   text-align: center;
   background: var(--bg-black);
-  padding: clamp(80px, 10vw, 160px) 24px;
+  padding: clamp(60px, 8vw, 120px) 24px clamp(80px, 10vw, 140px);
   color: var(--text-inverse);
+  overflow: hidden;
 }
 
+.apple-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 70%;
+  background: radial-gradient(ellipse at center, rgba(197, 165, 90, 0.10) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.apple-cta > * { position: relative; z-index: 1; }
+
 @media (min-width: 768px) {
-  .apple-cta { padding: clamp(100px, 10vw, 160px) 80px; }
+  .apple-cta { padding: clamp(80px, 9vw, 140px) 80px clamp(100px, 11vw, 160px); }
+}
+
+.apple-cta__visual {
+  margin: 0 auto 4px;
+  width: clamp(280px, 42vw, 500px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .apple-cta__product {
   display: block;
-  width: clamp(180px, 28vw, 320px);
+  width: 100%;
   height: auto;
-  margin: 0 auto 32px;
-  filter: drop-shadow(0 20px 60px rgba(197, 165, 90, 0.25))
-          drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 30px 80px rgba(197, 165, 90, 0.30))
+          drop-shadow(0 12px 32px rgba(0, 0, 0, 0.55));
+  animation: cta-float 6s ease-in-out infinite;
 }
 
-.apple-cta__badge {
+@keyframes cta-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apple-cta__product { animation: none; }
+}
+
+.apple-cta__eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: var(--accent);
-  color: var(--text-inverse);
-  padding: 6px 14px;
-  border-radius: 4px;
+  gap: 8px;
+  color: var(--accent);
   font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.apple-cta__eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
 }
 
 .apple-cta__title {
-  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-size: clamp(2.25rem, 5vw, 4rem);
   font-weight: 700;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 20px;
   color: var(--text-inverse);
+  text-wrap: balance;
 }
 
 .apple-cta__subtitle {
-  color: rgba(255,255,255,0.85);
-  max-width: 500px;
-  margin: 0 auto 24px;
-  line-height: 1.7;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.7));
+  max-width: 540px;
+  margin: 0 auto 36px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-wrap: pretty;
 }
 
 .apple-cta__price {
-  margin-bottom: 24px;
-  text-align: center;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .apple-cta__price-current {
-  font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: -1px;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
   color: var(--text-inverse);
-}
-
-.apple-cta__price-savings {
-  display: block;
-  font-size: 0.875rem;
-  color: var(--trust);
-  font-weight: 600;
-  margin-top: 4px;
+  letter-spacing: -0.02em;
 }
 
 .apple-cta__price-original {
   font-size: 1.125rem;
-  color: rgba(255,255,255,0.5);
+  color: var(--text-secondary, rgba(255, 255, 255, 0.5));
   text-decoration: line-through;
-  margin-left: 12px;
+}
+
+.apple-cta__price-savings {
+  display: inline-block;
+  background: rgba(197, 165, 90, 0.15);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+
+.cta-countdown {
+  font-size: 0.875rem;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.7));
+  margin-bottom: 32px;
+  font-family: var(--font-family, 'Inter', sans-serif);
+}
+
+.cta-countdown strong {
+  color: var(--accent);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin-left: 8px;
+}
+
+.btn--trust {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--trust);
+  color: var(--text-inverse);
+  padding: 18px 36px;
+  border-radius: 980px;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: background 200ms ease, transform 200ms ease;
+  min-width: 320px;
+  max-width: 100%;
+}
+
+.btn--trust:hover {
+  background: #158a4c;
+  transform: translateY(-1px);
+}
+
+.cta-social-proof {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
 
 .apple-cta__trust {
   display: flex;
   justify-content: center;
-  gap: 24px;
-  margin-top: 24px;
+  gap: 28px;
+  margin-top: 36px;
   flex-wrap: wrap;
 }
 
 .apple-cta__trust-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.813rem;
-  color: rgba(255,255,255,0.8);
-  font-weight: 500;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.7));
 }
 
-.apple-cta__trust-item svg {
-  color: var(--trust);
-  flex-shrink: 0;
+.apple-cta__trust-item svg { color: var(--trust); flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .apple-cta__visual { width: 60vw; }
+  .btn--trust { min-width: 100%; padding: 16px 24px; }
+  .apple-cta__trust { gap: 16px; }
 }
 
 /* ==========================================
@@ -2336,28 +2433,6 @@ details[open] .faq-icon { transform: rotate(45deg); }
 @media (max-width: 767px) {
   .stats-hero { padding: 32px 20px; }
   .stats-hero__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-}
-
-/* --- Apple CTA trust extras --- */
-.apple-cta__trust {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  margin-top: 32px;
-  flex-wrap: wrap;
-}
-.apple-cta__trust-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-.apple-cta__trust-item svg { color: var(--trust); flex-shrink: 0; }
-@media (max-width: 640px) {
-  .apple-cta__trust { gap: 16px; }
-  .apple-cta__trust-item { font-size: 0.8125rem; }
 }
 
 /* --- Apple Lifestyle stats extras --- */
